@@ -1,0 +1,65 @@
+.appointmentGuideline {
+  background: var(--textColorOne) !important;
+}
+
+.alertAppointment, .bg-green {
+  background: var(--secondaryColor) !important;
+  color: var(--textColorOne) !important;
+}
+
+.text-green {
+  color: var(--secondaryColor) !important;
+}
+
+
+
+.icon {
+  display: inline-block !important;
+  width: 0 !important;
+  height: 0 !important;
+  border-left: 8px solid transparent !important;
+  border-right: 8px solid var(--secondaryColor) !important;
+  border-bottom: 16px solid transparent !important;
+
+  margin-right:5px;
+
+ 
+}
+
+.bg-purple{
+  background-color: var(--thirdColor) !important;
+  color:var(--textColorOne) !important;
+  
+}
+
+
+.animate__slideInDown{
+  background:var(--secondaryColor) !important;
+  
+}
+
+.animate__slideInDown .doctor-btn{
+  background:none !important;
+  
+  border:0 !important;
+
+  transition:all 0.5s;
+}
+
+.animate__slideInDown .doctor-btn > a{
+  text-decoration: none !important;
+  color:var(--textColorOne) !important;
+}
+
+
+.animate__slideInDown .doctor-btn:hover{
+  background:var(--textColorOne) !important;
+  border-radius:5px !important;
+
+  padding:5px !important;
+}
+
+.animate__slideInDown .doctor-btn:hover > a{
+  color:var(--thirdColor) !important;
+}
+

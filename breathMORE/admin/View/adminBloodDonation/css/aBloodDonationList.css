@@ -1,0 +1,19 @@
+
+
+@media (min-width: 992px){
+    .searchbox .form-control{
+      width:55vw !important;
+    }
+  }
+
+  @media (min-width: 768px){
+    .searchbox .form-control{
+      width:60vw !important;
+    }
+  }
+
+  @media (min-width: 576){
+    .searchbox .form-control{
+      width:90vw !important;
+    }
+  }

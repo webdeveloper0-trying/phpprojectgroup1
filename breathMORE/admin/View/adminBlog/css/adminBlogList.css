@@ -1,0 +1,60 @@
+.content {
+  transition: all 5s;
+}
+
+.showContent {
+  white-space: nowrap !important;
+  width: 12vw !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+
+  cursor: pointer !important;
+}
+
+
+.content-hide {
+  display: none;
+
+  right: 25vw !important;
+  top: -10vw !important;
+}
+
+.content-show{
+  display: block !important;
+  width: 50vw !important;
+  height:80vh !important;
+  text-indent: 50px !important;
+  line-height: 1.5rem !important;
+
+  right: 25vw !important;
+  top: -10vw !important;
+
+  overflow:auto !important;
+}
+
+.content-show::-webkit-scrollbar {
+  width: 0.5em !important;
+}
+ 
+.content-show::-webkit-scrollbar-track {
+  box-shadow: outset 0 0 6px rgba(0, 0, 0, 0.3);
+  width: 0.5em !important;
+}
+ 
+.content-show::-webkit-scrollbar-thumb {
+  width: 0.5em !important;
+  background-color: var(--thirdColor);
+}
+
+.btn-close{
+  right:1rem !important;
+  top:1rem !important;
+}
+
+.content:click .showContent {
+  color: var(--secondaryColor) !important;
+}
+
+.content:click .content-hide {
+  display: block !important;
+}

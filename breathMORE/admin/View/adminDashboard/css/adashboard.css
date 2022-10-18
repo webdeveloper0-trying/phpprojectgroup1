@@ -1,0 +1,14 @@
+.adminDashboard{
+    background:var(--textColorOne) !important;
+    color:var(--textColorTwo) !important;
+    overflow:hidden !important;
+    border:0.5em solid var(--secondaryColor) !important;
+}
+
+.btn-lg{
+    width:18vw !important;
+}
+
+.btn-lg > a{
+    color:var(--textColorOne) !important;
+}

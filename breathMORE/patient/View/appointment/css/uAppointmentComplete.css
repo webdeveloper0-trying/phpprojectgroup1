@@ -1,0 +1,21 @@
+@media (min-width: 992px){
+    .card{
+      width:70vw !important;
+    }
+  }
+  
+  @media (min-width: 768px){
+    .card{
+      width:60vw !important;
+    }
+  }
+  
+  @media (min-width: 576){
+    .card{
+      width:90vw !important;
+    }
+  }
+
+  .bg-green{
+    background-color: var(--secondaryColor) !important;
+  }

@@ -1,0 +1,41 @@
+.btnMenu{
+  position:absolute !important;
+  bottom:90% !important;
+  left:2rem !important;
+}
+
+#offcanvasMenu {
+  width:20vw !important;
+  background: var(--secondaryColor) !important;
+  color:var(--textColorOne) !important;
+}
+
+.list-group {
+  list-style:none !important;
+}
+
+.list-group > li{
+  border:0 !important;
+  border-bottom:0.05em solid var(--textColorOne) !important;
+
+  transition:all 0.5s;
+}
+
+.list-group > li:hover{
+  background:rgba(255,255,255,0.5) !important;
+ 
+}
+
+.list-group > li:hover a{
+  color:var(--textColorTwo) !important;
+}
+
+
+.list-group > li > a{
+  text-decoration: none !important;
+  color:var(--textColorOne) !important;
+}
+
+
+
+

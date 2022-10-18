@@ -1,0 +1,22 @@
+body {
+  background-color: #c4fcef;
+}
+.aboutUs {
+  color: #8a39ab !important;
+}
+.btn {
+  width: 100% !important;
+}
+.featuresTitle {
+  color: #8a39ab !important;
+}
+.hightLightsTitle {
+  color: #8a39ab !important;
+}
+.aboutUsBackground {
+  background-image: url('./aboutUsBackground.png') !important;
+}
+.btn-lg{
+  background-color: #8a39ab !important;
+  color: #c4fcef !important;
+}
