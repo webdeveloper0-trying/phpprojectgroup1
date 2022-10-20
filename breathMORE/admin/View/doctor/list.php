@@ -2,6 +2,8 @@
 include "../../Controller/doctor/listController.php";
 // echo "<pre>";
 // print_r($doctorList);
+
+include "../../View/common/adminNavbar.php";
 ?>
 
 <!DOCTYPE html>
@@ -19,8 +21,11 @@ include "../../Controller/doctor/listController.php";
     <!-- css -->
     <link rel="stylesheet" href="../css/doclist_style.css">
 
+    <link rel="stylesheet" href="../common/css/adminNavbar.css">
+
+
     <script src="../js/jquery3.6.0.js"></script>
-    <script src="../js/doctorsearch.js" <?= time() ?> defer></script>
+    <script src="../resources/js/doctorsearch.js" <?= time() ?> defer></script>
 
 
 
@@ -28,7 +33,7 @@ include "../../Controller/doctor/listController.php";
 
 <body>
 
-    <div class="container-fluid p-4">
+    <div class=" container-fluid p-4">
 
 
 
