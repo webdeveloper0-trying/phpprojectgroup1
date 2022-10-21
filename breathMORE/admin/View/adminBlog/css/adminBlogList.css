@@ -58,3 +58,7 @@
 .content:click .content-hide {
   display: block !important;
 }
+
+.blogImg{
+  object-fit:cover !important;
+}

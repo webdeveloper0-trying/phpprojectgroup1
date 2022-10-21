@@ -13,8 +13,8 @@ if(isset($_GET["id"])){
 
     $result = $sql->fetchAll(PDO::FETCH_ASSOC);
 
-    echo("<pre>");
-    print_r($result);
+    // echo("<pre>");
+    // print_r($result);
 
 
     //save session data

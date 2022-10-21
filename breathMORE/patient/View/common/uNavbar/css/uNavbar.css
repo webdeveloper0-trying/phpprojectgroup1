@@ -1,0 +1,56 @@
+
+
+
+.uNavbar{
+  width: 100vw !important;
+  box-shadow:0 5px 5px rgba(0,0,0,0.3) !important;
+
+  z-index:100 !important
+}
+
+
+.hrService{
+  margin-left:80vw !important;
+}
+#logoStitle{
+  color:var(--textColorOne) !important;
+}
+
+#logoEtitle{
+  color:red !important;
+  text-transform: uppercase !important;
+}
+
+.userProfile{
+  margin-right:5em !important;
+}
+
+.nav-link{
+  color:var(--textColorOne) !important;
+}
+
+.nav-link-active{
+  position:relative !important;
+
+  overflow:hidden !important;
+}
+
+.nav-link-active::after{
+  content:"";
+
+  width:100% !important;
+  height:0.3em !important;
+  background:var(--thirdColor) !important;
+  border-radius: 5px !important;
+  position:absolute !important;
+  bottom:0 !important;
+  left:-100% !important;
+
+  transition:all 0.5s ease-in-out !important;
+
+  
+}
+
+.nav-link-active:hover::after{
+  left:0% !important;
+}

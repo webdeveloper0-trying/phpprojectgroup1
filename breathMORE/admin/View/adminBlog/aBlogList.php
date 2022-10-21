@@ -1,5 +1,5 @@
 <?php
-include "../../Controller/adminBlogs/adminBlogListController.php";
+include "../../Controller/adminBlogs/aBlogListController.php";
 
 include "../common/adminNavbar.php";
 
@@ -82,7 +82,7 @@ if ($_SESSION["ismainadmin"] == 0) {
                         <td><?= ++$count; ?></td>
                         <td>
                             <div class="d-flex align-items-center">
-                                <img src="https://mdbootstrap.com/img/new/avatars/8.jpg" alt="" style="width: 45px; height: 45px" class="rounded-circle" />
+                                <img src="../storage/blogsImg/<?= $blog["blog_img"] ?>" alt="" style="width: 45px; height: 45px" class="blogImg rounded-circle" />
 
                             </div>
                         </td>
@@ -128,15 +128,21 @@ if ($_SESSION["ismainadmin"] == 0) {
 
                         </td>
                         <td class="d-flex">
-                            <i class="fa-solid fa-pen-to-square""></i>
+                            <a href="../../Controller/adminBlogs/aEditBlogsController.php?id=<?= $blog["id"] ?>">
+                                <i class="fa-solid fa-pen-to-square""></i>
+                            </a>
                             &nbsp; &nbsp;
-                            <!-- <a href=" ../Controller/deleteAdminController.php?id=<?= $admin["id"] ?>"> -->
+                            <a href=" ../Controller/deleteAdminController.php?id=<?= $blog["id"] ?>">
                                 <i class="fa-solid fa-trash-can"></i>
+                            </a>
                         </td>
                     </tr><?php } ?>
 
             </tbody>
         </table>
+
+        <!-- Submit button -->
+        <button type="submit" name="updateAdmin" class="btn btn-purple btn-lg mb-4">Add</button>
     </div>
 </body>
 

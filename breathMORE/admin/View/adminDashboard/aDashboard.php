@@ -86,7 +86,7 @@ if (!isset($_SESSION["adminname"])) {
             </div>
             <div class="col col-4 text-center">
                 <button type="button" class="my-3 btn btn-lg btn-green btn-rounded">
-                    <a href="../adminBlog/adminBlogList.php">Blogs</a>
+                    <a href="../adminBlog/aBlogList.php">Blogs</a>
                 </button>
             </div>
 

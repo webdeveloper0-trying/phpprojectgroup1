@@ -61,6 +61,7 @@ if (isset($_GET["id"])) {
 </head>
 
 <body>
+
     <div class="d-flex justify-content-center align-items-center flex-column">
 
         <h3 class="title h3 my-5">Appointment Form
@@ -72,8 +73,14 @@ if (isset($_GET["id"])) {
 
                 <div class="col col-5 me-5">
                     <div class="form-outline my-4">
+                        <label class="form-label" for="patientId">Patient Id</label>
+                        <input type="text" name="patientId" id="" value="<?= $userInfos[0]["register_id"] ?>" readonly />
+                    </div>
+
+
+                    <div class="form-outline my-4">
                         <label class="form-label" for="patientName">Name</label>
-                        <input type="text" name="patientId" id="" value="<?= $userInfos[0]["register_id"] ?>" />
+
                         <input type="text" name="patientName" id="patientName" class="form-control" value="<?= $userInfos[0]["user_name"] ?>" readonly />
                     </div>
 
@@ -95,7 +102,7 @@ if (isset($_GET["id"])) {
                             $genderStr = "Female";
                         } ?>
                         <label class="form-label" for="patientGender">Gender</label>
-                        <input type="text" name="gender" id="patientGender" class="form-control text-center" value="<?= $genderStr  ?>" readyonly />
+                        <input type="text" name="gender" id="patientGender" class="form-control text-center" value="<?= $genderStr  ?>" readonly />
                     </div>
 
                     <div class="form-outline mb-4">
@@ -118,8 +125,8 @@ if (isset($_GET["id"])) {
 
                 <div class="col col-5 ms-5">
                     <div class="form-outline my-4">
-                        <input type="text" name="docId" id="" value="<?= $docName[0]["doctor_id"] ?>" />
-                        <input type="text" name="docCenter" id="" value="<?=  $docName[0]["center"] ?>">
+                        <input type="hidden" name="docId" id="" value="<?= $docName[0]["doctor_id"] ?>" />
+                        <input type="hidden" name="docCenter" id="" value="<?= $docName[0]["center"] ?>">
                         <label class="form-label" for="docName">Chose Doctor Name</label>
                         <input type="text" name="docName" id="docName" class="form-control" value="<?= $docName[0]["doctor_name"] ?>" readonly />
                     </div>
@@ -145,10 +152,10 @@ if (isset($_GET["id"])) {
 
                         <div class="animate__animated animate__slideInDown d-flex flex-wrap p-2">
                             <?php
-                            $dateTime =   $docDateTime[0]["start_time"]." - ".$docDateTime[0]["end_time"]
+                            $dateTime =   $docDateTime[0]["start_time"] . " - " . $docDateTime[0]["end_time"]
                             ?>
-                        <input type="text" name="docTime" id="docTime" class="form-control docTime" value="<?= $dateTime ?>" readonly />
-                           
+                            <input type="text" name="docTime" id="docTime" class="form-control docTime" value="<?= $dateTime ?>" readonly />
+
                         </div>
 
                     </div>

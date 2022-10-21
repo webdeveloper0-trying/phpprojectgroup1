@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&family=Marcellus&family=Playball&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&family=Marcellus&family=Playball&display=swap");
 
 :root {
   --firstColor: #c4fcef;
@@ -11,113 +11,113 @@
   --submitBtnFontSize: 2em;
 }
 
-*{
-    box-sizing: border-box;
-    padding:0;
-    margin:0;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-body{
-    width:100% !important;
-    font-family: "Josefin Sans", sans-serif !important;
-    background: var(--firstColor) !important;
+body {
+  width: 100% !important;
+  /* height:100vh !important; */
+  font-family: "Josefin Sans", sans-serif !important;
+  background: var(--firstColor) !important;
+  /* overflow:hidden !important; */
 }
 
-
-
-
-.header{
-  color:var(--thirdColor) !important;
-  text-shadow: 0 2px 2px rgba(0,0,0,0.5);
+.header {
+  color: var(--thirdColor) !important;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
 }
 
-.title{
-  color:var(--thirdColor) !important;
-  text-decoration:underline !important;
-  text-decoration-color:var(--secondaryColor) !important;
+.title {
+  color: var(--thirdColor) !important;
+  text-decoration: underline !important;
+  text-decoration-color: var(--secondaryColor) !important;
 
   position: relative !important;
 }
 
-
-.titleBar{
-  display:inline-block !important;
-  width:0 !important;
-  height:0 !important;
+.titleBar {
+  display: inline-block !important;
+  width: 0 !important;
+  height: 0 !important;
   border-top: 8px solid transparent !important;
-	border-right: 16px solid var(--secondaryColor) !important;
-	border-bottom: 8px solid transparent !important;
+  border-right: 16px solid var(--secondaryColor) !important;
+  border-bottom: 8px solid transparent !important;
 
   position: absolute !important;
-  left:100% !important;
-  bottom:0 !important;
+  left: 100% !important;
+  bottom: 0 !important;
 }
 
-
-.btn-purple{
-    background: var(--thirdColor) !important;
-    color:var(--textColorOne) !important;
+.btn-purple {
+  background: var(--thirdColor) !important;
+  color: var(--textColorOne) !important;
 }
 
-.btn-green{
-    background:var(--secondaryColor) !important;
-    color:var(--textColorOne) !important;
+.btn-green {
+  background: var(--secondaryColor) !important;
+  color: var(--textColorOne) !important;
 
-    transition:all 0.5s !important;
+  transition: all 0.5s !important;
 }
 
-.btn-green:hover{
+.btn-green:hover {
   background: var(--thirdColor) !important;
 }
 
-
-
-  /*START FOR TABLES */
-  .table{
-    background:var(--textColorOne) !important;
-    color:var(--textColorTwo) !important;
-  }
-
-  @media (min-width: 992px){
-    .table{
-      width:80vw !important;
-    }
-  }
-
-  @media (min-width: 768px){
-    .table{
-      width:75vw !important;
-    }
-  }
-
-  @media (min-width: 576){
-    .table{
-      width:100vw !important;
-    }
-  }
-
-
-  .thead{
-    height:10vh !important;
-    background:var(--thirdColor) !important;
-    color:var(--textColorOne) !important;
-  
+/*START FOR TABLES and  FORMS*/
+.table {
+  background: var(--textColorOne) !important;
+  color: var(--textColorTwo) !important;
 }
 
-.tbody > tr{
-  transition:all 0.5s !important;
+@media (min-width: 992px) {
+  .table {
+    width: 80vw !important;
+  }
 }
 
-.tbody > tr:hover{
-  background:rgba(138,57,171,0.3) !important;
+@media (min-width: 768px) {
+  .table {
+    width: 75vw !important;
+  }
 }
 
-.fa-solid{
-  color:var(--secondaryColor) !important;
+@media (min-width: 576) {
+  .table {
+    width: 100vw !important;
+  }
 }
 
-.fa-solid:hover{
+.thead {
+  height: 10vh !important;
+  background: var(--thirdColor) !important;
+  color: var(--textColorOne) !important;
+}
+
+.tbody > tr {
+  transition: all 0.5s !important;
+}
+
+.tbody > tr:hover {
+  background: rgba(138, 57, 171, 0.3) !important;
+}
+
+.fa-solid {
+  color: var(--secondaryColor) !important;
+}
+
+.fa-solid:hover {
   cursor: pointer !important;
 }
 
 /* END FOR TABLES */
+
+/* START FOR FORMS*/
+.form {
+  background: var(--textColorOne) !important;
+  color: var(--textColorTwo) !important;
+}
+/* END FOR FORMS */
