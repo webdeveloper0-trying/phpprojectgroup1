@@ -1,14 +1,14 @@
 <?php
+include "../common/adminNavbar.php";
 include "../../Controller/doctor/listController.php";
 // echo "<pre>";
 // print_r($doctorList);
 
-include "../../View/common/adminNavbar.php";
+
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,30 +19,20 @@ include "../../View/common/adminNavbar.php";
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
     <!-- css -->
-    <link rel="stylesheet" href="../css/doclist_style.css">
+    <link rel="stylesheet" href="../common/css/style.css">
 
     <link rel="stylesheet" href="../common/css/adminNavbar.css">
 
-
     <script src="../js/jquery3.6.0.js"></script>
     <script src="../resources/js/doctorsearch.js" <?= time() ?> defer></script>
-
-
 
 </head>
 
 <body>
 
     <div class=" container-fluid p-4">
-
-
-
-
         <div class="row justify-content-md-center">
-
-
             <div class="row m-3">
-
                 <div class="col col-lg-3 col-md-2 col-sm-auto"><input type="text" name="docSearch" id="searchDoctext" class="form-control" placeholder="SearchDoctor"></div>
                 <div class="col col-lg-2 col-md-2 col-sm-auto">
                     <button class="btn " id="searchBtn"><span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#8a39ab" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -51,10 +41,6 @@ include "../../View/common/adminNavbar.php";
                                 <line x1="21" y1="21" x2="15" y2="15" />
                             </svg></span></button>
                 </div>
-
-
-
-
                 <div class="col col-lg-2">
                     <input type="radio" name="category" id="rname" value="name" checked>
                     <label for="rname" class="fw-bold">Name<span>
@@ -98,15 +84,11 @@ include "../../View/common/adminNavbar.php";
 
             </div>
 
-
-
-
             <div class="col col-md-auto col-lg-11 col-sm-6">
                 <a href="./add.php"> <input class="btn m-3 mybtn 
                 float-lg-end float-sm-end float-md-end" type="submit" value="ADD Doctor"></a>
 
-
-                <table class="table table align-middle table-bordered text-center ">
+                <table class="table align-middle table-bordered text-center ">
                     <thead>
                         <tr>
                             <th scope="col" class="p-3">No.</th>

@@ -1,0 +1,86 @@
+
+.adminProfile{
+    position:fixed !important;
+    left:0 !important;
+    top:0 !important;
+    height:100vh !important;
+    background:var(--secondaryColor) !important;
+    box-shadow:3px 5px 3px rgba(0,0,0,0.2) !important;
+}
+
+.profileHeader{
+    width:100% !important;
+    height:10vh !important;
+}
+
+.profileCard{
+    background:var(--textColorOne) !important;
+}
+
+.profileCard .card-img-top{
+    width:5rem !important;
+    height:5rem !important;
+    border-radius:50% !important;
+    align-self:center !important;
+}
+
+.adminPath{
+    width:100% !important;
+    text-align:center !important;
+    line-height:10vh !important;
+   
+
+}
+
+.adminPath a{
+    color:var(--textColorOne) !important;
+    text-decoration:none !important;
+    text-shadow:3px 5px 3px rgba(0,0,0,0.2) !important;
+}
+
+.adminSetting{
+    height:100vh !important;
+    background:var(--textColorOne) !important;
+    box-shadow:-3px -5px 3px rgba(0,0,0,0.2) !important;
+}
+
+
+
+.adminMenuLinks a{
+    color:var(--textColorOne) !important;
+    text-decoration:none !important;
+    transition:all 0.5s !important;
+}
+
+.adminMenuLinks a:hover, .adminPath a:hover{
+    color:var(--thirdColor) !important;
+}
+
+.colorChange{
+    width:100% !important;
+    background:var(--firstColor) !important;
+    text-shadow:3px 5px 3px rgba(0,0,0,0.2) !important;
+
+    position:relative !important;
+}
+
+.colorChange .form-control{
+    border:0.1em solid var(--thirdColor) !important;
+}
+
+.tChange1{
+   margin-left:62% !important;
+}
+
+.tChange2{
+    margin-left:120% !important;
+ }
+
+.alertCard{
+    background:var(--secondaryColor) !important;
+}
+
+.alertCard .btn-purple{
+    display:inline-block !important;
+    width:10vw !important;
+}
