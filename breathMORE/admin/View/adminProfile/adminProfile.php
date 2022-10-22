@@ -21,6 +21,10 @@
     <link rel="stylesheet" href="../common/css/style.css" <?php time() ?>>
     <link rel="stylesheet" href="./css/adminProfile.css" <?php time() ?>>
 
+    <!-- picker css1 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/classic.min.css" <?php time() ?> /> <!-- 'classic' theme -->
+
+
 </head>
 
 <body>
@@ -85,114 +89,108 @@
                 </div>
             </nav>
 
-            <div class="row mt-5">
-                <div class="col">
+            <div class="mt-5">
+                <form action="../../Controller/adminProfile/aUpColorTxtController.php" method="post">
                     <table class="colorChange table">
-                        <thead>
-                            <tr>
-                                <th colspan="2" class="bg-purple text-center">Font and Name Change</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th>Logo Profile: </th>
-                                <td>
-                                    <div class="form-outline">
-                                        <input type="text" id="form12" class="form-control" />
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>Website Name: </th>
-                                <td>
-                                    <div class="form-outline">
-                                        <input type="text" id="form12" class="form-control" />
-                                    </div>
-                                </td>
-                            </tr>
+
+                        <tr>
+                            <th colspan="2" class="bg-purple text-center">Font and Name Change</th>
+                            <th colspan="3" class="bg-purple text-center">Color Change</th>
+                        </tr>
+
+                        <tr>
+                            <th>Logo Profile: </th>
+                            <td>
+                                <div class="form-outline">
+                                    <input type="text" name="logoImg" id="form12" class="form-control" />
+                                </div>
+                            </td>
+                            <th>Background Color1: </th>
+                            <td id="chBgColor1">
+
+                            </td>
+                            <td>
+                                <div class="color-picker1"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Website Name: </th>
+                            <td>
+                                <div class="form-outline">
+                                    <input type="text" name="webName" id="form12" class="form-control" />
+                                </div>
+                            </td>
+                            <th>Background Color2: </th>
+                            <td id="chBgColor2"></td>
+                            <td>
+                                <div class="color-picker2"></div>
+                            </td>
+                        </tr>
 
 
-                            <tr>
-                                <th>Logo Color: </th>
-                                <td>
-                                    <div class="form-outline">
-                                        <input type="text" id="form12" class="form-control" />
-                                    </div>
-                                </td>
+                        <tr>
+                            <th>Logo Color: </th>
+                            <td>
+                                <div class="form-outline">
+                                    <input type="text" name="logoColor" id="form12" class="form-control" />
+                                </div>
+                            </td>
+                            <th>Background Color3: </th>
+                            <td id="chBgColor3"></td>
+                            <td>
+                                <div class="color-picker3"></div>
+                            </td>
 
-                            </tr>
-                            <tr>
-                                <th>Font-family1: </th>
-                                <td>
-                                    <div class="form-outline">
-                                        <input type="text" id="form12" class="form-control" />
-                                    </div>
-                                </td>
+                        </tr>
+                        <tr>
+                            <th>Font-family1: </th>
+                            <td>
+                                <div class="form-outline">
+                                    <input type="text" name="fontOne" id="form12" class="form-control" />
+                                </div>
+                            </td>
+                            <th>Text Color1: </th>
+                            <td id="chTxtColor1"></td>
+                            <td>
+                                <div class="color-picker4"></div>
+                            </td>
 
-                            </tr>
-                            <tr>
-                                <th>Font-family2: </th>
-                                <td>
-                                    <div class="form-outline">
-                                        <input type="text" id="form12" class="form-control" />
-                                    </div>
-                                </td>
+                        </tr>
+                        <tr>
+                            <th>Font-family2: </th>
+                            <td>
+                                <div class="form-outline">
+                                    <input type="text" name="fontTwo" id="form12" class="form-control" />
+                                </div>
+                            </td>
+                            <th>Text Color2: </th>
+                            <td id="chTxtColor2"></td>
+                            <td>
+                                <div class="color-picker5"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <button type="submit" name="change" id="tChange" class="tChange btn btn-purple mt-3">Change</button>
+                            </td>
+                        </tr>
 
 
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>
-                                    <a href="#" class="tChange1 btn btn-purple mt-3">Change</a>
-                                </td>
-                            </tr>
-                        </tbody>
+
+
+
+
+
+
+
+
+
                     </table>
-                </div>
-
-                <div class="col">
-                    <table class="colorChange table">
-                        <thead>
-                            <tr>
-                                <th colspan="3" class="bg-purple text-center">Color Change</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th>Background Color1: </th>
-                                <td>Heading</td>
-                                <th>Heading</th>
-                            </tr>
-                            <tr>
-                                <th>Background Color2: </th>
-                                <td>Cell</td>
-                                <td>Cell</td>
-                            </tr>
-
-                            <tr>
-                                <th>Background Color3: </th>
-                                <td>Cell</td>
-                                <td>Cell</td>
-                            </tr>
-                            <tr>
-                                <th>Text Color1: </th>
-                                <td>Cell</td>
-                                <td>Cell</td>
-                            </tr>
-                            <tr>
-                                <th>Text Color2: </th>
-                                <td>Cell</td>
-                                <td>Cell</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>
-                                    <a href="#" class="tChange2 btn btn-purple mt-3">Change</a>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+                </form>
 
             </div>
 
@@ -206,6 +204,18 @@
 
         </div>
     </div>
+
+
+
+
+
+
+    <!-- picker js1 -->
+    <script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.min.js"></script>
+
+    <!-- custom js1 -->
+    <script src="./js/aChangeColors.js" <?php time() ?>></script>
+
 </body>
 
 </html>

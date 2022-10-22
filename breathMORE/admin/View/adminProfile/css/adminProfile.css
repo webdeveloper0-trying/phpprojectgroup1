@@ -68,12 +68,10 @@
     border:0.1em solid var(--thirdColor) !important;
 }
 
-.tChange1{
-   margin-left:62% !important;
-}
 
-.tChange2{
-    margin-left:120% !important;
+
+.tChange{
+    margin-left:100% !important;
  }
 
 .alertCard{
