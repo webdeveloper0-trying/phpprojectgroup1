@@ -19,8 +19,8 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js"></script>
 
     <!-- custom css1 -->
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="./css/uNavbar.css" <?php time(); ?> />
+    <!-- <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="./css/uNavbar.css" <?php time(); ?> /> -->
 </head>
 
 <body>

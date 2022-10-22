@@ -3,8 +3,10 @@ let chBgColor2 = document.getElementById("chBgColor2");
 let chBgColor3 = document.getElementById("chBgColor3");
 let chTxtColor1 = document.getElementById("chTxtColor1");
 let chTxtColor2 = document.getElementById("chTxtColor2");
+let chLogoColor = document.getElementById("chLogoColor");
 
-var applyBgColor1, applyBgColor2, applyBgColor3, applyTxtColor1, applyTxtColor2;
+
+var applyBgColor1, applyBgColor2, applyBgColor3, applyTxtColor1, applyTxtColor2, applyLogoColor;
 // Simple example, see optional options for more configuration.
 const pickr1 = Pickr.create({
     el: '.color-picker1',
@@ -217,20 +219,53 @@ const pickr5 = Pickr.create({
 });
 
 
+const pickr6 = Pickr.create({
+    el: '.color-picker6',
+    theme: 'classic', // or 'monolith', or 'nano'
+
+    swatches: [
+        'rgba(244, 67, 54, 1)',
+        'rgba(233, 30, 99, 0.95)',
+        'rgba(156, 39, 176, 0.9)',
+        'rgba(103, 58, 183, 0.85)',
+        'rgba(63, 81, 181, 0.8)',
+        'rgba(33, 150, 243, 0.75)',
+        'rgba(3, 169, 244, 0.7)',
+        'rgba(0, 188, 212, 0.7)',
+        'rgba(0, 150, 136, 0.75)',
+        'rgba(76, 175, 80, 0.8)',
+        'rgba(139, 195, 74, 0.85)',
+        'rgba(205, 220, 57, 0.9)',
+        'rgba(255, 235, 59, 0.95)',
+        'rgba(255, 193, 7, 1)'
+    ],
+
+    components: {
+
+        // Main components
+        preview: true,
+        opacity: true,
+        hue: true,
+
+        // Input / output Options
+        interaction: {
+            hex: true,
+            rgba: true,
+            hsla: true,
+            hsva: true,
+            cmyk: true,
+            input: true,
+            clear: true,
+            save: true
+        }
+    }
+});
 
 
 
-pickr1.on('init', instance => {
-    // console.log('Event: "init"', instance);
-}).on('hide', instance => {
-    // console.log('Event: "hide"', instance);
-}).on('show', (color, instance) => {
-    // console.log('Event: "show"', color, instance);
-}).on('save', (color, instance) => {
-    // console.log('Event: "save"', color, instance);
-}).on('clear', instance => {
-    // console.log('Event: "clear"', instance);
-}).on('change', (color, source, instance) => {
+
+
+pickr1.on('change', (color, source, instance) => {
     // console.log('Event: "change"', color, source, instance);
     color = color.toRGBA();
     console.log("Color", color);
@@ -245,26 +280,10 @@ pickr1.on('init', instance => {
                 ${color[3]})`;
 
     document.documentElement.style.setProperty('--firstColor', `${applyBgColor1}`);
-}).on('changestop', (source, instance) => {
-    // console.log('Event: "changestop"', source, instance);
-}).on('cancel', instance => {
-    // console.log('Event: "cancel"', instance);
-}).on('swatchselect', (color, instance) => {
-    // console.log('Event: "swatchselect"', color, instance);
 });
 
 
-pickr2.on('init', instance => {
-    // console.log('Event: "init"', instance);
-}).on('hide', instance => {
-    // console.log('Event: "hide"', instance);
-}).on('show', (color, instance) => {
-    // console.log('Event: "show"', color, instance);
-}).on('save', (color, instance) => {
-    // console.log('Event: "save"', color, instance);
-}).on('clear', instance => {
-    // console.log('Event: "clear"', instance);
-}).on('change', (color, source, instance) => {
+pickr2.on('change', (color, source, instance) => {
     // console.log('Event: "change"', color, source, instance);
     color = color.toRGBA();
     console.log("Color", color);
@@ -279,26 +298,10 @@ pickr2.on('init', instance => {
                     ${color[3]})`;
 
     document.documentElement.style.setProperty('--secondaryColor', `${applyBgColor2}`);
-}).on('changestop', (source, instance) => {
-    // console.log('Event: "changestop"', source, instance);
-}).on('cancel', instance => {
-    // console.log('Event: "cancel"', instance);
-}).on('swatchselect', (color, instance) => {
-    // console.log('Event: "swatchselect"', color, instance);
 });
 
 
-pickr3.on('init', instance => {
-    // console.log('Event: "init"', instance);
-}).on('hide', instance => {
-    // console.log('Event: "hide"', instance);
-}).on('show', (color, instance) => {
-    // console.log('Event: "show"', color, instance);
-}).on('save', (color, instance) => {
-    // console.log('Event: "save"', color, instance);
-}).on('clear', instance => {
-    // console.log('Event: "clear"', instance);
-}).on('change', (color, source, instance) => {
+pickr3.on('change', (color, source, instance) => {
     // console.log('Event: "change"', color, source, instance);
     color = color.toRGBA();
     console.log("Color", color);
@@ -313,26 +316,10 @@ pickr3.on('init', instance => {
                     ${color[3]})`;
 
     document.documentElement.style.setProperty('--thirdColor', `${applyBgColor3}`);
-}).on('changestop', (source, instance) => {
-    // console.log('Event: "changestop"', source, instance);
-}).on('cancel', instance => {
-    // console.log('Event: "cancel"', instance);
-}).on('swatchselect', (color, instance) => {
-    // console.log('Event: "swatchselect"', color, instance);
 });
 
 
-pickr4.on('init', instance => {
-    // console.log('Event: "init"', instance);
-}).on('hide', instance => {
-    // console.log('Event: "hide"', instance);
-}).on('show', (color, instance) => {
-    // console.log('Event: "show"', color, instance);
-}).on('save', (color, instance) => {
-    // console.log('Event: "save"', color, instance);
-}).on('clear', instance => {
-    // console.log('Event: "clear"', instance);
-}).on('change', (color, source, instance) => {
+pickr4.on('change', (color, source, instance) => {
     // console.log('Event: "change"', color, source, instance);
     color = color.toRGBA();
     console.log("Color", color);
@@ -347,25 +334,9 @@ pickr4.on('init', instance => {
                     ${color[3]})`;
 
     document.documentElement.style.setProperty('--textColorOne', `${applyTxtColor1}`);
-}).on('changestop', (source, instance) => {
-    // console.log('Event: "changestop"', source, instance);
-}).on('cancel', instance => {
-    // console.log('Event: "cancel"', instance);
-}).on('swatchselect', (color, instance) => {
-    // console.log('Event: "swatchselect"', color, instance);
 });
 
-pickr5.on('init', instance => {
-    // console.log('Event: "init"', instance);
-}).on('hide', instance => {
-    // console.log('Event: "hide"', instance);
-}).on('show', (color, instance) => {
-    // console.log('Event: "show"', color, instance);
-}).on('save', (color, instance) => {
-    // console.log('Event: "save"', color, instance);
-}).on('clear', instance => {
-    // console.log('Event: "clear"', instance);
-}).on('change', (color, source, instance) => {
+pickr5.on('change', (color, source, instance) => {
     // console.log('Event: "change"', color, source, instance);
     color = color.toRGBA();
     console.log("Color", color);
@@ -380,30 +351,59 @@ pickr5.on('init', instance => {
                     ${color[3]})`;
 
     document.documentElement.style.setProperty('--textColorTwo', `${applyTxtColor2}`);
-}).on('changestop', (source, instance) => {
-    // console.log('Event: "changestop"', source, instance);
-}).on('cancel', instance => {
-    // console.log('Event: "cancel"', instance);
-}).on('swatchselect', (color, instance) => {
-    // console.log('Event: "swatchselect"', color, instance);
+});
+
+pickr6.on('change', (color, source, instance) => {
+
+    color = color.toRGBA();
+    console.log("Color", color);
+
+    this.chLogoColor.style.backgroundColor = `rgba(${color[0]},${color[1]},${color[2]},${color[3]})`;
+    applyLogoColor = `rgba(${color[0]},${color[1]},${color[2]},${color[3]})`;
+
+    document.documentElement.style.setProperty('--logoColor', `${applyLogoColor}`);
 });
 
 
 
-document.getElementById('tChange').addEventListener('click', () => {
-    localStorage.setItem("BgColor1", applyBgColor1);
-    localStorage.setItem("BgColor2", applyBgColor2);
-    localStorage.setItem("BgColor3", applyBgColor3);
-    localStorage.setItem("txtColor1", applyTxtColor1);
-    localStorage.setItem("txtColor2", applyTxtColor2);
-    
+document.getElementById('tChange').addEventListener('click', (e) => {
+
+
+    let sendChProps = {
+        logoImg: $("#logoImg").val(),
+        webName: $("#webName").val(),
+        fontOne: $("#fontOne").val(),
+        fontTwo: $("#fontTwo").val(),
+        bgcolor1: applyBgColor1,
+        bgcolor2: applyBgColor2,
+        bgcolor3: applyBgColor3,
+        txtColor1: applyTxtColor1,
+        txtColor2: applyTxtColor2,
+        logoColor: applyLogoColor
+    }
+
+    console.log("PROPS", sendChProps);
+
+    $.ajax({
+        url: "../../Controller/adminProfile/aUpColorTxtController.php",
+        type: "POST",
+        data: sendChProps,
+        success: function () {
+            console.log("OK");
+
+        },
+        error: function (err) {
+            console.log(err);
+        }
+    })
+
 });
 
 
 
 
 
-   
+
 
 
 

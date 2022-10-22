@@ -1,0 +1,21 @@
+.regBg{
+    background:linear-gradient(-140deg,var(--secondaryColor) 50%,var(--thirdColor));
+}
+.regInfo{
+    background:var(--textColorOne) !important;
+
+}
+
+.header{
+    font-size:1.2rem !important;
+}
+
+.homeHeader{
+    font-size:1.8rem !important;
+    text-shadow: 0 5px 5px rgba(0,0,0,0.5) !important;
+}
+
+.logo{
+    width:6rem !important;
+    object-fit:contain !important;
+  }

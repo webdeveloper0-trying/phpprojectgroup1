@@ -1,5 +1,6 @@
 <?php
 include "../common/uNavbar/uNavbar.php";
+include "../../../patient/Controller/common/aChColorTxtController.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,12 +23,20 @@ include "../common/uNavbar/uNavbar.php";
   <!-- MDB -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet" />
   <!-- MDB -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js" defer></script>
 
-  <!-- custom css1 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js" defer></script>
+
+  <!-- custom css3 -->
   <link rel="stylesheet" href="../common/css/style.css" <?php time(); ?> />
   <link rel="stylesheet" href="../common/uNavbar/css/uNavbar.css" <?php time(); ?> />
   <link rel="stylesheet" href="./css/home.css" <?php time(); ?> />
+
+
+  <script src="../common/jq/jquery-3.6.0.min.js" defer></script>
+  <script src="./js/home.js" defer></script>
+  <script src="./js/uSubscribeNew.js" defer></script>
 
 
 
@@ -38,7 +47,13 @@ include "../common/uNavbar/uNavbar.php";
   <section id="herosection" class="mb-5">
     <div class="container-fluid d-flex mx-xs-0 mx-sm-0 mx-md-5 mx-lg-5">
       <div class="headerInfo col col-lg-7 text-lg-start">
-        <h3 class="header homeHeader h3 fw-bold">Breath<span>MORE</span></h3>
+        <?php
+        $webName = explode("/", $webName);
+        $fName = $webName[0];
+        $lName = $webName[1];
+        ?>
+        <h3 class="header homeHeader h3 fw-bold">
+          <?= $fName ?><span><?= $lName ?></span></h3>
 
         <p class="text-muted my-5">
           Our top health tips to help you live well in every way. <br />
@@ -246,51 +261,56 @@ include "../common/uNavbar/uNavbar.php";
   </section>
 
   <!-- carousel -->
-  <!-- Testimonials -->
-  <section id="testimonials" class="text-center">
 
-    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <h2>
-            I have had prolonged treatment here for a serious situation. the hospital, the consultants, staff, everyone
+  <section class="d-flex justify-content-center align-items-center">
+  <div class="splideCarousel splide pt-3">
+    <div class="splide__track">
+      <ul class="splide__list">
+        <li class="splide__slide d-flex justify-content-center align-items-center flex-column">
+        <img class="sCarouselImg rounded-circle" src="../storage/home/lady-img.jpg" alt="lady-profile">
+          <p class="sCarouselTxt rounded p-3 pt-5">
+          I have had prolonged treatment here for a serious situation. the hospital, the consultants, staff, everyone
             has been highly professional and expertly trained. Staff are helpful, caring, professional and friendly.
             Thank you for everything. I highly recommend this global standard hospital in the heart of Yangon.
-          </h2>
-          <img src="../storage/home/lady-img.jpg" class="rounded-circle mytestiImg1" alt="lady-profile" />
-          <em>Pebbles, New York</em>
-        </div>
-        <div class="carousel-item">
-          <h2 class="testimonial-text">I have had prolonged treatment here for a serious situation. the hospital, the
-            consultants, staff, everyone has been highly professional and expertly trained. Staff are helpful, caring,
-            professional and friendly. Thank you for everything. I highly recommend this global standard hospital in the
-            heart of Yangon.</h2>
-          <img class="rounded-circle mytestiImg1" src="../storage/home/lady-img.jpg" alt="lady-profile">
-          <em>Beverly, Illinois</em>
-        </div>
-
-        <div class="carousel-item">
-          <h2 class="testimonial-text">I have had prolonged treatment here for a serious situation. the hospital, the
-            consultants, staff, everyone has been highly professional and expertly trained. Staff are helpful, caring,
-            professional and friendly. Thank you for everything. I highly recommend this global standard hospital in the
-            heart of Yangon.</h2>
-          <img class="rounded-circle mytestiImg1" src="../storage/home/lady-img.jpg" alt="lady-profile">
-          <em>Beverly, Illinois</em>
-        </div>
-
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-
+          </p>
+        </li>
+        <li class="splide__slide d-flex justify-content-center align-items-center flex-column">
+        <img class="sCarouselImg rounded-circle" src="../storage/home/lady-img.jpg" alt="lady-profile">
+          <p class="sCarouselTxt rounded p-3 pt-5">
+          I have had prolonged treatment here for a serious situation. the hospital, the consultants, staff, everyone
+            has been highly professional and expertly trained. Staff are helpful, caring, professional and friendly.
+            Thank you for everything. I highly recommend this global standard hospital in the heart of Yangon.
+          </p>
+        </li>
+        <li class="splide__slide d-flex justify-content-center align-items-center flex-column">
+        <img class="sCarouselImg rounded-circle" src="../storage/home/lady-img.jpg" alt="lady-profile">
+          <p class="sCarouselTxt rounded p-3 pt-5">
+          I have had prolonged treatment here for a serious situation. the hospital, the consultants, staff, everyone
+            has been highly professional and expertly trained. Staff are helpful, caring, professional and friendly.
+            Thank you for everything. I highly recommend this global standard hospital in the heart of Yangon.
+          </p>
+        </li>
+        <li class="splide__slide d-flex justify-content-center align-items-center flex-column">
+        <img class="sCarouselImg rounded-circle" src="../storage/home/lady-img.jpg" alt="lady-profile">
+          <p class="sCarouselTxt rounded p-3 pt-5">
+          I have had prolonged treatment here for a serious situation. the hospital, the consultants, staff, everyone
+            has been highly professional and expertly trained. Staff are helpful, caring, professional and friendly.
+            Thank you for everything. I highly recommend this global standard hospital in the heart of Yangon.
+          </p>
+        </li>
+        <li class="splide__slide d-flex justify-content-center align-items-center flex-column">
+        <img class="sCarouselImg rounded-circle" src="../storage/home/lady-img.jpg" alt="lady-profile">
+          <p class="sCarouselTxt rounded p-3 pt-5">
+          I have had prolonged treatment here for a serious situation. the hospital, the consultants, staff, everyone
+            has been highly professional and expertly trained. Staff are helpful, caring, professional and friendly.
+            Thank you for everything. I highly recommend this global standard hospital in the heart of Yangon.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
   </section>
 
-  <!-- carousel end -->
 
   <section id="calculator">
 
@@ -378,44 +398,7 @@ include "../common/uNavbar/uNavbar.php";
     </div>
   </section>
 
-  <!-- <section id="map">
 
-    <div class="container-fluid">
-
-      <div class="map">
-        <div class="row">
-
-          <div class="col col-lg-6">
-            <div class="mapouter">
-              <div class="gmap_canvas">
-                <iframe width="600" height="500" id="gmap_canvas"
-                  src="https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                  frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a
-                  href="https://123movies-to.org"></a><br />
-                <style>
-                  .mapouter {
-                    position: relative;
-                    text-align: right;
-                    height: 500px;
-                    width: 600px;
-                  }
-                </style><a href="https://www.embedgooglemap.net">embedgooglemap.net</a>
-                <style>
-                  .gmap_canvas {
-                    overflow: hidden;
-                    background: none !important;
-                    height: 500px;
-                    width: 600px;
-                  }
-                </style>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section> -->
 
   <footer id="footer" class="footer">
     <div class="container-fluid mx-5 py-5">
@@ -457,19 +440,25 @@ include "../common/uNavbar/uNavbar.php";
 
 
 
-        </div>
       </div>
+    </div>
 
 
     </div>
   </footer>
 
-  <div class="newsLetterBox">
-  <i class='bx bx-news newsLetter bx-lg'></i>
-  </div>
-
-
-
+ 
+  <button
+  type="button"
+  class="newsLetterBox hover btn btn-secondary"
+  data-mdb-container="body"
+  data-mdb-toggle="popover"
+  data-mdb-placement="left"
+  data-mdb-content="Well Received!"
+>
+<i class='bx bx-news newsLetter bx-lg'></i>
+<p class="newsAlert rounded p-3">If you click this button, We will send to your Email our latest blogs and event.</p>
+</button>
 
 </body>
 

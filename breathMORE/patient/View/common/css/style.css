@@ -7,10 +7,13 @@
 
   --textColorOne: #e8f3f1;
   --textColorTwo: #000;
+  --fontOne:"Josefin Sans";
+  --fontTwo:"Roboto";
+
 
   --logoColor:red;
 
-  --submitBtnFontSize: 2em;
+  
 }
 
 *{
@@ -25,6 +28,15 @@ body{
     background: var(--firstColor) !important;
     overflow-x:hidden !important;
 }
+
+.homeHeader{
+  font-size:2.5rem !important;
+}
+
+.homeHeader > span{
+  color:var(--logoColor) !important;
+}
+
 
 
 

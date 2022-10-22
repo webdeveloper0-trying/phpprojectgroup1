@@ -6,13 +6,6 @@ body{
   margin-top:10vh !important;
 }
 
-.homeHeader{
-  font-size:2.5rem !important;
-}
-
-.homeHeader > span{
-  color:var(--logoColor) !important;
-}
 
 .services{
   background:var(--secondaryColor) !important;
@@ -91,10 +84,23 @@ body{
   bottom:2em !important;
 }
 
-#testimonials{
-  background:var(--thirdColor) !important;
+.splideCarousel{
+  width:100vw !important;
+  height:40vh !important;
+  background:var(--secondaryColor) !important;
   color:var(--textColorTwo) !important;
-  font-size:1.2em !important;
+}
+
+.sCarouselTxt{
+  width:50vw !important;
+  background:var(--textColorOne) !important;
+ 
+}
+
+.sCarouselImg{
+  width:4rem !important;
+  margin-bottom:-1em !important;
+  position:relative !important;
 }
 
 #footer{
@@ -128,21 +134,40 @@ body{
 
   cursor: pointer;
 
+  position:relative;
 }
 
 .newsLetter{
   color:var(--secondaryColor) !important;
   
   z-index:200 !important;
+
+ 
 }
+
+.newsAlert{
+  width:15em !important;
+  display:none !important;
+  background:var(--textColorOne) !important;
+  color:var(--textColorTwo) !important;
+
+  position:absolute;
+  left:-290%;
+  bottom:0;
+
+  transition:all 0.5s !important;
+
+}
+
+.hover:hover .newsAlert{
+  display:block !important;
+}
+
+
 
 
 /* Responsive  */
-@media (min-width: 992px){
-  .headerImg{
-    /* width:70vw !important; */
-  }
-}
+
 
 @media (max-width: 768px){
   .headerImg{

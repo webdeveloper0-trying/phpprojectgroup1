@@ -7,6 +7,8 @@
 
   --textColorOne: #e8f3f1;
   --textColorTwo: #000;
+  --fontOne:"Josefin Sans";
+  --fontTwo:"Roboto";
 
   --logoColor:red;
 }
@@ -20,10 +22,24 @@
 body {
   width: 100% !important;
   /* height:100vh !important; */
-  font-family: "Josefin Sans", sans-serif !important;
+  font-family: var(--fontOne), sans-serif !important;
   background: var(--firstColor) !important;
   /* overflow:hidden !important; */
 }
+
+.homeHeader{
+  color:var(--textColorOne) !important;
+  font-size:2rem !important;
+  text-decoration:capitalize !important;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.homeHeader > span{
+  text-decoration:uppercase !important;
+
+  color:var(--logoColor) !important;
+}
+
 
 .header {
   color: var(--thirdColor) !important;
