@@ -22,7 +22,7 @@
 body {
   width: 100vw !important;
   font-family: "Josefin Sans", sans-serif !important;
-  background: var(--firstColor) !important;
+  background: #f2f4f1 !important;
   overflow-x: hidden !important;
 }
 
@@ -84,7 +84,7 @@ body {
 }
 
 section {
-  background-color: var(--firstColor) !important;
+  background-color: #f2f4f1 !important;
   font-family: var(--fontFamilyJosef) !important;
 }
 
