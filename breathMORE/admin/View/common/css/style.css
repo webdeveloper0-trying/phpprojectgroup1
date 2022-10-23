@@ -1,16 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&family=Marcellus&family=Playball&display=swap");
 
 :root {
-  --firstColor:#FEEDDB ;
-  --secondaryColor: #4B694D;
-  --thirdColor:#8a39ab;
+  --firstColor: #f2f4f1;
+  --secondaryColor: #4b694d;
+  --thirdColor: #8a39ab;
 
   --textColorOne: #e8f3f1;
   --textColorTwo: #000;
-  --fontOne:"Josefin Sans";
-  --fontTwo:"Roboto";
+  --fontOne: "Josefin Sans";
+  --fontTwo: "Roboto";
 
-  --logoColor:red;
+  --logoColor: red;
 }
 
 * {
@@ -27,19 +27,18 @@ body {
   /* overflow:hidden !important; */
 }
 
-.homeHeader{
-  color:var(--textColorOne) !important;
-  font-size:2rem !important;
-  text-decoration:capitalize !important;
+.homeHeader {
+  color: var(--textColorOne) !important;
+  font-size: 2rem !important;
+  text-decoration: capitalize !important;
   text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
 }
 
-.homeHeader > span{
-  text-decoration:uppercase !important;
+.homeHeader > span {
+  text-decoration: uppercase !important;
 
-  color:var(--logoColor) !important;
+  color: var(--logoColor) !important;
 }
-
 
 .header {
   color: var(--thirdColor) !important;
@@ -67,7 +66,7 @@ body {
   bottom: 0 !important;
 }
 
-.bg-green{
+.bg-green {
   background: var(--secondaryColor) !important;
   color: var(--textColorOne) !important;
 }
