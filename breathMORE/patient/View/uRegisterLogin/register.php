@@ -40,7 +40,7 @@ unset($_SESSION["username"]);
         <div class="row col-7">
 
 
-            <div class="regBg col pb-5">
+            <div class="regBg col col-4 pb-5">
                 <div class="d-flex justify-content-center flex-row mt-5">
 
                     <img src="../storage/home/logo.png" class="logo" />
@@ -54,26 +54,26 @@ unset($_SESSION["username"]);
 
             </div>
 
-            <div class="regInfo col pb-5">
+            <div class="regInfo col col-8 pb-5">
                 <form action="../../Controller/uRegisterLogin/registerController.php" method="post">
                     <h3 class="header text-center my-5"> CREATE A NEW ACCOUNT</h3>
 
                     <div class="form-outline mb-4">
                         <input type="text" name="username" class="form-control" required>
-                        <label class="form-label" for="form3Example3">Name</label>
+                        <label class="form-label" for="name">Name</label>
                     </div>
 
                     <div class="row mb-4">
                         <div class="col">
                             <div class="form-outline">
                                 <input type="text" name="ph_no" class="form-control" required>
-                                <label class="form-label" for="form3Example1">Ph.No</label>
+                                <label class="form-label" for="phNo">Ph.No</label>
                             </div>
                         </div>
                         <div class="col">
                             <div class="form-outline">
                                 <input type="text" name="email" class="form-control" required>
-                                <label class="form-label" for="form3Example2">Email</label>
+                                <label class="form-label" for="email">Email</label>
                             </div>
                         </div>
                     </div>
@@ -82,25 +82,42 @@ unset($_SESSION["username"]);
                         <div class="col">
                             <div class="form-outline">
                                 <input type="password" name="password" class="form-control"" required>
-                                <label class=" form-label" for="form3Example1">Password</label>
+                                <label class=" form-label" for="pwd">Password</label>
                             </div>
                         </div>
                         <div class="col">
                             <div class="form-outline">
                                 <input type="password" name="comfirmpassword" class="form-control" required>
-                                <label class="form-label" for="form3Example2">Confirm Password</label>
+                                <label class="form-label" for="cPwd">Confirm Password</label>
                             </div>
                         </div>
                     </div>
 
                     <div class="form-outline mb-4">
-                        <input type="text" name="gender" class="form-control" required>
-                        <label class="form-label" for="form3Example3">Gender</label>
+                        <!-- <input type="text" name="gender" class="form-control" required> -->
+                        <label class="form-label" for="gender">Gender</label>
+
+                        <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gender" id="gender" value="1" />
+                        <label class="form-check-label" for="inlineRadio1">Male</label>
                     </div>
 
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gender" id="gender" value="2" />
+                        <label class="form-check-label" for="inlineRadio2">Female</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gender" id="gender" value="3" />
+                        <label class="form-check-label" for="inlineRadio3">Other</label>
+                    </div>
+                    </div>
+
+                   
+
                     <div class="form-outline mb-4">
-                        <input type="text" name="date_of_birth" class="form-control" required>
-                        <label class="form-label" for="form3Example3">Date Of Birth</label>
+                        <input type="date" name="date_of_birth" class="form-control" required>
+                        <label class="form-label" for="dob">Date Of Birth</label>
                     </div>
 
                     <div class="d-flex justify-content-center mb-4">
@@ -108,7 +125,9 @@ unset($_SESSION["username"]);
                     </div>
 
                     <div class="loginLink text-center">
-                        <a href="./login.php" class="text-primary">Already has account?</a>
+                        <a href="./login.php" class="text-primary">Already has account?
+                            <span>LogIn</span>
+                        </a>
                     </div>
 
                 </form>

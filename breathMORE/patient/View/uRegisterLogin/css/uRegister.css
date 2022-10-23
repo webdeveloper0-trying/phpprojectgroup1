@@ -1,5 +1,5 @@
 .regBg{
-    background:linear-gradient(-140deg,var(--secondaryColor) 50%,var(--thirdColor));
+    background:var(--secondaryColor) ;
 }
 .regInfo{
     background:var(--textColorOne) !important;
@@ -19,3 +19,8 @@
     width:6rem !important;
     object-fit:contain !important;
   }
+
+
+  .loginLink span{
+    color:var(--thirdColor) !important;
+}

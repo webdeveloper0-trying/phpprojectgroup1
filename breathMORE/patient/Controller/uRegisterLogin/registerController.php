@@ -7,17 +7,30 @@ if (isset($_POST["username"]) && isset($_POST["password"])) {
     $email = $_POST["email"];
     $password = $_POST["password"];
     $comfirmpassword = $_POST["comfirmpassword"];
-    $age = $_POST["age"];
-    $gender = $_POST["gender"];
+    $genderNo = $_POST["gender"];
     $date_of_birth = $_POST["date_of_birth"];
     $ph_no = $_POST["ph_no"];
+
+    switch ($genderNo) {
+        case '1':
+            $gender = "Male";
+            break;
+        case '2':
+            $gender = "Female";
+            break;
+        case '3':
+            $gender = "Other";
+            break;
+    }
+
+   
+    $today = date("m/d/Y");
+    $age = date_diff(date_create($date_of_birth), date_create($today));
+    $age = $age->format('%y');
 
     $sql = $pdo->prepare("SELECT * FROM  total_registered_accounts 
     WHERE user_name= :name ");
     $sql->bindValue(":name", $username);
-    // $sql->bindValue(":password", $password);
-    // $sql->bindValue(":comfirmpassword", $comfirmpassword);
-
     $sql->execute();
     $result = $sql->fetchAll(PDO::FETCH_ASSOC);
     print_r($result);
@@ -35,8 +48,17 @@ if (isset($_POST["username"]) && isset($_POST["password"])) {
 
         $sql->execute();
         $_SESSION["username"] = $username;
+
+        $sql1 = $pdo->prepare("SELECT * FROM  total_registered_accounts 
+        ORDER BY register_id LIMIT 1 ");
+        $sql1->execute();
+        $resultId = $sql1->fetchAll(PDO::FETCH_ASSOC);
+
+        $_SESSION["userId"] = $resultId[0]['register_id'];
+        echo "hello".$_SESSION["userId"];
         header("location: ../../View/main/home.php");
     } else {
+        $_SESSION["userId"] = $result[0]['register_id'];
         header("location: ../../View/uRegisterLogin/login.php");
         echo "<script> alert('You account has already been existed!!')</script>";
     }

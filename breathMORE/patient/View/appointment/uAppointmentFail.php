@@ -19,7 +19,7 @@
 
     <!-- custom css files 2 -->
     <link rel="stylesheet" href="../common/css/style.css">
-    <link rel="stylesheet" href="./css/uAppointmentComplete.css">
+    <link rel="stylesheet" href="./css/uAppointmentComplete.css" <?php time() ?>>
 </head>
 
 <body>

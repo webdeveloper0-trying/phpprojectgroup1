@@ -22,7 +22,7 @@ if (isset($_GET["id"])) {
     $sql->execute();
 
     $docDateTime = $sql->fetchAll(PDO::FETCH_ASSOC);;
-    // print_r(($docDateTime));
+   
 
     $docDays = $docDateTime[0]["day"];
 
@@ -67,42 +67,37 @@ if (isset($_GET["id"])) {
         <h3 class="title h3 my-5">Appointment Form
             <span class="titleBar"></span>
         </h3>
-        <form action="../../Controller/appointment/uAcceptUserAppointmentController.php" method="post" class="form d-flex justify-content-center align-items-center flex-column pt-5">
+        <form action="../../Controller/appointment/uAcceptUserAppointmentController.php" method="post" class="form d-flex justify-content-center align-items-center flex-column p-5">
 
             <div class="row">
 
                 <div class="col col-5 me-5">
                     <div class="form-outline my-4">
                         <label class="form-label" for="patientId">Patient Id</label>
-                        <input type="text" name="patientId" id="" value="<?= $userInfos[0]["register_id"] ?>" readonly />
+                        <input type="text" name="patientId" id="patientId" class="form-control text-center" value="<?= $userInfos[0]["register_id"] ?>" readonly />
                     </div>
 
 
                     <div class="form-outline my-4">
                         <label class="form-label" for="patientName">Name</label>
 
-                        <input type="text" name="patientName" id="patientName" class="form-control" value="<?= $userInfos[0]["user_name"] ?>" readonly />
+                        <input type="text" name="patientName" id="patientName" class="form-control text-center" value="<?= $userInfos[0]["user_name"] ?>" readonly />
                     </div>
 
                     <div class="form-outline mb-4">
                         <label class="form-label" for="patientEmail">Email</label>
-                        <input type="email" name="patientEmail" id="patientEmail" class="form-control" value="<?= $userInfos[0]["user_email"] ?>" readonly />
+                        <input type="email" name="patientEmail" id="patientEmail" class="form-control text-center" value="<?= $userInfos[0]["user_email"] ?>" readonly />
                     </div>
 
                     <div class="form-outline mb-4">
                         <label class="form-label" for="patientPhNo">Ph.No</label>
-                        <input type="text" name="patientPhNo" id="patientPhNo" class="form-control" value="<?= $userInfos[0]["ph_num"] ?>" readonly />
+                        <input type="text" name="patientPhNo" id="patientPhNo" class="form-control text-center" value="<?= $userInfos[0]["ph_num"] ?>" readonly />
                     </div>
 
                     <div class="form-outline mb-4">
-                        <?php
-                        if ($userInfos[0]["gender"] == 1) {
-                            $genderStr = "Male";
-                        } else if ($userInfos[0]["gender"] == 2) {
-                            $genderStr = "Female";
-                        } ?>
+                       
                         <label class="form-label" for="patientGender">Gender</label>
-                        <input type="text" name="gender" id="patientGender" class="form-control text-center" value="<?= $genderStr  ?>" readonly />
+                        <input type="text" name="gender" id="patientGender" class="form-control text-center" value="<?= $userInfos[0]["gender"]  ?>" readonly />
                     </div>
 
                     <div class="form-outline mb-4">
@@ -114,7 +109,7 @@ if (isset($_GET["id"])) {
                         $age = date_diff(date_create($birthDate), date_create($currentDate));
                         ?>
                         <label class="form-label" for="patientAge">Age</label>
-                        <input type="text" name="patientAge" id="patientAge" class="form-control" value="<?= $age->format("%y") ?>" readonly />
+                        <input type="text" name="patientAge" id="patientAge" class="form-control text-center" value="<?= $age->format("%y") ?>" readonly />
                     </div>
 
                     <div class="form-outline">
@@ -154,7 +149,7 @@ if (isset($_GET["id"])) {
                             <?php
                             $dateTime =   $docDateTime[0]["start_time"] . " - " . $docDateTime[0]["end_time"]
                             ?>
-                            <input type="text" name="docTime" id="docTime" class="form-control docTime" value="<?= $dateTime ?>" readonly />
+                            <button name="docTime" id="docTime" class="btn btn-lg btn-green docTime" disabled ><?= $dateTime ?></button>
 
                         </div>
 
