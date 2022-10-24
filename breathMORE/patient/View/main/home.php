@@ -1,6 +1,12 @@
 <?php
 include "../common/uNavbar/uNavbar.php";
+
 include "../../../patient/Controller/common/aChColorTxtController.php";
+
+
+
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -35,8 +41,8 @@ include "../../../patient/Controller/common/aChColorTxtController.php";
 
 
   <script src="../common/jq/jquery-3.6.0.min.js" defer></script>
-  <script src="./js/home.js" defer></script>
-  <script src="./js/uSubscribeNew.js" defer></script>
+  <script src="./js/home.js" <?php time(); ?> defer></script>
+  <!-- <script src="./js/uSubscribeNew.js" defer></script> -->
 
 
 

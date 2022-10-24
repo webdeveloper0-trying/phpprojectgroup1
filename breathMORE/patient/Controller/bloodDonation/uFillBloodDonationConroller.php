@@ -5,8 +5,6 @@ include "../../Model/dbConnection.php";
 session_start();
 
 
-$_SESSION["userId"] = 6;
-
 $userId = $_SESSION["userId"];
 
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

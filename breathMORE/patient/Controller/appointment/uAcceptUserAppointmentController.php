@@ -152,7 +152,7 @@ if (isset($_POST["applyAppointment"])) {
             // Receive Data From MySQL
             $appointmentInfos = $sql->fetchAll(PDO::FETCH_ASSOC);
 
-            header("Location: ../../View/appontment/uAppointmentComplete.php");
+            header("Location: ../../View/appointment/uAppointmentComplete.php");
 
             // echo "<pre>";
 

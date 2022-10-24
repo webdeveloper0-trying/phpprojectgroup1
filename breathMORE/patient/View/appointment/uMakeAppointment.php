@@ -1,7 +1,3 @@
-<?php
-//  include "../../Controller/appointment/uChooseDoctorController.php";
-
-?>
 
 
 <!DOCTYPE html>

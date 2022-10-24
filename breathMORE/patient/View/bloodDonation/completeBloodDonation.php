@@ -24,13 +24,13 @@
 <body>
     <div  tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="false">
         <div class="modal-dialog">
-            <div class="btn-purple modal-content">
+            <div class="btn-green modal-content">
                 <div class="modal-body text-center">
                     Donation Registration Complete..
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-green">
-                        <a href="../aboutUs/uAboutUs.php">Go to HomePage</a>
+                <div class="modal-footer d-flex justify-content-center">
+                    <button type="button" class="btn btn-purple">
+                        <a href="../aboutUs/uAboutUs.php" class="text-light">Go to HomePage</a>
                     </button>
                 </div>
             </div>
