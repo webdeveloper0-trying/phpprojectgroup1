@@ -25,7 +25,7 @@ include "../../Controller/doctor/listController.php";
     <link rel="stylesheet" href="../common/css/adminNavbar.css">
 
     <script src="./jquery3.6.0.js"></script>
-    <script src="./jquery3.6.0.js" <?= time() ?> defer></script>
+    <script src="./doctorsearch.js" <?= time() ?> defer></script>
 
 </head>
 
