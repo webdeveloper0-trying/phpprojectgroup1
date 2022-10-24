@@ -9,6 +9,7 @@ include "../../Controller/doctor/listController.php";
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,16 +24,16 @@ include "../../Controller/doctor/listController.php";
 
     <link rel="stylesheet" href="../common/css/adminNavbar.css">
 
-    <script src="../js/jquery3.6.0.js"></script>
-    <script src="../resources/js/doctorsearch.js" <?= time() ?> defer></script>
+    <script src="./jquery3.6.0.js"></script>
+    <script src="./jquery3.6.0.js" <?= time() ?> defer></script>
 
 </head>
 
-<body>
+<body class="d-flex justify-content-center">
 
-    <div class=" container-fluid p-4">
-        <div class="row justify-content-md-center">
-            <div class="row m-3">
+    <div class=" container-fluid">
+        <div class="row justify-content-center align-items-center m-5">
+            <div class="row m-5">
                 <div class="col col-lg-3 col-md-2 col-sm-auto"><input type="text" name="docSearch" id="searchDoctext" class="form-control" placeholder="SearchDoctor"></div>
                 <div class="col col-lg-2 col-md-2 col-sm-auto">
                     <button class="btn " id="searchBtn"><span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#8a39ab" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -80,13 +81,15 @@ include "../../Controller/doctor/listController.php";
                             </svg>
                         </span></label>
                 </div>
-
-
             </div>
 
+            <div class="col col-lg-5 col-sm-3">
+                <a href="./add.php"> <input class="btn m-3 mybtn" type="submit" value="ADD Doctor"></a>
+            </div>
+
+
             <div class="col col-md-auto col-lg-11 col-sm-6">
-                <a href="./add.php"> <input class="btn m-3 mybtn 
-                float-lg-end float-sm-end float-md-end" type="submit" value="ADD Doctor"></a>
+
 
                 <table class="table align-middle table-bordered text-center ">
                     <thead>
@@ -136,7 +139,9 @@ include "../../Controller/doctor/listController.php";
 
                     </tbody>
                 </table>
+
             </div>
+
 
         </div>
 
