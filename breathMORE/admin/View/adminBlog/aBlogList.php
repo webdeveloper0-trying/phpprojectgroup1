@@ -129,7 +129,7 @@ if ($_SESSION["ismainadmin"] == 0) {
                         </td>
                         <td class="d-flex">
                             <a href="../../Controller/adminBlogs/aEditBlogsController.php?id=<?= $blog["id"] ?>">
-                                <i class="fa-solid fa-pen-to-square""></i>
+                                <i class="fa-solid fa-pen-to-square"></i>
                             </a>
                             &nbsp; &nbsp;
                             <a href=" ../Controller/deleteAdminController.php?id=<?= $blog["id"] ?>">
