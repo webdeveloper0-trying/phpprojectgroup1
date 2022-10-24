@@ -1,0 +1,200 @@
+<?php
+include "../common/uNavbar/uNavbar.php";
+include "../common/uFooter/uFooter.php";
+include "../../Controller/emergency/oxygenListController.php";
+
+
+// echo "<pre>";
+// print_r($oxygenLists);
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency</title>
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- boxicon -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet" />
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js" defer></script>
+
+    <!-- Splide JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js" defer></script>
+
+    <!-- custom css3 -->
+    <link rel="stylesheet" href="../common/css/style.css" <?php time(); ?> />
+    <link rel="stylesheet" href="../common/uNavbar/css/uNavbar.css" />
+    <link rel="stylesheet" href="../common/uFooter/css/uFooter.css">
+    <link rel="stylesheet" href="./css/uEmergency.css" <?php time(); ?> />
+</head>
+
+<body>
+    <div class="mx-5">
+        <h3 class="title my-5">Emergency Departments and Embulance Services
+            <span class="titleBar"></span>
+        </h3>
+
+        <div class="row">
+            <div class="col col-9">
+                <h5 class="emergencyTitle mb-4">In Case of <span>Emergency</span>, Please Call
+                    <span> 09455 222 111</span>
+                </h5>
+                <p>
+                    Whether you arrive because of broken bones or a heart attack, our certified and specially
+                    trained physicians and nurses are committed to providing you with the highest level of
+                    emergency care in a safe environment.
+                </p>
+
+                <div class="balls d-flex justify-content-center">
+                    <div class="ball mt-5 me-5"></div>
+                    <div class="ball mt-5 me-5"></div>
+                    <div class="ball mt-5 me-5"></div>
+                </div>
+
+            </div>
+
+            <div class="col col-2">
+                <img src="../storage/emergency/emergency1.jpg" alt="EmergencyImg1" class="emergencyImg1" />
+            </div>
+        </div>
+
+        <div class="row mt-5">
+
+            <div class="col col-2 me-5">
+                <img src="../storage/emergency/emergency2.jpg" alt="EmergencyImg1" class="emergencyImg1" />
+            </div>
+
+            <div class="col col-9 ms-5">
+                <h5 class="emergencyTitle mb-4">Emergency ambulance service for both local & remote area
+                </h5>
+                <p>
+                    Hospital to Hospital patient transfer, Airport and Seaport pickup service
+                    Ambulance for out-patient appointments, admission and discharge
+                    Home visit
+                    Ambulance and medical cover for sports activities, events, festivals, conference
+
+                </p>
+
+                <div class="balls d-flex justify-content-center">
+                    <div class="ball mt-5 me-5"></div>
+                    <div class="ball mt-5 me-5"></div>
+                    <div class="ball mt-5 me-5"></div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="oxygenList row mt-5">
+            <div class="col col-9">
+                <h5 class="emergencyTitle mb-5">
+                    24/7 Oxygen Available Places In Yangon
+                </h5>
+
+                <div class="oxygenTable">
+                    <table class="table table-borderless">
+                        <thead class="thead1 p-0">
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Ph.NO</th>
+                                <th scope="col">Address</th>
+                                <th scope="col">Type of Service</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+                            $count = 0;
+                            foreach ($oxygenLists as $oxygenList) { ?>
+                                <tr>
+                                    <th scope="row"><?= ++$count; ?></th>
+                                    <td><?= $oxygenList["name"] ?></td>
+                                    <td><?= $oxygenList["ph_num"] ?></td>
+                                    <td><?= $oxygenList["address"] ?></td>
+                                    <td><?= $oxygenList["type_of_service"] ?></td>
+                                </tr>
+                            <?php } ?>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="balls d-flex justify-content-center">
+                    <div class="square mt-5 me-5"></div>
+                    <div class="square mt-5 me-5"></div>
+                    <div class="square mt-5 me-5"></div>
+                </div>
+
+            </div>
+
+            <div class="col col-2">
+                <img src="../storage/emergency/emergency3.jpg" alt="EmergencyImg3" class="emergencyImg1" />
+            </div>
+        </div>
+
+        <div class="callCenters row mt-5">
+
+            <div class="col col-4 me-5">
+                <img src="../storage/emergency/emergency4.jpg" alt="EmergencyImg4" class="emergencyImg4" />
+            </div>
+
+            <div class="col col-7 ms-5">
+                <h5 class="emergencyTitle mb-4">
+                    24 hours Call Centers
+                    Billing & Payment Services
+                </h5>
+
+                <ol class="list-group list-group-light list-group-numbered rounded-0">
+                    <li class="list-group-item d-flex justify-content-between align-items-start ps-4">
+                        <div class="ms-2 me-auto">
+                            <div class="fw-bold">Billing & Payment Services</div>
+                            01-231 777, 01-523 444
+                        </div>
+
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start ps-4">
+                        <div class="ms-2 me-auto">
+                            <div class="fw-bold">Admission Information</div>
+                            01-222 1111, 01-444 000
+                        </div>
+
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start ps-4">
+                        <div class="ms-2 me-auto">
+                            <div class="fw-bold">Outpatient Appointments</div>
+                            01-666 888, 01-567 999, 09-422049911
+                        </div>
+
+                    </li>
+                </ol>
+
+                <div class="balls d-flex justify-content-center">
+                    <div class="square mt-5 me-5"></div>
+                    <div class="square mt-5 me-5"></div>
+                    <div class="square mt-5 me-5"></div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+</body>
+
+</html>

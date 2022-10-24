@@ -1,6 +1,7 @@
 <?php
-session_start();
-$subBlogInfo = $_SESSION["subBlogInfo"];
+include "../../Controller/blogs/subBlogController.php";
+
+$subBlogInfo =$_SESSION["subBlogInfo"];
 ?>
 
 <!DOCTYPE html>

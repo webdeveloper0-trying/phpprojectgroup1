@@ -11,7 +11,7 @@ if(isset($_GET["id"])){
     $resultBlogs = $sql->fetchALl(PDO::FETCH_ASSOC);
 
     $_SESSION["subBlogInfo"] = $resultBlogs;
-    header("Location: ../View./showBlog.php");
+    // header("Location: ../../View/blogs/showBlog.php");
     echo "<pre>";
     print_r($resultBlogs);
 

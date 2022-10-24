@@ -81,7 +81,7 @@ if (!isset($_SESSION["adminname"])) {
             </div>
             <div class="col col-4 text-center">
                 <button type="button" class="my-3 btn btn-lg btn-green btn-rounded">
-                    <a href="">Pharmacies List</a>
+                    <a href="../subscribeNews/aSubscribeNewList.php">Subscribtion List</a>
                 </button>
             </div>
             <div class="col col-4 text-center">

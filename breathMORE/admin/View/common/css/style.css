@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&family=Marcellus&family=Playball&display=swap");
 
 :root {
-  --firstColor:#FEEDDB ;
+  --firstColor:#f2f4f1 ;
   --secondaryColor: #4B694D;
   --thirdColor:#8a39ab;
 
@@ -119,7 +119,7 @@ body {
 
 .thead {
   height: 10vh !important;
-  background: var(--thirdColor) !important;
+  background: var(--secondaryColor) !important;
   color: var(--textColorOne) !important;
 }
 
