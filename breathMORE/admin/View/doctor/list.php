@@ -83,14 +83,11 @@ include "../../Controller/doctor/listController.php";
                 </div>
             </div>
 
-            <div class="col col-lg-5 col-sm-3">
+            <div class="d-md-flex justify-content-md-end">
                 <a href="./add.php"> <input class="btn m-3 mybtn" type="submit" value="ADD Doctor"></a>
             </div>
 
-
-            <div class="col col-md-auto col-lg-11 col-sm-6">
-
-
+            <div class="col col-md-auto col-lg-11 col-sm-6 ">
                 <table class="table align-middle table-bordered text-center ">
                     <thead>
                         <tr>
@@ -107,7 +104,7 @@ include "../../Controller/doctor/listController.php";
                         </tr>
                     </thead>
                     <tbody id="searchresult">
-                        <?php $count = 1; ?>
+                        <?php $count = ($page * $rowLimit) - ($rowLimit - 1); ?>
                         <?php foreach ($doctorList as $key => $doctor) { ?>
                             <tr>
                                 <td><?= $count++; ?></td>
@@ -134,13 +131,42 @@ include "../../Controller/doctor/listController.php";
 
                             </tr>
                         <?php } ?>
-
-
-
                     </tbody>
                 </table>
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item <?php if ($page <= 1) {
+                                                    echo "disabled";
+                                                } ?>">
+                            <a class="page-link" href="?page=<?= $page - 1 ?>" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+
+
+                        <?php for ($i = 1; $i <= $totalPages; $i++) { ?>
+                            <li class="page-item 
+                            <?php
+                            if ($page == $i) {
+                                echo "active";
+                            }
+                            ?>
+                            "><a class="page-link" href="?page=<?= $i ?>"><?= $i ?></a></li><?php } ?>
+
+                        <li class="page-item 
+                        <?php if ($page >= $totalPages) {
+                            echo "disabled";
+                        } ?>">
+                            <a class="page-link" href="?page=<?= $page + 1 ?>" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
 
             </div>
+
+
 
 
         </div>
