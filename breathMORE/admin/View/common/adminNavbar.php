@@ -31,7 +31,7 @@
 <body>
 
     <button class="btn btn-green btnMenu" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
-        <i class='bx bx-menu bx-sm' style='color:#ffffff'></i>
+        <i class='bx bx-menu bx-sm' style='color:#4b694d'></i>
     </button>
 
     <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasWithBothOptionsLabel">

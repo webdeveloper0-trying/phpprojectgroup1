@@ -20,8 +20,9 @@ include "../../Controller/doctor/listController.php";
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
     <!-- css -->
-    <link rel="stylesheet" href="../common/css/style.css">
+    <!-- <link rel="stylesheet" href="../common/css/style.css"> -->
 
+    <link rel="stylesheet" href="./docAdd.css">
     <link rel="stylesheet" href="../common/css/adminNavbar.css">
 
     <script src="./jquery3.6.0.js"></script>
@@ -93,14 +94,14 @@ include "../../Controller/doctor/listController.php";
                         <tr>
                             <th scope="col" class="p-3">No.</th>
                             <th scope="col">Doctor_Name</th>
-                            <th scope="col">Gender</th>
-                            <th scope="col">Sama</th>
-                            <th scope="col">Bachelar</th>
+                            <th class="db" scope="col">Gender</th>
+                            <th class="db" scope="col">Sama</th>
+                            <th class="db" scope="col">Bachelar</th>
                             <th scope="col">Center</th>
                             <th scope="col">PhoneNo</th>
-                            <th scope="col">Duty Day</th>
-                            <th scope="col">Duty Time</th>
-                            <th colspan="2" scope="col ">Action</th>
+                            <th class="db" scope="col">Duty Day</th>
+                            <th class="db" scope="col">Duty Time</th>
+                            <th class="db" scope="col ">Action</th>
                         </tr>
                     </thead>
                     <tbody id="searchresult">
@@ -109,24 +110,25 @@ include "../../Controller/doctor/listController.php";
                             <tr>
                                 <td><?= $count++; ?></td>
                                 <td>Dr.<?= $doctor["doctor_name"] ?></td>
-                                <td><?php
-                                    if ($doctor["doctor_gender"] == 0) {
-                                        echo "Male";
-                                    } else {
-                                        echo "Female";
-                                    }
+                                <td class="db"><?php
+                                                if ($doctor["doctor_gender"] == 0) {
+                                                    echo "Male";
+                                                } else {
+                                                    echo "Female";
+                                                }
 
-                                    ?></td>
-                                <td><?= $doctor["doctor_sama"] ?></td>
-                                <td><?= $doctor["doctor_bachelar"] ?></td>
+                                                ?></td>
+                                <td class="db"><?= $doctor["doctor_sama"] ?></td>
+                                <td class="db"><?= $doctor["doctor_bachelar"] ?></td>
                                 <td><?= $doctor["center"] ?></td>
                                 <td><?= $doctor["ph_num"] ?></td>
-                                <td><?= $doctor["day"] ?></td>
-                                <td><?= $doctor["start_time"] ?>-<?= $doctor["end_time"] ?></td>
+                                <td class="db"><?= $doctor["day"] ?></td>
+                                <td class="db"><?= $doctor["start_time"] ?>-<?= $doctor["end_time"] ?></td>
 
 
-                                <td><a href="../../Controller/doctor/editController.php?id=<?= $doctor["doctor_id"] ?>">Edit</a> </td>
-                                <td><a href="../../Controller/doctor/deleteController.php?id=<?= $doctor["doctor_id"] ?>">delete</a></td>
+                                <td class="db"><a href="../../Controller/doctor/editController.php?id=<?= $doctor["doctor_id"] ?>">Edit</a>
+                                    <a href="../../Controller/doctor/deleteController.php?id=<?= $doctor["doctor_id"] ?>">delete</a>
+                                </td>
 
 
                             </tr>
