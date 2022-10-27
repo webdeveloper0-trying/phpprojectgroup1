@@ -33,6 +33,9 @@ include "../../../patient/Controller/common/aChColorTxtController.php";
   <link rel="stylesheet" href="../common/uNavbar/css/uNavbar.css" />
   <link rel="stylesheet" href="../common/uFooter/css/uFooter.css" <?php time(); ?>>
   <link rel="stylesheet" href="./css/uAboutUs.css" <?php time(); ?>>
+
+  <script src="../common/jq/jquery-3.6.0.min.js" defer></script>
+  <script src="../common/uNavbar/js/uNavbar.js"<?php time(); ?> defer></script>
 </head>
 
 <body>

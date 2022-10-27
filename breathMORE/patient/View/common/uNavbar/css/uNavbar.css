@@ -1,6 +1,4 @@
 
-
-
 .uNavbar{
   width: 100vw !important;
   box-shadow:0 5px 5px rgba(0,0,0,0.3) !important;
@@ -41,9 +39,8 @@
   width:100% !important;
   height:0.3em !important;
   background:var(--thirdColor) !important;
-  border-radius: 5px !important;
   position:absolute !important;
-  bottom:0 !important;
+  bottom:0.5em !important;
   left:-100% !important;
 
   transition:all 0.5s ease-in-out !important;
@@ -53,4 +50,17 @@
 
 .nav-link-active:hover::after{
   left:0% !important;
+}
+
+.nav-active{
+ text-decoration-color: var(--thirdColor) !important;
+ text-decoration-thickness: 0.3em !important;
+ text-decoration-line:underline !important;
+  border-radius: 5px !important;
+ 
+
+
+  transition:all 0.5s ease-in-out !important;
+
+  
 }

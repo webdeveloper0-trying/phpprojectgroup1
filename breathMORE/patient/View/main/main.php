@@ -3,6 +3,7 @@ include "../common/uNavbar/uNavbar.php";
 include "../common/uFooter/uFooter.php";
 
 include "../../../patient/Controller/common/aChColorTxtController.php";
+include "../../../admin/Controller/adminProfile/adminAlertController.php";
 
 
 
@@ -14,21 +15,7 @@ include "../../../patient/Controller/common/aChColorTxtController.php";
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-
-  <!-- Font Awesome -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  <!-- boxicon -->
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
-  <!-- MDB -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet" />
-  <!-- MDB -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js" defer></script>
+  <title>Home</title>
 
   <!-- Splide JS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css">
@@ -36,12 +23,14 @@ include "../../../patient/Controller/common/aChColorTxtController.php";
 
   <!-- custom css3 -->
   <link rel="stylesheet" href="../common/css/style.css" />
-  <link rel="stylesheet" href="../common/uNavbar/css/uNavbar.css" />
+  <link rel="stylesheet" href="../common/uNavbar/css/uNavbar.css"<?php time(); ?> />
   <link rel="stylesheet" href="../common/uFooter/css/uFooter.css" <?php time(); ?>>
   <link rel="stylesheet" href="./css/home.css" />
 
 
   <script src="../common/jq/jquery-3.6.0.min.js" defer></script>
+  <script src="../common/uNavbar/js/uNavbar.js"<?php time(); ?> defer></script>
+
   <script src="./js/home.js" defer></script>
 </head>
 
@@ -134,6 +123,9 @@ include "../../../patient/Controller/common/aChColorTxtController.php";
   <hr />
 
   <section id="myblogs" class="myBlogs mt-5">
+    <div class="dailyAlert">
+      <!-- <keyframe><?=$_SESSION["alert"] ?></keyframe> -->
+    </div>
     <div class=" container-fluid">
       <div class="m-5">
         <h3 class="h3 title fw-bold mb-5">Health Tips

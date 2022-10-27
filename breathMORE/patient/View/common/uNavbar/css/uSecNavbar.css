@@ -1,0 +1,18 @@
+.logoBox{
+    position:fixed !important;
+    top:0;
+
+}
+
+
+.logoImg{
+    width:6em !important;
+}
+
+.header{
+    font-size:1.5em !important;
+}
+
+.header > span{
+    color:red !important;
+}

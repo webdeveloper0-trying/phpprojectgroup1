@@ -1,6 +1,6 @@
 <?php
 
-include "../Model/dbConnect.php";
+include "../../Model/dbConnection.php";
 if (isset($_POST["searchtext"])) {
     $search = $_POST["searchtext"];
 

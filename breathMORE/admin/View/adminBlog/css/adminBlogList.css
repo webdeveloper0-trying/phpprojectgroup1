@@ -15,8 +15,11 @@
 .content-hide {
   display: none;
 
+  overflow-x:hidden !important;
+
   right: 25vw !important;
   top: -10vw !important;
+  z-index:10 !important;
 }
 
 .content-show{

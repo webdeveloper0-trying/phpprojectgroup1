@@ -1,3 +1,6 @@
+<?php
+include "../Controller/labreportController.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +15,6 @@
     <script src="../js/jquery3.6.0.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.22/pdfmake.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
-
     <script src="../js/labreport.js" defer></script>
 
 </head>
@@ -28,50 +30,37 @@
                 <thead>
                     <tr class="tablehead">
                         <th>No</th>
+                        <th> Reference Doctor</th>
                         <th> ResultDate</th>
-                        <th>Time</th>
-                        <th> Ref Doctor</th>
                         <th>Test</th>
                         <th>Result</th>
                         <th>RefRange</th>
                         <th>Unit</th>
                         <th>Remark</th>
+                        <th>Reported_by</th>
+                        <th>Authorised_by</th>
+
                     </tr>
                 </thead>
                 <tbody class="tablebody">
-                    <tr>
-                        <td>1</td>
-                        <td>2022/05/22</td>
-                        <td>6:00PM</td>
-                        <td>Dr.Mg Mg</td>
-                        <td>eye</td>
-                        <td>eye</td>
-                        <td>eye</td>
-                        <td>eye</td>
-                        <td>Don't eat ice-cream</td>
-                    </tr>
-                    <tr>
-                        <td>Mary</td>
-                        <td>Moe</td>
-                        <td>mary@example.com</td>
-                        <td>Dr.Mg Mg</td>
-                        <td>eye</td>
-                        <td>eye</td>
-                        <td>eye</td>
-                        <td>eye</td>
-                        <td>Don't eat ice-cream</td>
-                    </tr>
-                    <tr>
-                        <td>July</td>
-                        <td>Dooley</td>
-                        <td>july@example.com</td>
-                        <td>Dr.Mg Mg</td>
-                        <td>eye</td>
-                        <td>eye</td>
-                        <td>eye</td>
-                        <td>eye</td>
-                        <td>Don't eat ice-cream</td>
-                    </tr>
+                    <?php $count = 1; ?>
+                    <?php
+                    foreach ($patientHistory as $patient) { ?>
+                        <tr>
+                            <td><?= $count++ ?></td>
+                            <td><?= $patient["ref_doc"] ?></td>
+                            <td><?= $patient["result_date"] ?></td>
+                            <td><?= $patient["test"] ?></td>
+                            <td><?= $patient["result"] ?></td>
+                            <td><?= $patient["ref_rate"] ?></td>
+                            <td><?= $patient["unit"] ?></td>
+                            <td><?= $patient["remark"] ?></td>
+                            <td><?= $patient["reported_by"] ?></td>
+                            <td><?= $patient["authorised_by"] ?></td>
+
+                        </tr>
+                    <?php }
+                    ?>
                 </tbody>
             </table>
 

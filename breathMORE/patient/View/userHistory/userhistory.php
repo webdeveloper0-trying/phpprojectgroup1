@@ -1,3 +1,8 @@
+<?php
+include "../Controller/historyController.php";
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,6 +14,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <title>Document</title>
     <link rel="stylesheet" href="style2.css">
+    <script src="../js/jquery3.6.0.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.22/pdfmake.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    <script src="../js/history.js" defer></script>
+
 </head>
 
 <body class="bg">
@@ -17,45 +27,38 @@
             <h3>USER'S HISTORY BOOK</h3>
         </div>
         <p class="profile"><u> Profile </u>/<u> User’s History</u></p>
-        <table class="table table-bordered">
+        <table class="table table-bordered" id="lab">
             <thead>
                 <tr class="tablehead">
                     <th>No</th>
                     <th>Date</th>
                     <th>Time</th>
-                    <th>Doctor</th>
-                    <th>Center</th>
-                    <th>Doctor Medicine Note</th>
+                    <th>categories</th>
+                    <th>doctor_id</th>
+                    <th>patient_id</th>
+                    <th>ph_no</th>
+                    <th>diagnosis</th>
                 </tr>
             </thead>
             <tbody class="tablebody">
-                <tr>
-                    <td>1</td>
-                    <td>2022/05/22</td>
-                    <td>6:00PM</td>
-                    <td>Dr.Mg Mg</td>
-                    <td>eye</td>
-                    <td>Don't eat ice-cream</td>
-                </tr>
-                <tr>
-                    <td>Mary</td>
-                    <td>Moe</td>
-                    <td>mary@example.com</td>
-                    <td>Dr.Mg Mg</td>
-                    <td>eye</td>
-                    <td>Don't eat ice-cream</td>
-                </tr>
-                <tr>
-                    <td>July</td>
-                    <td>Dooley</td>
-                    <td>july@example.com</td>
-                    <td>Dr.Mg Mg</td>
-                    <td>eye</td>
-                    <td>Don't eat ice-cream</td>
-                </tr>
+                <?php $count = 1; ?>
+                <?php
+                foreach ($patientHistory as $patient) { ?>
+                    <tr>
+                        <td><?= $count++ ?></td>
+                        <td><?= $patient["date"] ?></td>
+                        <td><?= $patient["time"] ?></td>
+                        <td><?= $patient["categories"] ?></td>
+                        <td><?= $patient["doctor_id"] ?></td>
+                        <td><?= $patient["patient_id"] ?></td>
+                        <td><?= $patient["ph_no"] ?></td>
+                        <td><?= $patient["diagnosis"] ?></td>
+                    </tr>
+                <?php }
+                ?>
             </tbody>
         </table>
-        <button type="button" class="download">Download</button>
+        <button type="button" id="download">Download</button>
     </div>
     </div>
 </body>

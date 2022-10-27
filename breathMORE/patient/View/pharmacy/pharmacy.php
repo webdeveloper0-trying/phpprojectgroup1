@@ -1,3 +1,15 @@
+<?php
+include "../common/uNavbar/uNavbar.php";
+include "../common/uFooter/uFooter.php";
+
+include "../../../patient/Controller/common/aChColorTxtController.php";
+include "../../Controller/pharmacy/drugsListController.php";
+
+// echo "<pre>";
+// print_r($drugs);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,166 +17,98 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./pharmacy.css">
-    <script src="../js/jquery3.6.0.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.22/pdfmake.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    <title>Pharmacy</title>
+    <!-- animate -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
-    <script src="../js/drugs.js" defer></script>
+    <!-- custom css3 -->
+    <link rel="stylesheet" href="../common/css/style.css" />
+    <link rel="stylesheet" href="../common/uNavbar/css/uNavbar.css" />
+    <link rel="stylesheet" href="../common/uFooter/css/uFooter.css" />
+    <link rel="stylesheet" href="./css/pharmacy.css" <?php time(); ?> />
+
+    <script src="../common/jq/jquery-3.6.0.min.js" defer></script>
+    <script src="./js/drugs.js" <?php time(); ?> defer></script>
 </head>
 
-<body class="pharmacybg">
-    <div class="display-4"><u>Pharmacies Near Me</u></div>
-    <div class="state">
-        <h6>State & Regins</h6>
-    </div>
-    <div class="container">
-        <class class="row">
-            <div class="col-6 col-sm-5 col-md-6">
-                <div class="row">
-                    <!-- selectstart -->
-                    <div class="state col-6">
-                        <select class="form-select state" id="state" aria-label="Default select example">
-                            <option>Rakhine State</option>
-                            <option value="1">1</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                        </select>
-                        <select class="form-select  state" aria-label="Default select example">
-                            <option>Shan State</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                        </select>
-                        <select class="form-select  state" aria-label="Default select example">
-                            <option>Mon State</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                        </select>
-                        <select class="form-select  state" aria-label="Default select example">
-                            <option>Kachin State</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                        </select>
-                        <select class="form-select  state" aria-label="Default select example">
-                            <option>Kayin State</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                        </select>
-                        <select class="form-select  state" aria-label="Default select example">
-                            <option>Chin State</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                        </select>
-                        <select class="form-select  state" aria-label="Default select example">
-                            <option>Kayah State</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                        </select>
-                    </div>
-                    <!-- selectend -->
-                    <div class="state col-6">
-                        <select class="form-select  state" aria-label="Default select example">
-                            <option>Yangon Regin</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                        </select>
-                        <select class="form-select  state" aria-label="Default select example">
-                            <option>Mandalay Regin</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                        </select>
-                        <select class="form-select  state" aria-label="Default select example">
-                            <option>Bago Regin</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                        </select>
-                        <select class="form-select  state" aria-label="Default select example">
-                            <option>Magway Regin</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                        </select>
-                        <select class="form-select  state" aria-label="Default select example">
-                            <option>Sagaing Regin</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                        </select>
-                        <select class="form-select  state" aria-label="Default select example">
-                            <option>Ayeyarwady Regin</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                        </select>
-                        <select class="form-select  state" aria-label="Default select example">
-                            <option>Tanintharyi Regin</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                        </select>
-                    </div>
-                </div>
+<body>
+    <div class="mx-5">
+
+        <h3 class="title my-5">Pharmacy Near Me
+            <span class="titleBar"></span>
+        </h3>
+        <p>Your can search pharmacies' details of each township in Yangon Region</p>
+
+        <div class="row">
+            <div class="townshipSelect col col-6">
+                <select class="form-select state" id="state" aria-label="townshiptSelect">
+                    <option>Township</option>
+                    <option value="Mingaladon">Mingaladon</option>
+                    <option value="Insein">Insein</option>
+                    <option value="Hlaingthayar">Hlaingthayar</option>
+                    <option value="Thanlyin">Thanlyin</option>
+                    <option value="Latha">Latha</option>
+                    <option value="Lanmadaw">Lanmadaw</option>
+                    <option value="Pabedan">Pabedan</option>
+                    <option value="Dagon">Dagon</option>
+                    <option value="Ahlon">Ahlon</option>
+                    <option value="Kyeemyintdaing">Kyeemyintdaing</option>
+                    <option value="SanChaung">SanChaun</option>
+                    <option value="South Okkalapa">South Okkalapa</option>
+                </select>
+
+
             </div>
-            <!-- pharmacyleftend -->
-            <!-- drugs -->
-            <div class="col-6 col-sm-5 offset-sm-2 col-md-6 offset-md-0">
-                <div class="row" mt-5>
-                    <div class="col-6">
+
+            <div class="col-2"></div>
+
+            <div class="drugSelect col col-4">
+                <div class="col col-4 input-group container d-flex justify-content-end">
+                    <div class="form-outline">
                         <input type="text" id="searchtext" class="form-control" placeholder="drugs deal with diseases">
+                        <label class="form-label" for="form1">Search</label>
                     </div>
-                    <div class="col-3">
-                        <button class="btn btn-primary" id="search">Search</button>
-                    </div>
-                    <div class="drug" id="searchResult"></div>
+                    <button type="button" id="search" class="btn btn-purple">
+                        <i class="fas fa-search"></i>
+                    </button>
                 </div>
-                <!-- end drugs -->
-                <div class="pharmacy mt-5">
 
-                    <!-- end pharmacy1 -->
-                    <div class="holebody col-sm-5 offset-sm-2 " style="background-color:#8a39ab;">
-                        <div class=" card " style=" width: 10rem;">
-                            <img src="./glass-shelves-retail-pharmacy-interior-design-016-1.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
 
-                        <div class="card " style="width: 10rem;">
-                            <img src="./glass-shelves-retail-pharmacy-interior-design-016-1.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-
-                        <div class="card" style="width: 18rem;">
-                            <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/182.webp" class="card-img-top" alt="Sunset Over the Sea" />
-                            <div class="card-body">
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
-                        </div>
-                        <!--End holebody  -->
-                    </div>
-
-                </div>
             </div>
+        </div>
+
+        <div class="showData row">
+            <div id="pharmacy" class="showData d-flex  flex-wrap col col-9"></div>
+
+            <div id="drugResult" class="showData col col-3 shadow-5 mt-5">
+
+            <h4 class="drugSearchBox">
+                    Drugs and Disease
+            </h4>
+                
+                <?php
+                foreach ($drugs as $drug) { ?>
+                    <h6 class="bg-green fw-bold ps-2 pt-2 pb-2"><?= $drug["disease_names"] ?></h6>
+                    <p class="text-muted bg-light pt-2"><?= $drug["medicine_names"] ?></p>
+
+                <?php } ?>
+
+            </div>
+        </div>
+
+
+
+
+
+
     </div>
-    </div>
+
+
+
+
+
+
+
 </body>
 
 </html>

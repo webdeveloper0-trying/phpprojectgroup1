@@ -1,0 +1,101 @@
+.showData{
+  
+  height:auto !important;
+
+  
+}
+
+#state{
+  background:var(--textColorOne) !important;
+
+}
+
+.pharmacyCard{
+  height:auto !important;
+  background:none !important;
+}
+
+.card-img-top{
+  height:25vh !important;
+  object-fit:center !important;
+}
+
+.pharmacyInfo{
+  background:var(--textColorOne) !important;
+}
+
+.drugSearchBox{
+  display:none !important;
+}
+
+
+#drugResult{
+  height:50vh !important;
+    overflow-x:hidden !important;
+    overflow-y:auto !important;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+  
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius:5px !important;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+@media (max-width: 1035px){
+ 
+  #search{
+    display:none !important;
+  }
+  
+}
+
+@media (max-width: 990px){
+  #pharmacy{
+      margin-top:2rem !important;
+  }
+  
+  
+}
+
+@media (max-width: 625px){
+  .showData{
+    display:flex !important;
+    flex-direction:column !important;
+  }
+
+  .drugSelect{
+    display:none !important;
+  }
+
+  .drugSearchBox{
+    display:block !important;
+    margin-bottom:1em !important;
+  }
+
+
+  
+  #drugResult{
+    width:80vw !important;
+  }
+  
+}
+
+
+

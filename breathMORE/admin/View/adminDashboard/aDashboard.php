@@ -11,8 +11,13 @@ if (isset($_POST['adminname']) && isset($_POST['password'])) {
 if (!isset($_SESSION["adminname"])) {
     header("Location: ../adminRegisterLogin/aLogin.php");
 } else {
+    if ($_SESSION["ismainadmin"] == 0) {
+        header("Location: ./aSubAdminDashboard.php");
+    }
     $adminname = $_SESSION["adminname"];
 }
+
+
 ?>
 
 <!DOCTYPE html>
@@ -44,50 +49,68 @@ if (!isset($_SESSION["adminname"])) {
         <h3 class="h3 header my-5">Admin Dashboard</h3>
         <div class="adminDashboard col col-10 row justify-content-center align-items-center flex-wrap py-5">
             <div class="col col-4 text-center">
-                <button type="button" class="my-3 btn btn-lg btn-green btn-rounded">
-                    <a href="../adminManagement/aManagement.php">Admin Management</a>
-                </button>
+                <a href="../adminManagement/aManagement.php">
+                    <button type="button" id="mainAdminControl" class="my-3 btn btn-lg btn-green btn-rounded">
+                        Admin Management
+                    </button>
+                </a>
             </div>
             <div class="col col-4 text-center">
-                <button type="button" class="my-3 btn btn-lg btn-green btn-rounded">
-                    <a href="">Total Registered List</a>
-                </button>
+                <a href="">
+                    <button type="button" class="my-3 btn btn-lg btn-green btn-rounded">
+                        Total Registered List
+                    </button>
+                </a>
             </div>
             <div class="col col-4 text-center">
-                <button type="button" class="my-3 btn btn-lg btn-green btn-rounded">
-                    <a href="../adminAppointment/aAppointmentList.php">Total Appointments</a>
-                </button>
+                <a href="../adminAppointment/aAppointmentList.php">
+                    <button type="button" class="my-3 btn btn-lg btn-green btn-rounded">
+                        Total Appointments
+                    </button>
+                </a>
             </div>
             <div class="col col-4 text-center">
-                <button type="button" class="my-3 btn btn-lg btn-green btn-rounded">
-                   <a href="">Doctors List</a>
-                </button>
+                <a href="../doctor/list.php">
+                    <button type="button" class="my-3 btn btn-lg btn-green btn-rounded">
+                        Doctors List
+                    </button>
+                </a>
             </div>
 
             <div class="col col-4 text-center">
-                <button type="button" class="my-3 btn btn-lg btn-green btn-rounded">
-                    <a href="../adminBloodDonation/abloodDonationList.php">Blood Donations</a>
-                </button>
+                <a href="../adminBloodDonation/abloodDonationList.php">
+                    <button type="button" class="my-3 btn btn-lg btn-green btn-rounded">
+                        Blood Donations
+                    </button>
+                </a>
+            </div>
+            <div class="col col-4 text-center">
+                <a href="">
+                    <button type="button" class="my-3 btn btn-lg btn-green btn-rounded">
+                        Medicine
+                    </button>
+                </a>
+            </div>
+            <div class="col col-4 text-center">
+                <a href="">
+                    <button type="button" class="my-3 btn btn-lg btn-green btn-rounded">
+                        Lab Reports
+                    </button>
+                </a>
             </div>
             <div class="col col-4 text-center">
                 <button type="button" class="my-3 btn btn-lg btn-green btn-rounded">
-                    <a href="">Medicine</a>
+                    <a href="../subscribeNews/aSubscribeNewList.php">
+                        Subscribtion List
                 </button>
+                </a>
             </div>
             <div class="col col-4 text-center">
-                <button type="button" class="my-3 btn btn-lg btn-green btn-rounded">
-                    <a href="">Lab Reports</a>
-                </button>
-            </div>
-            <div class="col col-4 text-center">
-                <button type="button" class="my-3 btn btn-lg btn-green btn-rounded">
-                    <a href="../subscribeNews/aSubscribeNewList.php">Subscribtion List</a>
-                </button>
-            </div>
-            <div class="col col-4 text-center">
-                <button type="button" class="my-3 btn btn-lg btn-green btn-rounded">
-                    <a href="../adminBlog/aBlogList.php">Blogs</a>
-                </button>
+                <a href="../adminBlog/aBlogList.php">
+                    <button type="button" class="my-3 btn btn-lg btn-green btn-rounded">
+                        Blogs
+                    </button>
+                </a>
             </div>
 
 

@@ -1,7 +1,7 @@
 <?php
+include "../common/adminNavbar.php";
 include "../../Controller/adminBlogs/aBlogListController.php";
 
-include "../common/adminNavbar.php";
 
 session_start();
 
@@ -76,10 +76,10 @@ if ($_SESSION["ismainadmin"] == 0) {
             <tbody>
 
                 <?php
-                $count = 0;
+                $count = ($page * $rowLimit) - ($rowLimit - 1);
                 foreach ($blogs as $blog) { ?>
                     <tr>
-                        <td><?= ++$count; ?></td>
+                        <td><?= $count++; ?></td>
                         <td>
                             <div class="d-flex align-items-center">
                                 <img src="../storage/blogsImg/<?= $blog["blog_img"] ?>" alt="" style="width: 45px; height: 45px" class="blogImg rounded-circle" />
@@ -101,48 +101,85 @@ if ($_SESSION["ismainadmin"] == 0) {
                             $paraLen = strlen($content) / 2;
 
                             $showContent = substr($content, 0, 30);
-
-
-                            $para = substr($content, 0, $paraLen);
-
-                            $strLen1 = strrpos($para, ".");
-
-
-
-                            $para1 = substr($content, 0, ++$strLen1);
-                            $para2 = substr($content, $strLen1, strlen($content));
-
-
                             ?>
-                            <p class="showContent">
+                            <div class="showContent">
                                 <?= $showContent ?>
-                            </p>
+                            </div>
 
 
-                            <p class="bg-light position-absolute p-5 content-hide">
+                            <div class="bg-light position-absolute p-5 content-hide">
                                 <button type="button" class="btn-close position-absolute btnClose" aria-label="Close"></button>
-                                <span> <?= $para1; ?></span> <br /><br />
-                                <span> <?= $para2; ?></span>
-                            </p>
+                                <?= $content; ?>
+                            </div>
 
 
                         </td>
-                        <td class="d-flex">
-                            <a href="../../Controller/adminBlogs/aEditBlogsController.php?id=<?= $blog["id"] ?>">
-                                <i class="fa-solid fa-pen-to-square""></i>
-                            </a>
-                            &nbsp; &nbsp;
-                            <a href=" ../Controller/deleteAdminController.php?id=<?= $blog["id"] ?>">
-                                <i class="fa-solid fa-trash-can"></i>
-                            </a>
+                        <td>
+                            <div class="row">
+                                <div class="col">
+                                    <a href="../../Controller/adminBlogs/aEditBlogsController.php?id=<?= $blog["id"] ?>">
+                                        <i class="fa-solid fa-pen-to-square""></i>
+                                    </a>
+                                </div>
+                                <div class=" col">
+                                            <a href="../../Controller/adminBlogs/aDeleteBlogController.php?id=<?= $blog["id"] ?>">
+                                                <i class="fa-solid fa-trash-can"></i>
+                                            </a>
+                                </div>
+                            </div>
                         </td>
                     </tr><?php } ?>
 
             </tbody>
+
+            <tfoot>
+                <tr>
+                    <td colspan="7">
+                        <ul class="pagination pagination-circle justify-content-end">
+                            <li class="page-item 
+                    <?php if ($page <= 1) {
+                        echo "disabled";
+                    }  ?>
+                    ">
+                                <a class="page-link" href="?page=<?= $page - 1 ?>" aria-label="Previous">
+                                    <span aria-hidden="true">Previous</span>
+                                </a>
+                            </li>
+
+                            <?php for ($i = 1; $i <= $totalPages; $i++) { ?>
+                                <li class="page-item 
+                        <?php
+                                if ($page == $i) {
+                                    echo "active";
+                                }
+                        ?>
+                        "><a class="page-link" href="?page=<?= $i ?>"><?= $i ?></a></li>
+                            <?php } ?>
+
+
+                            <li class="page-item 
+                     <?php if ($page >= $totalPages) {
+                            echo "disabled";
+                        }  ?>">
+                                <a class="page-link" href="?page=<?= $page + 1 ?>" aria-label="Next">
+                                    <span aria-hidden="true">Next</span>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </td>
+                </tr>
+            </tfoot>
         </table>
 
+
+
         <!-- Submit button -->
-        <button type="submit" name="updateAdmin" class="btn btn-purple btn-lg mb-4">Add</button>
+        <a href="./aAddBlogForm.php">
+        <button type="submit" name="addBlog" class="btn btn-purple btn-lg mb-4">Add</button>
+        </a>
+
+
     </div>
 </body>
 

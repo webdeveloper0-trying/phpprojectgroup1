@@ -28,12 +28,17 @@ $patientinfo = $_SESSION["patientinfo"];
 
             <input type="text" name="username" class="form-control  mt-5" value="<?= $patientinfo[0]["user_name"] ?>" placeholder="name" disabled>
             <input type="text" name="email" class="form-control mt-5" value="<?= $patientinfo[0]["user_email"] ?>" placeholder="email" disabled>
-            <input type="text" name="Age" class="form-control mt-5" value="<?= $patientinfo[0]["age"] ?>" placeholder="Age" required>
-            <input type="text" name="Gender" class="form-control mt-5 " value="<?= $patientinfo[0]["gender"] ?>" placeholder="gender" required>
+            <input type="text" name="Age" class="form-control mt-5" value="
+            <?= $patientinfo[0]["age"] ?>" placeholder="Age" required>
+            <input type="text" name="Gender" class="form-control mt-5 " value="<?php if ($patientinfo[0]["gender"] == 0) echo "female";
+                                                                                elseif ($patientinfo[0]["gender"] == 1) echo "Male"; ?>" placeholder="gender" required>
             <input type="text" name="date of birth" class="form-control mt-5" value="<?= $patientinfo[0]["date_of_birth"] ?>" placeholder="date of birth" required>
             <input type="hidden" name="id" value="<?= $patientinfo[0]["register_id"] ?>">
             <button type="sumit" class="btn btn-secondary mt-5" name="profile">Update</button>
         </form>
+
+        <button type="sumit" class="btn btn-secondary mt-5" id="history"><a href="../View/userhistory.php">History Page </a></button>
+
     </div>
 </body>
 

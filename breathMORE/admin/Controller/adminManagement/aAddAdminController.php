@@ -5,7 +5,10 @@ include "../../Model/dbConnection.php";
 if(isset($_POST["addAdmin"])){
     $adminName = $_POST["adminname"];
     $password = $_POST["password"];
-    // $status = $_POST["status"];
+    $role = $_POST["role"];
+    
+
+    $role = (isset($_POST["role"]))? ("1") : ("0");
 
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
@@ -13,16 +16,19 @@ if(isset($_POST["addAdmin"])){
 $sql = $pdo->prepare("
                 INSERT INTO admin_management(
                     admin_name,
-                    password
+                    password,
+                    status
                 )
                 VALUES
                 (
                     :adminName,
-                    :password                  
+                    :password,
+                    :role                 
                 )");
 
         $sql->bindValue(':adminName',$adminName);
         $sql->bindValue(':password',password_hash($password, PASSWORD_DEFAULT));
+        $sql->bindValue(':role',$role);
         
         
 

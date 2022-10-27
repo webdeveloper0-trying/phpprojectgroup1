@@ -10,11 +10,11 @@ if (isset($_POST["addBlog"])) {
     $blogContent = $_POST["blogContent"];
   
 
-    echo $blogTitle . "<br/>";
-    echo $blogWriter . "<br/>";
-    echo $blogDate . "<br/>";
-    echo $blogImage . "<br/>";
-    echo $blogContent . "<br/>";
+    // echo $blogTitle . "<br/>";
+    // echo $blogWriter . "<br/>";
+    // echo $blogDate . "<br/>";
+    // echo $blogImage . "<br/>";
+    // echo $blogContent . "<br/>";
 
 
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

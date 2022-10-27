@@ -3,8 +3,10 @@
 include "../../Model/dbConnection.php";
 
 if (
-    isset($_POST["bgcolor1"])
-) {
+    isset($_POST["bgcolor1"]) || isset($_POST["bgcolor2"])  || isset($_POST["bgcolor3"])  || isset($_POST["txtColor1"]) 
+    || isset($_POST["txtColor2"])  || isset($_POST["logoColor"])  || isset($_POST["logoImg"])  || isset($_POST["webName"]) 
+    || isset($_POST["fontOne"])  || isset($_POST["fontTwo"]) )
+{
     $backgroundColorOne = $_POST["bgcolor1"];
     $backgroundColorTwo = $_POST["bgcolor2"];
     $backgroundColorThree = $_POST["bgcolor3"];

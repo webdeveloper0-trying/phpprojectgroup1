@@ -3,9 +3,9 @@ $("#searchBtn").click(function () {
     alert("Search Something");
   } else {
     let type = "";
-    if ($("#rname").prop("checked")) {
+    if ($("#rname").prop("selected")) {
       type = "name";
-    } else if ($("#rcenter").prop("checked")) {
+    } else if ($("#rcenter").prop("selected")) {
       type = "center";
     } else {
       type = "phone";
@@ -23,7 +23,7 @@ $("#searchBtn").click(function () {
       data: searchData,
 
       success: function (response) {
-        // console.log(response);
+        console.log(response);
         let doctorList = JSON.parse(response);
         console.log(doctorList);
         $("#searchresult").empty();

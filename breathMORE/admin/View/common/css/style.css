@@ -123,13 +123,7 @@ body {
   color: var(--textColorOne) !important;
 }
 
-.tbody > tr {
-  transition: all 0.5s !important;
-}
 
-.tbody > tr:hover {
-  background: rgba(138, 57, 171, 0.3) !important;
-}
 
 .fa-solid {
   color: var(--secondaryColor) !important;

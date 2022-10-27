@@ -8,14 +8,13 @@ if (isset($_GET["id"])) {
 
 
     $sql = $pdo->prepare("
-                        DELETE FROM admin_management
-                        WHERE id=:id;");
+    UPDATE admin_management SET del_flg = 1
+    WHERE id=:id;");
 
 
     $sql->bindValue(':id', $adminId);
     $sql->execute();
 
-    
 
     header("Location:../../View/adminManagement/aManagement.php");
 }
