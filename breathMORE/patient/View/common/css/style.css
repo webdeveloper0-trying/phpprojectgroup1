@@ -1,220 +1,214 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&family=Marcellus&family=Playball&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&family=Marcellus&family=Playball&display=swap");
 
 :root {
+<<<<<<< HEAD
   --firstColor:#f2f4f1 ;
   --secondaryColor: #4B694D;
   --thirdColor:#8a39ab;
+=======
+  --firstColor: #f2f4f1;
+  --secondaryColor: #4b694d;
+  --thirdColor: #8a39ab;
+>>>>>>> b438a2f6a1a78e8a3e3ff22398c47520df0229e0
 
   --textColorOne: #e8f3f1;
   --textColorTwo: #000;
-  --fontOne:"Josefin Sans";
-  --fontTwo:"Roboto";
+  --fontOne: "Josefin Sans";
+  --fontTwo: "Roboto";
 
-
-  --logoColor:red;
-
-  
+  --logoColor: red;
 }
 
-*{
-    box-sizing: border-box;
-    padding:0;
-    margin:0;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-body{
-    width:100vw !important;
-    font-family: "Josefin Sans", sans-serif !important;
-    background: var(--firstColor) !important;
-    overflow-x:hidden !important;
+body {
+  width: 100vw !important;
+  font-family: "Josefin Sans", sans-serif !important;
+  background: #f2f4f1 !important;
+  overflow-x: hidden !important;
 }
 
-.homeHeader{
-  font-size:2.5rem !important;
+.homeHeader {
+  font-size: 2.5rem !important;
 }
 
-.homeHeader > span{
-  color:var(--logoColor) !important;
+.homeHeader > span {
+  color: var(--logoColor) !important;
 }
-
-
-
 
 /* For Admin Page */
-.header{
-  color:var(--thirdColor) !important;
-  text-shadow: 0 2px 2px rgba(0,0,0,0.5) !important;
+.header {
+  color: var(--thirdColor) !important;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5) !important;
 }
 
-
-.title{
-  display:inline-block;
-  color:var(--thirdColor) !important;
-  text-shadow: 0 2px 2px rgba(0,0,0,0.5) !important;
-  text-decoration:underline !important;
-  text-decoration-color:var(--secondaryColor) !important;
+.title {
+  display: inline-block;
+  color: var(--thirdColor) !important;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5) !important;
+  text-decoration: underline !important;
+  text-decoration-color: var(--secondaryColor) !important;
 
   position: relative !important;
 }
 
-
-.titleBar{
-  display:inline-block !important;
-  width:0 !important;
-  height:0 !important;
+.titleBar {
+  display: inline-block !important;
+  width: 0 !important;
+  height: 0 !important;
   border-top: 8px solid transparent !important;
-	border-right: 16px solid var(--secondaryColor) !important;
-	border-bottom: 8px solid transparent !important;
+  border-right: 16px solid var(--secondaryColor) !important;
+  border-bottom: 8px solid transparent !important;
 
-   position: absolute !important;
-  left:100% !important;
-  bottom:0% !important; 
+  position: absolute !important;
+  left: 100% !important;
+  bottom: 0% !important;
 }
 
-
-
-  /* submit button */
-  .submit-button {
-    margin-top: 10% !important;
-    height: 50px !important;
-    width: 30% !important;
-    background-color: var(--thirdColor) !important;
-    font-family: var(--fontFamilyJosef) !important;
-    color: var(--textColorOne) !important;
-    border: 1px solid #8a39ab !important;
-    font-size: 20px !important;
-    border-radius: 16px !important;
-  }
-  
-  .submit-button:focus {
-    background-color: var(--firstColor) !important;
-    color: var(--thirdColor) !important;
-    border: 3px solid var(--thirdColor) !important;
-    border-radius: 16px !important;
-  }
-  
-  section {
-    background-color: var(--firstColor) !important;
-    font-family: var(--fontFamilyJosef) !important;
-  }
-  
-  .mycard_body {
-    background-color: var(--secondaryColor) !important;
-  }
-  
-  h3 {
-    color: var(--textColorOne) !important;
-  }
-  
-  .myhr {
-    background-color: white !important;
-    border: 1px solid white !important;
-  }
-
-
-  .btn-purple{
-    background: var(--thirdColor) !important;
-    color:var(--textColorOne) !important;
+/* submit button */
+.submit-button {
+  margin-top: 10% !important;
+  height: 50px !important;
+  width: 30% !important;
+  background-color: var(--thirdColor) !important;
+  font-family: var(--fontFamilyJosef) !important;
+  color: var(--textColorOne) !important;
+  border: 1px solid #8a39ab !important;
+  font-size: 20px !important;
+  border-radius: 16px !important;
 }
 
-.btn-green{
-    background:var(--secondaryColor) !important;
-    color:var(--textColorOne) !important;
+.submit-button:focus {
+  background-color: var(--firstColor) !important;
+  color: var(--thirdColor) !important;
+  border: 3px solid var(--thirdColor) !important;
+  border-radius: 16px !important;
 }
 
-.btn-green > a{
+section {
+  background-color: #f2f4f1 !important;
+  font-family: var(--fontFamilyJosef) !important;
+}
+
+.mycard_body {
+  background-color: var(--secondaryColor) !important;
+}
+
+h3 {
+  color: var(--textColorOne) !important;
+}
+
+.myhr {
+  background-color: white !important;
+  border: 1px solid white !important;
+}
+
+.btn-purple {
+  background: var(--thirdColor) !important;
+  color: var(--textColorOne) !important;
+}
+
+.btn-green {
+  background: var(--secondaryColor) !important;
+  color: var(--textColorOne) !important;
+}
+
+.btn-green > a {
   text-decoration: none !important;
-  color:var(--textColorOne) !important;
+  color: var(--textColorOne) !important;
 }
 
-.bg-green{
-  background:var(--secondaryColor) !important;
-  color:var(--textColorOne) !important;
+.bg-green {
+  background: var(--secondaryColor) !important;
+  color: var(--textColorOne) !important;
 }
 
+<<<<<<< HEAD
 .bg-purple{
   background:var(--thirdColor) !important;
   color:var(--textColorOne) !important;
 }
 
+=======
+/*START FOR TABLES */
+.table {
+  background: var(--textColorOne) !important;
+  color: var(--textColorTwo) !important;
+}
+>>>>>>> b438a2f6a1a78e8a3e3ff22398c47520df0229e0
 
-
-  /*START FOR TABLES */
-  .table{
-
-    background:var(--textColorOne) !important;
-    color:var(--textColorTwo) !important;
+@media (min-width: 992px) {
+  .table {
+    width: 80vw !important;
   }
-
-  @media (min-width: 992px){
-    .table{
-      width:80vw !important;
-    }
-  }
-
-  @media (min-width: 768px){
-    .table{
-      width:75vw !important;
-    }
-  }
-
-  @media (min-width: 576){
-    .table{
-      width:100vw !important;
-    }
-  }
-
-
-  .thead{
-    height:10vh !important;
-    background:var(--thirdColor) !important;
-    color:var(--textColorOne) !important;
 }
 
-.tbody > tr{
-  transition:all 0.5s !important;
+@media (min-width: 768px) {
+  .table {
+    width: 75vw !important;
+  }
 }
 
-.tbody > tr:hover{
-  background:rgba(138,57,171,0.3) !important;
+@media (min-width: 576) {
+  .table {
+    width: 100vw !important;
+  }
 }
 
-.fa-solid{
-  color:var(--secondaryColor) !important;
+.thead {
+  height: 10vh !important;
+  background: var(--thirdColor) !important;
+  color: var(--textColorOne) !important;
 }
 
-.fa-solid:hover{
+.tbody > tr {
+  transition: all 0.5s !important;
+}
+
+.tbody > tr:hover {
+  background: rgba(138, 57, 171, 0.3) !important;
+}
+
+.fa-solid {
+  color: var(--secondaryColor) !important;
+}
+
+.fa-solid:hover {
   cursor: pointer !important;
 }
 
 /* END FOR TABLES */
 
 /* START FOR FORMS */
-.form{
-  background:var(--textColorOne) !important;
-  color:var(--textColorTwo) !important;
-  border:1px solid var(--secondaryColor) !important;
+.form {
+  background: var(--textColorOne) !important;
+  color: var(--textColorTwo) !important;
+  border: 1px solid var(--secondaryColor) !important;
 }
 
-input[readyonly]{
-  color:var(--secondaryColor) !important;
+input[readyonly] {
+  color: var(--secondaryColor) !important;
 }
 
-@media (min-width: 992px){
-  .form{
-    width:70vw !important;
+@media (min-width: 992px) {
+  .form {
+    width: 70vw !important;
   }
 }
 
-@media (min-width: 768px){
-  .form{
-    width:60vw !important;
+@media (min-width: 768px) {
+  .form {
+    width: 60vw !important;
   }
 }
 
-@media (min-width: 576){
-  .form{
-    width:90vw !important;
+@media (min-width: 576) {
+  .form {
+    width: 90vw !important;
   }
 }
 /* END FOR FORMS */

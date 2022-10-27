@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&family=Marcellus&family=Playball&display=swap");
+
+:root {
+  --firstColor: #f2f4f1;
+  --secondaryColor: #4b694d;
+  --thirdColor: #8a39ab;
+
+  --textColorOne: #e8f3f1;
+  --textColorTwo: #000;
+  --fontOne: "Josefin Sans";
+  --fontTwo: "Roboto";
+
+  --logoColor: red;
+}
+
+/* font family Josefin Sans, Marcellus ,Playball*/
+/* <style>
+    @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&family=Marcellus&family=Playball&display=swap');
+    </style>  */
+
+/* submit button */
+.submit-button {
+  background-color: var(--secondaryColor) !important;
+  font-family: var(--fontTwo);
+  color: var(--textColorOne) !important;
+  /* border: 1px solid #8a39ab; */
+  font-size: 20px;
+  border-radius: 10px;
+  font-family: var(--fontFamilyJosef) !important;
+}
+
+.submit-button:hover {
+  background-color: var(--thirdColor);
+  color: var(--textColorOne) !important;
+}
+
+.mybtn {
+  /* background: var(--secondaryColor) !important; */
+  color: var(--secondaryColor) !important;
+}
+
+h3 {
+  font-weight: 500;
+}
+
+body {
+  background-color: var(--firstColor);
+  font-family: var(--fontFamilyJosef);
+}
+
+input {
+  border-radius: 10px !important;
+}
+
+thead {
+  background: var(--secondaryColor) !important;
+  color: var(--firstColor) !important;
+}
+
+/*START FOR TABLES and  FORMS*/
+.table {
+  background: var(--textColorOne) !important;
+  color: var(--textColorTwo) !important;
+}
+
+@media (max-width: 992px) {
+  .table {
+    width: 100vw !important;
+
+    justify-content: center;
+  }
+  .db {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .table {
+    width: 75vw !important;
+
+    justify-content: center;
+  }
+  .db {
+    display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .table {
+    width: 50vw !important;
+
+    justify-content: center;
+  }
+  .db {
+    display: none;
+  }
+}

@@ -114,6 +114,7 @@ if ($_SESSION["ismainadmin"] == 0) {
 
 
                         </td>
+<<<<<<< HEAD
                         <td>
                             <div class="row">
                                 <div class="col">
@@ -127,6 +128,16 @@ if ($_SESSION["ismainadmin"] == 0) {
                                             </a>
                                 </div>
                             </div>
+=======
+                        <td class="d-flex">
+                            <a href="../../Controller/adminBlogs/aEditBlogsController.php?id=<?= $blog["id"] ?>">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </a>
+                            &nbsp; &nbsp;
+                            <a href=" ../Controller/deleteAdminController.php?id=<?= $blog["id"] ?>">
+                                <i class="fa-solid fa-trash-can"></i>
+                            </a>
+>>>>>>> b438a2f6a1a78e8a3e3ff22398c47520df0229e0
                         </td>
                     </tr><?php } ?>
 
