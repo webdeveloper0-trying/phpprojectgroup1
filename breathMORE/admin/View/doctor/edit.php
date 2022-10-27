@@ -55,9 +55,7 @@ $docInfo = $_SESSION["docInfo"];
                         <input type="radio" name="gender" value="1" <?php if ($docInfo[0]['doctor_gender'] == 1) {
                                                                         echo "checked";
                                                                     } ?>>Female
-
                     </div>
-
 
                 </div>
             </div>
