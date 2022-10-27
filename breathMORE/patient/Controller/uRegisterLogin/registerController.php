@@ -50,15 +50,14 @@ if (isset($_POST["username"]) && isset($_POST["password"])) {
         $_SESSION["username"] = $username;
 
         $sql1 = $pdo->prepare("SELECT * FROM  total_registered_accounts 
-        ORDER BY register_id LIMIT 1 ");
+        ORDER BY register_id DESC LIMIT 1 ");
         $sql1->execute();
         $resultId = $sql1->fetchAll(PDO::FETCH_ASSOC);
-
         $_SESSION["userId"] = $resultId[0]['register_id'];
-        echo "hello".$_SESSION["userId"];
+      
         header("location: ../../View/main/home.php");
     } else {
-        $_SESSION["userId"] = $result[0]['register_id'];
+        
         header("location: ../../View/uRegisterLogin/login.php");
         echo "<script> alert('You account has already been existed!!')</script>";
     }

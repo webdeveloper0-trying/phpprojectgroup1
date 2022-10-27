@@ -1,5 +1,7 @@
 <?php
 include "../../Controller/common/aChColorTxtController.php";
+include "../../Controller/adminProfile/aProfileSelectPropsController.php";
+
 
 ?>
 
@@ -116,6 +118,7 @@ include "../../Controller/common/aChColorTxtController.php";
                         <td>
                             <div class="form-outline">
                                 <input type="text" name="logoImg" id="logoImg" class="form-control" />
+                                <input type="hidden" name="logoImg1" id="logoImg1" value="<?= $defaultProps[0]["logoPic"] ?>" />
                             </div>
                         </td>
                         <th>Background Color1: </th>
@@ -123,7 +126,10 @@ include "../../Controller/common/aChColorTxtController.php";
 
                         </td>
                         <td>
-                            <div class="color-picker1"></div>
+                            <input type="hidden" name="bgColor1" id="bgColor1" value="<?= $defaultProps[0]["backgroundColorOne"] ?>" />
+                            <div class="color-picker1">
+
+                            </div>
                         </td>
                     </tr>
                     <tr>
@@ -131,11 +137,13 @@ include "../../Controller/common/aChColorTxtController.php";
                         <td>
                             <div class="form-outline">
                                 <input type="text" name="webName" id="webName" class="form-control" />
+                                <input type="hidden" name="webName1" id="webName1" value="<?= $defaultProps[0]["websiteName"] ?>" />
                             </div>
                         </td>
                         <th>Background Color2: </th>
                         <td id="chBgColor2"></td>
                         <td>
+                            <input type="hidden" name="bgColor2" id="bgColor2" value="<?= $defaultProps[0]["backgroundColorTwo"] ?>" />
                             <div class="color-picker2"></div>
                         </td>
                     </tr>
@@ -143,6 +151,7 @@ include "../../Controller/common/aChColorTxtController.php";
 
                     <tr>
                         <th>Logo Color:
+                            <input type="hidden" name="logoColor" name="logoColor" value="<?= $defaultProps[0]["logoColor"] ?>" />
                             <div class="color-picker6"></div>
                         </th>
 
@@ -152,6 +161,7 @@ include "../../Controller/common/aChColorTxtController.php";
                         <th>Background Color3: </th>
                         <td id="chBgColor3"></td>
                         <td>
+                            <input type="hidden" name="bgColor3" id="bgColor3" value="<?= $defaultProps[0]["backgroundColorThree"] ?>" />
                             <div class="color-picker3"></div>
                         </td>
 
@@ -161,11 +171,13 @@ include "../../Controller/common/aChColorTxtController.php";
                         <td>
                             <div class="form-outline">
                                 <input type="text" name="fontOne" id="fontOne" class="form-control" />
+                                <input type="hidden" name="fontOne1" id="fontOne1" value="<?= $defaultProps[0]["fontFamilyOne"] ?>" />
                             </div>
                         </td>
                         <th>Text Color1: </th>
                         <td id="chTxtColor1"></td>
                         <td>
+                            <input type="hidden" name="txtColor1" id="txtColor1" value="<?= $defaultProps[0]["txtColorOne"] ?>" />
                             <div class="color-picker4"></div>
                         </td>
 
@@ -175,11 +187,13 @@ include "../../Controller/common/aChColorTxtController.php";
                         <td>
                             <div class="form-outline">
                                 <input type="text" name="fontTwo" id="fontTwo" class="form-control" />
+                                <input type="hidden" name="fontTwo1" id="fontTwo1" value="<?= $defaultProps[0]["fontFamilyTwo"] ?>" />
                             </div>
                         </td>
                         <th>Text Color2: </th>
                         <td id="chTxtColor2"></td>
                         <td>
+                            <input type="hidden" name="txtColor2" id="txtColor2" value="<?= $defaultProps[0]["txtColorTwo"] ?>" />
                             <div class="color-picker5"></div>
                         </td>
                     </tr>
@@ -199,8 +213,8 @@ include "../../Controller/common/aChColorTxtController.php";
             <div class="alertCard card text-center rounded-0 mt-5">
                 <div class="h4 header card-header">Today's Alert</div>
                 <div class="card-body d-flex align-items-center flex-column">
-                    <textarea cols="100" rows="3"></textarea>
-                    <a href="#" class="btn btn-purple mt-3">Change</a>
+                    <textarea cols="100" rows="3" name="alertTxt" id="alertTxt"></textarea>
+                    <a href="#" id="alertSubmit" class="btn btn-purple mt-3">Change</a>
                 </div>
             </div>
 
@@ -217,6 +231,7 @@ include "../../Controller/common/aChColorTxtController.php";
 
     <!-- custom js1 -->
     <script src="./js/aChangeColors.js" <?php time() ?>></script>
+    <script src="./js/aAlert.js"<?php time() ?>></script>
 
 </body>
 

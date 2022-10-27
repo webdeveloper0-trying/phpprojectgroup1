@@ -1,3 +1,4 @@
+
 let chBgColor1 = document.getElementById("chBgColor1");
 let chBgColor2 = document.getElementById("chBgColor2");
 let chBgColor3 = document.getElementById("chBgColor3");
@@ -6,7 +7,8 @@ let chTxtColor2 = document.getElementById("chTxtColor2");
 let chLogoColor = document.getElementById("chLogoColor");
 
 
-var applyBgColor1, applyBgColor2, applyBgColor3, applyTxtColor1, applyTxtColor2, applyLogoColor;
+var applyBgColor1 = "", applyBgColor2 = "", applyBgColor3 = "", applyTxtColor1 = "", applyTxtColor2 = "", applyLogoColor = "",
+    logoImg = "", fontOne = "", fontTwo = "", webName = "";
 // Simple example, see optional options for more configuration.
 const pickr1 = Pickr.create({
     el: '.color-picker1',
@@ -368,12 +370,52 @@ pickr6.on('change', (color, source, instance) => {
 
 document.getElementById('tChange').addEventListener('click', (e) => {
 
+    if (applyBgColor1 == "") {
+        applyBgColor1 = $("#bgColor1").val();
+    }
+    if (applyBgColor2 == "") {
+        applyBgColor2 = $("#bgColor2").val();
+    }
+    if (applyBgColor3 == "") {
+        applyBgColor3 = $("#bgColor3").val();
+    }
+    if (applyTxtColor1 == "") {
+        applyTxtColor1 = $("#txtColor1").val();
+    }
+    if (applyTxtColor2 == "") {
+        applyTxtColor2 = $("#txtColor2").val();
+    }
+    if (applyLogoColor == "") {
+        applyLogoColor = $("#logoColor").val();
+    }
+    if ($("#logoImg").val() == "") {
+        logoImg = $("#logoImg1").val();
+
+    }else{
+        logoImg = $("#logoImg").val();
+    }
+    if ($("#fontOne").val() == "") {
+        fontOne = $("#fontOne1").val();
+    }else{
+        fontOne = $("#fontOne").val();
+    }
+    if ($("#fontTwo").val() == "") {
+        fontTwo = $("#fontTwo1").val();
+    }else{
+        fontTwo = $("#fontTwo").val();
+    }
+    if ($("#webName").val() == "") {
+        webName = $("#webName1").val();
+    }else{
+        webName = $("#webName").val();
+    }
+
 
     let sendChProps = {
-        logoImg: $("#logoImg").val(),
-        webName: $("#webName").val(),
-        fontOne: $("#fontOne").val(),
-        fontTwo: $("#fontTwo").val(),
+        logoImg: logoImg,
+        webName: webName,
+        fontOne: fontOne,
+        fontTwo: fontTwo,
         bgcolor1: applyBgColor1,
         bgcolor2: applyBgColor2,
         bgcolor3: applyBgColor3,
@@ -398,6 +440,9 @@ document.getElementById('tChange').addEventListener('click', (e) => {
     })
 
 });
+
+
+
 
 
 

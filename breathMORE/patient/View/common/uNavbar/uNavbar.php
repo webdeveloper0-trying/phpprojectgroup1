@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Menu</title>
+    <title></title>
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
@@ -17,10 +17,6 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet" />
     <!-- MDB -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js"></script>
-
-    <!-- custom css1 -->
-    <!-- <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="./css/uNavbar.css" <?php time(); ?> /> -->
 </head>
 
 <body>
@@ -50,13 +46,16 @@
                 <!-- Left links -->
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                     <li class="nav-link-active nav-item m-3">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" href="../main/home.php">Home</a>
                     </li>
                     <li class="nav-link-active nav-item m-3">
-                        <a class="nav-link" href="#">About Us</a>
+                        <a class="nav-link" href="../aboutUs/uAboutUs.php">About Us</a>
                     </li>
                     <li class="nav-link-active nav-item m-3">
-                        <a class="nav-link" href="#">Center</a>
+                        <a class="nav-link" href="../centers/center.php">Center</a>
+                    </li>
+                    <li class="nav-link-active nav-item m-3">
+                        <a class="nav-link" href="../blogs/mainblog.php">Blogs</a>
                     </li>
                     <li class="nav-link-active nav-item m-3">
                         <a class="nav-link" href="#">Contact Us</a>

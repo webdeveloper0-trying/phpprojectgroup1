@@ -1,0 +1,94 @@
+.emergencyTitle {
+  color: var(--secondaryColor) !important;
+}
+
+.emergencyTitle span {
+  color: red !important;
+}
+
+.emergencyImg1 {
+  width: 20vw !important;
+}
+
+.emergencyImg4 {
+  width: 30vw !important;
+}
+
+.ball {
+  width: 0.5em !important;
+  height: 0.5em !important;
+  border-radius: 100%;
+  background: var(--thirdColor) !important;
+}
+
+.square {
+  width: 0.5em !important;
+  height: 0.5em !important;
+  background:var(--thirdColor) !important;
+}
+
+.callCenters .list-group-item {
+  background: var(--textColorOne) !important;
+}
+
+.oxygenTable{
+    height:50vh !important;
+    overflow-x:hidden !important;
+    overflow-y:auto !important;
+}
+
+.table{
+    position:relative !important;
+}
+
+.thead1{
+    position:sticky !important;
+    top:0 !important;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+    
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius:5px !important;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+
+  @media (max-width: 1225px){
+    .col{
+        margin-top:3rem !important;
+    }
+    .oxygenList{
+        
+      flex-direction:column !important;
+    }
+
+    .oxygenTable{
+        width:90vw !important;
+    }
+  }
+
+  @media (max-width: 690px){
+
+    .oxygenTable{
+        width:auto !important;
+    }
+  }
+
+

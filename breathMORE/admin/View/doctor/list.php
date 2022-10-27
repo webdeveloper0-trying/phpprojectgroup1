@@ -15,9 +15,6 @@ include "../../Controller/doctor/listController.php";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doctor List</title>
-    <!-- bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css?=time()" rel="stylesheet" />
@@ -28,14 +25,49 @@ include "../../Controller/doctor/listController.php";
 
     <link rel="stylesheet" href="./docAdd.css">
     <link rel="stylesheet" href="../common/css/adminNavbar.css">
+    <link rel="stylesheet" href="./css/aDoctorlist.css" <?php time(); ?> />
 
+<<<<<<< HEAD
+    <script src="../common/jq/jquery-3.6.0.min.js"></script>
+    <script src="./js/doctorsearch.js" <?= time() ?> defer></script>
+=======
     <script src="./jquery3.6.0.js"></script>
     <script src="./doctorsearch.js" <?= time() ?> defer></script>
+>>>>>>> b438a2f6a1a78e8a3e3ff22398c47520df0229e0
 
 </head>
 
 <body class="d-flex justify-content-center">
 
+<<<<<<< HEAD
+    <div class="mx-5 d-flex justify-content-center align-items-center flex-column">
+        <h3 class="header my-5">Total Doctor Lists</h3>
+    
+                <table class="table">
+                    <thead class="thead">
+                        <tr>
+                            <th colspan="11">
+
+                                <div class="input-group d-flex justify-content-center align-items-center flex-row">
+                                    <select class="selectBox form-select form-select-sm py-1" aria-label="select">
+                                        <option id="rname" value="name">With Name</option>
+                                        <option id="rcenter" value="center">With Center</option>
+                                        <option id="rphone" value="phone">With Ph.No</option>
+                                    </select>
+                                    <input type="text" name="docSearch" id="searchDoctext" class="inputBox form-control py-2" placeholder="Search With Category" />
+                                    <button type="button" class="btn btn-purple" id="searchBtn">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <circle cx="10" cy="10" r="7" />
+                                            <line x1="21" y1="21" x2="15" y2="15" />
+                                        </svg>
+                                    </button>
+
+                                </div>
+
+                            </th>
+                        </tr>
+=======
     <div class=" container-fluid">
         <div class="row justify-content-center align-items-center m-5">
             <div class="row m-5">
@@ -95,6 +127,7 @@ include "../../Controller/doctor/listController.php";
             <div class="col col-md-auto col-lg-11 col-sm-6 ">
                 <table class="table align-middle table-bordered text-center ">
                     <thead>
+>>>>>>> b438a2f6a1a78e8a3e3ff22398c47520df0229e0
                         <tr>
                             <th scope="col" class="p-3">No.</th>
                             <th scope="col">Doctor_Name</th>
@@ -129,17 +162,24 @@ include "../../Controller/doctor/listController.php";
                                 <td class="db"><?= $doctor["day"] ?></td>
                                 <td class="db"><?= $doctor["start_time"] ?>-<?= $doctor["end_time"] ?></td>
 
+<<<<<<< HEAD
+                                <td><a href="../../Controller/doctor/editController.php?id=<?= $doctor["doctor_id"] ?>"><i class="fa-solid fa-pen-to-square"></i></a> </td>
+                                <td><a href="../../Controller/doctor/deleteController.php?id=<?= $doctor["doctor_id"] ?>"> <i class="fa-solid fa-trash-can"></i></a></td>
+=======
 
                                 <td class="db"><a href="../../Controller/doctor/editController.php?id=<?= $doctor["doctor_id"] ?>"><i class="fa-solid fa-pen-to-square"></i></a>
 
                                     <a href="../../Controller/doctor/deleteController.php?id=<?= $doctor["doctor_id"] ?>"><i class="fa-solid fa-trash-can"></i></a>
                                 </td>
+>>>>>>> b438a2f6a1a78e8a3e3ff22398c47520df0229e0
 
 
                             </tr>
                         <?php } ?>
                     </tbody>
                 </table>
+<<<<<<< HEAD
+=======
                 <nav aria-label="Page navigation example">
                     <ul class="pagination justify-content-center">
                         <li class="page-item <?php if ($page <= 1) {
@@ -175,7 +215,10 @@ include "../../Controller/doctor/listController.php";
 
         </div>
 
+>>>>>>> b438a2f6a1a78e8a3e3ff22398c47520df0229e0
 
+                <a href="./add.php"> <input class="btn btn-purple mt-3 mb-5 
+                float-lg-end float-sm-end float-md-end" type="submit" value="ADD Doctor"></a>
 
     </div>
 

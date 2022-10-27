@@ -1,4 +1,9 @@
-.btn-primary {
-  background: var(--thirdColor) !important;
-  color:var(--textColorOne) !important;
+
+
+.modal-content{
+  background:var(--firstColor) !important;
+}
+
+.modal-title{
+  color:var(--secondaryColor) !important;
 }

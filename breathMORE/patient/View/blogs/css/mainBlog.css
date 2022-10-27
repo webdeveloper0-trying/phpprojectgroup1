@@ -1,0 +1,19 @@
+.blogCard{
+  background:var(--textColorOne) !important;
+}
+
+.blogImage{
+  width:20vw !important;
+  object-fit: cover !important;
+}
+
+.blogTitle{
+  color:var(--secondaryColor) !important;
+}
+
+.blogContent{
+  white-space: wrap !important;
+  width: 60vw !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
