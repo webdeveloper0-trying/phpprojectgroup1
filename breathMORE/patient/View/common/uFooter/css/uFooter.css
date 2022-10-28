@@ -1,23 +1,21 @@
-body{
-    position: relative !important; 
-    /* height:100vh !important; */
- }
+body {
+  position: relative !important;
+  /* height:100vh !important; */
+}
 
+#footer {
+  width: 100vw !important;
+  background: var(--secondaryColor) !important;
+  color: var(--textColorOne) !important;
 
-#footer{
-    width:100vw !important;
-    background:var(--secondaryColor) !important;
-    color:var(--textColorOne) !important;
+  position: absolute !important;
+  top: 100% !important;
+}
 
-    position:absolute !important;
-    top:100% !important;
-  }
-  
-  .footer a{
-    color:var(--textColorOne) !important;
-  }
+.footer a {
+  color: var(--textColorOne) !important;
+}
 
-
-.footerLink:hover{
-    color:var(--thirdColor) !important;
+.footerLink:hover {
+  color: var(--thirdColor) !important;
 }

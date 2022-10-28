@@ -1,206 +1,193 @@
-body{
+body {
   position: relative !important;
 }
 
-.headerInfo{
-  margin-top:10vh !important;
+.headerInfo {
+  margin-top: 10vh !important;
 }
 
-
-.services{
-  background:var(--secondaryColor) !important;
-  margin-top:7em !important;
+.services {
+  background: var(--secondaryColor) !important;
+  margin-top: 7em !important;
 }
 
-.serviceCard{
-  padding:0 !important;
-  width:12vw !important;
+.serviceCard {
+  padding: 0 !important;
+  width: 12vw !important;
 }
 
-.serviceLink{
-  color:var(--thirdColor) !important;
+.serviceLink {
+  color: var(--thirdColor) !important;
 }
 
-.headerImg{
-  margin-top:2vh !important;
+.headerImg {
+  margin-top: 2vh !important;
 
-  position:relative !important;
+  position: relative !important;
 }
 
-.headerBox1{
-  width:5vw !important;
-  height:10vh !important;
-  background:var(--thirdColor) !important;
+.headerBox1 {
+  width: 5vw !important;
+  height: 10vh !important;
+  background: var(--thirdColor) !important;
 
-  position:absolute !important;
-  top:5% !important;
-  left:-5% !important;
+  position: absolute !important;
+  top: 5% !important;
+  left: -5% !important;
 }
 
-.headerBox2, .headerBox3{
-  height:10vh !important;
-  background:rgba(138,57,171,0.8) !important;
-  color:var(--textColorOne) !important;
-  font-size:1.2rem !important;
+.headerBox2,
+.headerBox3 {
+  height: 10vh !important;
+  background: rgba(138, 57, 171, 0.8) !important;
+  color: var(--textColorOne) !important;
+  font-size: 1.2rem !important;
   text-align: center !important;
   line-height: 10vh !important;
-  text-shadow: 3px 3px 3px rgba(0,0,0,0.4) !important;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4) !important;
 
-  padding:0 1rem 0 !important;
+  padding: 0 1rem 0 !important;
 
-  position:absolute !important;
- 
+  position: absolute !important;
 }
 
-.headerBox2{
-  top:60% !important;
-  left:-5% !important;
+.headerBox2 {
+  top: 60% !important;
+  left: -5% !important;
 }
 
-.headerBox3{
-  top:75% !important;
-  left:10% !important;
+.headerBox3 {
+  top: 75% !important;
+  left: 10% !important;
 }
 
-.headerImg > img{
-  width:100% !important;
+.headerImg > img {
+  width: 100% !important;
   object-fit: contain;
 }
 
-.myBlogs .card-img-top{
-  height:20vh !important;
-  object-fit:cover !important;
+.myBlogs .card-img-top {
+  height: 20vh !important;
+  object-fit: cover !important;
 }
 
-.myBlogs .card-body{
-  height:25vh !important;
+.myBlogs .card-body {
+  height: 25vh !important;
 
   position: relative !important;
 }
 
-.myBlogs .card-body .btn-green{
-  position:absolute !important;
-  right:2em !important;
-  bottom:2em !important;
+.myBlogs .card-body .btn-green {
+  position: absolute !important;
+  right: 2em !important;
+  bottom: 2em !important;
 }
 
-.splideCarousel{
-  width:100vw !important;
-  height:40vh !important;
-  background:var(--secondaryColor) !important;
-  color:var(--textColorTwo) !important;
+.splideCarousel {
+  width: 100vw !important;
+  height: 40vh !important;
+  background: var(--secondaryColor) !important;
+  color: var(--textColorTwo) !important;
 }
 
-.sCarouselTxt{
-  width:50vw !important;
-  background:var(--textColorOne) !important;
- 
+.sCarouselTxt {
+  width: 50vw !important;
+  background: var(--textColorOne) !important;
 }
 
-.sCarouselImg{
-  width:4rem !important;
-  margin-bottom:-1em !important;
-  position:relative !important;
+.sCarouselImg {
+  width: 4rem !important;
+  margin-bottom: -1em !important;
+  position: relative !important;
 }
 
 /* Subscription */
-.subscribeLet{
-  color:var(--textColorOne) !important;
-  text-shadow: 0 2px 2px rgba(0,0,0,0.5) !important;
+.subscribeLet {
+  color: var(--textColorOne) !important;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5) !important;
 }
 
-.formSubscribe{
-  color:var(--textColorOne) !important;
-  border-bottom:1px solid var(--thirdColor) !important;
+.formSubscribe {
+  color: var(--textColorOne) !important;
+  border-bottom: 1px solid var(--thirdColor) !important;
 }
 
-.newsLetterBox{
-  position:fixed !important;
-  bottom:3vh !important;
-  right:3rem !important;
-  background:var(--textColorOne) !important;
-  box-shadow: 0 2px 2px rgba(0,0,0,0.5) !important;
-  
-  padding:0.5em !important;
+.newsLetterBox {
+  position: fixed !important;
+  bottom: 3vh !important;
+  right: 3rem !important;
+  background: var(--textColorOne) !important;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5) !important;
+
+  padding: 0.5em !important;
   border-radius: 50%;
 
   cursor: pointer;
 
-  position:relative;
+  position: relative;
 }
 
-.newsLetter{
-  color:var(--secondaryColor) !important;
-  
-  z-index:200 !important;
+.newsLetter {
+  color: var(--secondaryColor) !important;
 
- 
+  z-index: 200 !important;
 }
 
-.newsAlert{
-  width:15em !important;
-  display:none !important;
-  background:var(--textColorOne) !important;
-  color:var(--textColorTwo) !important;
+.newsAlert {
+  width: 15em !important;
+  display: none !important;
+  background: var(--textColorOne) !important;
+  color: var(--textColorTwo) !important;
 
-  position:absolute;
-  left:-290%;
-  bottom:0;
+  position: absolute;
+  left: -290%;
+  bottom: 0;
 
-  transition:all 0.5s !important;
-
+  transition: all 0.5s !important;
 }
 
-.hover:hover .newsAlert{
-  display:block !important;
+.hover:hover .newsAlert {
+  display: block !important;
 }
-
-
-
 
 /* Responsive  */
 
-
-@media (max-width: 768px){
-  .headerImg{
-    display:none !important;
+@media (max-width: 768px) {
+  .headerImg {
+    display: none !important;
   }
 }
 
-@media (max-width: 576px){
-  .headerImg{
-    display:none !important;
+@media (max-width: 576px) {
+  .headerImg {
+    display: none !important;
   }
 }
 
-
-@media (max-width: 1144px){
-  .headerBox2{
-    top:50% !important;
+@media (max-width: 1144px) {
+  .headerBox2 {
+    top: 50% !important;
   }
-  .headerBox3{
-    top:60% !important;
+  .headerBox3 {
+    top: 60% !important;
   }
 }
-
 
 /* Responsive  */
-@media (max-width: 1300px){
-  .myBlogs .card-body{
-    height:auto !important;
+@media (max-width: 1300px) {
+  .myBlogs .card-body {
+    height: auto !important;
   }
 }
 
-@media (max-width: 1360px){
-  .myBlogs .card-body .btn-green{
-    position:static !important;
+@media (max-width: 1360px) {
+  .myBlogs .card-body .btn-green {
+    position: static !important;
   }
 }
 
-@media (max-width: 576px){
-  .myBlogs .card-body{
-    height:auto !important;
+@media (max-width: 576px) {
+  .myBlogs .card-body {
+    height: auto !important;
   }
 }
-
-
