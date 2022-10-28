@@ -1,5 +1,5 @@
 <?php
-include "../Controller/labreportController.php";
+include "../../Controller/labReport/labreportController.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -21,11 +21,7 @@
 
 <body>
     <!-- Navbar -->
-    <nav class="uNavbar col-12 navbar navbar-expand-lg navbar-light bg-green flex-column position-sticky top-0">
-        <div class="bg-green hrService">
-            24 Hours Service </br>
-            09-123456789
-        </div>
+    <nav class="uNavbar col-12 navbar navbar-expand-lg navbar-light bg-green flex-column position-sticky top-0 p-0">
         <!-- Container wrapper -->
         <div class="container-fluid">
             <!-- Toggle button -->

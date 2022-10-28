@@ -149,7 +149,8 @@ if (isset($_GET["id"])) {
                             <?php
                             $dateTime =   $docDateTime[0]["start_time"] . " - " . $docDateTime[0]["end_time"]
                             ?>
-                            <button name="docTime" id="docTime" class="btn btn-lg btn-green docTime" disabled ><?= $dateTime ?></button>
+                            
+                            <input type="text" name="docTime" id="docTime" class="form-control docTime" value="<?= $dateTime ?>" readonly />
 
                         </div>
 

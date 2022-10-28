@@ -111,7 +111,7 @@ include "../../../patient/Controller/common/aChColorTxtController.php";
 
                     <!-- Default checkbox -->
                     <div class="form-check mb-4">
-                      <input class="form-check-input" type="checkbox" name="role" value="1" id="roleEdit<?= $countId ?>" />
+                      <input class="form-check-input" type="checkbox" name="role" value="1" id="roleEdit<?= $countId ?>" <?php if($adminInfo[0]['status']==1)echo "checked"?> />
                       <label class="form-check-label" for="roleEdit<?= $countId ?>">Main Admin</label>
                     </div>
 

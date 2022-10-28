@@ -38,6 +38,10 @@
   
 }
 
+.animate__slideInDown h6{
+  color:var(--textColorOne) !important;
+}
+
 .animate__slideInDown .doctor-btn{
   background:none !important;
   
@@ -63,11 +67,13 @@
   color:var(--thirdColor) !important;
 }
 
-.docDay{
+.docDay, .docTime{
  cursor: pointer;
+ transition: all 0.5s !important;
 }
 
-.docDay:hover{
+.docDay:hover, .docTime:hover{
   background-color: var(--thirdColor) !important;
+  color:var(--textColorOne) !important;
 }
 

@@ -32,6 +32,7 @@ include "../../../admin/Controller/adminProfile/adminAlertController.php";
   <script src="../common/uNavbar/js/uNavbar.js"<?php time(); ?> defer></script>
 
   <script src="./js/home.js" defer></script>
+  <script src="./js/bmi.js" defer></script>
 </head>
 
 <body>
@@ -309,89 +310,99 @@ include "../../../admin/Controller/adminProfile/adminAlertController.php";
 
   <section id="calculator">
 
-    <div class=" container-fluid">
+<div class=" container-fluid">
 
-      <div class="calculators m-5">
-        <div class="row">
-          <div class="col ms-3">
-            <div class="bmi">BMI CALCULATOR</div>
-            <p class="aboutBmi mt-3">
-              BMI is a reliable indicator of body fatness for most people. It is
-              used to screen for weight categories that may lead to health
-              problems. This calculator provides BMI and the corresponding weight
-              category.
-            </p>
+  <div class="calculators m-5">
+    <div class="row">
+      <div class="col ms-3">
+        <div class="bmi">BMI CALCULATOR</div>
+        <p class="aboutBmi mt-3">
+          BMI is a reliable indicator of body fatness for most people. It is
+          used to screen for weight categories that may lead to health
+          problems. This calculator provides BMI and the corresponding weight
+          category.
+        </p>
 
-            <div class="weight mb-3">
-              <div class="weightLabel">Weight:</div>
-              <input type="number" id="inputWeight" />
+        <div class="weight mb-3">
+          <div class="weightLabel">Weight:</div>
+          <input type="number" id="inputWeight" value=""/>
+        </div>
+        <div class="height mb-3">
+          <div class="row">
+            <div class="col">
+              <div class="FeetLabel">Height (feet):</div>
+              <input type="number" id="inputFeet" value=""/>
             </div>
-            <div class="height mb-3">
-              <div class="row">
-                <div class="col">
-                  <div class="FeetLabel">Height (feet):</div>
-                  <input type="number" id="inputFeet" />
-                </div>
-                <div class="col">
-                  <div class="InchesLabel">Height (inches):</div>
-                  <input type="number" id="inputInches" />
-                </div>
-              </div>
-            </div>
-            <button type="button" class="btn btn-primary calculateBtn mb-3">
-              Calculate
-            </button>
-            <div class="displayReport mb-3 ms-5">
-              Your Body Mass Index is <span id="bmrResult"> 20.6</span>
-            </div>
-            <img src="../storage/home/Screenshot (41) 1.png" class="img-fluid" alt="..." />
-          </div>
-          <div class="col">
-            <div class="bmi">ADVANCE BMR CALCULATOR</div>
-            <p class="aboutBmr mt-3">
-              Your basal metabolic rate (BMR) is equivalent to the amount of
-              energy (in the form of calories) that your body needs to function if
-              it were to rest for 24 hours.
-            </p>
-            <div class="row mt-5">
-              <div class="col">Weight (pounds):</div>
-              <div class="col"><input type="number" id="" class="mb-3" /></div>
-            </div>
-            <div class="row">
-              <div class="col">Height (feet):</div>
-              <div class="col"><input type="number" id="" class="mb-3" /></div>
-            </div>
-            <div class="row">
-              <div class="col">Height (inches):</div>
-              <div class="col"><input type="number" id="" class="mb-3" /></div>
-            </div>
-            <div class="row">
-              <div class="col">Age :</div>
-              <div class="col"><input type="number" id="" class="mb-3" /></div>
-            </div>
-            <div class="row">
-              <div class="col">Sex :</div>
-              <div class="col"><input type="number" id="" class="mb-3" /></div>
-            </div>
-            <div class="row">
-              <div class="col">BMR (kcal/day):</div>
-              <div class="col"><input type="number" id="" class="mb-3" /></div>
-            </div>
-            <div class="row">
-              <div class="col">PAL</div>
-              <div class="col"><input type="number" id="" class="mb-3" /></div>
-            </div>
-            <div class="row">
-              <div class="col">Total energy expenditure is</div>
-              <div class="col"><input type="number" id="" class="mb-3" /></div>
+            <div class="col">
+              <div class="InchesLabel">Height (inches):</div>
+              <input type="number" id="inputInches" value=""/>
             </div>
           </div>
         </div>
+        <button type="button" class="btn btn-primary calculateBtn mb-3" id="calculateButton">
+          Calculate
+        </button>
+        <div class="displayReport mb-3 ms-5">
+          Your Body Mass Index is <span id="showResult"></span>
+        </div>
+        <img src="../storage/home/Screenshot (41) 1.png" class="img-fluid" alt="..." />
       </div>
-
-
+      <div class="col">
+        <div class="bmi">ADVANCE BMR CALCULATOR</div>
+        <p class="aboutBmr mt-3">
+          Your basal metabolic rate (BMR) is equivalent to the amount of
+          energy (in the form of calories) that your body needs to function if
+          it were to rest for 24 hours.
+        </p>
+        <div class="row mt-5">
+          <div class="col">Weight (pounds):</div>
+          <div class="col"><input type="number" id="inputWeightBmr" class="mb-3" value=""/></div>
+        </div>
+        <div class="row">
+          <div class="col">Height (feet):</div>
+          <div class="col"><input type="number" id="inputFeetBmr" class="mb-3" value=""/></div>
+        </div>
+        <div class="row">
+          <div class="col">Height (inches):</div>
+          <div class="col"><input type="number" id="inputInchesBmr" class="mb-3" value=""/></div>
+        </div>
+        <div class="row">
+          <div class="col">Age :</div>
+          <div class="col"><input type="number" id="inputAgeBmr" class="mb-3" value=""/></div>
+        </div>
+        <div class="row">
+          <div class="col">Gender :</div>
+          <div class="col"><select class="form-select" id="inputGenderBmr" aria-label="Default select example">
+            <option value="1">Male</option>
+            <option value="2">Female</option>
+          </select></div>
+        </div>
+        <div class="row">
+          <div class="col">BMR (kcal/day):</div>
+          <div class="col"><input type="number" id="calculationBmr" class="mb-3" value=""/></div>
+        </div>
+        <div class="row">
+          <div class="col">PAL</div>
+          <div class="col"><select class="form-select" id="inputPalBmr" aria-label="Default select example">
+            <option selected>Open this select menu</option>
+            <option value="1.2">Sedentary (little or no exercise)</option>
+            <option value="1.375">Lightly active (light exercise/sports 1-3 days/week)</option>
+            <option value="1.55">Moderately active (moderate exercise/sports 3-5 days/week)</option>
+            <option value="1.725">Very active (hard exercise/sports 6-7 days a week)</option>
+            <option value="1.9">If you are extra active (very hard exercise/sports & a physical job)</option>
+          </select></div>
+        </div>
+        <div class="row">
+          <div class="col">Total energy expenditure is</div>
+          <div class="col"><input type="number" id="calculationTee" class="mb-3" value=""/></div>
+        </div>
+      </div>
     </div>
-  </section>
+  </div>
+
+
+</div>
+</section>
   <button
   type="button"
   class="newsLetterBox hover btn btn-secondary"

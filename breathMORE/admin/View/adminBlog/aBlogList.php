@@ -32,15 +32,7 @@ if ($_SESSION["ismainadmin"] == 0) {
     <!-- Bootstrap js1 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous" defer></script>
 
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css?=time()" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css?=time()" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap?=time()" rel="stylesheet" />
-    <!-- MDB -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css?=time()" rel="stylesheet" />
-
+   
     <!-- MDB -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js" defer></script>
 
@@ -114,7 +106,7 @@ if ($_SESSION["ismainadmin"] == 0) {
 
 
                         </td>
-<<<<<<< HEAD
+
                         <td>
                             <div class="row">
                                 <div class="col">
@@ -128,8 +120,8 @@ if ($_SESSION["ismainadmin"] == 0) {
                                             </a>
                                 </div>
                             </div>
-=======
-                        <td class="d-flex">
+
+                        <!-- <td class="d-flex">
                             <a href="../../Controller/adminBlogs/aEditBlogsController.php?id=<?= $blog["id"] ?>">
                                 <i class="fa-solid fa-pen-to-square"></i>
                             </a>
@@ -137,8 +129,8 @@ if ($_SESSION["ismainadmin"] == 0) {
                             <a href=" ../Controller/deleteAdminController.php?id=<?= $blog["id"] ?>">
                                 <i class="fa-solid fa-trash-can"></i>
                             </a>
->>>>>>> b438a2f6a1a78e8a3e3ff22398c47520df0229e0
-                        </td>
+
+                        </td> -->
                     </tr><?php } ?>
 
             </tbody>

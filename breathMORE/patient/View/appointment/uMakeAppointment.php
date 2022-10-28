@@ -53,10 +53,9 @@
                 <div class="tagging">
 
                     <p><span class="icon"></span> Select Speciality you want to take a booking</p>
-                    <p><span class="icon"></span>Select Doctor from the following of the </p>
-                    <p><span class="icon"></span>Click The Appointment Button</p>
+                    <p><span class="icon"></span>Select Doctor and Click Doctor you want to take a booking</p>
                     <p><span class="icon"></span>Fill infos in the Appointment form and Click Send</p>
-                    <p><span class="icon"></span>Appointment Code and QR code will be appeared</p>
+                    <p><span class="icon"></span>Return Message Will Appear</p>
                 </div>
 
             </div>
@@ -78,7 +77,7 @@
 
                 <div id="docNames" class="animate__animated animate__slideInDown d-flex flex-wrap p-5">
 
-                    <h5>Doctors' Names will appear HERE</h5>
+                    <h6>Doctors' Names will appear HERE</h6>
 
                 </div>
             </div>
