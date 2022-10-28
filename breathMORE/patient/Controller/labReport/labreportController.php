@@ -1,10 +1,10 @@
 <?php
 session_start();
-include "../Model/dbConnect.php";
-$name = $_SESSION["username"];
-$sql = $pdo->prepare("SELECT patient_id FROM
-patient_history  WHERE user_name= :name");
-$sql->bindValue(":name", $name);
+include "../../Model/dbConnection.php";
+$userId =  $_SESSION["userId"];
+$sql = $pdo->prepare("SELECT * FROM
+patient_history  WHERE patient_id= :userId");
+$sql->bindValue(":userId", $userId);
 $sql->execute();
 $patientinfo = $sql->fetchAll(PDO::FETCH_ASSOC);
 

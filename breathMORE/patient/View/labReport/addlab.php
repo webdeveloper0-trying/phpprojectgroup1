@@ -6,9 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Lab Report</title>
-    
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
-
+    <!-- Font Awesome -->
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" /> -->
     <!-- Google Fonts -->
     <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" /> -->
     <!-- MDB -->
@@ -17,16 +16,10 @@
     <!-- MDB -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js"></script>
 
+    <link rel="stylesheet" href="../css/labAdd.css">
+    <script src="../js/jquery3.6.0.js"></script>
 
-    <script src="../common/jq/jquery-3.6.0.min.js" defer></script>
-
-    <script src="./js/labsearch.js" <?= time() ?> defer></script>
-
-    <link rel="stylesheet" href="../doctor/docAdd.css">
-    <script src="./jquery3.6.0.js"></script>
-
-    <script src="./labsearch.js" <?= time() ?> defer></script>
-
+    <script src="../js/labsearch.js" <?= time() ?> defer></script>
 
 </head>
 
@@ -46,13 +39,17 @@
                     <label for="exampleFormControlInput1" class="form-label">Patient ID</label>
                     <input id="patientID" type="text" name="pid" class="form-control" id="exampleFormControlInput1" placeholder="PatientID">
 
-                   
+                    <!-- <button class="btn" id="searchidBtn"><span><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#8a39ab" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <circle cx="10" cy="10" r="7" />
+                                <line x1="21" y1="21" x2="15" y2="15" />
+                            </svg></span></button> -->
                 </div>
 
                 <div class="mb-2 col col-lg-3" id="pname">
                     <label for="exampleFormControlInput1" class="form-label">Patient Name</label>
                     <div name="pname"></div>
-                  
+                    <!-- <input type="text" name="pname" class="form-control" id="exampleFormControlInput1" placeholder="Name"> -->
                 </div>
             </div>
 
@@ -60,7 +57,7 @@
                 <div class="mb-2 col col-lg-3" id="phno">
                     <label for="exampleFormControlInput1" class="form-label">Ph.No</label>
                     <div name="phnum"></div>
-                    
+                    <!-- <input type="text" name="phnum" class="form-control" id="exampleFormControlInput1" placeholder=""> -->
 
                 </div>
 

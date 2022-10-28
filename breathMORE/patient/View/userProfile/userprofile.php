@@ -1,6 +1,8 @@
 <?php
-session_start();
-$patientinfo = $_SESSION["patientinfo"];
+include "../../Controller/userProfile/profileController.php";
+include "../common/uNavbar/uNavbar.php";
+include "../common/uFooter/uFooter.php";
+
 // echo "<pre>";
 // print_r($patientinfo);
 ?>
@@ -13,17 +15,79 @@ $patientinfo = $_SESSION["patientinfo"];
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="../js/profile.js" defer></script>
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="../common/css/style.css" />
+    <link rel="stylesheet" href="../common/uNavbar/css/uNavbar.css" />
+    <link rel="stylesheet" href="../common/uFooter/css/uFooter.css" />
+    <link rel="stylesheet" href="./css/userProfile.css" <?php time(); ?> <script src="./js/profile.js" defer>
+    </script>
 </head>
 
 <body>
-    <div class="container">
-        <form action="../Controller/updateController.php" method="post" enctype="multipart/form-data">
-            <h6 class="display-4 ms-3 fw-bold  escape">Your Profile</h6>
+    <div class="mx-5">
+        <div class="uProfileTitle d-flex justify-content-center flex-row my-5">
+            <h4 class="h3 me-4">Your Profile</h4>
+            <div class="titleLine"></div>
+        </div>
 
-            <img src="../storage/<?= $patientinfo[0]["profile"] ?>" class="rounded mx-auto d-block" alt="" width="200" height="200" id="image" style="border-radius:50% !important">
+
+        <div class="profileCon d-flex py-4 shadow-4">
+            <div class="uProfileImgBox d-flex justify-content-center align-items-center flex-column ms-5">
+                <div class="uPImg d-flex justify-content-center align-items-center mb-4">
+                    <img src="../storage/home/benefitsOfCoffee.jpg" class="img-fluid uPic mb-3" alt="User" />
+                </div>
+                <div class="uPName text-center">
+                    <span><?= $patientinfo[0]["user_name"] ?></span>
+                    <span class="uPline"></span>
+                </div>
+            </div>
+            <div class="uProfileInfo ms-5">
+                <table class="table text-start">
+                    <thead>
+                        <tr>
+                            <th colspan="4" class="text-muted text-capitalize">Your Id is <span><?= $patientinfo[0]["register_id"] ?></span></th>
+                        </tr>
+                        <tr>
+                            <th><span class="text-muted">Gender:</span>
+                                <?= $patientinfo[0]["gender"] ?>
+                            </th>
+                            <th scope="col">
+                                <span class="text-muted">Date of Birth:</span>
+                                <?= $patientinfo[0]["date_of_birth"] ?>
+                            </th>
+                            <th>
+                                <span class="text-muted">Age:</span>
+                                <?= $patientinfo[0]["age"] ?>
+                            </th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+
+                            <td><span class="text-muted">Email</span>
+                            <?= $patientinfo[0]["user_email"] ?>
+                            </td>
+                            
+                            <td colspan="2"><span class="text-muted">Ph.No:</span>
+                            <?= $patientinfo[0]["ph_num"] ?>
+                            </td>                          
+                           
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="hosHistory">
+            
+        </div>
+        <!-- <form action="../Controller/updateController.php" method="post" enctype="multipart/form-data">
+           
+
+            <img src="../storage/home/benefitsOfCoffee.jpg"  alt="a" id="image" />
             <input type="file" name="upload" onchange="setimg()" id="uploadfile">
 
             <input type="text" name="username" class="form-control  mt-5" value="<?= $patientinfo[0]["user_name"] ?>" placeholder="name" disabled>
@@ -37,7 +101,7 @@ $patientinfo = $_SESSION["patientinfo"];
             <button type="sumit" class="btn btn-secondary mt-5" name="profile">Update</button>
         </form>
 
-        <button type="sumit" class="btn btn-secondary mt-5" id="history"><a href="../View/userhistory.php">History Page </a></button>
+        <button type="sumit" class="btn btn-secondary mt-5" id="history"><a href="../userHistory/userhistory.php">History Page </a></button> -->
 
     </div>
 </body>

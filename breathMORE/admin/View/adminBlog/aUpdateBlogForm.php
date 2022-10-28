@@ -75,7 +75,9 @@ $blogInfos = $_SESSION["blogInfo"];
 
             <!-- Message input -->
             <div class="form-outline mb-4">
-                <textarea class="form-control" name="blogContent" id="blogContent" rows="4" placeholder="<?= $blogInfos[0]["content"] ?>"></textarea>
+                <textarea class="form-control" name="blogContent" id="blogContent" rows="4">
+                <?= $blogInfos[0]["content"] ?>
+                </textarea>
                 <label class="form-label" for="blogContent">Blog Content</label>
             </div>
 

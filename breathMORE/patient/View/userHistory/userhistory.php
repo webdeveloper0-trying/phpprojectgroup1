@@ -1,5 +1,5 @@
 <?php
-include "../Controller/historyController.php";
+include "../../Controller/userHistory/historyController.php";
 
 ?>
 

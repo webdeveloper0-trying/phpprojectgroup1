@@ -1,3 +1,3 @@
-<a href="../View/labreport.php">Lab report</a>
+<a href="./labreport.php">Lab report</a>
 
 <!-- home nav bar -->

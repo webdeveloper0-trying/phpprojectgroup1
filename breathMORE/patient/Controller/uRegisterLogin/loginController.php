@@ -24,7 +24,7 @@ if (isset($_POST["username"]) && isset($_POST["password"])) {
         $resultId = $sql1->fetchAll(PDO::FETCH_ASSOC);
         $_SESSION["userId"] = $resultId[0]['register_id'];
 
-        header("location: ../../View/main/home.php");
+        header("location: ../../View/main/main.php");
     } else {
        
         header("location: ../../View/uRegisterLogin/login.php");

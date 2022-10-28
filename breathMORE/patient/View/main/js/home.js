@@ -18,10 +18,6 @@ $(".newsLetterBox").click(function(){
         data: sendData,
         success: function (res) {
             console.log("OKAY");
-
-
-           
-
         },
         error: function (err) {
             console.log(err);

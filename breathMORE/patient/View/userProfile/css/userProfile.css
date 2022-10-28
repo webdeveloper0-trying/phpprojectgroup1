@@ -1,0 +1,48 @@
+
+
+.uProfileTitle{
+   color:var(--textColorTwo) !important;
+}
+
+.titleLine{
+    width:85% !important;
+    height:5em !important;
+    background:none !important;
+    border-top:0.2em outset var(--thirdColor) !important;
+    margin-left:1em !important;
+    margin-top:1em !important;
+}
+
+.profileCon{
+    background: var(--textColorOne) !important;
+  }
+
+.uPImg{
+    width:100% !important;
+    border-bottom:inset 0.2em var(--firstColor) !important;
+    
+}
+
+.uPic{
+    width:7em !important;
+    height:7em !important;
+    object-fit:center !important;
+    border-radius: 100% !important;
+}
+
+.uPName{
+    width:100% !important;
+    text-transform: capitalize !important;
+}
+
+.uPline{
+    display: inline-block !important;
+    width:100% !important;
+    height:0.2em !important;
+    background:var(--thirdColor) !important;
+    border-radius:0.2em !important;
+}
+
+.textLeft{
+    text-align: right !important;
+}

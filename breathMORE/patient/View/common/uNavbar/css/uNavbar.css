@@ -1,23 +1,22 @@
 
 .uNavbar{
   width: 100vw !important;
-  box-shadow:0 5px 5px rgba(0,0,0,0.3) !important;
+  box-shadow:1px 1px 0.5px rgba(0,0,0,0.3) !important;
+  color:var(--textColorOne) !important;
 
   z-index:100 !important
 }
 
-
-.hrService{
-  margin-left:80vw !important;
-}
 #logoStitle{
-  color:var(--textColorOne) !important;
+  color:var(--textColorTwo) !important;
 }
 
 #logoEtitle{
   color:red !important;
   text-transform: uppercase !important;
 }
+
+
 
 .userProfile{
   margin-right:5em !important;

@@ -20,6 +20,12 @@ session_start();
     <!-- MDB -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js"></script>
 
+    <link rel="stylesheet" href="../common/css/style.css">
+
+    <!-- <link rel="stylesheet" href="./phadd.css"> -->
+    <script src="../common/jq/jquery-3.6.0.min.js" defer></script>
+    <script src="./js/phadd.js" defer <?= time() ?> ></script>
+
     <link rel="stylesheet" href="../doctor/docAdd.css">
     <!-- <link rel="stylesheet" href="../common/css/adminNavbar.css"> -->
 
@@ -27,15 +33,12 @@ session_start();
     <script src="../common/jq/jquery-3.6.0.min.js"></script>
     <script src="../phistory/js/phadd.js" <?= time() ?> defer></script>
 
+
 </head>
 
 <body>
 
-    <div class="container-fluid">
-
-
-
-
+    <div class="MX-5">
 
         <form action="../../Controller/phistory/phaddController.php" method="post">
 

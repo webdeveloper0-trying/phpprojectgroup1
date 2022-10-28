@@ -23,15 +23,13 @@
     <!-- Boxicon  -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-    <!-- custom css -->
-    <!-- <link rel="stylesheet" href="./css/style.css"> -->
-    <!-- <link rel="stylesheet" href="./css/adminNavbar.css" > -->
+   
 </head>
 
 <body>
 
     <button class="btn btn-green btnMenu" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
-        <i class='bx bx-menu bx-sm' style='color:#4b694d'></i>
+        <i class='bx bx-menu bx-sm' style='color:#fff'></i>
     </button>
 
     <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasWithBothOptionsLabel">
