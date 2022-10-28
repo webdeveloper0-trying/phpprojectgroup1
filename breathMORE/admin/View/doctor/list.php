@@ -1,9 +1,6 @@
 <?php
 include "../common/adminNavbar.php";
 include "../../Controller/doctor/listController.php";
-// echo "<pre>";
-// print_r($doctorList);
-
 
 ?>
 
@@ -20,13 +17,9 @@ include "../../Controller/doctor/listController.php";
     <link rel="stylesheet" href="../common/css/adminNavbar.css" />
     <link rel="stylesheet" href="./css/aDoctorlist.css" <?php time(); ?> />
 
-
     <script src="../common/jq/jquery-3.6.0.min.js"></script>
     <script src="./js/doctorsearch.js" <?= time() ?> defer></script>
-    <script src="./jquery3.6.0.js"></script>
-    <script src="./doctorsearch.js" <?= time() ?> defer></script>
-
-
+   
 </head>
 
 <body>
@@ -93,23 +86,33 @@ include "../../Controller/doctor/listController.php";
                         <td class="db"><?= $doctor["day"] ?></td>
                         <td class="db"><?= $doctor["start_time"] ?>-<?= $doctor["end_time"] ?></td>
 
-                        <td><a href="../../Controller/doctor/editController.php?id=<?= $doctor["doctor_id"] ?>"><i class="fa-solid fa-pen-to-square"></i></a> </td>
-                        <td><a href="../../Controller/doctor/deleteController.php?id=<?= $doctor["doctor_id"] ?>"> <i class="fa-solid fa-trash-can"></i></a></td>
-                       
 
-                    </tr>
-                <?php } ?>
-            </tbody>
-        </table>
-        <nav aria-label="Page navigation example">
-            <ul class="pagination justify-content-center">
-                <li class="page-item <?php if ($page <= 1) {
-                                            echo "disabled";
-                                        } ?>">
-                    <a class="page-link" href="?page=<?= $page - 1 ?>" aria-label="Previous">
-                        <span aria-hidden="true">&laquo;</span>
-                    </a>
-                </li>
+                                <td><a href="../../Controller/doctor/editController.php?id=<?= $doctor["doctor_id"] ?>"><i class="fa-solid fa-pen-to-square"></i></a> </td>
+                                <td><a href="../../Controller/doctor/deleteController.php?id=<?= $doctor["doctor_id"] ?>"> <i class="fa-solid fa-trash-can"></i></a></td>
+
+
+                                <td class="db"><a href="../../Controller/doctor/editController.php?id=<?= $doctor["doctor_id"] ?>"><i class="fa-solid fa-pen-to-square"></i></a>
+
+                                    <a href="../../Controller/doctor/deleteController.php?id=<?= $doctor["doctor_id"] ?>"><i class="fa-solid fa-trash-can"></i></a>
+                                </td>
+
+
+
+                            </tr>
+                        <?php } ?>
+                    </tbody>
+                </table>
+
+
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item <?php if ($page <= 1) {
+                                                    echo "disabled";
+                                                } ?>">
+                            <a class="page-link" href="?page=<?= $page - 1 ?>" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
 
 
                 <?php for ($i = 1; $i <= $totalPages; $i++) { ?>
