@@ -139,15 +139,6 @@ include "../../Controller/doctor/listController.php";
                 float-lg-end float-sm-end float-md-end" type="submit" value="ADD Doctor"></a>
 
     </div>
-
-
-    
-
-
-
-    
-
-
 </body>
 
 </html>

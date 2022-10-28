@@ -86,7 +86,7 @@ if (isset($_POST["applyAppointment"])) {
 
         echo ("COUNT" . $appCount[0]["appointment_count"]);
 
-        if ($appCount[0]["appointment_count"] < 5) {
+        if ($appCount[0]["appointment_count"] <= 5) {
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         // Prepare for Execute
@@ -161,7 +161,7 @@ if (isset($_POST["applyAppointment"])) {
             header("Location: ../../View/appointment/uAppointmentFail.php");
         }
     } else {
-        header("Location: ../../View/appointment/uAppointmentComplete.php");
+        header("Location: ../../View/appointment/uAppointmentFail.php");
         
     }
 } else {

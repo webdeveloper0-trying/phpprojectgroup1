@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Update Form</title>
+    <title>Pharmacy ADD</title>
 
     <!-- Bootstrap css1 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
@@ -27,37 +25,48 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js" defer></script>
 
     <!-- custom css -->
-    <link rel="stylesheet" href="../common/css/style.css">
+    <link rel="stylesheet" href="../css/dm.css">
 </head>
 
 <body>
     <div class="d-flex justify-content-center align-items-center flex-column">
-        <h3 class="h3 header my-5">Blog Update Form</h3>
-        <form class="form p-5" action="../../Controller/adminBlogs/aAddBlogController.php" method="POST">
+        <h3 class="h3 header my-5">Pharmacy ADD</h3>
+        <form class="form p-3" action="../../Controller/pharmacy/addPharmacyController.php" method="POST">
             <div class="row mb-4">
                 <div class="col">
                     <div class="form-outline">
-                        <input type="text" name="blogTitle" id="blogTitle" class="form-control" />
-                        <label class="form-label" for="blogTitle">Blog Title</label>
+                        <input type="text" name="pharmacyName" id="Pharmacy Name" class="form-control" />
+                        <label class="form-label" for="Pharmacy Name">Pharmacy Name</label>
                     </div>
                 </div>
                 <div class="col">
-                    <div class="form-outline">
-                        <input type="text" name="blogWriter" id="blogWriter" class="form-control" />
-                        <label class="form-label" for="blogWriter">Blog Writer</label>
-                    </div>
+                    <!-- <div class="form-outline"> -->
+                    <!-- <input type="text" name="pharmacyPhoto" id="pharmacyPhoto" class="form-control" /> -->
+                    <!-- <label class="form-label" for="pharmacyPhoto">pharmacyPhoto</label> -->
+                    <select class="form-control" name="pharmacyPhoto" id="pharmacyPhoto" aria-label="Default select example">
+                        <option value="ph1.jpg" selected>Pharmacy Image1</option>
+                        <option value="ph2.jpg">Pharmacy Image2</option>
+                        <option value="ph3.jpg">Pharmacy Image3</option>
+                        <option value="ph4.jpg">Pharmacy Image4</option>
+                        <option value="ph5.jpg">Pharmacy Image5</option>
+
+
+                    </select>
+
+
+
+                    <!-- </div> -->
                 </div>
+
+
             </div>
+
+
 
             <!-- Text input -->
             <div class="form-outline mb-4">
-                <input type="datetime-local" name="blogDate" id="blogDate" class="form-control" />
-            </div>
-
-            <!-- Text input -->
-            <div class="form-outline mb-4">
-                <input type="text" name="blogImage" id="BlogImage" class="form-control" />
-                <label class="form-label" for="BlogImage">Blog Image</label>
+                <input type="text" name="pharmacyAdd" id="pharmacyAdd" class="form-control" />
+                <label class="form-label" for="pharmacyAdd">Address</label>
             </div>
 
 
@@ -65,20 +74,23 @@
 
             <!-- Message input -->
             <div class="form-outline mb-4">
-                <textarea class="form-control" name="blogContent" id="blogContent" rows="4"></textarea>
-                <label class="form-label" for="blogContent">Blog Content</label>
+
+                <input type="text" name="phNum" id="phNum" class="form-control" />
+                <label class="form-label" for="phNum">Phone No.</label>
+            </div>
+
+            <div class="form-outline mb-4">
+
+                <input type="text" class="form-control" name="township" id="township" />
+                <label class="form-label" for="township">Township</label>
             </div>
 
 
-            <div class="d-flex justify-content-between">
-                <!-- Submit button -->
-                <button type="submit" class="btn btn-purple btn-blog mb-4" name="addBlog">Add</button>
 
-                <!-- Blog button -->
-                <a href="">
-                    <button type="submit" class="btn btn-green btn-blog mb-4">Go Back to Blog Page</button>
-                </a>
+            <div class="d-flex justify-content-center">
+                <button class="btn float-end col-lg-5 submit-button  col btn-secondary " type="submit" name="addPharmacy">Submit</button>
             </div>
+
         </form>
     </div>
 </body>

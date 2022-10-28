@@ -16,18 +16,7 @@ if (isset($_POST["searchid"])) {
     $_SESSION["pList"] = $pList1;
 
     echo json_encode($pList1);
-    // header("Location: ../phistory/newController.php");
-
-    // $sql = $pdo->prepare(" 
-    // SELECT * FROM doctor_lists WHERE doctor_id=:pid
-    // ");
-    // $sql->bindValue(":pid", $pList1[0]["doctor_id"]);
-
-    // $sql->execute();
-    // $pList2 = $sql->fetchAll(PDO::FETCH_ASSOC);
-
-    // echo "<pre>";
-    // print_r($pList2);
+   
 
 
 }

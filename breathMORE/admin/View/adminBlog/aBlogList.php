@@ -179,7 +179,7 @@ if ($_SESSION["ismainadmin"] == 0) {
 
         <!-- Submit button -->
         <a href="./aAddBlogForm.php">
-        <button type="submit" name="addBlog" class="btn btn-purple btn-lg mb-4">Add</button>
+        <button type="submit" name="addBlog" class="btn btn-purple mb-4">Add</button>
         </a>
 
 

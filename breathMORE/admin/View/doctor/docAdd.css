@@ -24,19 +24,19 @@
   font-family: var(--fontTwo);
   color: var(--textColorOne) !important;
   /* border: 1px solid #8a39ab; */
-  font-size: 20px;
-  border-radius: 10px;
+  font-size: 15px;
+  border-radius: 7px;
   font-family: var(--fontFamilyJosef) !important;
 }
 
 .submit-button:hover {
-  background-color: var(--thirdColor);
-  color: var(--textColorOne) !important;
+  background: var(--thirdColor) !important;
+  color: var(--firstColor);
 }
 
 .mybtn {
-  /* background: var(--secondaryColor) !important; */
-  color: var(--secondaryColor) !important;
+  background: var(--secondaryColor) !important;
+  color: var(--textColorOne) !important;
 }
 
 h3 {
@@ -52,15 +52,28 @@ input {
   border-radius: 10px !important;
 }
 
+.mybtn-pill {
+  background-color: var(--secondaryColor) !important;
+  color: var(--firstColor);
+}
+
+.mybtn-pill:hover {
+  background-color: var(--secondaryColor) !important;
+  color: var(--firstColor);
+}
 thead {
   background: var(--secondaryColor) !important;
   color: var(--firstColor) !important;
 }
 
 /*START FOR TABLES and  FORMS*/
-.table {
+.tr:hover {
   background: var(--textColorOne) !important;
   color: var(--textColorTwo) !important;
+}
+th {
+  font-size: 18px;
+  font-weight: 100;
 }
 
 @media (max-width: 992px) {
