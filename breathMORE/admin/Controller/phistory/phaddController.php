@@ -13,7 +13,7 @@ if (isset($_POST["addPatientReport"])) {
     $pid = $_POST["pid"];
     $date = $_POST["date"];
     $dnote = $_POST["dnote"];
-    $refDoc = $_POST["refDoc"];
+    // $refDoc = $_POST["refDoc"];
     $did = $_POST["did"];
     $sql = $pdo->prepare("
     INSERT INTO patient_history

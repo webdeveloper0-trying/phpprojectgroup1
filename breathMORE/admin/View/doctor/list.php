@@ -27,19 +27,19 @@ include "../../Controller/doctor/listController.php";
     <link rel="stylesheet" href="../common/css/adminNavbar.css">
     <link rel="stylesheet" href="./css/aDoctorlist.css" <?php time(); ?> />
 
-<<<<<<< HEAD
+
     <script src="../common/jq/jquery-3.6.0.min.js"></script>
     <script src="./js/doctorsearch.js" <?= time() ?> defer></script>
-=======
+
     <script src="./jquery3.6.0.js"></script>
     <script src="./doctorsearch.js" <?= time() ?> defer></script>
->>>>>>> b438a2f6a1a78e8a3e3ff22398c47520df0229e0
+
 
 </head>
 
 <body class="d-flex justify-content-center">
 
-<<<<<<< HEAD
+
     <div class="mx-5 d-flex justify-content-center align-items-center flex-column">
         <h3 class="header my-5">Total Doctor Lists</h3>
     
@@ -67,7 +67,7 @@ include "../../Controller/doctor/listController.php";
 
                             </th>
                         </tr>
-=======
+
     <div class=" container-fluid">
         <div class="row justify-content-center align-items-center m-5">
             <div class="row m-5">
@@ -127,7 +127,7 @@ include "../../Controller/doctor/listController.php";
             <div class="col col-md-auto col-lg-11 col-sm-6 ">
                 <table class="table align-middle table-bordered text-center ">
                     <thead>
->>>>>>> b438a2f6a1a78e8a3e3ff22398c47520df0229e0
+
                         <tr>
                             <th scope="col" class="p-3">No.</th>
                             <th scope="col">Doctor_Name</th>
@@ -162,23 +162,23 @@ include "../../Controller/doctor/listController.php";
                                 <td class="db"><?= $doctor["day"] ?></td>
                                 <td class="db"><?= $doctor["start_time"] ?>-<?= $doctor["end_time"] ?></td>
 
-<<<<<<< HEAD
+
                                 <td><a href="../../Controller/doctor/editController.php?id=<?= $doctor["doctor_id"] ?>"><i class="fa-solid fa-pen-to-square"></i></a> </td>
                                 <td><a href="../../Controller/doctor/deleteController.php?id=<?= $doctor["doctor_id"] ?>"> <i class="fa-solid fa-trash-can"></i></a></td>
-=======
+
 
                                 <td class="db"><a href="../../Controller/doctor/editController.php?id=<?= $doctor["doctor_id"] ?>"><i class="fa-solid fa-pen-to-square"></i></a>
 
                                     <a href="../../Controller/doctor/deleteController.php?id=<?= $doctor["doctor_id"] ?>"><i class="fa-solid fa-trash-can"></i></a>
                                 </td>
->>>>>>> b438a2f6a1a78e8a3e3ff22398c47520df0229e0
+
 
 
                             </tr>
                         <?php } ?>
                     </tbody>
                 </table>
-<<<<<<< HEAD
+
 =======
                 <nav aria-label="Page navigation example">
                     <ul class="pagination justify-content-center">
@@ -215,7 +215,7 @@ include "../../Controller/doctor/listController.php";
 
         </div>
 
->>>>>>> b438a2f6a1a78e8a3e3ff22398c47520df0229e0
+
 
                 <a href="./add.php"> <input class="btn btn-purple mt-3 mb-5 
                 float-lg-end float-sm-end float-md-end" type="submit" value="ADD Doctor"></a>
