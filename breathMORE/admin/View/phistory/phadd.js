@@ -24,7 +24,7 @@ $("#searchBtn").click(function () {
                 <td>${plist.user_name}</td>
                 <td>${plist.diagnosis}</td>
                 <td>${plist.categories}</td>
-                <td> <input id="searchpid"  value="${plist.doctor_id}" type="text"  name="did" class="form-control" readonly id="exampleFormControlInput1" placeholder=""></td>   
+                <td>${plist.doctor_id}</td>   
                 
             </tr>
           

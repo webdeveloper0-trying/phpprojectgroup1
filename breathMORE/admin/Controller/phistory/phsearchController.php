@@ -16,7 +16,4 @@ if (isset($_POST["searchid"])) {
     $_SESSION["pList"] = $pList1;
 
     echo json_encode($pList1);
-   
-
-
 }

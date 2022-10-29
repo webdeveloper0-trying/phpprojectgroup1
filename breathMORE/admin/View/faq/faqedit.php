@@ -47,9 +47,9 @@ $gotfaq = $_SESSION["faqRes"];
 
                 <div class="col-4 mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Question</label>
-                    <input type="text" name="upque" value="<?php echo $gotfaq[0]["question"] ?>" class="form-control" id="exampleFormControlInput1" placeholder="Name" cols="30" rows="5">
+                    <!-- <input type="text" name="upque" value="<?php echo $gotfaq[0]["question"] ?>" class="form-control" id="exampleFormControlInput1" placeholder="Name" cols="30" rows="5"> -->
 
-                    <!-- <textarea name="upque" class="form-control" value="<?php echo $gotfaq[0]["question"] ?>" id="exampleFormControlInput1" cols="30" rows="5"></textarea> -->
+                    <textarea name="upque" class="form-control" id="exampleFormControlInput1" cols="30" rows="5"><?php echo $gotfaq[0]["question"] ?></textarea>
 
                 </div>
 
@@ -60,7 +60,7 @@ $gotfaq = $_SESSION["faqRes"];
 
                 <div class="col-4 mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Answer</label>
-                    <textarea name="upans" value="<?php echo $gotfaq[0]["answer"] ?>" id="exampleFormControlInput1" class="form-control" cols="30" rows="5"></textarea>
+                    <textarea name="upans" id="exampleFormControlInput1" class="form-control" cols="30" rows="5"><?php echo $gotfaq[0]["answer"] ?></textarea>
 
                     <!-- <input type="text" name="ans" class="form-control" id="exampleFormControlInput1" placeholder="Name"> -->
 

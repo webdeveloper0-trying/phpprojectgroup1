@@ -42,7 +42,7 @@ session_start();
 
             <div class="row justify-content-center mt-3">
                 <div class="col col-lg-5 text-center">
-                    <h3 class="m-3 title"> Patient History Record </h3>
+                    <h3 class="m-3 title">Patient History Record </h3>
                 </div>
             </div>
             <div class="row justify-content-center mt-3">
