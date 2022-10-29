@@ -1,65 +1,56 @@
-
-.uNavbar{
+.uNavbar {
   width: 100vw !important;
-  box-shadow:1px 1px 0.5px rgba(0,0,0,0.3) !important;
-  color:var(--textColorOne) !important;
+  box-shadow: 1px 1px 0.5px rgba(0, 0, 0, 0.3) !important;
+  color: var(--textColorOne) !important;
 
-  z-index:100 !important
+  z-index: 100 !important;
 }
 
-#logoStitle{
-  color:var(--textColorOne) !important;
+#logoStitle {
+  color: var(--textColorOne) !important;
 }
 
-#logoEtitle{
-  color:red !important;
+#logoEtitle {
+  color: red !important;
   text-transform: uppercase !important;
 }
 
-
-
-.userProfile{
-  margin-right:5em !important;
+.userProfile {
+  margin-right: 5em !important;
 }
 
-.nav-link{
-  color:var(--textColorOne) !important;
+.nav-link {
+  color: var(--textColorOne) !important;
 }
 
-.nav-link-active{
-  position:relative !important;
+.nav-link-active {
+  position: relative !important;
 
-  overflow:hidden !important;
+  overflow: hidden !important;
 }
 
-.nav-link-active::after{
-  content:"";
+.nav-link-active::after {
+  content: "";
 
-  width:100% !important;
-  height:0.3em !important;
-  background:var(--thirdColor) !important;
-  position:absolute !important;
-  bottom:0.5em !important;
-  left:-100% !important;
+  width: 100% !important;
+  height: 0.3em !important;
+  background: var(--thirdColor) !important;
+  position: absolute !important;
+  bottom: 0.5em !important;
+  left: -100% !important;
 
-  transition:all 0.5s ease-in-out !important;
-
-  
+  transition: all 0.5s ease-in-out !important;
 }
 
-.nav-link-active:hover::after{
-  left:0% !important;
+.nav-link-active:hover::after {
+  left: 0% !important;
 }
 
-.nav-active{
- text-decoration-color: var(--thirdColor) !important;
- text-decoration-thickness: 0.3em !important;
- text-decoration-line:underline !important;
+.nav-active {
+  text-decoration-color: var(--thirdColor) !important;
+  text-decoration-thickness: 0.3em !important;
+  text-decoration-line: underline !important;
   border-radius: 5px !important;
- 
 
-
-  transition:all 0.5s ease-in-out !important;
-
-  
+  transition: all 0.5s ease-in-out !important;
 }

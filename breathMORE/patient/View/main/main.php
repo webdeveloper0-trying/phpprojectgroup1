@@ -38,7 +38,7 @@ include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
 
 <body>
   <!-- Daily Msg -->
-  <marquee><?= $dailyMsg[0]["message"]?></marquee>
+  <marquee><?= $dailyMsg[0]["message"] ?></marquee>
   <!-- herosection -->
   <section id="herosection" class="mb-5">
     <div class="container-fluid p-5 d-flex mx-xs-0 mx-sm-0 mx-md-5 mx-lg-5">
@@ -136,25 +136,25 @@ include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
           <span class="titleBar"></span>
         </h3>
         <div class="row row-cols-1 row-cols-md-4 g-4">
-        
-        <?php foreach ($blogsInMain as $blogInMain){?> 
-          
-          <div class="col mb-4">
-            <div class="card">
-            <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-              <img src="../storage/home/<?= $blogInMain["blog_img"] ?>" class="card-img-top" alt="..." />
-              <a href="#!">
-                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-              </a>
+
+          <?php foreach ($blogsInMain as $blogInMain) { ?>
+
+            <div class="col mb-4">
+              <div class="card">
+                <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                  <img src="../storage/home/<?= $blogInMain["blog_img"] ?>" class="card-img-top" alt="..." />
+                  <a href="#!">
+                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                  </a>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title"> <?= $blogInMain["title"] ?></h5>
+                  <a href="../../Controller/blogs/subBlogController.php?id=<?= $blogInMain["id"] ?>" class="btn btn-green">Read More</a>
+                </div>
+              </div>
             </div>
-            <div class="card-body">
-              <h5 class="card-title"> <?= $blogInMain["title"] ?></h5>
-              <a href="../../Controller/blogs/subBlogController.php?id=<?= $blogInMain["id"] ?>" class="btn btn-green">Read More</a>
-            </div>
-          </div>
-        </div>
-        <?php } ?>
-         
+          <?php } ?>
+
 
         </div>
       </div>
