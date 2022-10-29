@@ -1,9 +1,10 @@
 <?php
+include "../../Controller/blogs/mainBlogController.php";
 include "../common/uNavbar/uNavbar.php";
 include "../common/uFooter/uFooter.php";
 
 include "../../../patient/Controller/common/aChColorTxtController.php";
-include "../../../admin/Controller/adminProfile/adminAlertController.php";
+include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
 
 
 
@@ -32,10 +33,12 @@ include "../../../admin/Controller/adminProfile/adminAlertController.php";
   <script src="../common/uNavbar/js/uNavbar.js" <?php time(); ?> defer></script>
 
   <script src="./js/home.js" defer></script>
-  <script src="./js/bmi.js" defer></script>
+  <script src="./js/bmiBmr.js" defer></script>
 </head>
 
 <body>
+  <!-- Daily Msg -->
+  <marquee><?= $dailyMsg[0]["message"]?></marquee>
   <!-- herosection -->
   <section id="herosection" class="mb-5">
     <div class="container-fluid p-5 d-flex mx-xs-0 mx-sm-0 mx-md-5 mx-lg-5">
@@ -123,7 +126,7 @@ include "../../../admin/Controller/adminProfile/adminAlertController.php";
 
   <hr />
 
-  <section id="myblogs" class="myBlogs mt-5">
+  <section id="myblogs" class="myBlogs">
     <div class="dailyAlert">
       <!-- <keyframe><?= $_SESSION["alert"] ?></keyframe> -->
     </div>
@@ -133,123 +136,25 @@ include "../../../admin/Controller/adminProfile/adminAlertController.php";
           <span class="titleBar"></span>
         </h3>
         <div class="row row-cols-1 row-cols-md-4 g-4">
+        
+        <?php foreach ($blogsInMain as $blogInMain){?> 
+          
           <div class="col mb-4">
             <div class="card">
-              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                <img src="../storage/home/weightLoss.jpg" class="card-img-top" alt="..." />
-                <a href="#!">
-                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                </a>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Noom Reviews: Long-term weight loss through behavioral change?</h5>
-                <a href="#!" class="btn btn-green">Read More</a>
-              </div>
+            <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+              <img src="../storage/home/<?= $blogInMain["blog_img"] ?>" class="card-img-top" alt="..." />
+              <a href="#!">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+              </a>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title"> <?= $blogInMain["title"] ?></h5>
+              <a href="../../Controller/blogs/subBlogController.php?id=<?= $blogInMain["id"] ?>" class="btn btn-green">Read More</a>
             </div>
           </div>
-          <div class="col mb-4">
-            <div class="card">
-              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                <img src="../storage/home/benefitsOfCoffee.jpg" class="card-img-top" alt="..." />
-                <a href="#!">
-                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                </a>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Top 10 Health Benefits of Coffee</h5>
-                <a href="#!" class="btn btn-green">Read More</a>
-              </div>
-            </div>
-          </div>
-          <div class="col mb-4">
-            <div class="card">
-              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                <img src="../storage/home/diabete.jpg" class="card-img-top" alt="..." />
-                <a href="#!">
-                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                </a>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Diabetes Statistics in the United States</h5>
-                <a href="#!" class="btn btn-green">Read More</a>
-              </div>
-            </div>
-          </div>
-          <div class="col mb-4">
-            <div class="card">
-              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                <img src="../storage/home/orgain.jpg" class="card-img-top" alt="..." />
-                <a href="#!">
-                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                </a>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Orgain Reviews: A good value in supplements and meal replacements?</h5>
-
-                <a href="#!" class="btn btn-green">Read More</a>
-              </div>
-            </div>
-          </div>
-          <div class="col mb-4">
-            <div class="card">
-              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                <img src="../storage/home/goodLens.jpg" class="card-img-top" alt="..." />
-                <a href="#!">
-                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                </a>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Lensabl Review: Good lens replacement and eyewear options? T</h5>
-
-                <a href="#!" class="btn btn-green">Read More</a>
-              </div>
-            </div>
-          </div>
-          <div class="col mb-4">
-            <div class="card">
-              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                <img src="../storage/home/zincSupplement.jpg" class="card-img-top" alt="..." />
-                <a href="#!">
-                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                </a>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Best Zinc Supplement</h5>
-
-                <a href="#!" class="btn btn-green">Read More</a>
-              </div>
-            </div>
-          </div>
-          <div class="col mb-4">
-            <div class="card">
-              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                <img src="../storage/home/hairLoss.jfif" class="card-img-top" alt="..." />
-                <a href="#!">
-                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                </a>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Keeps Review: Do Keeps’ Hair Loss Treatments Work?</h5>
-
-                <a href="#!" class="btn btn-green">Read More</a>
-              </div>
-            </div>
-          </div>
-          <div class="col mb-4">
-            <div class="card">
-              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                <img src="../storage/home/candid.jpg" class="card-img-top" alt="..." />
-                <a href="#!">
-                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                </a>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Candid Review: Is Candid teeth straightening legit?</h5>
-
-                <a href="#!" class="btn btn-green">Read More</a>
-              </div>
-            </div>
-          </div>
+        </div>
+        <?php } ?>
+         
 
         </div>
       </div>
@@ -339,7 +244,7 @@ include "../../../admin/Controller/adminProfile/adminAlertController.php";
                 </div>
               </div>
             </div>
-            <button type="button" class="btn btn-primary calculateBtn mb-3" id="calculateButton">
+            <button type="button" class="btn btn-purple calculateBtn mb-3" id="calculateButton">
               Calculate
             </button>
             <div class="displayReport mb-3 ms-5">

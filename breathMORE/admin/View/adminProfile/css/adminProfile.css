@@ -68,7 +68,9 @@
     border:0.1em solid var(--thirdColor) !important;
 }
 
-
+.header{
+    color:var(--textColorOne) !important;
+}
 
 .tChange{
     margin-left:50% !important;

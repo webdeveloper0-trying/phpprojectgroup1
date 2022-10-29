@@ -2,8 +2,10 @@
 include "../common/adminNavbar.php";
 include "../../Controller/faq/faqListController.php";
 
-// echo "<pre>";
-// print_r($faqlists);
+
+
+
+
 
 ?>
 
