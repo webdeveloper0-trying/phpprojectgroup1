@@ -20,6 +20,7 @@ $typeStock = $_SESSION["bloodInfos"];
 
     <!-- css -->
     <link rel="stylesheet" href="../doctor/docAdd.css">
+    <link rel="stylesheet" href="../common/css/style.css">
     <link rel="stylesheet" href="../common/css/adminNavbar.css">
 </head>
 
@@ -32,7 +33,7 @@ $typeStock = $_SESSION["bloodInfos"];
 
                 <div class="row justify-content-center  ">
                     <div class="col col-lg-auto">
-                        <h3 class="m-5">Edit Blood Stock</h3>
+                        <h3 class="m-5 title">Edit Blood Stock</h3>
                     </div>
                 </div>
 

@@ -1,8 +1,8 @@
 <?php
 session_start();
 $shop = $_SESSION["shopInfos"];
-echo "<pre>";
-print_r($shop);
+// echo "<pre>";
+// print_r($shop);
 
 ?>
 
@@ -33,12 +33,13 @@ print_r($shop);
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js" defer></script>
 
     <!-- custom css -->
-    <link rel="stylesheet" href="../css/dm.css">
+    <link rel="stylesheet" href="../doctor/docAdd.css">
+    <link rel="stylesheet" href="../common/css/style.css">
 </head>
 
 <body>
     <div class="d-flex justify-content-center align-items-center flex-column">
-        <h3 class="h3 header my-5">Edit Pharmacy</h3>
+        <h3 class="h3 header my-5 title">Edit Pharmacy</h3>
         <form class="form p-3" action="../../Controller/pharmacy/upShopController.php" method="POST">
             <div class="row mb-4">
                 <div class="col">
@@ -102,14 +103,14 @@ print_r($shop);
             </div>
             <div class="form-outline mb-4">
 
-                <input type="text" class="form-control" value="<?php echo $shop[0]["id"] ?>" name="upid" id="" />
+                <input type="text" class="form-control" hidden value="<?php echo $shop[0]["id"] ?>" name="upid" id="" />
 
             </div>
 
 
 
             <div class="d-flex justify-content-center">
-                <button class="btn float-end col-lg-5 submit-button  col btn-secondary " type="submit" name="upPharmacy">Submit</button>
+                <button class="btn m-3 float-end col-lg-5 submit-button  col btn-secondary " type="submit" name="upPharmacy">Submit</button>
             </div>
 
         </form>

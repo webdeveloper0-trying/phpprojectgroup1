@@ -1,5 +1,7 @@
 <?php
 
+include "../common/adminNavbar.php";
+
 include "../../Controller/pharmacy/listPharmacyController.php";
 
 // echo "<pre>";
@@ -35,7 +37,11 @@ include "../../Controller/pharmacy/listPharmacyController.php";
     <!-- MDB -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js" defer></script>
 
+
     <link rel="stylesheet" href="../doctor/docAdd.css">
+    <link rel="stylesheet" href="../common/css/style.css">
+    <link rel="stylesheet" href="../common/css/adminNavbar.css" />
+    <link rel="stylesheet" href="./css/aDoctorlist.css" <?php time(); ?> />
 
 
 
@@ -43,12 +49,8 @@ include "../../Controller/pharmacy/listPharmacyController.php";
 
 <body class="container_fluid">
 
-
-
-    <h3 class="h3 text-center mt-5">Pharmacy Lists</h3>
-
-    <div class="d-flex justify-content-center p-5">
-
+    <div class="mx-5 d-flex justify-content-center align-items-center flex-column">
+        <h3 class="header  title my-5">Pharmacy Lists</h3>
 
         <table class="table mt-5 align-middle table-bordered  ">
             <thead class="">
@@ -63,10 +65,11 @@ include "../../Controller/pharmacy/listPharmacyController.php";
                 </tr>
             </thead>
             <tbody>
+                <?php $count = ($page * $rowLimit) - ($rowLimit - 1); ?>
 
                 <?php foreach ($shopLists as $shop) { ?>
                     <tr>
-                        <td>1</td>
+                        <td><?= $count++; ?></td>
                         <td>
                             <!-- <div class="d-flex align-items-center"> -->
                             <img src="./pharmacyImg/<?= $shop["pharmacy_photo"] ?>" alt="" style="width:50px; height: 50px" class="blogImg rounded-circle" />
@@ -91,15 +94,47 @@ include "../../Controller/pharmacy/listPharmacyController.php";
 
             </tbody>
 
-
         </table>
 
-        <!-- Submit button -->
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+                <li class="page-item <?php if ($page <= 1) {
+                                            echo "disabled";
+                                        } ?>">
+                    <a class="page-link" href="?page=<?= $page - 1 ?>" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+
+
+                <?php for ($i = 1; $i <= $totalPages; $i++) { ?>
+                    <li class="page-item 
+                            <?php
+                            if ($page == $i) {
+                                echo "active";
+                            }
+                            ?>
+                            "><a class="page-link" href="?page=<?= $i ?>"><?= $i ?></a></li><?php } ?>
+
+                <li class="page-item 
+                        <?php if ($page >= $totalPages) {
+                            echo "disabled";
+                        } ?>">
+                    <a class="page-link" href="?page=<?= $page + 1 ?>" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <a href="./addPharmacy.php"><button type="button" class="btn submit-button  m-5 float-lg-end float-sm-end float-md-end" data-mdb-ripple-color="dark">Add Pharmacy</button></a>
+
+
 
 
     </div>
 
-    <a href="./addPharmacy.php"><button type="button" class="btn btn-outline-success  m-5 float-lg-end float-sm-end float-md-end" data-mdb-ripple-color="dark">Add Pharmacy</button></a>
+
 
 
 

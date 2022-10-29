@@ -1,4 +1,4 @@
-$("#patientID").keyup(function () {
+$("#searchBtns").click(function () {
   if ($("#patientID").val() == "") {
     alert("Write Something");
   } else {
@@ -23,25 +23,25 @@ $("#patientID").keyup(function () {
           let gen = pinfo.gender == "0" ? "Male" : "Female";
           $("#pname").append(
             ` <label for="exampleFormControlInput1" class="form-label">Patient Name</label>
-            <div name="pname">${pinfo.user_name}</div>
+            <div class="mylabsearchRes"  name="pname">${pinfo.user_name}</div>
             `
           );
 
           $("#phno").append(
             `
              <label for="exampleFormControlInput1" class="form-label">Ph.No</label>
-             <div name="phnum">${pinfo.ph_num}</div>
+             <div class="mylabsearchRes" name="phnum">${pinfo.ph_num}</div>
               
              `
           );
           $("#age").append(
             `<label for="exampleFormControlInput1" class="form-label">Age</label>
       
-            <div name="age">${pinfo.age}</div>`
+            <div class="mylabsearchRes" name="age">${pinfo.age}</div>`
           );
           $("#gender").append(
             `<label for="exampleFormControlInput1" class="form-label">Gender</label>
-            <div name="gender">${gen}</div>`
+            <div class="mylabsearchRes" name="gender">${gen}</div>`
           );
         }
         // $("#patientID").val("");

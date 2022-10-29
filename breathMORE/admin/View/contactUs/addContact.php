@@ -1,5 +1,5 @@
 <?php
-
+include "../common/adminNavbar.php";
 include "../../Controller/contact/conListController.php";
 // echo "<pre>";
 // print_r($conList);
@@ -15,15 +15,19 @@ include "../../Controller/contact/conListController.php";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Contact us</title>
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../doctor/docAdd.css">
 
-    <link rel="stylesheet" href="../css/dm.css">
+    <link rel="stylesheet" href="../common/css/style.css">
+
+    <link rel="stylesheet" href="../common/css/adminNavbar.css" />
+
 </head>
 
-<body class="d-flex justify-content-center">
+<body>
     <div class="container-fluid">
 
         <form action="../../Controller/contact/conAddController.php" method="post">
@@ -31,7 +35,7 @@ include "../../Controller/contact/conListController.php";
 
                 <div class="row justify-content-center  ">
                     <div class="col col-lg-auto ">
-                        <h3 class="m-5">Add Contact Us</h3>
+                        <h3 class="m-5 title">Add Contact Us</h3>
                     </div>
 
                 </div>
@@ -86,9 +90,9 @@ include "../../Controller/contact/conListController.php";
 
 
 
-        <div class="row justify-content-center align-items-center">
+        <div class="row justify-content-center">
 
-            <div class="col-7 mb-3 ">
+            <div class="col-lg-auto mb-3 ">
 
                 <table class="table mytable table align-middle table-bordered text-center  ">
                     <thead class="mytable">
@@ -107,17 +111,17 @@ include "../../Controller/contact/conListController.php";
                         <?php foreach ($conList as $key => $contact) { ?>
                             <tr>
                                 <th scope="row">1</th>
-                                <td><?= $contact["website_phno"] ?></td>
-                                <td><?= $contact["facebook"] ?></td>
-                                <td><?= $contact["youtube"] ?></td>
-                                <td><?= $contact["telegram"] ?></td>
+                                <td class="text-wrap"><?= $contact["website_phno"] ?></td>
+                                <td class="text-wrap"><?= $contact["facebook"] ?></td>
+                                <td class="text-wrap"><?= $contact["youtube"] ?></td>
+                                <td class="text-wrap"><?= $contact["telegram"] ?></td>
 
                                 <td>
-                                    <a href=" ../../Controller/contact/conEditController.php?id=<?= $contact["id"] ?>">Edit</a>
+                                    <a href=" ../../Controller/contact/conEditController.php?id=<?= $contact["id"] ?>"><i class="fa-solid fa-pen-to-square"></i></a>
 
                                     &nbsp;&nbsp;
 
-                                    <a href=" ../../Controller/contact/conDeleteController.php?id=<?= $contact["id"] ?>">DELETE</a>
+                                    <a href=" ../../Controller/contact/conDeleteController.php?id=<?= $contact["id"] ?>"><i class="fa-solid fa-trash-can"></i></a>
                                 </td>
 
 

@@ -19,13 +19,13 @@ include "../../Controller/doctor/listController.php";
 
     <script src="../common/jq/jquery-3.6.0.min.js"></script>
     <script src="./js/doctorsearch.js" <?= time() ?> defer></script>
-   
+
 </head>
 
 <body>
 
     <div class="mx-5 d-flex justify-content-center align-items-center flex-column">
-        <h3 class="header my-5">Total Doctor Lists</h3>
+        <h3 class="header my-5"> Doctor Lists</h3>
 
         <table class="table">
             <thead class="thead">
@@ -38,7 +38,7 @@ include "../../Controller/doctor/listController.php";
                                 <option id="rcenter" value="center">With Center</option>
                                 <option id="rphone" value="phone">With Ph.No</option>
                             </select>
-                            <input type="text" name="docSearch" id="searchDoctext" class="inputBox form-control py-2" placeholder="Search With Category" />
+                            <input type="text" name="docSearch" id="searchDoctext" class="inputBox form-control py-2 m-2" placeholder="Search With Category" />
                             <button type="button" class="btn btn-purple" id="searchBtn">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -87,29 +87,30 @@ include "../../Controller/doctor/listController.php";
                         <td class="db"><?= $doctor["start_time"] ?>-<?= $doctor["end_time"] ?></td>
 
 
-                                <td><a href="../../Controller/doctor/editController.php?id=<?= $doctor["doctor_id"] ?>"><i class="fa-solid fa-pen-to-square"></i></a> </td>
-                                <td><a href="../../Controller/doctor/deleteController.php?id=<?= $doctor["doctor_id"] ?>"> <i class="fa-solid fa-trash-can"></i></a></td>
+                        <td><a href="../../Controller/doctor/editController.php?id=<?= $doctor["doctor_id"] ?>">
+                                <i class="fa-solid fa-pen-to-square"></i></a></td>
+                        <td><a href="../../Controller/doctor/deleteController.php?id=<?= $doctor["doctor_id"] ?>"><i class="fa-solid fa-trash-can"></i></a></td>
 
 
-                             
 
 
 
-                            </tr>
-                        <?php } ?>
-                    </tbody>
-                </table>
+
+                    </tr>
+                <?php } ?>
+            </tbody>
+        </table>
 
 
-                <nav aria-label="Page navigation example">
-                    <ul class="pagination justify-content-center">
-                        <li class="page-item <?php if ($page <= 1) {
-                                                    echo "disabled";
-                                                } ?>">
-                            <a class="page-link" href="?page=<?= $page - 1 ?>" aria-label="Previous">
-                                <span aria-hidden="true">&laquo;</span>
-                            </a>
-                        </li>
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+                <li class="page-item <?php if ($page <= 1) {
+                                            echo "disabled";
+                                        } ?>">
+                    <a class="page-link" href="?page=<?= $page - 1 ?>" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
 
 
                 <?php for ($i = 1; $i <= $totalPages; $i++) { ?>

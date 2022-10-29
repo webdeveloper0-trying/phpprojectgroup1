@@ -11,7 +11,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-    <link rel="../css/o2.css" href="style.css">
+    <link rel="stylesheet" href="../doctor/docAdd.css">
+
+    <link rel="stylesheet" href="../common/css/style.css">
 </head>
 
 <body>
@@ -22,7 +24,7 @@
 
             <div class="row justify-content-center  ">
                 <div class="col col-lg-auto ">
-                    <h3 class="m-5">Add Oxygen</h3>
+                    <h3 class="m-5 title">Add Oxygen</h3>
                 </div>
 
             </div>
@@ -66,24 +68,27 @@
 
                 <div class="col-4 mb-3">
                     <label for="exampleFormControlTextarea1" class="form-label">Address</label>
-                    <textarea name="oaddre" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <input name="oaddre" class="form-control" id="exampleFormControlTextarea1" rows="3"></input>
 
                 </div>
-                <div class="col-4">
-
+                <!-- <div class="col-4"> -->
+                <div class="col-4 mb-3 align-self-end">
+                    <button class="btn float-end col-lg-4 submit-button col btn-secondary " type="submit" name="addOxygen">Submit</button>
                 </div>
+
+                <!-- </div> -->
 
 
             </div>
 
 
 
-            <div class="row  justify-content-center ">
+            <!-- <div class="row  justify-content-center ">
 
                 <div class="col-4 mb-3 align-self-end">
                     <button class="btn float-end col-lg-5 submit-button col btn-secondary " type="submit" name="addOxygen">Submit</button>
                 </div>
-            </div>
+            </div> -->
         </form>
     </div>
 </body>

@@ -17,7 +17,10 @@ $o2infos = $_SESSION["oxygenInfo"];
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-    <link rel="../css/o2.css" href="style.css">
+    <link rel="stylesheet" href="../doctor/docAdd.css">
+    <link rel="stylesheet" href="../common/css/style.css">
+
+    <link rel="stylesheet" href="./css/aDoctorlist.css" <?php time(); ?> />
 </head>
 
 <body>
@@ -28,7 +31,7 @@ $o2infos = $_SESSION["oxygenInfo"];
 
             <div class="row justify-content-center  ">
                 <div class="col col-lg-auto ">
-                    <h3 class="m-5">EDIT Oxygen</h3>
+                    <h3 class="m-5 title">EDIT Oxygen</h3>
                 </div>
 
             </div>
@@ -75,10 +78,11 @@ $o2infos = $_SESSION["oxygenInfo"];
                     <input type="text" name="oaddre" value="<?php echo $o2infos[0]["address"] ?>" class="form-control" id="exampleFormControlTextarea1" rows="3"></input>
 
                 </div>
-                <div class="col-4">
-                    <input type="text" name="upid" value="<?php echo $o2infos[0]["id"] ?>" class="form-control" id="exampleFormControlInput1" placeholder="">
 
+                <div class="col-4 mb-3 align-self-end">
+                    <button class="btn float-end col-lg-5 p-2 submit-button col btn-secondary " type="submit" name="editOxygen">Submit</button>
                 </div>
+
 
 
             </div>
@@ -86,10 +90,12 @@ $o2infos = $_SESSION["oxygenInfo"];
 
 
             <div class="row  justify-content-center ">
+                <div class="col-4">
+                    <input type="text" hidden name="upid" value="<?php echo $o2infos[0]["id"] ?>" class="form-control" id="exampleFormControlInput1" placeholder="">
 
-                <div class="col-4 mb-3 align-self-end">
-                    <button class="btn float-end col-lg-5 p-2 submit-button col btn-secondary " type="submit" name="editOxygen">Submit</button>
                 </div>
+
+
             </div>
         </form>
     </div>

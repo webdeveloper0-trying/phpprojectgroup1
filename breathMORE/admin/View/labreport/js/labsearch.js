@@ -1,4 +1,4 @@
-$("#patientID").keyup(function () {
+$("#searchBtn").click(function () {
   if ($("#patientID").val() == "") {
     alert("Write Something");
   } else {

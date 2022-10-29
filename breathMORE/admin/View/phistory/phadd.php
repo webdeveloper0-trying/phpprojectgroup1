@@ -22,29 +22,27 @@ session_start();
 
     <link rel="stylesheet" href="../common/css/style.css">
 
-    <!-- <link rel="stylesheet" href="./phadd.css"> -->
-    <script src="../common/jq/jquery-3.6.0.min.js" defer></script>
-    <script src="./js/phadd.js" defer <?= time() ?> ></script>
+
+    <!-- <script src="../common/jq/jquery-3.6.0.min.js" defer></script>
+    <script src="./js/phadd.js" defer <?= time() ?>></script> -->
 
     <link rel="stylesheet" href="../doctor/docAdd.css">
-    <!-- <link rel="stylesheet" href="../common/css/adminNavbar.css"> -->
-
-    <!-- <link rel="stylesheet" href="./phadd.css"> -->
+    <link rel="stylesheet" href="../common/css/style.css">
     <script src="../common/jq/jquery-3.6.0.min.js"></script>
-    <script src="../phistory/js/phadd.js" <?= time() ?> defer></script>
+    <script src="./phadd.js" <?= time() ?> defer></script>
 
 
 </head>
 
 <body>
 
-    <div class="MX-5">
+    <div class="mx-5 d-flex justify-content-center align-items-center flex-column">
 
         <form action="../../Controller/phistory/phaddController.php" method="post">
 
-            <div class="row justify-content-center   myheader">
-                <div class="col col-lg-auto ">
-                    <h3 class="m-5"> Patient History Record</h3>
+            <div class="row justify-content-center mt-3">
+                <div class="col col-lg-5 text-center">
+                    <h3 class="m-3 title"> Patient History Record </h3>
                 </div>
             </div>
             <div class="row justify-content-center mt-3">
@@ -64,10 +62,7 @@ session_start();
 
             </div>
 
-
-
-
-            <div class="d-flex justify-content-center align-items-center flex-column">
+            <div class=" justify-content-center align-items-center flex-column">
                 <table class="table  align-middle table-bordered text-center ">
                     <thead>
                         <tr>
@@ -76,7 +71,8 @@ session_start();
                             <th scope="col col-lg-2">diagnosis</th>
 
                             <th scope="col col-lg-2">Center</th>
-                            <!-- <th scope="col"> <input type="text" hidden value="Doctor ID"></th> -->
+                            <th scope="col col-lg-2">Doc Id</th>
+                            <!-- <th scope="col"> <input type="text" value="Doctor ID"></th> -->
 
 
                         </tr>
@@ -96,7 +92,7 @@ session_start();
 
 
 
-            <div class="row  d-flex  justify-content-center  ">
+            <div class="row justify-content-center  ">
 
                 <div class="mb-2 col col-lg-6">
                     <label for="exampleFormControlInput1" class="form-label">Doctor Note</label>
@@ -109,9 +105,17 @@ session_start();
             <div class="row justify-content-center mt-3  ">
 
                 <div class="mb-2 col col-lg-3" id="pname">
-                    <!-- <label for="exampleFormControlInput1" class="form-label">Date</label> -->
+
 
                     <input type="date" name="date" class="form-control" id="exampleFormControlInput1" placeholder="">
+
+
+                </div>
+
+                <div class="mb-2 col col col-lg-3" id="">
+
+
+                    <input type="text" name="typeIDdoc" class="form-control" id="exampleFormControlInput1" placeholder="reportedID">
                 </div>
                 <div class="mb-2 col col col-lg-3" id="">
 
