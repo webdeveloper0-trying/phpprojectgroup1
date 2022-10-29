@@ -1,3 +1,7 @@
+<?php
+include "../../../patient/Controller/common/aChColorTxtController.php"; ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,7 +20,7 @@
     <!-- MDB -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet" />
     <!-- MDB -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js" defer></script>
+    
 
     <!-- boxicons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -25,24 +29,34 @@
 <body>
     <!-- Navbar -->
     <nav class="uNavbar col-12 navbar navbar-expand-lg navbar-light bg-green flex-column position-sticky top-0 p-0">
-        <!-- Container wrapper -->
+      
         <div class="container-fluid">
-            <!-- Toggle button -->
+          
             <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
             </button>
 
-            <!-- Collapsible wrapper -->
+           
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <div class="navbar-brand mt-2 mt-lg-0">
-                    <!-- Navbar brand -->
-                    <a class="" href="#">
+                    
+                    <a href="../main/main.php">
                         <img src="../storage/home/logo.png" height="35" alt="MDB Logo" loading="lazy" />
+
+                         <?php
+                    $webName = explode("/", $webName);
+                    $fName = $webName[0];
+                    $lName = $webName[1];
+                    ?>
+                    <span id="logoStitle">
+                        <?= $fName ?><span id="logoEtitle"><?= $lName ?></span></span>
                     </a>
-                    <span id="logoStitle">Breath<span id="logoEtitle">More</span></span>
+
+                   
+
                 </div>
 
-                <!-- Left links -->
+              
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                     <li class="nav-link-active nav-item m-3">
                         <a class="nav-link" href="#">Home</a>
@@ -60,13 +74,9 @@
                         <a class="nav-link" href="#">Contact Us</a>
                     </li>
                 </ul>
-                <!-- Left links -->
+               
             </div>
-            <!-- Collapsible wrapper -->
-
-            <!-- Right elements -->
-
-            <!-- Icon dropdown -->
+          
             <div class="userProfile nav-item me-5 me-lg-0 dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
                     <i class="fas fa-user"></i>
@@ -87,12 +97,17 @@
                 </ul>
             </div>
 
-            <!-- Right elements -->
+            
         </div>
-        <!-- Container wrapper -->
+       
     </nav>
     <!-- Navbar -->
 
+    
+
+
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js"></script>
 </body>
 
 </html>

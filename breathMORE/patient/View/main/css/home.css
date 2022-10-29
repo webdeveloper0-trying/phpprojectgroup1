@@ -1,7 +1,14 @@
 body {
   position: relative !important;
 }
-
+marquee{
+  height:10vh !important;
+  width:100vw !important;
+  background:var(--textColorOne) !important;
+  color:var(--secondaryColor) !important;
+  font-size:1.1em !important;
+  line-height: 10vh !important;
+}
 .headerInfo {
   margin-top: 10vh !important;
 }

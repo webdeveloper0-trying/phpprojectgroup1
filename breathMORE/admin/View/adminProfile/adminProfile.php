@@ -210,28 +210,31 @@ include "../../Controller/adminProfile/aProfileSelectPropsController.php";
                 </table>
             </div>
 
-            <div class="alertCard card text-center rounded-0 mt-5">
-                <div class="h4 header card-header">Today's Alert</div>
-                <div class="card-body d-flex align-items-center flex-column">
-                    <textarea cols="100" rows="3" name="alertTxt" id="alertTxt"></textarea>
-                    <a href="#" id="alertSubmit" class="btn btn-purple mt-3">Change</a>
+            <div class="alertCard form-outline card text-center rounded-0 mt-5 py-3">
+
+            <form action="../../Controller/adminProfile/adminAlertController.php" method="post">
+                <h4 class="h4 header">Today's Alert</h4>
+
+                <!-- Message input -->
+                <div class="form-outline mb-4">
+                    <textarea class="form-control bg-light" name="dailyMsg" id="dailyMsg" rows="4"></textarea>
+                    <label class="form-label" for="dailyMsg">Daily Message</label>
                 </div>
+
+                <button type="submit" class="btn btn-purple mt-3">Submit</button>
+            <form>
             </div>
 
-        </div>
-    </div>
 
 
 
+                <script src="../common/jq/jquery-3.6.0.min.js"></script>
+                <!-- picker js1 -->
+                <script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.min.js"></script>
 
+                <!-- custom js1 -->
+                <script src="./js/aChangeColors.js" <?php time() ?>></script>
 
-    <script src="../common/jq/jquery-3.6.0.min.js"></script>
-    <!-- picker js1 -->
-    <script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.min.js"></script>
-
-    <!-- custom js1 -->
-    <script src="./js/aChangeColors.js" <?php time() ?>></script>
-    <script src="./js/aAlert.js"<?php time() ?>></script>
 
 </body>
 

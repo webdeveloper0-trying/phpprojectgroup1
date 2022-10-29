@@ -91,7 +91,7 @@ include "../common/uFooter/uFooter.php";
                 </table>
 
                 <div class="container d-flex justify-content-end">
-                    <a href="">
+                    <a href="./uSetting.php">
                         <button class="btn btn-purple">Go to Setting</button>
                     </a>
                 </div>

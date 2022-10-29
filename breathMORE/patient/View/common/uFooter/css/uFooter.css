@@ -1,6 +1,6 @@
 body {
   position: relative !important;
-  /* height:100vh !important; */
+  
 }
 
 #footer {
@@ -9,7 +9,7 @@ body {
   color: var(--textColorOne) !important;
 
   position: absolute !important;
-  top: 100% !important;
+  top: 420% !important;
 }
 
 .footer a {

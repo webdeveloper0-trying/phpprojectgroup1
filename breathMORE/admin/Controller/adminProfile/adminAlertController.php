@@ -1,24 +1,35 @@
 <?php
 
-// include "../../Model/dbConnection.php";
+include "../../Model/dbConnection.php";
 
-print_r("a");
 
-if (isset($_POST["alert"])){
+if (isset($_POST["dailyMsg"])){
 
-    $alert = $_POST["alert"];
+    $msg = $_POST["dailyMsg"];
 
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
+    $sql = $pdo->prepare("
+    INSERT INTO daily_msg
+    (
+       message
+    )
+    VALUES
+    (
+        :msg
+       
+    )
+    ");
+    $sql->bindValue(":msg", $msg);
    
     // Real Execute
     $sql->execute();
-    // Receive Data From MySQL
-        session_start();
-   $_SESSION["alert"] = $alert;
+
+    header("Location: ../../View/adminProfile/adminProfile.php");
+   
 
 } else {
-    echo "NO01";
+    echo "NO";
 }
 
 ?>

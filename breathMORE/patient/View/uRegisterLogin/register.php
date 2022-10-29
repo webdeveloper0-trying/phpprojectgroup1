@@ -94,7 +94,7 @@ unset($_SESSION["username"]);
                     </div>
 
                     <div class="form-outline mb-4">
-                        <!-- <input type="text" name="gender" class="form-control" required> -->
+                  
                         <label class="form-label" for="gender">Gender</label>
 
                         <div class="form-check form-check-inline">
