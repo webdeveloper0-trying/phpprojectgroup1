@@ -25,12 +25,13 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js" defer></script>
 
     <!-- custom css -->
-    <link rel="stylesheet" href="../css/dm.css">
+    <link rel="stylesheet" href="../doctor/docAdd.css">
+    <link rel="stylesheet" href="../common/css/style.css">
 </head>
 
 <body>
     <div class="d-flex justify-content-center align-items-center flex-column">
-        <h3 class="h3 header my-5">Pharmacy ADD</h3>
+        <h3 class="h3 header my-5 title">Pharmacy ADD</h3>
         <form class="form p-3" action="../../Controller/pharmacy/addPharmacyController.php" method="POST">
             <div class="row mb-4">
                 <div class="col">

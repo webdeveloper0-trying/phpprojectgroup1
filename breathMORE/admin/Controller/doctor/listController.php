@@ -23,7 +23,7 @@ $doctorList = $sql->fetchAll(PDO::FETCH_ASSOC);
 
 
 
-
+//for pagination
 $sql = $pdo->prepare("
     SELECT COUNT(id) AS total FROM doctor_lists
     INNER JOIN  doctor_dutytime_lists

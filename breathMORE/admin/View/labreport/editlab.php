@@ -25,7 +25,10 @@ $labinfo =  $_SESSION["pLabInfo"];
     <!-- MDB -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js"></script>
 
-    <link rel="stylesheet" href="../css/labAdd.css">
+    <link rel="stylesheet" href="../doctor/css/aDoctorlist.css">
+    <link rel="stylesheet" href="../doctor/docAdd.css">
+
+    <link rel="stylesheet" href="../common/css/style.css">
 </head>
 
 <body>
@@ -33,7 +36,7 @@ $labinfo =  $_SESSION["pLabInfo"];
         <form action="../../Controller/labreport/update_labController.php" method="post">
             <div class="row justify-content-center ">
                 <div class="col col-lg-auto ">
-                    <h3 class="m-5">Edit Lab Info</h3>
+                    <h3 class="m-5 title">Edit Lab Info</h3>
                 </div>
             </div>
 
@@ -42,7 +45,7 @@ $labinfo =  $_SESSION["pLabInfo"];
                 <div class="mb-3 col col-lg-3">
                     <label for="exampleFormControlInput1" value="<?php echo $labinfo[0]["patient_id"] ?>" class="form-label">PatientID</label>
 
-                    <input type="text" name="pid" class="form-control" id="exampleFormControlInput1" placeholder="" disabled value="<?php echo $labinfo[0]["patient_id"] ?>">
+                    <input type="text" readonly name="pid" class="form-control" id="exampleFormControlInput1" placeholder="" value="<?php echo $labinfo[0]["patient_id"] ?>">
 
                 </div>
             </div>
@@ -99,7 +102,7 @@ $labinfo =  $_SESSION["pLabInfo"];
                 </div>
 
                 <div class="mb-3 col col-lg-3">
-                    <button type="button submit" name="updateLab" class="btn btn-secondary mt-4">UPDATE Doctor Info</button>
+                    <button type="button submit" name="updateLab" class="btn btn-secondary  submit-button mt-4">UPDATE Lab Info</button>
                 </div>
 
             </div>

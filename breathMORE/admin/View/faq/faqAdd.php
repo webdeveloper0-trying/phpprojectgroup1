@@ -1,6 +1,9 @@
 <?php
-
+include "../common/adminNavbar.php";
 include "../../Controller/faq/faqListController.php";
+
+
+
 
 
 
@@ -14,25 +17,30 @@ include "../../Controller/faq/faqListController.php";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Add Frequently Asked Questions</title>
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="../css/dm.css">
+    <link rel="stylesheet" href="../doctor/docAdd.css">
+
+    <link rel="stylesheet" href="../common/css/style.css">
+
+    <link rel="stylesheet" href="../common/css/adminNavbar.css" />
+    <link rel="stylesheet" href="./css/aDoctorlist.css" <?php time(); ?> />
 
 
 </head>
 
 <body>
     <div class="container-fluid">
-        <!-- <div class="d-flex d-lg-flex justify-content-center align-items-center mt-5"> -->
+
 
         <form action="../../Controller/faq/faqAddController.php" method="post">
 
             <div class="row justify-content-center  ">
                 <div class="col col-lg-auto ">
-                    <h3 class="m-5 text-center my-header ">Add Frequently Asked Questions</h3>
+                    <h3 class="m-5 text-center title ">Add Frequently Asked Questions</h3>
                 </div>
 
             </div>
@@ -71,9 +79,9 @@ include "../../Controller/faq/faqListController.php";
             </div>
         </form>
 
-        <div class="row justify-content-center align-items-center">
+        <div class="row justify-content-center">
 
-            <div class="col-7 mb-3 ">
+            <div class="col-lg-auto mb-3  ">
 
                 <table class="table mytable table align-middle table-bordered text-center ">
                     <thead>
@@ -87,18 +95,19 @@ include "../../Controller/faq/faqListController.php";
                         </tr>
                     </thead>
                     <tbody>
+                        <?php $count = ($page * $rowLimit) - ($rowLimit - 1); ?>
                         <?php foreach ($faqlists as $key => $faq) { ?>
                             <tr>
-                                <th scope="row">1</th>
+                                <td><?= $count++; ?></td>
                                 <td><?= $faq["question"] ?></td>
                                 <td><?= $faq["answer"] ?></td>
 
                                 <td>
-                                    <a href=" ../../Controller/faq/faqEditController.php?id=<?= $faq["id"] ?>">Edit</a>
+                                    <a href=" ../../Controller/faq/faqEditController.php?id=<?= $faq["id"] ?>"><i class="fa-solid fa-pen-to-square"></i></a>
 
                                     &nbsp;&nbsp;
 
-                                    <a href=" ../../Controller/faq/faqDeleteController.php?id=<?= $faq["id"] ?>">DELETE</a>
+                                    <a href=" ../../Controller/faq/faqDeleteController.php?id=<?= $faq["id"] ?>"><i class="fa-solid fa-trash-can"></i></a>
                                 </td>
 
 
@@ -107,6 +116,36 @@ include "../../Controller/faq/faqListController.php";
                         <?php } ?>
                     </tbody>
                 </table>
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item <?php if ($page <= 1) {
+                                                    echo "disabled";
+                                                } ?>">
+                            <a class="page-link" href="?page=<?= $page - 1 ?>" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+
+
+                        <?php for ($i = 1; $i <= $totalPages; $i++) { ?>
+                            <li class="page-item 
+                            <?php
+                            if ($page == $i) {
+                                echo "active";
+                            }
+                            ?>
+                            "><a class="page-link" href="?page=<?= $i ?>"><?= $i ?></a></li><?php } ?>
+
+                        <li class="page-item 
+                        <?php if ($page >= $totalPages) {
+                            echo "disabled";
+                        } ?>">
+                            <a class="page-link" href="?page=<?= $page + 1 ?>" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
 
 
 

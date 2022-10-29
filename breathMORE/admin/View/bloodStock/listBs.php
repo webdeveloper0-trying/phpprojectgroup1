@@ -1,5 +1,6 @@
 <?php
 // echo "OK";
+include "../common/adminNavbar.php";
 include "../../Controller/bloodStock/listBsController.php";
 // echo "<pre>";
 // print_r($instockLists);
@@ -23,7 +24,11 @@ include "../../Controller/bloodStock/listBsController.php";
 
     <!-- css -->
     <link rel="stylesheet" href="../doctor/docAdd.css">
-    <link rel="stylesheet" href="../common/css/adminNavbar.css">
+
+    <link rel="stylesheet" href="../common/css/style.css">
+
+    <link rel="stylesheet" href="../common/css/adminNavbar.css" />
+    <link rel="stylesheet" href="./css/aDoctorlist.css" <?php time(); ?> />
 </head>
 
 <body class="container-fluid">
@@ -57,9 +62,7 @@ include "../../Controller/bloodStock/listBsController.php";
             </div>
         <?php } ?>
 
-        <a href="./addBs.php">
-            <button type="button" class="btn m-3 mybtn  m-5 float-lg-end float-sm-end float-md-end" data-mdb-ripple-color="dark">Add Blood stocks</button>
-        </a>
+
 
 
 
@@ -126,11 +129,9 @@ include "../../Controller/bloodStock/listBsController.php";
                 </li>
             </ul>
         </nav>
-
-
-
-
-
+        <a href="./addBs.php">
+            <button type="button" class="btn submit-button m-5 float-lg-end float-sm-end float-md-end" data-mdb-ripple-color="dark">Add Blood stocks</button>
+        </a>
 
     </div>
 </body>

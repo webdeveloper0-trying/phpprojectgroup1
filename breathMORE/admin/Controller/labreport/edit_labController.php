@@ -22,5 +22,6 @@ if (isset($_GET["id"])) {
 
     header("Location: ../../View/labreport/editlab.php");
 } else {
-    header("Location: ../../View/labreport/labList.php");
+    // header("Location: ../../View/labreport/labList.php");
+    echo "err";
 }

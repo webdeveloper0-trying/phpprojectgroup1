@@ -1,5 +1,6 @@
 <?php
 // echo "OK";
+include "../common/adminNavbar.php";
 include "../../Controller/oxygen/o2listController.php";
 
 ?>
@@ -20,13 +21,16 @@ include "../../Controller/oxygen/o2listController.php";
     <!-- MDB -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js"></script>
 
-    <link rel="stylesheet" href="../css/labAdd.css">
+    <link rel="stylesheet" href="../doctor/docAdd.css">
+    <link rel="stylesheet" href="../common/css/style.css">
+    <link rel="stylesheet" href="../common/css/adminNavbar.css" />
+    <link rel="stylesheet" href="./css/aDoctorlist.css" <?php time(); ?> />
 </head>
 
-<body class="d-flex justify-content-center align-items-center flex-column">
-    <div class="d-flex justify-content-center align-items-center flex-column">
+<body>
+    <div class="mx-5 d-flex justify-content-center align-items-center flex-column">
+        <h3 class="header title my-5">Total Oxygen Lists</h3>
 
-        <a href="./o2add.php"><button type="button" class="btn btn-outline-success  m-5 float-lg-end float-sm-end float-md-end" data-mdb-ripple-color="dark">Add Oxygen</button></a>
 
         <table class="table">
             <thead>
@@ -42,9 +46,10 @@ include "../../Controller/oxygen/o2listController.php";
                 </tr>
             </thead>
             <tbody>
+                <?php $count = ($page * $rowLimit) - ($rowLimit - 1); ?>
                 <?php foreach ($oxygenList as $key => $oxygen) { ?>
                     <tr>
-                        <th scope="row">1</th>
+                        <th scope="row"><?= $count++; ?></th>
                         <td><?= $oxygen["date"] ?></td>
                         <td><?= $oxygen["name"] ?></td>
                         <td><?= $oxygen["ph_num"] ?></td>
@@ -52,14 +57,46 @@ include "../../Controller/oxygen/o2listController.php";
                         <td><?= $oxygen["type_of_service"] ?></td>
 
 
-                        <td><a href=" ../../Controller/oxygen/o2editController.php?id=<?= $oxygen["id"] ?>">Edit</a></td>
+                        <td><a href=" ../../Controller/oxygen/o2editController.php?id=<?= $oxygen["id"] ?>"><i class="fa-solid fa-pen-to-square"></i></a></td>
 
-                        <td><a href=" ../../Controller/oxygen/o2deleteController.php?id=<?= $oxygen["id"] ?>">DELETE</a></td>
+                        <td><a href=" ../../Controller/oxygen/o2deleteController.php?id=<?= $oxygen["id"] ?>"><i class="fa-solid fa-trash-can"></i></a></td>
                     </tr>
 
                 <?php } ?>
             </tbody>
         </table>
+
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+                <li class="page-item <?php if ($page <= 1) {
+                                            echo "disabled";
+                                        } ?>">
+                    <a class="page-link" href="?page=<?= $page - 1 ?>" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+
+
+                <?php for ($i = 1; $i <= $totalPages; $i++) { ?>
+                    <li class="page-item 
+                            <?php
+                            if ($page == $i) {
+                                echo "active";
+                            }
+                            ?>
+                            "><a class="page-link" href="?page=<?= $i ?>"><?= $i ?></a></li><?php } ?>
+
+                <li class="page-item 
+                        <?php if ($page >= $totalPages) {
+                            echo "disabled";
+                        } ?>">
+                    <a class="page-link" href="?page=<?= $page + 1 ?>" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <a href="./o2add.php"><button type="button" class="btn  submit-button   m-5 float-lg-end float-sm-end float-md-end" data-mdb-ripple-color="dark">Add Oxygen</button></a>
 
     </div>
 
