@@ -91,10 +91,7 @@ include "../../Controller/doctor/listController.php";
                                 <td><a href="../../Controller/doctor/deleteController.php?id=<?= $doctor["doctor_id"] ?>"> <i class="fa-solid fa-trash-can"></i></a></td>
 
 
-                                <td class="db"><a href="../../Controller/doctor/editController.php?id=<?= $doctor["doctor_id"] ?>"><i class="fa-solid fa-pen-to-square"></i></a>
-
-                                    <a href="../../Controller/doctor/deleteController.php?id=<?= $doctor["doctor_id"] ?>"><i class="fa-solid fa-trash-can"></i></a>
-                                </td>
+                             
 
 
 

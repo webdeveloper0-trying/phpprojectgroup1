@@ -13,4 +13,4 @@ $sql = $pdo->prepare("SELECT * FROM
 lab_reports WHERE patient_id = :id");
 $sql->bindValue(":id", $patientid);
 $sql->execute();
-$patientHistory = $sql->fetchAll(PDO::FETCH_ASSOC);
+$labList = $sql->fetchAll(PDO::FETCH_ASSOC);

@@ -103,7 +103,6 @@ include "../common/adminNavbar.php";
                 </a>
             </li>
         </ul>
-
         </div>
     </div>
 </body>

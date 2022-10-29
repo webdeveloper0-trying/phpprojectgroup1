@@ -101,7 +101,7 @@
 }
 
 .bg-purple{
-  background:rgba(138,57,171,0.8) !important;
+  background:var(--textColorOne) !important;
 }
 
 .hightLightCount{

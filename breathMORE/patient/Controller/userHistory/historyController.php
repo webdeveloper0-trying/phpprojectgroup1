@@ -1,6 +1,6 @@
 <?php
 
-session_start();
+
 include "../../Model/dbConnection.php";
 $userId =  $_SESSION["userId"];
 $sql = $pdo->prepare("SELECT * FROM

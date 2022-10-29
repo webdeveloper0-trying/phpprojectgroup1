@@ -15,20 +15,17 @@ include "../../Controller/labReport/labreportController.php";
     <script src="../js/jquery3.6.0.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.22/pdfmake.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
-    <script src="../js/labreport.js" defer></script>
+    <script src="./js/labreport.js" defer></script>
 
 </head>
 
 <body class="bg">
     <div class="container">
-        <div class="head">
-            <h3>USER'S HISTORY BOOK</h3>
-        </div>
-        <p class="profile"><u> Profile </u>/<u> User’s History</u></p>
-        <div class="tablebg">
-            <table class="table table-bordered" id="lab">
+       
+       
+            <table class="table" id="labReport">
                 <thead>
-                    <tr class="tablehead">
+                    <tr>
                         <th>No</th>
                         <th> Reference Doctor</th>
                         <th> ResultDate</th>
@@ -45,7 +42,7 @@ include "../../Controller/labReport/labreportController.php";
                 <tbody class="tablebody">
                     <?php $count = 1; ?>
                     <?php
-                    foreach ($patientHistory as $patient) { ?>
+                    foreach ($labList as $patient) { ?>
                         <tr>
                             <td><?= $count++ ?></td>
                             <td><?= $patient["ref_doc"] ?></td>
@@ -64,8 +61,8 @@ include "../../Controller/labReport/labreportController.php";
                 </tbody>
             </table>
 
-        </div>
-        <button class="btn btn-primary" id="download">Download All</button>
+      
+        <button class="btn btn-purple" id="downloadReport">Download All</button>
     </div>
     </div>
 </body>

@@ -11,3 +11,22 @@ function setimg() {
     img.src = reader.result;
   };
 }
+
+
+
+$("#uAHistory").click(function(){
+  console.log("click history");
+  
+  $(".uAHistory").css("display","block");
+  $(".uReport").css("display","none");
+  
+});
+
+$("#uReport").click(function(){
+  console.log("click report");
+ 
+  $(".uAHistory").css("display","none");
+  $(".uReport").css("display","block");
+  
+  
+});

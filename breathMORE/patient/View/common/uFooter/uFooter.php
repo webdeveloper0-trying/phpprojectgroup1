@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
 
-    <!-- Font Awesome -->
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+
+  <!-- Font Awesome -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -23,10 +24,11 @@
   <!-- custom css3 -->
   <!-- <link rel="stylesheet" href="./css/uFooter.css"<?php time(); ?>>
   <link rel="stylesheet" href="../../common/css/style.css" <?php time(); ?>> -->
- 
+
 </head>
+
 <body>
-<footer id="footer" class="footer mt-5">
+  <footer id="footer" class="footer mt-5">
     <div class="container-fluid mx-5 py-5">
       <!-- 
       <div class="footer container"> -->
@@ -63,9 +65,9 @@
             <a href="https://www.w3schools.com" class="fw-bold">Follow Us</a>
           </div>
           <div class="socialLinks">
-          <a href="" class="m-2"><i class='bx bx-sm bxl-facebook footerLink' style='color:#eaeaea' ></i></a>
-          <a href="" class="m-2"><i class='bx bx-sm bxl-telegram footerLink' style='color:#eaeaea' ></i></a>
-          <a href="" class="m-2"><i class='bx bx-sm bxl-youtube footerLink' style='color:#eaeaea' ></i></a>
+            <a href="" class="m-2"><i class='bx bx-sm bxl-facebook footerLink' style='color:#eaeaea'></i></a>
+            <a href="" class="m-2"><i class='bx bx-sm bxl-telegram footerLink' style='color:#eaeaea'></i></a>
+            <a href="" class="m-2"><i class='bx bx-sm bxl-youtube footerLink' style='color:#eaeaea'></i></a>
           </div>
         </div>
 
@@ -78,4 +80,5 @@
     </div>
   </footer>
 </body>
+
 </html>

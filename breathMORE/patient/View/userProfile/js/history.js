@@ -1,5 +1,6 @@
-$("#download").click(function () {
-  html2canvas($("#labReport"), {
+$("#downloadHistory").click(function () {
+  console.log("hi1");
+  html2canvas($("#lab"), {
     onrendered: function (canvas) {
       var data = canvas.toDataURL();
       var docDefinition = {
@@ -10,7 +11,7 @@ $("#download").click(function () {
           },
         ],
       };
-      pdfMake.createPdf(docDefinition).download("labreport.pdf");
+      pdfMake.createPdf(docDefinition).download("patienthistory.pdf");
     },
   });
 });
