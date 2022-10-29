@@ -17,8 +17,7 @@ if ($_SESSION["ismainadmin"] == 0) {
 
 include "../../Controller/subscribeNews/aSubscribeNewListController.php";
 
-// echo "<pre>";
-// print_r($subscriberInfos);
+
 
 
 ?>
@@ -58,24 +57,31 @@ include "../../Controller/subscribeNews/aSubscribeNewListController.php";
         <h3 class="h3 header my-5">Subscribtion List for Events and News</h3>
 
         <table class="table table-hover">
-        <thead class="thead">
-            <tr>
-                <th scope="col">No</th>
-                <th scope="col">UserName</th>
-                <th scope="col">Email</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php
-            $count=0; foreach ($subscriberInfos as $subscriberInfo) {?>
+            <thead class="thead">
                 <tr>
-                    <td><?= ++$count; ?></td>
-                    <td><?= $subscriberInfo['user_name'] ?></td>
-                    <td><?= $subscriberInfo['user_email'] ?></td>
+                    <th scope="col">No</th>
+                    <th scope="col">UserName</th>
+                    <th scope="col">Email</th>
                 </tr>
-            <?php } ?>
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                <?php
+                $count = 0;
+                foreach ($subscriberInfos as $subscriberInfo) { ?>
+                    <tr>
+                        <td><?= ++$count; ?></td>
+                        <td><?= $subscriberInfo['user_name'] ?></td>
+                        <td><?= $subscriberInfo['user_email'] ?></td>
+                    </tr>
+                <?php } ?>
+            </tbody>
+        </table>
+
+        <form action="../../Controller/subscribeNews/subscribeEmailController.php" method="post">
+            <input class="form-control" name="subject"></input>
+            <button type="submit" name="sendmail">sendmail<button>
+        </form>
+
     </div>
 </body>
 

@@ -30,7 +30,7 @@ include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
 
 
   <script src="../common/jq/jquery-3.6.0.min.js" defer></script>
-  <script src="../common/uNavbar/js/uNavbar.js" <?php time(); ?> defer></script>
+  <script src="../common/uNavbar/js/uNavbar.js" defer></script>
 
   <script src="./js/home.js" defer></script>
   <script src="./js/bmiBmr.js" defer></script>
@@ -44,7 +44,9 @@ include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
     <div class="container-fluid p-5 d-flex mx-xs-0 mx-sm-0 mx-md-5 mx-lg-5">
       <div class="headerInfo col col-lg-7 text-lg-start">
         <?php
+        echo $webName;
         $webName = explode("/", $webName);
+        
         $fName = $webName[0];
         $lName = $webName[1];
         ?>

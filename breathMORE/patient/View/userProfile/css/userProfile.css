@@ -1,6 +1,11 @@
+#footer{
+  top:120% !important;
+}
+
 .uProfileTitle {
   color: var(--textColorTwo) !important;
 }
+
 
 .titleLine {
   width: 85% !important;

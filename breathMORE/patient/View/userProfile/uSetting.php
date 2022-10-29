@@ -34,7 +34,7 @@ include "../common/uFooter/uFooter.php"; ?>
 
 
            <div class="imgBox d-flex justify-content-center align-items-center position-relative">
-           <img src="../storage/home/benefitsOfCoffee.jpg" alt="a" id="image" class="uPic mb-4" />
+           <img src="../storage/home/<?= $userInfo[0]["patient_profile"] ?>" alt="a" id="image" class="uPic mb-4" />
             <input type="file" name="upload" onchange="setimg()" id="uploadfile" class="d-block form-control-lg">
            </div>
 

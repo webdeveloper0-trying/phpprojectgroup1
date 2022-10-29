@@ -4,9 +4,9 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\SMTP;
 
-require './lib/PHPMailer/src/Exception.php';
-require './lib/PHPMailer/src/PHPMailer.php';
-require './lib/PHPMailer/src/SMTP.php';
+require '../lib/PHPMailer/src/Exception.php';
+require '../lib/PHPMailer/src/PHPMailer.php';
+require '../lib/PHPMailer/src/SMTP.php';
 
 
 class SendMail
@@ -21,13 +21,13 @@ class SendMail
             $mail->isSMTP();
             $mail->Host       = 'smtp.gmail.com';
             $mail->SMTPAuth   = true;
-            $mail->Username   = ''; // <<< Change 
-            $mail->Password   = ''; // <<< Change
+            $mail->Username   = 'safelife1130@gmail.com'; // <<< Change 
+            $mail->Password   = 'rsxreembdmhfqcrr'; // <<< Change
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
             $mail->Port       = 465;
 
             //Recipients
-            $mail->setFrom('', ''); //<<< Change
+            $mail->setFrom('safelife1130@gmail.com', 'BreathMORE');            //<<< Change
             $mail->addAddress($toMail);
 
             //Content

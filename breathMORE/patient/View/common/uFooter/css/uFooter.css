@@ -9,7 +9,8 @@ body {
   color: var(--textColorOne) !important;
 
   position: absolute !important;
-  top: 420% !important;
+  top:150% !important;
+  
 }
 
 .footer a {

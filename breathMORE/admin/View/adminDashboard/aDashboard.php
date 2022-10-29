@@ -85,7 +85,7 @@ if (!isset($_SESSION["adminname"])) {
                 </a>
             </div>
             <div class="col col-4 text-center">
-                <a href="">
+                <a href="../diseAndmedi/addmedi.php">
                     <button type="button" class="my-3 btn btn-lg btn-green btn-rounded">
                         Medicine
                     </button>
@@ -105,6 +105,14 @@ if (!isset($_SESSION["adminname"])) {
                 </button>
                 </a>
             </div>
+            <div class="col col-4 text-center">
+                <a href="../adminBlog/aBlogList.php">
+                    <button type="button" class="my-3 btn btn-lg btn-green btn-rounded">
+                        Blogs
+                    </button>
+                </a>
+            </div>
+
             <div class="col col-4 text-center">
                 <a href="../adminBlog/aBlogList.php">
                     <button type="button" class="my-3 btn btn-lg btn-green btn-rounded">
