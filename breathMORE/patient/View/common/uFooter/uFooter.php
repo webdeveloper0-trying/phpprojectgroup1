@@ -1,7 +1,8 @@
 <?php
 include "../../../admin/Controller/contact/conListController.php";
 
-// print_r($conList);?>
+// print_r($conList);
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -46,34 +47,34 @@ include "../../../admin/Controller/contact/conListController.php";
           <div class="footerAddress">Myanmar</div>
           <div class="footerAddress">01-567 344</div>
           <br />
-          
-          <div class="footerAddress"><?=$conList[0]['website_phno'] ?></div>
+
+          <div class="footerAddress"><?= $conList[0]['website_phno'] ?></div>
         </div>
         <div class="col">
           <div class="mb-3">
             <a href="https://www.w3schools.com" class="footerLink">Privacy Policy</a>
           </div>
-          <div><a href="https://www.w3schools.com" class="footerLink">FAQs</a></div>
+          <div><a href="../../faq/faq.php" class="footerLink">FAQs</a></div>
         </div>
         <div class="col">
           <div class="mb-3">
-            <a href="https://www.w3schools.com" class="fw-bold">Navigation</a>
+            <a href="#" class="fw-bold">Navigation</a>
           </div>
           <div class="footerHome">
-            <a href="https://www.w3schools.com" class="footerLink">Home</a>
+            <a href="../../main/main.php" class="footerLink">Home</a>
           </div>
-          <div><a href="https://www.w3schools.com" class="footerLink">Centers</a></div>
-          <div><a href="https://www.w3schools.com" class="footerLink">Blogs</a></div>
-          <div><a href="https://www.w3schools.com" class="footerLink">Contact</a></div>
+          <div><a href="../../centers/center.php" class="footerLink">Centers</a></div>
+          <div><a href="../../blogs/mainBlog.php" class="footerLink">Blogs</a></div>
+          <div><a href="../../emergency/uEmergency.php" class="footerLink">Contact</a></div>
         </div>
         <div class="col">
           <div class="ms-2 mb-3">
-            <a href="https://www.w3schools.com" class="fw-bold">Follow Us</a>
+            <a href="#" class="fw-bold">Follow Us</a>
           </div>
           <div class="socialLinks">
-            <a href="<?=$conList[0]['facebook'] ?>" class="m-2"><i class='bx bx-sm bxl-facebook footerLink' style='color:#eaeaea'></i></a>
-            <a href="<?=$conList[0]['telegram'] ?>" class="m-2"><i class='bx bx-sm bxl-telegram footerLink' style='color:#eaeaea'></i></a>
-            <a href="<?=$conList[0]['youtube']?>" class="m-2"><i class='bx bx-sm bxl-youtube footerLink' style='color:#eaeaea'></i></a>
+            <a href="<?= $conList[0]['facebook'] ?>" class="m-2"><i class='bx bx-sm bxl-facebook footerLink' style='color:#eaeaea'></i></a>
+            <a href="<?= $conList[0]['telegram'] ?>" class="m-2"><i class='bx bx-sm bxl-telegram footerLink' style='color:#eaeaea'></i></a>
+            <a href="<?= $conList[0]['youtube'] ?>" class="m-2"><i class='bx bx-sm bxl-youtube footerLink' style='color:#eaeaea'></i></a>
           </div>
         </div>
 
