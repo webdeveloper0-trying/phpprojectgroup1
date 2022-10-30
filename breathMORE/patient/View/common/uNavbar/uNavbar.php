@@ -60,19 +60,19 @@ include "../../Controller/userProfile/profileController.php"; ?>
 
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                     <li class="nav-link-active nav-item m-3">
-                        <a class="nav-link" href="../../main/main.php">Home</a>
+                        <a class="nav-link" href="../main/main.php">Home</a>
                     </li>
                     <li class="nav-link-active nav-item m-3">
-                        <a class="nav-link" href="../../aboutUs/uAboutUs.php">About Us</a>
+                        <a class="nav-link" href="../aboutUs/uAboutUs.php">About Us</a>
                     </li>
                     <li class="nav-link-active nav-item m-3">
-                        <a class="nav-link" href="../../centers/center.php">Center</a>
+                        <a class="nav-link" href="../centers/center.php">Center</a>
                     </li>
                     <li class="nav-link-active nav-item m-3">
-                        <a class="nav-link" href="../../blogs/mainBlog.php">Blogs</a>
+                        <a class="nav-link" href="../blogs/mainBlog.php">Blogs</a>
                     </li>
                     <li class="nav-link-active nav-item m-3">
-                        <a class="nav-link" href="../../emergency/uEmergency.php">Contact Us</a>
+                        <a class="nav-link" href="../emergency/uEmergency.php">Contact Us</a>
                     </li>
                 </ul>
 
