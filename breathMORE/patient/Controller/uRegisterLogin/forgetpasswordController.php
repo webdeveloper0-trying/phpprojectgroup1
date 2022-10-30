@@ -1,7 +1,7 @@
 <?php
-include "../Model/dbConnect.php";
-include "./common/random.php";
-include "./common/mailsender.php";
+include "../../Model/dbConnection.php";
+include "../common/mailsender.php";
+include "../common/random.php";
 
 
 if (isset($_POST["forgetpassword"])) {
@@ -29,5 +29,5 @@ if (isset($_POST["forgetpassword"])) {
                 <p>new password is : $newpassword </p>"
         );
     }
-    header("location:../View/login.php");
+    header("location: ../../View/uRegisterLogin/login.php");
 }

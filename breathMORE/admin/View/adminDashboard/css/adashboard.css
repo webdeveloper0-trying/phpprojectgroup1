@@ -5,10 +5,17 @@
     /* border:0.5em solid var(--secondaryColor) !important; */
 }
 
-.btn-lg{
-    width:18vw !important;
+.btn-xl{
+    width:16vw !important;
+
+    position:  relative !important;
 }
 
-.btn-lg > a{
-    color:var(--textColorOne) !important;
+
+
+.badge-primary{
+    position:absolute !important;
+    top:50% !important;
+    transform:translateY(-50%) !important;
+    right:5% !important;
 }

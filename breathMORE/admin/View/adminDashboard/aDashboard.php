@@ -1,5 +1,5 @@
 <?php
-
+include '../../Controller/aDashboard/aDashboardCountController.php';
 session_start();
 
 if (isset($_POST['adminname']) && isset($_POST['password'])) {
@@ -16,6 +16,12 @@ if (!isset($_SESSION["adminname"])) {
     }
     $adminname = $_SESSION["adminname"];
 }
+
+print_r($regCount[0]['COUNT(register_id)']);
+
+$register = $regCount[0]['COUNT(register_id)'];
+
+$appointement = $appCount[0]['COUNT(id)'];
 
 
 ?>
@@ -50,73 +56,84 @@ if (!isset($_SESSION["adminname"])) {
         <div class="adminDashboard col col-10 row justify-content-center align-items-center flex-wrap py-5">
             <div class="col col-4 text-center">
                 <a href="../adminManagement/aManagement.php">
-                    <button type="button" id="mainAdminControl" class="my-3 btn btn-lg btn-green btn-rounded">
-                        Admin Management
+                    <button type="button" id="mainAdminControl" class="my-3 btn btn-xl py-3 btn-green btn-rounded d-flex align-items-center">
+                        Admin Management  
                     </button>
+                   
                 </a>
             </div>
             <div class="col col-4 text-center">
-                <a href="">
-                    <button type="button" class="my-3 btn btn-lg btn-green btn-rounded">
+                <a href="../aTotalRegisterList/aTotalRegister.php">
+                    <button type="button" class="my-3 btn btn-xl py-3 btn-green btn-rounded d-flex align-items-center">
                         Total Registered List
+                        <span class="badge badge-primary rounded-pill fs-6"><?= $register; ?></span>
                     </button>
                 </a>
             </div>
             <div class="col col-4 text-center">
                 <a href="../adminAppointment/aAppointmentList.php">
-                    <button type="button" class="my-3 btn btn-lg btn-green btn-rounded">
+                    <button type="button" class="my-3 btn btn-xl py-3 btn-green btn-rounded d-flex align-items-center">
                         Total Appointments
+                        <span class="badge badge-primary rounded-pill fs-6">14</span>
                     </button>
                 </a>
             </div>
             <div class="col col-4 text-center">
                 <a href="../doctor/list.php">
-                    <button type="button" class="my-3 btn btn-lg btn-green btn-rounded">
+                    <button type="button" class="my-3 btn btn-xl py-3 btn-green btn-rounded d-flex align-items-center">
                         Doctors List
+                        <span class="badge badge-primary rounded-pill fs-6">14</span>
                     </button>
                 </a>
             </div>
 
             <div class="col col-4 text-center">
                 <a href="../adminBloodDonation/abloodDonationList.php">
-                    <button type="button" class="my-3 btn btn-lg btn-green btn-rounded">
+                    <button type="button" class="my-3 btn btn-xl py-3 btn-green btn-rounded d-flex align-items-center">
                         Blood Donations
+                        <span class="badge badge-primary rounded-pill fs-6">14</span>
                     </button>
                 </a>
             </div>
             <div class="col col-4 text-center">
                 <a href="../diseAndmedi/addmedi.php">
-                    <button type="button" class="my-3 btn btn-lg btn-green btn-rounded">
-                        Medicine
+                    <button type="button" class="my-3 btn btn-xl py-3 btn-green btn-rounded d-flex align-items-center">
+                        Medicine list
+                        <span class="badge badge-primary rounded-pill fs-6">14</span>
                     </button>
                 </a>
             </div>
             <div class="col col-4 text-center">
-                <a href="">
-                    <button type="button" class="my-3 btn btn-lg btn-green btn-rounded">
+                <a href="../labreport/labList.php">
+                    <button type="button" class="my-3 btn btn-xl py-3 btn-green btn-rounded d-flex align-items-center">
                         Lab Reports
+                        <span class="badge badge-primary rounded-pill fs-6">14</span>
                     </button>
                 </a>
             </div>
             <div class="col col-4 text-center">
-                <button type="button" class="my-3 btn btn-lg btn-green btn-rounded">
-                    <a href="../subscribeNews/aSubscribeNewList.php">
+            <a href="../subscribeNews/aSubscribeNewList.php">
+                <button type="button" class="my-3 btn btn-xl py-3 btn-green btn-rounded d-flex align-items-center">
+                    
                         Subscribtion List
+                        <span class="badge badge-primary rounded-pill fs-6">14</span>
                 </button>
                 </a>
             </div>
             <div class="col col-4 text-center">
                 <a href="../adminBlog/aBlogList.php">
-                    <button type="button" class="my-3 btn btn-lg btn-green btn-rounded">
-                        Blogs
+                    <button type="button" class="my-3 btn btn-xl py-3 btn-green btn-rounded d-flex align-items-center">
+                        Blogs list
+                        <span class="badge badge-primary rounded-pill fs-6">14</span>
                     </button>
                 </a>
             </div>
 
             <div class="col col-4 text-center">
                 <a href="../adminBlog/aBlogList.php">
-                    <button type="button" class="my-3 btn btn-lg btn-green btn-rounded">
+                    <button type="button" class="my-3 btn btn-xl py-3 btn-green btn-rounded d-flex align-items-center">
                         Blogs
+                        <span class="badge badge-primary rounded-pill fs-6">14</span>
                     </button>
                 </a>
             </div>
@@ -125,6 +142,7 @@ if (!isset($_SESSION["adminname"])) {
         </div>
     </div>
 
+  
 
     <!-- bootstrap js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>

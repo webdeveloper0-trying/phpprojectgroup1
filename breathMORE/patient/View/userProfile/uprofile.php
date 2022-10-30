@@ -3,6 +3,9 @@ include "../../Controller/userProfile/profileController.php";
 include "../common/uNavbar/uNavbar.php";
 include "../common/uFooter/uFooter.php";
 
+if($patientinfo = "NOT SET"){
+
+}
 ?>
 
 <!DOCTYPE html>

@@ -79,8 +79,10 @@ include "../../Controller/userProfile/profileController.php"; ?>
             </div>
 
             <div class="userProfile nav-item me-5 me-lg-0 dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                    <a href="../userProfile/uprofile.php">
                     <img src="../storage/home/<?= $userInfo[0]["patient_profile"] ?>" width="45em" height="45em" alt="a" class="PicImg my-4 rounded-circle" />
+                    </a>
                 </a>
                 <ul class="dropdown-menu me-5" aria-labelledby="navbarDropdown">
                     <li>

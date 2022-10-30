@@ -40,10 +40,10 @@
         <div class="offcanvas-body">
             <ul class="list-group text-center mt-5">
                 <li class="p-3">
-                    <a href="#">Admin Management</a>
+                    <a href="../adminManagement/aManagement.php">Admin Management</a>
                 </li>
                 <li class="p-3">
-                    <a href="#">Total Registered List</a>
+                    <a href="../adminAppointment/aAppointmentList.php">Total Registered List</a>
                 </li>
                 <li class="p-3">
                     <a href="#">Total Appointments</a>
