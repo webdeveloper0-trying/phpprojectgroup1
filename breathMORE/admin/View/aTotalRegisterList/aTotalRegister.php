@@ -1,5 +1,5 @@
 <?php
-include "../../Controller/adminAppointment/aAppointmentListController.php";
+include "../../Controller/aUserTotalRegister/aURegisterListController.php";
 
 include "../common/adminNavbar.php";
 ?>
@@ -32,39 +32,30 @@ include "../common/adminNavbar.php";
 
 <body>
     <div class="col col-10 col-md-auto d-flex justify-content-center align-items-center flex-column">
-        <h3 class="h3 header my-5">Total Appointment List</h3>
+        <h3 class="h3 header my-5">Total Registration List</h3>
         <table class="table">
             <thead class="thead">
                 <tr>
                     <th scope="col">No</th>
-                    <th scope="col">Patient Name</th>
-                    <th scope="col">Patient Gender</th>
-                    <th scope="col">Patient Ph.NO</th>
-                    <th scope="col">Patient Email</th>
-                    <th scope="col">Patient Age</th>
-                    <th scope="col">Patient Address</th>
-                    <th scope="col">Doctor Name</th>
-                    <th scope="col">Appointment Day</th>
-                    <th scope="col">Appointment Time</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Gender</th>
+                    <th scope="col">Age</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Ph.NO</th>
                 </tr>
             </thead>
             <tbody>
                 <?php
                  $count = ($page * $rowLimit) - ($rowLimit - 1);
                  $id = 0;
-                foreach ($appointments1 as $appointment) { ?>
+                foreach ($regLists as $regList) { ?>
                     <tr>
                         <th scope="row"><?= $count++ ?></th>
-                        <td><?= $appointment["user_name"] ?></td>
-                        <td><?= $appointment["gender"] ?></td>
-                        <td><?= $appointment["ph_num"] ?></td>
-                        <td><?= $appointment["user_email"] ?></td>
-                        <td><?= $appointment["age"] ?></td>
-                        <td><?= $appointment["address"] ?></td>
-                        <td><?= $appointments2[$id]["doctor_name"] ?></td>
-                        <?php $id++; ?>
-                        <td><?= $appointment["date"] ?></td>
-                        <td><?= $appointment["time"] ?></td>
+                        <td><?= $regList["user_name"] ?></td>
+                        <td><?= $regList["gender"] ?></td>
+                        <td><?= $regList["age"] ?></td>
+                        <td><?= $regList["user_email"] ?></td>
+                        <td><?= $regList["ph_num"] ?></td>    
                     </tr><?php } ?>
 
 
