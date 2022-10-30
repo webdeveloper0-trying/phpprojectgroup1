@@ -51,6 +51,12 @@
                         <option value="ph4.jpg">Pharmacy Image4</option>
                         <option value="ph5.jpg">Pharmacy Image5</option>
 
+                        <option value="ph6.jpg">Pharmacy Image6</option>
+                        <option value="ph7.jpg">Pharmacy Image7</option>
+                        <option value="ph8.jpg">Pharmacy Image8</option>
+                        <option value="ph9.jpg">Pharmacy Image9</option>
+                        <option value="ph10.jpg">Pharmacy Image10</option>
+
 
                     </select>
 
