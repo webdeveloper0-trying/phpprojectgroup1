@@ -80,22 +80,14 @@ include "../../Controller/userProfile/profileController.php"; ?>
 
             <div class="userProfile nav-item me-5 me-lg-0 dropdown">
                 <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-                    <a href="../../userProfile/uprofile.php">
-                        <img src="../storage/home/<?= $userInfo[0]["patient_profile"] ?>" width="45em" height="45em" alt="a" class="PicImg my-4 rounded-circle" />
-                    </a>
+                        <img src="../storage/home/<?= $userInfo[0]["patient_profile"] ?>" width="30em" height="30em" alt="a" class="PicImg my-4 rounded-circle" />
                 </a>
                 <ul class="dropdown-menu me-5" aria-labelledby="navbarDropdown">
                     <li>
-                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="../userProfile/uprofile.php">Go to Profile</a>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="#">Another action</a>
-                    </li>
-                    <li>
-                        <hr class="dropdown-divider" />
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                        <a class="dropdown-item" href="#">Log Out</a>
                     </li>
                 </ul>
             </div>
