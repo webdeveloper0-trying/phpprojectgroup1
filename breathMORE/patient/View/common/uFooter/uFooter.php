@@ -54,18 +54,18 @@ include "../../../admin/Controller/contact/conListController.php";
           <div class="mb-3">
             <a href="https://www.w3schools.com" class="footerLink">Privacy Policy</a>
           </div>
-          <div><a href="../../faq/faq.php" class="footerLink">FAQs</a></div>
+          <div><a href="../faq/faq.php" class="footerLink">FAQs</a></div>
         </div>
         <div class="col">
           <div class="mb-3">
             <a href="#" class="fw-bold">Navigation</a>
           </div>
           <div class="footerHome">
-            <a href="../../main/main.php" class="footerLink">Home</a>
+            <a href="../main/main.php" class="footerLink">Home</a>
           </div>
-          <div><a href="../../centers/center.php" class="footerLink">Centers</a></div>
-          <div><a href="../../blogs/mainBlog.php" class="footerLink">Blogs</a></div>
-          <div><a href="../../emergency/uEmergency.php" class="footerLink">Contact</a></div>
+          <div><a href="../centers/center.php" class="footerLink">Centers</a></div>
+          <div><a href="../blogs/mainBlog.php" class="footerLink">Blogs</a></div>
+          <div><a href="../emergency/uEmergency.php" class="footerLink">Contact</a></div>
         </div>
         <div class="col">
           <div class="ms-2 mb-3">
