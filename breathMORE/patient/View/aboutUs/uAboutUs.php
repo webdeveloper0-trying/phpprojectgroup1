@@ -35,7 +35,7 @@ include "../../../patient/Controller/common/aChColorTxtController.php";
   <link rel="stylesheet" href="./css/uAboutUs.css" <?php time(); ?>>
 
   <script src="../common/jq/jquery-3.6.0.min.js" defer></script>
-  <script src="../common/uNavbar/js/uNavbar.js"<?php time(); ?> defer></script>
+  <script src="../common/uNavbar/js/uNavbar.js" <?php time(); ?> defer></script>
 </head>
 
 <body>
@@ -57,16 +57,16 @@ include "../../../patient/Controller/common/aChColorTxtController.php";
         <div class="aboutMenu col col-3 mt-5">
           <ul class="list-group text-center rounded-0">
             <li class="list-item">
-              <a href="">Appointment</a>
+              <a href="../appointment/uMakeAppointment.php">Appointment</a>
             </li>
             <li class="list-item">
-              <a href="">Blood Donation</a>
+              <a href="../bloodDonation/bloodDonationForm.php">Blood Donation</a>
             </li>
             <li class="list-item">
-              <a href="">Emergency</a>
+              <a href="../emergency/uEmergency.php">Emergency</a>
             </li>
             <li class="list-item">
-              <a href="">Pharmacies</a>
+              <a href="../pharmacy/pharmacy.php">Pharmacies</a>
             </li>
             <li class="list-item">
               <a href="">User Guide</a>
@@ -153,7 +153,7 @@ include "../../../patient/Controller/common/aChColorTxtController.php";
           <p class="hightLightCount ms-5">80</p>
         </div>
       </div>
-      
+
       <div class="col bg-purple rounded ms-5 px-5 py-3">
         <h5>Online Appointments Token Until Today</h5>
         <div class="d-flex justify-content-center align-items-center flex-row">
