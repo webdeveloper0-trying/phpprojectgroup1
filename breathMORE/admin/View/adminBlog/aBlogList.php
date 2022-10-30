@@ -1,19 +1,17 @@
 <?php
+session_start();
 include "../common/adminNavbar.php";
 include "../../Controller/adminBlogs/aBlogListController.php";
 
+// if (isset($_POST['adminname']) && isset($_POST['password'])) {
+//     $adminname = $_POST['adminname'];
+//     $password = $_POST['password'];
+//     $_SESSION["adminname"] = $adminname;
+// }
 
-session_start();
-
-if (isset($_POST['adminname']) && isset($_POST['password'])) {
-    $adminname = $_POST['adminname'];
-    $password = $_POST['password'];
-    $_SESSION["adminname"] = $adminname;
-}
-
-if ($_SESSION["ismainadmin"] == 0) {
-    header("Location: ../adminRegisterLogin/aLogin.php");
-}
+// if ($_SESSION["ismainadmin"] == 0) {
+//     header("Location: ../adminRegisterLogin/aLogin.php");
+// }
 
 
 ?>
@@ -32,7 +30,7 @@ if ($_SESSION["ismainadmin"] == 0) {
     <!-- Bootstrap js1 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous" defer></script>
 
-   
+
     <!-- MDB -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js" defer></script>
 
@@ -121,7 +119,7 @@ if ($_SESSION["ismainadmin"] == 0) {
                                 </div>
                             </div>
 
-                        <!-- <td class="d-flex">
+                            <!-- <td class="d-flex">
                             <a href="../../Controller/adminBlogs/aEditBlogsController.php?id=<?= $blog["id"] ?>">
                                 <i class="fa-solid fa-pen-to-square"></i>
                             </a>
@@ -179,7 +177,7 @@ if ($_SESSION["ismainadmin"] == 0) {
 
         <!-- Submit button -->
         <a href="./aAddBlogForm.php">
-        <button type="submit" name="addBlog" class="btn btn-purple mb-4">Add</button>
+            <button type="submit" name="addBlog" class="btn btn-purple mb-4">Add</button>
         </a>
 
 
