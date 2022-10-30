@@ -28,7 +28,6 @@ include "../../Controller/labreport/list_labController.php";
     <link rel="stylesheet" href="../doctor/docAdd.css">
     <link rel="stylesheet" href="../common/css/style.css">
     <link rel="stylesheet" href="../common/css/adminNavbar.css" />
-    <link rel="stylesheet" href="./css/aDoctorlist.css" <?php time(); ?> />
 
 </head>
 

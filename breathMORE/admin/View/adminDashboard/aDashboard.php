@@ -56,7 +56,7 @@ if (!isset($_SESSION["adminname"])) {
                 </a>
             </div>
             <div class="col col-4 text-center">
-                <a href="">
+                <a href="../adminURegsiter/aURegisterListController.php">
                     <button type="button" class="my-3 btn btn-lg btn-green btn-rounded">
                         Total Registered List
                     </button>
@@ -65,14 +65,14 @@ if (!isset($_SESSION["adminname"])) {
             <div class="col col-4 text-center">
                 <a href="../adminAppointment/aAppointmentList.php">
                     <button type="button" class="my-3 btn btn-lg btn-green btn-rounded">
-                        Total Appointments
+                        Total Appointment Lists
                     </button>
                 </a>
             </div>
             <div class="col col-4 text-center">
                 <a href="../doctor/list.php">
                     <button type="button" class="my-3 btn btn-lg btn-green btn-rounded">
-                        Doctors List
+                        Doctor Lists
                     </button>
                 </a>
             </div>
@@ -87,12 +87,12 @@ if (!isset($_SESSION["adminname"])) {
             <div class="col col-4 text-center">
                 <a href="../diseAndmedi/addmedi.php">
                     <button type="button" class="my-3 btn btn-lg btn-green btn-rounded">
-                        Medicine
+                        Diseases and Medicine
                     </button>
                 </a>
             </div>
             <div class="col col-4 text-center">
-                <a href="">
+                <a href="../labreport/labList.php">
                     <button type="button" class="my-3 btn btn-lg btn-green btn-rounded">
                         Lab Reports
                     </button>
@@ -112,11 +112,25 @@ if (!isset($_SESSION["adminname"])) {
                     </button>
                 </a>
             </div>
+            <div class="col col-4 text-center">
+                <a href="../oxygen/o2list.php">
+                    <button type="button" class="my-3 btn btn-lg btn-green btn-rounded">
+                        Oxygen
+                    </button>
+                </a>
+            </div>
+            <div class="col col-4 text-center">
+                <a href="../pharmacy/addPharmacy.php">
+                    <button type="button" class="my-3 btn btn-lg btn-green btn-rounded">
+                        Pharmacies
+                    </button>
+                </a>
+            </div>
 
             <div class="col col-4 text-center">
-                <a href="../adminBlog/aBlogList.php">
+                <a href="../phistory/phadd.php">
                     <button type="button" class="my-3 btn btn-lg btn-green btn-rounded">
-                        Blogs
+                        Patient History
                     </button>
                 </a>
             </div>

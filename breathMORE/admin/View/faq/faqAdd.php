@@ -27,7 +27,7 @@ include "../../Controller/faq/faqListController.php";
     <link rel="stylesheet" href="../common/css/style.css">
 
     <link rel="stylesheet" href="../common/css/adminNavbar.css" />
-    <link rel="stylesheet" href="./css/aDoctorlist.css" <?php time(); ?> />
+
 
 
 </head>

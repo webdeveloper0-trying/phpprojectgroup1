@@ -62,7 +62,7 @@
 
 
                 <li class="p-3">
-                    <a href="#">Total Registered List</a>
+                    <a href="../adminURegsiter/aURegisterListController.php">Total Registered List</a>
                 </li>
                 <li class="p-3">
                     <a href="../bloodStock/listBs.php">Blood Stocks</a>

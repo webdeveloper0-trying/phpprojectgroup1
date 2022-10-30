@@ -20,7 +20,7 @@ $o2infos = $_SESSION["oxygenInfo"];
     <link rel="stylesheet" href="../doctor/docAdd.css">
     <link rel="stylesheet" href="../common/css/style.css">
 
-    <link rel="stylesheet" href="./css/aDoctorlist.css" <?php time(); ?> />
+
 </head>
 
 <body>
