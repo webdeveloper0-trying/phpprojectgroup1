@@ -40,6 +40,12 @@
         <div class="offcanvas-body">
             <ul class="list-group text-center mt-5">
                 <li class="p-3">
+
+                    <a href="../adminManagement/aManagement.php">Admin Management</a>
+                </li>
+                <li class="p-3">
+                    <a href="../adminAppointment/aAppointmentList.php">Total Registered List</a>
+
                     <a href="../adminAppointment/aAppointmentList.php">Total Appointments</a>
                 </li>
                 <li class="p-3">
@@ -62,7 +68,11 @@
 
 
                 <li class="p-3">
+
                     <a href="../adminURegsiter/aURegisterListController.php">Total Registered List</a>
+
+                    <a href="#">Total Registered List</a>
+
                 </li>
                 <li class="p-3">
                     <a href="../bloodStock/listBs.php">Blood Stocks</a>

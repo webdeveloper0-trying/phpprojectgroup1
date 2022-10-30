@@ -1,6 +1,6 @@
 <?php
 
-
+include "../../Controller/subscribeNews/aSubscribeNewListController.php";
 include "../common/adminNavbar.php";
 
 session_start();
@@ -15,7 +15,7 @@ if ($_SESSION["ismainadmin"] == 0) {
     header("Location: ../adminRegisterLogin/aLogin.php");
 }
 
-include "../../Controller/subscribeNews/aSubscribeNewListController.php";
+
 
 
 
