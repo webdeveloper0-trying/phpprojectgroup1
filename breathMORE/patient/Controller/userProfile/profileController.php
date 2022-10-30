@@ -13,7 +13,7 @@ $page2 = (isset($_GET["page2"])) ?  $_GET["page2"] : 1;
 $startPage1 = ($page1 - 1) * $rowLimit1;
 $startPage2 = ($page2 - 1) * $rowLimit2;
 
-session_start();
+
 // Profile Inofo
 $userId = $_SESSION["userId"];
 $sql1 = $pdo->prepare("SELECT * FROM total_registered_accounts WHERE  register_id=:userId");

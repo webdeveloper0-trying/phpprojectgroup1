@@ -1,6 +1,14 @@
 <?php
 
 session_start();
+include "../../Controller/blogs/mainBlogController.php";
+include "../common/uNavbar/uNavbar.php";
+include "../common/uFooter/uFooter.php";
+
+include "../../../patient/Controller/common/aChColorTxtController.php";
+include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
+
+
 if (isset($_POST["username"]) && isset($_POST["password"])) {
     $username = $_POST["username"];
     $password = $_POST["password"];
@@ -13,12 +21,6 @@ if (!isset($_SESSION["username"])) {
     $userId = $_SESSION["userId"];
 }
 
-include "../../Controller/blogs/mainBlogController.php";
-include "../common/uNavbar/uNavbar.php";
-include "../common/uFooter/uFooter.php";
-
-include "../../../patient/Controller/common/aChColorTxtController.php";
-include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
 
 
 

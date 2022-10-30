@@ -21,6 +21,7 @@
 
 body {
   width: 100vw !important;
+  height:auto !important;
   font-family: "Josefin Sans", sans-serif !important;
   background: #f2f4f1 !important;
   overflow-x: hidden !important;

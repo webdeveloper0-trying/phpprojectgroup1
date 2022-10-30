@@ -1,7 +1,8 @@
 body {
   position: relative !important;
-  
+  height:auto !important;
 }
+
 
 #footer {
   width: 100vw !important;
@@ -9,6 +10,7 @@ body {
   color: var(--textColorOne) !important;
 
   position: absolute !important;
+  top:100% !important;
   
   
 }
