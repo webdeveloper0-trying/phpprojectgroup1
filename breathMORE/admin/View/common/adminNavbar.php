@@ -23,7 +23,7 @@
     <!-- Boxicon  -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-   
+
 </head>
 
 <body>
@@ -40,32 +40,72 @@
         <div class="offcanvas-body">
             <ul class="list-group text-center mt-5">
                 <li class="p-3">
+<<<<<<< HEAD
                     <a href="../adminManagement/aManagement.php">Admin Management</a>
                 </li>
                 <li class="p-3">
                     <a href="../adminAppointment/aAppointmentList.php">Total Registered List</a>
+=======
+                    <a href="../adminAppointment/aAppointmentList.php">Total Appointments</a>
                 </li>
                 <li class="p-3">
-                    <a href="#">Total Appointments</a>
+                    <a href="../adminBlog/aBlogList.php">Blogs</a>
+                </li>
+
+                <li class="p-3">
+                    <a href="../adminBloodDonation/abloodDonationList.php">Blood Donations</a>
                 </li>
                 <li class="p-3">
-                    <a href="#">Doctors List</a>
+                    <a href="../adminDashboard/aDashboard.php">Admin DashBoard</a>
+                </li>
+
+                <li class="p-3">
+                    <a href="../adminManagement/aManagement.php">Admin Management</a>
                 </li>
                 <li class="p-3">
-                    <a href="#">Blood Donations</a>
+                    <a href="../adminProfile/adminProfile.php">Admin Profile</a>
+                </li>
+
+
+                <li class="p-3">
+                    <a href="#">Total Registered List</a>
+>>>>>>> ca72c5d7eb3cf83684d9415a145c32fcd4aecef2
                 </li>
                 <li class="p-3">
-                    <a href="#">Medicine</a>
+                    <a href="../bloodStock/listBs.php">Blood Stocks</a>
                 </li>
                 <li class="p-3">
-                    <a href="#">Lab Reports</a>
+                    <a href="../contactUs/addContact.php">Contact Us</a>
                 </li>
                 <li class="p-3">
-                    <a href="#">Pharmacies List</a>
+                    <a href="../diseAndmedi/addmedi.php">Disease And Medicine</a>
+                </li>
+
+                <li class="p-3">
+                    <a href="../doctor/list.php">Doctors</a>
                 </li>
                 <li class="p-3">
-                    <a href="#">Blogs</a>
+                    <a href="../faq/faqAdd.php">FAQ</a>
                 </li>
+                <li class="p-3">
+                    <a href="../labreport/labList.php">Lab Reports</a>
+                </li>
+                <li class="p-3">
+                    <a href="../oxygen/o2list.php">Oxygen</a>
+                </li>
+                <li class="p-3">
+                    <a href="../pharmacy/listPharmacy.php">Pharmacies</a>
+                </li>
+                <li class="p-3">
+                    <a href="../phistory/phlist.php">Patient History</a>
+                </li>
+                <li class="p-3">
+                    <a href="../subscribeNews/aSubscribeNewList.php">Subscribe News</a>
+                </li>
+                <li class="p-3">
+                    <a href="#">FeedBack</a>
+                </li>
+
             </ul>
         </div>
     </div>

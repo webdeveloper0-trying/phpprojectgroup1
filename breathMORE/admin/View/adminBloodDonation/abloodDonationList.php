@@ -4,15 +4,15 @@ session_start();
 
 
 
-if (isset($_POST['adminname']) && isset($_POST['password'])) {
-    $adminname = $_POST['adminname'];
-    $password = $_POST['password'];
-    $_SESSION["adminname"] = $adminname;
-}
+// if (isset($_POST['adminname']) && isset($_POST['password'])) {
+//     $adminname = $_POST['adminname'];
+//     $password = $_POST['password'];
+//     $_SESSION["adminname"] = $adminname;
+// }
 
-if ($_SESSION["ismainadmin"] == 0) {
-    header("Location: ./adminLogin.php");
-}
+// if ($_SESSION["ismainadmin"] == 0) {
+//     header("Location: ./adminLogin.php");
+// }
 
 
 include "../../Controller/adminBloodDonation/aBloodDonationController.php";
@@ -52,7 +52,7 @@ include "../common/adminNavbar.php";
     <link rel="stylesheet" href="./css/aBloodDonationList.css">
 
     <!-- jq 1 -->
-    <script src="../common/jq/jquery-3.6.0.min.js"<?php time() ?> defer></script>
+    <script src="../common/jq/jquery-3.6.0.min.js" <?php time() ?> defer></script>
 
     <!-- custom js file -->
     <script src="./js/aBloodDonation.js" <?php time() ?> defer></script>
@@ -74,14 +74,14 @@ include "../common/adminNavbar.php";
                         <div class="searchbox input-group d-flex justify-content-center align-items-center flex-row">
                             <input type="search" class="form-control rounded" id="searchBloodType" placeholder="Search By BloodType" aria-label="Search" aria-describedby="search-addon" />
                             <button type="button" class="btn btn-green" id="searchBloodIcon">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                <circle cx="10" cy="10" r="7" />
-                                <line x1="21" y1="21" x2="15" y2="15" />
-                            </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <circle cx="10" cy="10" r="7" />
+                                    <line x1="21" y1="21" x2="15" y2="15" />
+                                </svg>
                             </button>
 
-                          
+
                         </div>
                     </th>
                 </tr>
@@ -119,4 +119,5 @@ include "../common/adminNavbar.php";
     </div>
 
 </body>
+
 </html>
