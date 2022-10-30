@@ -15,7 +15,7 @@ include "../../Controller/doctor/listController.php";
 
     <link rel="stylesheet" href="../common/css/style.css">
     <link rel="stylesheet" href="../common/css/adminNavbar.css" />
-    <link rel="stylesheet" href="./css/aDoctorlist.css" <?php time(); ?> />
+
 
     <script src="../common/jq/jquery-3.6.0.min.js"></script>
     <script src="./js/doctorsearch.js" <?= time() ?> defer></script>

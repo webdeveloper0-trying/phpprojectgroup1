@@ -24,7 +24,7 @@ include "../../Controller/diseAndmedi/dmlistController.php";
     <link rel="stylesheet" href="../common/css/style.css">
 
     <link rel="stylesheet" href="../common/css/adminNavbar.css" />
-    <link rel="stylesheet" href="./css/aDoctorlist.css" <?php time(); ?> />
+    <!-- <link rel="stylesheet" href="./css/aDoctorlist.css" <?php time(); ?> /> -->
 
 
 </head>

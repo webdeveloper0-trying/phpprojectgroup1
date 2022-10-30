@@ -76,9 +76,9 @@ include "../../Controller/adminProfile/aProfileSelectPropsController.php";
                 <div class="container-fluid">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="#">Admin Management</a></li>
-                            <li class="breadcrumb-item"><a href="#">Total Registered List</a></li>
-                            <li class="breadcrumb-item active" aria-current="page"><a href="#">Total Appointment</a></li>
+                            <li class="breadcrumb-item"><a href="../adminManagement/aManagement.php">Admin Management</a></li>
+                            <li class="breadcrumb-item"><a href="../">Total Registered List</a></li>
+                            <li class="breadcrumb-item active" aria-current="page"><a href=".">Total Appointment</a></li>
                             <li class="breadcrumb-item active" aria-current="page">
                                 <a href="#">Doctors List</a>
                             </li>
@@ -212,28 +212,28 @@ include "../../Controller/adminProfile/aProfileSelectPropsController.php";
 
             <div class="alertCard form-outline card text-center rounded-0 mt-5 py-3">
 
-            <form action="../../Controller/adminProfile/adminAlertController.php" method="post">
-                <h4 class="h4 header">Today's Alert</h4>
+                <form action="../../Controller/adminProfile/adminAlertController.php" method="post">
+                    <h4 class="h4 header">Today's Alert</h4>
 
-                <!-- Message input -->
-                <div class="form-outline mb-4">
-                    <textarea class="form-control bg-light" name="dailyMsg" id="dailyMsg" rows="4"></textarea>
-                    <label class="form-label" for="dailyMsg">Daily Message</label>
-                </div>
+                    <!-- Message input -->
+                    <div class="form-outline mb-4">
+                        <textarea class="form-control bg-light" name="dailyMsg" id="dailyMsg" rows="4"></textarea>
+                        <label class="form-label" for="dailyMsg">Daily Message</label>
+                    </div>
 
-                <button type="submit" class="btn btn-purple mt-3">Submit</button>
-            <form>
+                    <button type="submit" class="btn btn-purple mt-3">Submit</button>
+                    <form>
             </div>
 
 
 
 
-                <script src="../common/jq/jquery-3.6.0.min.js"></script>
-                <!-- picker js1 -->
-                <script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.min.js"></script>
+            <script src="../common/jq/jquery-3.6.0.min.js"></script>
+            <!-- picker js1 -->
+            <script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.min.js"></script>
 
-                <!-- custom js1 -->
-                <script src="./js/aChangeColors.js" <?php time() ?>></script>
+            <!-- custom js1 -->
+            <script src="./js/aChangeColors.js" <?php time() ?>></script>
 
 
 </body>

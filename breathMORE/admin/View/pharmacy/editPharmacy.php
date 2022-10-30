@@ -68,6 +68,25 @@ $shop = $_SESSION["shopInfos"];
                                                 } ?>>Pharmacy Image5</option>
 
 
+                        <option value="ph6.jpg" <?php if ($shop[0]['pharmacy_photo'] == 'ph6.jpg') {
+                                                    echo "selected";
+                                                } ?>>Pharmacy Image6</option>
+
+                        <option value="ph7.jpg" <?php if ($shop[0]['pharmacy_photo'] == 'ph7.jpg') {
+                                                    echo "selected";
+                                                } ?>>Pharmacy Image7</option>
+                        <option value="ph8.jpg" <?php if ($shop[0]['pharmacy_photo'] == 'ph8.jpg') {
+                                                    echo "selected";
+                                                } ?>>Pharmacy Image8</option>
+
+
+                        <option value="ph9.jpg" <?php if ($shop[0]['pharmacy_photo'] == 'ph9.jpg') {
+                                                    echo "selected";
+                                                } ?>>Pharmacy Image9</option>
+                        <option value="ph10.jpg" <?php if ($shop[0]['pharmacy_photo'] == 'ph10.jpg') {
+                                                        echo "selected";
+                                                    } ?>>Pharmacy Image10</option>
+
                     </select>
 
 

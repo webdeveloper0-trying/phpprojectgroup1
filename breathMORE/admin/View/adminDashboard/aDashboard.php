@@ -57,33 +57,47 @@ $appointement = $appCount[0]['COUNT(id)'];
             <div class="col col-4 text-center">
                 <a href="../adminManagement/aManagement.php">
                     <button type="button" id="mainAdminControl" class="my-3 btn btn-xl py-3 btn-green btn-rounded d-flex align-items-center">
-                        Admin Management  
+                        Admin Management
                     </button>
-                   
+
                 </a>
             </div>
             <div class="col col-4 text-center">
-                <a href="../aTotalRegisterList/aTotalRegister.php">
-                    <button type="button" class="my-3 btn btn-xl py-3 btn-green btn-rounded d-flex align-items-center">
-                        Total Registered List
-                        <span class="badge badge-primary rounded-pill fs-6"><?= $register; ?></span>
-                    </button>
-                </a>
+
+                <a href="../adminURegsiter/aURegisterListController.php">
+                    <button type="button" class="my-3 btn btn-lg btn-green btn-rounded">
+
+                        <a href="../aTotalRegisterList/aTotalRegister.php">
+                            <button type="button" class="my-3 btn btn-xl py-3 btn-green btn-rounded d-flex align-items-center">
+                                Total Registered List
+                                <span class="badge badge-primary rounded-pill fs-6"><?= $register; ?></span>
+                            </button>
+                        </a>
             </div>
             <div class="col col-4 text-center">
                 <a href="../adminAppointment/aAppointmentList.php">
-                    <button type="button" class="my-3 btn btn-xl py-3 btn-green btn-rounded d-flex align-items-center">
-                        Total Appointments
-                        <span class="badge badge-primary rounded-pill fs-6">14</span>
-                    </button>
+
+                    <button type="button" class="my-3 btn btn-lg btn-green btn-rounded">
+                        Total Appointment Lists
+
+                        <button type="button" class="my-3 btn btn-xl py-3 btn-green btn-rounded d-flex align-items-center">
+                            Total Appointments
+                            <span class="badge badge-primary rounded-pill fs-6">14</span>
+
+                        </button>
                 </a>
             </div>
             <div class="col col-4 text-center">
                 <a href="../doctor/list.php">
-                    <button type="button" class="my-3 btn btn-xl py-3 btn-green btn-rounded d-flex align-items-center">
-                        Doctors List
-                        <span class="badge badge-primary rounded-pill fs-6">14</span>
-                    </button>
+
+                    <button type="button" class="my-3 btn btn-lg btn-green btn-rounded">
+                        Doctor Lists
+
+                        <button type="button" class="my-3 btn btn-xl py-3 btn-green btn-rounded d-flex align-items-center">
+                            Doctors List
+                            <span class="badge badge-primary rounded-pill fs-6">14</span>
+
+                        </button>
                 </a>
             </div>
 
@@ -97,27 +111,36 @@ $appointement = $appCount[0]['COUNT(id)'];
             </div>
             <div class="col col-4 text-center">
                 <a href="../diseAndmedi/addmedi.php">
-                    <button type="button" class="my-3 btn btn-xl py-3 btn-green btn-rounded d-flex align-items-center">
-                        Medicine list
-                        <span class="badge badge-primary rounded-pill fs-6">14</span>
-                    </button>
+
+                    <button type="button" class="my-3 btn btn-lg btn-green btn-rounded">
+                        Diseases and Medicine
+
+                        <button type="button" class="my-3 btn btn-xl py-3 btn-green btn-rounded d-flex align-items-center">
+                            Medicine list
+                            <span class="badge badge-primary rounded-pill fs-6">14</span>
+
+                        </button>
                 </a>
             </div>
             <div class="col col-4 text-center">
                 <a href="../labreport/labList.php">
-                    <button type="button" class="my-3 btn btn-xl py-3 btn-green btn-rounded d-flex align-items-center">
-                        Lab Reports
-                        <span class="badge badge-primary rounded-pill fs-6">14</span>
-                    </button>
+
+                    <button type="button" class="my-3 btn btn-lg btn-green btn-rounded">
+
+                        <button type="button" class="my-3 btn btn-xl py-3 btn-green btn-rounded d-flex align-items-center">
+
+                            Lab Reports
+                            <span class="badge badge-primary rounded-pill fs-6">14</span>
+                        </button>
                 </a>
             </div>
             <div class="col col-4 text-center">
-            <a href="../subscribeNews/aSubscribeNewList.php">
-                <button type="button" class="my-3 btn btn-xl py-3 btn-green btn-rounded d-flex align-items-center">
-                    
+                <a href="../subscribeNews/aSubscribeNewList.php">
+                    <button type="button" class="my-3 btn btn-xl py-3 btn-green btn-rounded d-flex align-items-center">
+
                         Subscribtion List
                         <span class="badge badge-primary rounded-pill fs-6">14</span>
-                </button>
+                    </button>
                 </a>
             </div>
             <div class="col col-4 text-center">
@@ -128,21 +151,41 @@ $appointement = $appCount[0]['COUNT(id)'];
                     </button>
                 </a>
             </div>
-
             <div class="col col-4 text-center">
-                <a href="../adminBlog/aBlogList.php">
-                    <button type="button" class="my-3 btn btn-xl py-3 btn-green btn-rounded d-flex align-items-center">
-                        Blogs
-                        <span class="badge badge-primary rounded-pill fs-6">14</span>
+                <a href="../oxygen/o2list.php">
+                    <button type="button" class="my-3 btn btn-lg btn-green btn-rounded">
+                        Oxygen
                     </button>
                 </a>
+            </div>
+            <div class="col col-4 text-center">
+                <a href="../pharmacy/addPharmacy.php">
+                    <button type="button" class="my-3 btn btn-lg btn-green btn-rounded">
+                        Pharmacies
+                    </button>
+                </a>
+            </div>
+
+            <div class="col col-4 text-center">
+
+                <a href="../phistory/phadd.php">
+                    <button type="button" class="my-3 btn btn-lg btn-green btn-rounded">
+                        Patient History
+
+                        <a href="../adminBlog/aBlogList.php">
+                            <button type="button" class="my-3 btn btn-xl py-3 btn-green btn-rounded d-flex align-items-center">
+                                Blogs
+                                <span class="badge badge-primary rounded-pill fs-6">14</span>
+
+                            </button>
+                        </a>
             </div>
 
 
         </div>
     </div>
 
-  
+
 
     <!-- bootstrap js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>

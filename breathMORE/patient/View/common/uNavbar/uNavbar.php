@@ -60,19 +60,19 @@ include "../../Controller/userProfile/profileController.php"; ?>
 
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                     <li class="nav-link-active nav-item m-3">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" href="../../main/main.php">Home</a>
                     </li>
                     <li class="nav-link-active nav-item m-3">
-                        <a class="nav-link" href="../aboutUs/uAboutUs.php">About Us</a>
+                        <a class="nav-link" href="../../aboutUs/uAboutUs.php">About Us</a>
                     </li>
                     <li class="nav-link-active nav-item m-3">
-                        <a class="nav-link" href="../centers/center.php">Center</a>
+                        <a class="nav-link" href="../../centers/center.php">Center</a>
                     </li>
                     <li class="nav-link-active nav-item m-3">
-                        <a class="nav-link" href="../blogs/mainblog.php">Blogs</a>
+                        <a class="nav-link" href="../../blogs/mainBlog.php">Blogs</a>
                     </li>
                     <li class="nav-link-active nav-item m-3">
-                        <a class="nav-link" href="#">Contact Us</a>
+                        <a class="nav-link" href="../../emergency/uEmergency.php">Contact Us</a>
                     </li>
                 </ul>
 
@@ -80,8 +80,8 @@ include "../../Controller/userProfile/profileController.php"; ?>
 
             <div class="userProfile nav-item me-5 me-lg-0 dropdown">
                 <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-                    <a href="../userProfile/uprofile.php">
-                    <img src="../storage/home/<?= $userInfo[0]["patient_profile"] ?>" width="45em" height="45em" alt="a" class="PicImg my-4 rounded-circle" />
+                    <a href="../../userProfile/uprofile.php">
+                        <img src="../storage/home/<?= $userInfo[0]["patient_profile"] ?>" width="45em" height="45em" alt="a" class="PicImg my-4 rounded-circle" />
                     </a>
                 </a>
                 <ul class="dropdown-menu me-5" aria-labelledby="navbarDropdown">
