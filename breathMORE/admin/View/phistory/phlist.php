@@ -16,10 +16,7 @@ include "../../Controller/phistory/phlistController.php"
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Patient History Lists</title>
 
-    <!-- MDB -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet" />
-    <!-- MDB -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js"></script>
+    
 
     <link rel="stylesheet" href="../common/css/style.css">
     <link rel="stylesheet" href="../doctor/docAdd.css">

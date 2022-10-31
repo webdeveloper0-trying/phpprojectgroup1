@@ -16,7 +16,7 @@ $("#searchBtn").click(function () {
         console.log(plists);
         $("#searchresult").empty();
 
-        for (const plist of plists) {
+        for (plist of plists) {
           $("#searchresult").append(
             `
             <tr>

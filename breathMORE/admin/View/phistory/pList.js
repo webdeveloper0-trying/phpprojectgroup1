@@ -16,12 +16,12 @@ $("#searchBtn").click(function () {
         let id = JSON.parse(res);
         console.log(id);
         $("#searchresult").empty();
+        let count = 0;
         for (const pnote of id) {
           $("#searchresult").append(
             `
                 <tr>
-                    
-                    <td>${count++}</td>
+                    <td>${++count}</td>
                     <td>${pnote.write_date}</td>
                     <td>${pnote.patient_id}</td>
                     <td>Dr.${pnote.doctor_name}</td>
