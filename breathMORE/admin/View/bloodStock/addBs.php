@@ -77,7 +77,7 @@
 
                     <label for="exampleFormControlInput1" class="form-label">Today Add Stock</label>
 
-                    <input id="" type="text" name="psB" class="form-control" id="exampleFormControlInput1" placeholder="">
+                    <input id="" type="text" name="psB" class="form-control" id="exampleFormControlInput1" required placeholder="">
 
 
                 </div>
@@ -86,7 +86,7 @@
 
                     <label for="exampleFormControlInput1" class="form-label">Used</label>
 
-                    <input id="" type="text" name="udB" class="form-control" id="exampleFormControlInput1" placeholder="">
+                    <input id="" type="text" name="udB" class="form-control" id="exampleFormControlInput1" required placeholder="">
 
 
                 </div>

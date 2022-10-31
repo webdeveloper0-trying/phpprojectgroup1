@@ -17,7 +17,7 @@ $("#flush-headingOne").click(function (event) {
       let count = 1;
       for (const doctorlist of centerresult) {
         $("#eye").append(`
-        <p>(${count++})${doctorlist.doctor_name}</p>`);
+        <p>(${count++}) Dr. ${doctorlist.doctor_name}</p>`);
       }
     },
     error: function (err) {
@@ -44,7 +44,7 @@ $("#flush-headingTwo").click(function (event) {
       let count = 1;
       for (const doctorlist of centerresult) {
         $("#general").append(`
-        <p>(${count++})${doctorlist.doctor_name}</p>`);
+        <p>(${count++}) Dr.${doctorlist.doctor_name}</p>`);
       }
     },
     error: function (err) {
@@ -70,7 +70,7 @@ $("#flush-headingThree").click(function (event) {
       $("#skin").empty();
       let count = 1;
       for (const doctorlist of centerresult) {
-        $("#skin").append(`<p>(${count++})${doctorlist.doctor_name}</p>`);
+        $("#skin").append(`<p>(${count++})Dr.${doctorlist.doctor_name}</p>`);
       }
     },
     error: function (err) {
@@ -97,7 +97,7 @@ $("#flush-headingFour").click(function (event) {
       let count = 1;
       for (const doctorlist of centerresult) {
         $("#surgery").append(`
-        <p>(${count++})${doctorlist.doctor_name}</p>`);
+        <p>(${count++}) Dr.${doctorlist.doctor_name}</p>`);
       }
     },
     error: function (err) {
@@ -124,7 +124,7 @@ $("#flush-headingFive").click(function (event) {
       let count = 1;
       for (const doctorlist of centerresult) {
         $("#og").append(`
-        <p>(${count++})${doctorlist.doctor_name}</p>`);
+        <p>(${count++}) Dr.${doctorlist.doctor_name}</p>`);
       }
     },
     error: function (err) {
@@ -153,7 +153,7 @@ $("#flush-headingSix").click(function (event) {
       let count = 1;
       for (const doctorlist of centerresult) {
         $("#child").append(`
-        <p>(${count++})${doctorlist.doctor_name}</p>`);
+        <p>(${count++}) Dr. ${doctorlist.doctor_name}</p>`);
       }
     },
     error: function (err) {
@@ -181,7 +181,7 @@ $("#flush-headingSeven").click(function (event) {
       let count = 1;
       for (const doctorlist of centerresult) {
         $("#kidney").append(`
-        <p>(${count++})${doctorlist.doctor_name}</p>`);
+        <p>(${count++}) Dr.${doctorlist.doctor_name}</p>`);
       }
     },
     error: function (err) {
@@ -208,7 +208,7 @@ $("#flush-headingEight").click(function (event) {
       let count = 1;
       for (const doctorlist of centerresult) {
         $("#heart").append(`
-      <p>(${count++})${doctorlist.doctor_name}</p>`);
+      <p>(${count++}) Dr.${doctorlist.doctor_name}</p>`);
       }
     },
     error: function (err) {

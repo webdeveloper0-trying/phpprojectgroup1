@@ -40,7 +40,7 @@ include "../common/uFooter/uFooter.php";
 
         <div class="accordion accordion-flush" id="accordionFlushExample">
             <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-headingOne">
+                <h2 class="accordion-header  btn-background-slide" id="flush-headingOne">
                     <button class="accordion-button collapsed" type="button" data-mdb-toggle="collapse" data-mdb-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
                         Eye
                     </button>
@@ -55,16 +55,16 @@ include "../common/uFooter/uFooter.php";
                         sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat
                         craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't
                         heard of them accusamus labore sustainable VHS.
-                        
+
                     </div>
                     <div id="eye" class="ps-5"></div>
-                   
+
                 </div>
             </div>
             <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingTwo">
                     <button class="accordion-button collapsed" type="button" data-mdb-toggle="collapse" data-mdb-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                       General
+                        General
                     </button>
                 </h2>
                 <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-mdb-parent="#accordionFlushExample">
@@ -104,8 +104,8 @@ include "../common/uFooter/uFooter.php";
 
 
             <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-headingFour">
-                    <button class="accordion-button collapsed" type="button" data-mdb-toggle="collapse" data-mdb-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                <h2 class="accordion-header " id="flush-headingFour">
+                    <button class="accordion-button collapsed " type="button" data-mdb-toggle="collapse" data-mdb-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
                         Surgery
                     </button>
                 </h2>
@@ -126,7 +126,7 @@ include "../common/uFooter/uFooter.php";
             <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingFive">
                     <button class="accordion-button collapsed" type="button" data-mdb-toggle="collapse" data-mdb-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
-                       OG
+                        OG
                     </button>
                 </h2>
                 <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-mdb-parent="#accordionFlushExample">

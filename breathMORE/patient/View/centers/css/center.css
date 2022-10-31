@@ -1,5 +1,23 @@
-.accordion-button{
-    background:var(--textColorOne) !important;
+.accordion-button {
+  background: var(--textColorOne) !important;
+  cursor: pointer;
 }
 
+.btn-background-slide::before {
+  content: "";
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  z-index: -1 !important;
+  background-color: green !important;
 
+  transition: transform 300ms ease-in-out !important;
+  transform: scaleX(0) !important;
+  transform-origin: left !important;
+}
+
+.btn-background-slide:hover::before,
+.btn-background-slide:focus::before {
+  transform: scaleX(1) !important;
+}

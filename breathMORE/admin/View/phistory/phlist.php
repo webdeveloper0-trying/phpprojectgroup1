@@ -16,7 +16,7 @@ include "../../Controller/phistory/phlistController.php"
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Patient History Lists</title>
 
-    
+
 
     <link rel="stylesheet" href="../common/css/style.css">
     <link rel="stylesheet" href="../doctor/docAdd.css">
@@ -42,13 +42,15 @@ include "../../Controller/phistory/phlistController.php"
                     <th colspan="7">
                         <input id="searchpid" type="text" name="pid" class="form-control" id="exampleFormControlInput1" placeholder="">
 
-                        <button class="btn" id="searchBtn"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-search" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#6f32be" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <button class="btn" id="searchBtn">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-search" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f2f4f1" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                 <circle cx="12" cy="7" r="4" />
                                 <path d="M6 21v-2a4 4 0 0 1 4 -4h1" />
                                 <circle cx="16.5" cy="17.5" r="2.5" />
                                 <path d="M18.5 19.5l2.5 2.5" />
-                            </svg></button>
+                            </svg>
+                        </button>
                     </th>
                 </tr>
 
