@@ -120,12 +120,7 @@ include "../../Controller/phistory/phlistController.php"
         <a href="./phadd.php"><button type="button" class="btn  submit-button   m-5 float-lg-end float-sm-end float-md-end" data-mdb-ripple-color="dark">ADD patient Info</button></a>
 
 
-        <!-- <div class="container-fluid d-flex justify-content-end">
-            <a href="./phadd.php">
-                <button type="button" class="btn submit-button m-5 float-lg-end float-sm-end float-md-end" data-mdb-ripple-color="dark">ADD patient Info</button>
-            </a>
 
-        </div> -->
 
 
 

@@ -10,15 +10,15 @@ include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
 
 
 if (isset($_POST["username"]) && isset($_POST["password"])) {
-    $username = $_POST["username"];
-    $password = $_POST["password"];
-    $_SESSION["username"] = $username;
+  $username = $_POST["username"];
+  $password = $_POST["password"];
+  $_SESSION["username"] = $username;
 }
 if (!isset($_SESSION["username"])) {
 
-    header("Location: ../uRegisterLogin/register.php");
+  header("Location: ../uRegisterLogin/register.php");
 } else {
-    $userId = $_SESSION["userId"];
+  $userId = $_SESSION["userId"];
 }
 
 
@@ -62,7 +62,7 @@ if (!isset($_SESSION["username"])) {
         <?php
         echo $webName;
         $webName = explode("/", $webName);
-        
+
         $fName = $webName[0];
         $lName = $webName[1];
         ?>
