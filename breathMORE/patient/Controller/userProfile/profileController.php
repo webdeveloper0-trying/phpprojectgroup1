@@ -16,6 +16,7 @@ $startPage2 = ($page2 - 1) * $rowLimit2;
 
 // Profile Inofo
 $userId = $_SESSION["userId"];
+echo "$userId";
 $sql1 = $pdo->prepare("SELECT * FROM total_registered_accounts WHERE  register_id=:userId");
 $sql1->bindValue(":userId", $userId);
 $sql1->execute();

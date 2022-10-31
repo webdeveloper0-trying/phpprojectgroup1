@@ -24,13 +24,8 @@ include "../../../admin/Controller/contact/conListController.php";
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
   <!-- MDB -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet" />
-  <!-- MDB -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js" defer></script>
-
-  <!-- custom css3 -->
-  <link rel="stylesheet" href="./css/uFooter.css" <?php time(); ?>>
-  <!-- <link rel="stylesheet" href="../../common/css/style.css" <?php time(); ?>> --> -->
-
+  
+ 
 </head>
 
 <body>

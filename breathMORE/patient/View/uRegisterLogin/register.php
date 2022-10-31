@@ -1,6 +1,6 @@
 <?php
 session_start();
-unset($_SESSION["username"]);
+unset($_SESSION["userId"]);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,9 +21,6 @@ unset($_SESSION["username"]);
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
     <!-- MDB -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet" />
-    <!-- MDB -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js" defer></script>
-
     <!-- custom css -->
     <link rel="stylesheet" href="../common/css/style.css" <?php time(); ?> />
     <link rel="stylesheet" href="./css/uRegister.css" />

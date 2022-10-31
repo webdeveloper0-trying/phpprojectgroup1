@@ -63,5 +63,5 @@ if (isset($_POST["profile"])) {
     $sql->bindValue(":dateofbirth", $dateofbirth);
     $sql->bindValue(":id", $id);
     $sql->execute();
-    // header("location: ../../View/main/main.php");
+    header("location: ../../View/userProfile/uprofile.php");
 }
