@@ -1,12 +1,9 @@
-
-
-
-marquee{
-  height:10vh !important;
-  width:100vw !important;
-  background:var(--textColorOne) !important;
-  color:var(--secondaryColor) !important;
-  font-size:1.1em !important;
+marquee {
+  height: 10vh !important;
+  width: 100vw !important;
+  background: var(--textColorOne) !important;
+  color: var(--secondaryColor) !important;
+  font-size: 1.1em !important;
   line-height: 10vh !important;
 }
 .headerInfo {
@@ -16,11 +13,16 @@ marquee{
 .services {
   background: var(--secondaryColor) !important;
   margin-top: 7em !important;
+  border-radius: 20px;
 }
 
 .serviceCard {
   padding: 0 !important;
   width: 12vw !important;
+}
+
+.serviceCard:hover {
+  border-radius: 10px 100px / 120px;
 }
 
 .serviceLink {
@@ -159,13 +161,13 @@ marquee{
 
 /* Responsive  */
 
-@media (max-width: 768px) {
+/* @media (max-width: 1000px) {
   .headerImg {
     display: none !important;
   }
-}
+} */
 
-@media (max-width: 576px) {
+@media (max-width: 1000px) {
   .headerImg {
     display: none !important;
   }
