@@ -28,14 +28,15 @@ include "../../../admin/Controller/contact/conListController.php";
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js" defer></script>
 
   <!-- custom css3 -->
-  <!-- <link rel="stylesheet" href="./css/uFooter.css"<?php time(); ?>>
-  <link rel="stylesheet" href="../../common/css/style.css" <?php time(); ?>> -->
+  <link rel="stylesheet" href="./css/uFooter.css" <?php time(); ?>>
+  <!-- <link rel="stylesheet" href="../../common/css/style.css" <?php time(); ?>> --> -->
 
 </head>
 
 <body>
-  <footer id="footer" class="footer mt-5">
-    <div class="container-fluid mx-5 py-5">
+
+  <footer id="footer" class="footer mt-5 p-5">
+    <div class="container-fluid">
       <!-- 
       <div class="footer container"> -->
       <div class="row">
@@ -52,7 +53,7 @@ include "../../../admin/Controller/contact/conListController.php";
         </div>
         <div class="col">
           <div class="mb-3">
-            <a href="https://www.w3schools.com" class="footerLink">Privacy Policy</a>
+            <a href="../userPrivacyPolicy/privacyPolicy.php" class="footerLink">Privacy Policy</a>
           </div>
           <div><a href="../faq/faq.php" class="footerLink">FAQs</a></div>
         </div>

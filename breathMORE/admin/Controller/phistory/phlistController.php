@@ -21,6 +21,17 @@ $patientLists = $sql->fetchAll(PDO::FETCH_ASSOC);
 // print_r($patientLists);
 
 
+// $sql = $pdo->prepare(" 
+//      SELECT * FROM patient_history INNER JOIN total_registered_accounts ON patient_history.patient_id= total_registered_accounts.register_id; 
+//     ");
+
+// $sql->execute();
+
+// $patientInfos = $sql->fetchAll(PDO::FETCH_ASSOC);
+// echo "<pre>";
+// print_r($patientInfos);
+
+
 $sql = $pdo->prepare(" 
     SELECT COUNT(id) AS total FROM patient_history INNER JOIN doctor_lists ON patient_history.refDocId= doctor_lists.doctor_id; 
     ");

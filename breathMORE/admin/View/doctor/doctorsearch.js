@@ -1,6 +1,6 @@
 $("#searchBtn").click(function () {
   if ($("#searchDoctext").val() == "") {
-    alert("Search Something");
+    alert("You Need to type before you Search Something");
   } else {
     let type = "";
     if ($("#rname").prop("selected")) {

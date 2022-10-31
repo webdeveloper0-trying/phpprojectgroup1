@@ -69,7 +69,7 @@ include "../../../patient/Controller/common/aChColorTxtController.php";
               <a href="../pharmacy/pharmacy.php">Pharmacies</a>
             </li>
             <li class="list-item">
-              <a href="">User Guide</a>
+              <a href="../userGuide/userguide.php">User Guide</a>
             </li>
           </ul>
         </div>
