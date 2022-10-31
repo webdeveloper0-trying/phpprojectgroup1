@@ -47,13 +47,13 @@ $blogInfos = $_SESSION["blogInfo"];
                 <input type="hidden" name="blogId" value="<?=$blogInfos[0]["id"] ?>">
                     <div class="form-outline">
                         
-                        <input type="text" name="blogTitle" id="blogTitle" class="form-control" value="<?=$blogInfos[0]["title"] ?>" />
+                        <input type="text" name="blogTitle" id="blogTitle" class="form-control" value="<?=$blogInfos[0]["title"] ?>" required />
                         <label class="form-label" for="blogTitle">Blog Title</label>
                     </div>
                 </div>
                 <div class="col">
                     <div class="form-outline">
-                        <input type="text" name="blogWriter" id="blogWriter" class="form-control" value="<?=$blogInfos[0]["writer"] ?>"/>
+                        <input type="text" name="blogWriter" id="blogWriter" class="form-control" value="<?=$blogInfos[0]["writer"] ?>" required />
                         <label class="form-label" for="blogWriter">Blog Writer</label>
                     </div>
                 </div>
@@ -61,12 +61,12 @@ $blogInfos = $_SESSION["blogInfo"];
 
             <!-- Text input -->
             <div class="form-outline mb-4">
-                <input type="datetime-local" name="blogDate" id="blogDate" class="form-control"  value="<?=$blogInfos[0]["date"] ?>"/>
+                <input type="date" name="blogDate" id="blogDate" class="form-control"  value="<?=$blogInfos[0]["date"] ?>" required />
             </div>
 
             <!-- Text input -->
             <div class="form-outline mb-4">
-                <input type="text" name="blogImage" id="BlogImage" class="form-control" value="<?=$blogInfos[0]["blog_img"] ?>" />
+                <input type="text" name="blogImage" id="BlogImage" class="form-control" value="<?=$blogInfos[0]["blog_img"] ?>" required />
                 <label class="form-label" for="BlogImage">Blog Image</label>
             </div>
 
@@ -75,7 +75,7 @@ $blogInfos = $_SESSION["blogInfo"];
 
             <!-- Message input -->
             <div class="form-outline mb-4">
-                <textarea class="form-control" name="blogContent" id="blogContent" rows="4">
+                <textarea class="form-control" name="blogContent" id="blogContent" rows="10">
                 <?= $blogInfos[0]["content"] ?>
                 </textarea>
                 <label class="form-label" for="blogContent">Blog Content</label>

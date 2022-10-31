@@ -10,10 +10,10 @@ if (isset($_POST["updateBlog"])) {
     $blogContent = $_POST["blogContent"];
     $blogId = $_POST["blogId"];
 
-    echo $blogTitle . "<br/>";
-    echo $blogWriter . "<br/>";
-    echo $blogDate . "<br/>";
-    echo $blogImage . "<br/>";
+    // echo $blogTitle . "<br/>";
+    // echo $blogWriter . "<br/>";
+    // echo $blogDate . "<br/>";
+    // echo $blogImage . "<br/>";
     echo $blogContent . "<br/>";
 
 
@@ -25,8 +25,8 @@ if (isset($_POST["updateBlog"])) {
                 SET title = :blogTitle,
                 writer = :blogWriter,
                 date = :blogDate,
-                blog_img = :blogImage,
-                content = :blogContent
+                content = :blogContent,
+                blog_img = :blogImage              
                 WHERE id = :blogId");
 
     $sql->bindValue(':blogTitle', $blogTitle);
@@ -35,6 +35,8 @@ if (isset($_POST["updateBlog"])) {
     $sql->bindValue(':blogImage', $blogImage);
     $sql->bindValue(':blogContent', $blogContent);
     $sql->bindValue(':blogId', $blogId);
+
+
 
 
     // Real Execute

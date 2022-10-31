@@ -65,4 +65,10 @@ SELECT COUNT(id) As total FROM lab_reports WHERE del_flg=0;
         $totalRecord2 = $sql6->fetchAll(PDO::FETCH_ASSOC)[0]['total'];
 
         $totalPages2 = ceil($totalRecord2 / $rowLimit2);
-}
+}else{?>
+
+        <script>
+                document.getElementById("pHistory").style.display = `none`;
+        </script>
+
+<?php } ?>

@@ -63,6 +63,11 @@ unset($_SESSION["username"]);
                         <a href="./register.php" class="ms-6">Don't Have Account?
                             <span>Register</span>
                         </a>
+                        <br />
+
+                        <a href="./forgetpassword.php" class="ms-6">Forgot Password?
+                           
+                        </a>
                     </div>
 
                 </form>

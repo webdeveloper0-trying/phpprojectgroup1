@@ -86,20 +86,15 @@ include "../../Controller/adminBlogs/aBlogListController.php";
                         </td>
                         <td class="content position-relative">
 
-                            <?php $content = $blog["content"];
-
-                            $paraLen = strlen($content) / 2;
-
-                            $showContent = substr($content, 0, 30);
-                            ?>
+                           
                             <div class="showContent">
-                                <?= $showContent ?>
+                                <?= $blog["content"] ?>
                             </div>
 
 
                             <div class="bg-light position-absolute p-5 content-hide">
                                 <button type="button" class="btn-close position-absolute btnClose" aria-label="Close"></button>
-                                <?= $content; ?>
+                                <?= $blog["content"]; ?>
                             </div>
 
 

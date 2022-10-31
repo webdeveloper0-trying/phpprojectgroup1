@@ -5,6 +5,7 @@
 .showContent {
   white-space: nowrap !important;
   width: 12vw !important;
+  height:3vh !important;
   overflow: hidden !important;
   text-overflow: ellipsis !important;
 

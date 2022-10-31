@@ -1,3 +1,8 @@
+<?php
+session_start();
+include "../../../patient/Controller/common/aChColorTxtController.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,25 +10,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <title>Forgot Pwd</title>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet" />
+    <!-- MDB -->
+    <!-- custom css3 -->
+    <link rel="stylesheet" href="../common/css/style.css" />
 </head>
 
-<body>
-    <form action="../../Controller/uRegisterLogin/forgetpasswordController.php" method="POST">
-        <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Email address</label>
-            <input type="mail" class="form-control" name="email" id="exampleInputEmail1" placeholder="Your email " aria-describedby="emailHelp" required>
-            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-        </div>
-        <!-- <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
-        </div> -->
-        <button type="submit" class="btn btn-primary" name="forgetpassword">Reset password</button>
-        <a href="./login.php">Login?</a>
-    </form>
+<body class="d-flex justify-content-center">
+    <div class="mx-5 mt-5 col col-xl-5 col-lg-5 col-md-5 col-sm-10">
+
+        <form class="bg-green p-3 rounded" action="../../Controller/uRegisterLogin/forgetpasswordController.php" method="POST">
+            <!-- Email input -->
+            <div class="form-outline mb-4">
+            <input type="mail" class="form-control" name="email" id="forgotPwdEmail" aria-describedby="emailHelp" required>
+    <label class="form-label" for="form1Example1">Email address</label>
+            </div>
+
+           
+            <!-- 2 column grid layout for inline styling -->
+            <div class="row mb-4">
+                
+
+                <div class="col">
+                <button type="submit" class="btn btn-purple" name="forgetpassword">Reset password</button>
+            <a href="./login.php">Login?</a>
+                </div>
+            </div>
+
+            
+        </form>
+       
+    </div>
 </body>
 
 </html>
