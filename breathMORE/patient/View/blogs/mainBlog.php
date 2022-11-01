@@ -47,27 +47,27 @@ include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
   <div class="mx-5">
     <h4 class="header text-center my-5">Strong And Well</h4>
 
-    <div class="blogList">
+    <div class="blogList p-5">
       <?php foreach ($resultBlogs as $blogs) { ?>
-        
-          <div class="blogCard row mb-4 pb-4">
-            <div class="col-md-3 col-sm- d-flex justify-content-center align-items-center">
-              <img src="../storage/home/<?= $blogs["blog_img"] ?>" class="img-fluid blogImage" alt="..." />
-            </div>
-            <div class="col-md-8 col-sm-12">
-              <h5 class="blogTitle my-4">
-                <?= $blogs["title"] ?>
-              </h5>
-              <span class="blogWriter me-5 fw-bold">By: <?= $blogs["writer"] ?></span>
-              <span class="blogDate ms-5 fw-bold"> Last Updated: <span> <?= $blogs["date"] ?></span></span>
-              <p class="blogContent mt-4"><?= substr($blogs["content"], 0, 350) ?>
-              </p>
-              <div class="d-flex justify-content-end">
+
+        <div class="blogCard row mb-4 pb-4">
+          <div class="col-md-3 col-sm- d-flex justify-content-center align-items-center">
+            <img src="../storage/home/<?= $blogs["blog_img"] ?>" class="img-fluid blogImage" alt="..." />
+          </div>
+          <div class="col-md-8 col-sm-12">
+            <h5 class="blogTitle my-4">
+              <?= $blogs["title"] ?>
+            </h5>
+            <span class="blogWriter me-5 fw-bold">By: <?= $blogs["writer"] ?></span>
+            <span class="blogDate ms-5 fw-bold"> Last Updated: <span> <?= $blogs["date"] ?></span></span>
+            <p class="blogContent mt-4"><?= substr($blogs["content"], 0, 350) ?>
+            </p>
+            <div class="d-flex justify-content-end">
               <a href="../../Controller/blogs/subBlogController.php?id=<?= $blogs["id"] ?>" class="btn-green py-1 px-2">Read Full Article</a>
-              </div>
             </div>
           </div>
-       
+        </div>
+
       <?php } ?>
     </div>
 

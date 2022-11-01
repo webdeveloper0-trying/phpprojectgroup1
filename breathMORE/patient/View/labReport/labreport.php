@@ -20,48 +20,48 @@ include "../../Controller/labReport/labreportController.php";
 </head>
 
 <body class="bg">
-    <div class="container">
-       
-       
-            <table class="table" id="labReport">
-                <thead>
+    <div class="container-fluid p-3">
+
+
+        <table class="table" id="labReport">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th> Reference Doctor</th>
+                    <th> ResultDate</th>
+                    <th>Test</th>
+                    <th>Result</th>
+                    <th>RefRange</th>
+                    <th>Unit</th>
+                    <th>Remark</th>
+                    <th>Reported_by</th>
+                    <th>Authorised_by</th>
+
+                </tr>
+            </thead>
+            <tbody class="tablebody">
+                <?php $count = 1; ?>
+                <?php
+                foreach ($labList as $patient) { ?>
                     <tr>
-                        <th>No</th>
-                        <th> Reference Doctor</th>
-                        <th> ResultDate</th>
-                        <th>Test</th>
-                        <th>Result</th>
-                        <th>RefRange</th>
-                        <th>Unit</th>
-                        <th>Remark</th>
-                        <th>Reported_by</th>
-                        <th>Authorised_by</th>
+                        <td><?= $count++ ?></td>
+                        <td><?= $patient["ref_doc"] ?></td>
+                        <td><?= $patient["result_date"] ?></td>
+                        <td><?= $patient["test"] ?></td>
+                        <td><?= $patient["result"] ?></td>
+                        <td><?= $patient["ref_rate"] ?></td>
+                        <td><?= $patient["unit"] ?></td>
+                        <td><?= $patient["remark"] ?></td>
+                        <td><?= $patient["reported_by"] ?></td>
+                        <td><?= $patient["authorised_by"] ?></td>
 
                     </tr>
-                </thead>
-                <tbody class="tablebody">
-                    <?php $count = 1; ?>
-                    <?php
-                    foreach ($labList as $patient) { ?>
-                        <tr>
-                            <td><?= $count++ ?></td>
-                            <td><?= $patient["ref_doc"] ?></td>
-                            <td><?= $patient["result_date"] ?></td>
-                            <td><?= $patient["test"] ?></td>
-                            <td><?= $patient["result"] ?></td>
-                            <td><?= $patient["ref_rate"] ?></td>
-                            <td><?= $patient["unit"] ?></td>
-                            <td><?= $patient["remark"] ?></td>
-                            <td><?= $patient["reported_by"] ?></td>
-                            <td><?= $patient["authorised_by"] ?></td>
+                <?php }
+                ?>
+            </tbody>
+        </table>
 
-                        </tr>
-                    <?php }
-                    ?>
-                </tbody>
-            </table>
 
-      
         <button class="btn btn-purple" id="downloadReport">Download All</button>
     </div>
     </div>
