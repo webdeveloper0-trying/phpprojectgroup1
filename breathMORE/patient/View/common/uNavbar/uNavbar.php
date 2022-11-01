@@ -1,7 +1,7 @@
 <?php
 include "../../../patient/Controller/common/aChColorTxtController.php";
-include "../../Controller/userProfile/profileController.php"; ?>
-
+include "../../Controller/userProfile/profileController.php";
+ ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -12,16 +12,19 @@ include "../../Controller/userProfile/profileController.php"; ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
 
-   
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
-   
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet" />
- 
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.css" rel="stylesheet" />
+
     <!-- boxicons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.js" defer></script>
 </head>
 
 <body>
@@ -76,8 +79,8 @@ include "../../Controller/userProfile/profileController.php"; ?>
             </div>
 
             <div class="userProfile nav-item me-5 me-lg-0 dropdown">
-                <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-                        <img src="../storage/home/<?= $userInfo[0]["patient_profile"] ?>" width="30em" height="30em" alt="a" class="PicImg my-4 rounded-circle" />
+                <a class="nav-link dropdown-toggle" href="../userProfile/uprofile.php" id="navbarDropdown" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                    <img src="../storage/home/<?= $userInfo[0]["patient_profile"] ?>" width="30em" height="30em" alt="a" class="PicImg my-4 rounded-circle" />
                 </a>
                 <ul class="dropdown-menu me-5" aria-labelledby="navbarDropdown">
                     <li>

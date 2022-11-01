@@ -19,3 +19,7 @@
   .bg-green{
     background-color: var(--secondaryColor) !important;
   }
+
+  .bg-fail{
+    background:var(--firstColor) !important;
+  }

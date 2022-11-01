@@ -1,18 +1,35 @@
 .logoBox{
     position:fixed !important;
     top:0;
-
 }
 
 
 .logoImg{
-    width:6em !important;
+    width:4em !important;
 }
 
 .header{
-    font-size:1.5em !important;
+    font-size:1em !important;
 }
 
 .header > span{
     color:red !important;
 }
+
+@media (max-width: 900px) {
+    .logoBox{
+       margin:0 !important;
+        position:fixed !important;
+        top:0;
+    }
+  }
+
+
+  @media (max-width: 500px) {
+    .logoBox{
+       margin:0 !important;
+        position:fixed !important;
+        top:0;
+        left:0 !important;
+    }
+  }

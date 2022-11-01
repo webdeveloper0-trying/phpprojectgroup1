@@ -1,19 +1,18 @@
 <?php
-session_start();
-if (isset($_POST["username"]) && isset($_POST["password"])) {
-    $username = $_POST["username"];
-    $password = $_POST["password"];
-    $_SESSION["username"] = $username;
-}
-if (!isset($_SESSION["username"])) {
 
-    header("Location: ../uRegisterLogin/register.php");
+session_start();
+if (!isset($_SESSION["userId"])) {
+  header("Location: ../uRegisterLogin/register.php");
 } else {
-    $userId = $_SESSION["userId"];
+  $userId = $_SESSION["userId"];
 }
+
 include "../../Controller/userProfile/profileController.php";
 include "../common/uNavbar/uNavbar.php";
 include "../common/uFooter/uFooter.php";
+
+include "../../../patient/Controller/common/aChColorTxtController.php";
+include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
 
 ?>
 
@@ -291,7 +290,8 @@ include "../common/uFooter/uFooter.php";
                 </div>
 
             </div>
-        <?php } ?>
+        <?php }else{ ?>
+            <?php } ?>
 
     </div>
 </body>

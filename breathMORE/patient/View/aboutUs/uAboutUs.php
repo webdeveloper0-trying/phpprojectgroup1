@@ -1,8 +1,17 @@
 <?php
+session_start();
+if (!isset($_SESSION["userId"])) {
+  header("Location: ../uRegisterLogin/register.php");
+} else {
+  $userId = $_SESSION["userId"];
+}
+include "../../Controller/blogs/mainBlogController.php";
 include "../common/uNavbar/uNavbar.php";
 include "../common/uFooter/uFooter.php";
 
 include "../../../patient/Controller/common/aChColorTxtController.php";
+include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
+include "../../Controller/appointment/uCountAppointmentController.php";
 
 ?>
 
@@ -14,19 +23,6 @@ include "../../../patient/Controller/common/aChColorTxtController.php";
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Us</title>
-  <!-- Font Awesome -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  <!-- boxicon -->
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
-  <!-- MDB -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet" />
-  <!-- MDB -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js" defer></script>
 
   <!-- custom css -->
   <link rel="stylesheet" href="../common/css/style.css" <?php time(); ?> />
@@ -41,6 +37,7 @@ include "../../../patient/Controller/common/aChColorTxtController.php";
 <body>
   <section class="aboutUsHeading mt-5 mx-5">
     <?php
+    $webName;
     $webName = explode("/", $webName);
     $fName = $webName[0];
     $lName = $webName[1];
@@ -150,7 +147,7 @@ include "../../../patient/Controller/common/aChColorTxtController.php";
         <h5>Online Appointments Token Today</h5>
         <div class="d-flex justify-content-center align-items-center flex-row">
           <img src="../storage/aboutUs/calendar_.png" alt="">
-          <p class="hightLightCount ms-5">80</p>
+          <p class="hightLightCount ms-5 text-light"><?= $todayACount[0]['COUNT(id)'] ?></p>
         </div>
       </div>
 
@@ -158,7 +155,7 @@ include "../../../patient/Controller/common/aChColorTxtController.php";
         <h5>Online Appointments Token Until Today</h5>
         <div class="d-flex justify-content-center align-items-center flex-row">
           <img src="../storage/aboutUs/calendar_.png" alt="">
-          <p class="hightLightCount ms-5">80</p>
+          <p class="hightLightCount ms-5 text-light"><?= $totalACount[0]['COUNT(id)'] ?></p>
         </div>
       </div>
     </div>

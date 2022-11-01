@@ -17,9 +17,49 @@ if (isset($_POST["applyAppointment"])) {
     $docTime = $_POST["docTime"];
     $docCenter = $_POST["docCenter"];
 
-   
+    echo  $docDay;
+    echo "<br/>";
+    echo $docTime;
+    echo "<br/>";
+    echo $docCenter;
+    echo "<br/>";
+    echo $docId;
 
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    // Prepare for Execute
+    $sql = $pdo->prepare("
+                SELECT
+                   date,
+                   time,
+                   categories,
+                   doctor_id
+                  
+               FROM online_appointments_lists
+               WHERE 
+                    date = :day AND
+                    time = :time AND
+                    categories = :center AND
+                    doctor_id =:doc_id
+                                  
+                ");
+
+    $sql->bindValue(':day', $docDay);
+    $sql->bindValue(':time', $docTime);
+    $sql->bindValue(':center', $docCenter);
+    $sql->bindValue(':doc_id', $docId);
+   
+    // Real Execute
+    $sql->execute();
+
+
+    // Receive Data From MySQL
+    $docTakenInfo = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+    print_r($docTakenInfo);
+
+    if(count($docTakenInfo) == 0){
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // Prepare for Execute
     $sql = $pdo->prepare("
@@ -86,7 +126,9 @@ if (isset($_POST["applyAppointment"])) {
 
         echo ("COUNT" . $appCount[0]["appointment_count"]);
 
-        if ($appCount[0]["appointment_count"] <= 5) {
+        $_SESSION["countAppointment"] = 5;
+
+        if ($appCount[0]["appointment_count"] <= $_SESSION["countAppointment"]) {
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         // Prepare for Execute
@@ -99,7 +141,8 @@ if (isset($_POST["applyAppointment"])) {
                    patient_id,
                    ph_no,
                    diagnosis,
-                   address
+                   address,
+                   created_date
                   
                 )
                 VALUES
@@ -111,7 +154,8 @@ if (isset($_POST["applyAppointment"])) {
                     :patient_id,
                     :ph_no,
                     :diagnosis,
-                    :p_address
+                    :p_address,
+                    :created_date
                              
                 )");
 
@@ -123,6 +167,7 @@ if (isset($_POST["applyAppointment"])) {
         $sql->bindValue(':ph_no', $patientPhNo);
         $sql->bindValue(':diagnosis', $patientFeeling);
         $sql->bindValue(':p_address', $patientAddress);
+        $sql->bindValue(":created_date", date("Y/m/d"));
        
 
         // Real Execute
@@ -158,12 +203,21 @@ if (isset($_POST["applyAppointment"])) {
 
             // print_r($appointmentInfos);
         }else{
-            header("Location: ../../View/appointment/uAppointmentFail.php");
+            header("Location: ../../View/appointment/uAFailDocCountComplete.php");
         }
     } else {
-        header("Location: ../../View/appointment/uAppointmentFail.php");
+        header("Location: ../../View/appointment/uAFailSameAppointment.php");
         
     }
+
+    }else{
+        header("Location: ../../View/appointment/uAFailTookSameAppointment.php");
+
+    }
+
+   
+
+    
 } else {
     echo "Not Received";
 }

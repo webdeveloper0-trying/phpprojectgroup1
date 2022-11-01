@@ -24,3 +24,24 @@
   .loginLink span{
     color:var(--thirdColor) !important;
 }
+
+
+@media (max-width: 600px){
+    .formContainer{
+        width:95vw !important;
+    }
+}
+
+@media (max-width:630px){
+    .homeHeader{
+        font-size:1.4rem !important;
+        text-shadow: 0 5px 5px rgba(0,0,0,0.5) !important;
+    }
+}
+
+@media (max-width:500px){
+    .formRow{
+        display:flex !important;
+        flex-direction: column !important;
+    }
+}

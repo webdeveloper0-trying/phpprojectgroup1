@@ -1,4 +1,16 @@
+<?php
 
+session_start();
+if (!isset($_SESSION["userId"])) {
+    header("Location: ../uRegisterLogin/register.php");
+} else {
+    $userId = $_SESSION["userId"];
+}
+
+include "../../../patient/Controller/common/aChColorTxtController.php";
+include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -21,6 +33,7 @@
 
     <!-- custom css files 2 -->
     <link rel="stylesheet" href="../common/css/style.css">
+    <link rel="stylesheet" href="../common/uNavbar/css/uSecNavbar.css" />
     <link rel="stylesheet" href="./css/uAppointmentForm.css">
 
     <!-- animate.css -->
@@ -33,7 +46,9 @@
 </head>
 
 <body>
-
+    <div class="mx-5">
+    <?php
+    include("../common/uNavbar/uSecNavbar.php") ?>
     <div class="d-flex justify-content-center align-items-center flex-column">
         <h3 class="title h3 my-5">Make Appointment
             <span class="titleBar"></span>
@@ -83,6 +98,7 @@
             </div>
             <!-- container div end -->
         </div>
+    </div>
 
 
 

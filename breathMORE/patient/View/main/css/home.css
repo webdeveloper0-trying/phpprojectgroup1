@@ -159,13 +159,7 @@ marquee {
   display: block !important;
 }
 
-/* Responsive  */
 
-/* @media (max-width: 1000px) {
-  .headerImg {
-    display: none !important;
-  }
-} */
 
 @media (max-width: 1000px) {
   .headerImg {
