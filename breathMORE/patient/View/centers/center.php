@@ -43,7 +43,7 @@ include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
 </head>
 
 <body class="left">
-    <div class="mx-5">
+    <div class="mx-5 p-5">
         <h3 class="title my-5">
             Centers For Patients
             <span class="titleBar"></span>
@@ -51,8 +51,8 @@ include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
 
         <div class="accordion accordion-flush" id="accordionFlushExample">
             <div class="accordion-item">
-                <h2 class="accordion-header  btn-background-slide" id="flush-headingOne">
-                    <button class="accordion-button collapsed" type="button" data-mdb-toggle="collapse" data-mdb-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                <h2 class="accordion-header  " id="flush-headingOne">
+                    <button class="accordion-button collapsed btn-background-slide" type="button" data-mdb-toggle="collapse" data-mdb-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
                         Eye
                     </button>
                 </h2>

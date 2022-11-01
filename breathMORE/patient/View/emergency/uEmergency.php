@@ -54,7 +54,7 @@ include "../../Controller/emergency/oxygenListController.php";
 </head>
 
 <body>
-    <div class="mx-5">
+    <div class="mx-5 p-5">
         <h3 class="title my-5">Emergency Departments and Embulance Services
             <span class="titleBar"></span>
         </h3>

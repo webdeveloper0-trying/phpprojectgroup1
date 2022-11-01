@@ -3,21 +3,33 @@
   cursor: pointer;
 }
 
-.btn-background-slide::before {
+.btn.btn-background-slide::before {
   content: "";
-  position: absolute !important;
-  top: 0 !important;
-  left: 0 !important;
-  right: 0 !important;
-  z-index: -1 !important;
-  background-color: green !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  background-color: var(--secondaryColor);
 
   transition: transform 300ms ease-in-out !important;
-  transform: scaleX(0) !important;
-  transform-origin: left !important;
+  transform: scaleX(0);
+  transform-origin: left;
 }
 
-.btn-background-slide:hover::before,
-.btn-background-slide:focus::before {
+.btn.btn-background-slide:hover::before,
+.btn.btn-background-slide:focus::before {
   transform: scaleX(1) !important;
+  cursor: pointer;
+}
+
+.btn.btn-background-slide {
+  transition: color 600ms ease-in-out !important;
+  z-index: 1;
+}
+
+.btn.btn-background-slide:hover,
+.btn.btn-background-slide:focus {
+  color: var(--textColorOne) !important;
 }
