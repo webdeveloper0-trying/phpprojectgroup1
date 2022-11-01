@@ -1,27 +1,17 @@
 <?php
 
 session_start();
+if (!isset($_SESSION["userId"])) {
+  header("Location: ../uRegisterLogin/register.php");
+} else {
+  $userId = $_SESSION["userId"];
+}
 include "../../Controller/blogs/mainBlogController.php";
 include "../common/uNavbar/uNavbar.php";
 include "../common/uFooter/uFooter.php";
 
 include "../../../patient/Controller/common/aChColorTxtController.php";
 include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
-
-
-if (isset($_POST["username"]) && isset($_POST["password"])) {
-  $username = $_POST["username"];
-  $password = $_POST["password"];
-  $_SESSION["username"] = $username;
-}
-if (!isset($_SESSION["username"])) {
-
-  header("Location: ../uRegisterLogin/register.php");
-} else {
-  $userId = $_SESSION["userId"];
-}
-
-
 
 
 ?>
@@ -55,11 +45,13 @@ if (!isset($_SESSION["username"])) {
 <body>
   <!-- Daily Msg -->
   <marquee><?= $dailyMsg[0]["message"] ?></marquee>
+
   <!-- herosection -->
   <div class="container-fluid">
 
 
     <section id="herosection" class="mb-5">
+
 
       <div class="row flex-wrap ">
         <div class="col-lg-8 mybg">
@@ -97,6 +89,22 @@ if (!isset($_SESSION["username"])) {
                   </a>
                 </div>
               </div>
+
+              <div class="d-flex pb-4 mb-5" aria-label="Basic example">
+                <a href="../appointment/uMakeAppointment.php">
+                  <button type="button" class="btn btn-green rounded-0">
+                    <img src="../storage/home/doct1.png" alt="" width="30" />
+                    Find Doctors
+                  </button>
+                </a>
+                <a href="../pharmacy/pharmacy.php">
+                  <button type="button" class="btn btn-purple rounded-0">
+                    <img src="../storage/home/capsule.png" alt="" width="30">
+                    Pharmacies
+                  </button>
+                </a>
+              </div>
+
 
             </div>
 
@@ -155,9 +163,7 @@ if (!isset($_SESSION["username"])) {
   <hr />
 
   <section id="myblogs" class="myBlogs">
-    <div class="dailyAlert">
-      <!-- <keyframe><?= $_SESSION["alert"] ?></keyframe> -->
-    </div>
+
     <div class="container-fluid p-5">
       <div class="m-5">
         <h3 class="h3 title fw-bold mb-5">Health Tips

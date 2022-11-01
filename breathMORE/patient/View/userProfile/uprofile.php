@@ -15,8 +15,6 @@ include "../../Controller/userProfile/profileController.php";
 include "../common/uNavbar/uNavbar.php";
 include "../common/uFooter/uFooter.php";
 
-
-
 ?>
 
 <!DOCTYPE html>
@@ -64,7 +62,7 @@ include "../common/uFooter/uFooter.php";
         <div class="profileCon d-flex py-4 shadow-4 ms-5">
             <div class="uProfileImgBox d-flex justify-content-center align-items-center flex-column ms-5">
                 <div class="uPImg d-flex justify-content-center align-items-center mb-4">
-                    <img src="../storage/home/benefitsOfCoffee.jpg" class="img-fluid uPic mb-3" alt="User" />
+                <img src="../storage/home/<?= $userInfo[0]["patient_profile"] ?>" alt="a" id="image" class="uPic mb-4" />
                 </div>
                 <div class="uPName text-center">
                     <span><?= $userInfo[0]["user_name"] ?></span>

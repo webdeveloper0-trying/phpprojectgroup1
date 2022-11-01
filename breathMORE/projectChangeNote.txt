@@ -1,0 +1,8 @@
+1. total_registered_accounts table  တွင်  patient_profile column's default value "profile.png"
+pharmacy_lists
+2. pharmacy_lists table 
+
+name YoonNadi
+pwd 535564
+
+Aung Khant 

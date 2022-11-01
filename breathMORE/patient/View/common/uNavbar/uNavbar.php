@@ -12,17 +12,14 @@ include "../../Controller/userProfile/profileController.php"; ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
 
-    <!-- Font Awesome -->
+   
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
-    <!-- MDB -->
+   
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet" />
-    <!-- MDB -->
-
-
+ 
     <!-- boxicons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -87,7 +84,7 @@ include "../../Controller/userProfile/profileController.php"; ?>
                         <a class="dropdown-item" href="../userProfile/uprofile.php">Go to Profile</a>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="#">Log Out</a>
+                        <a class="dropdown-item" href="../../Controller/uRegisterLogin/uLogoutController.php">Log Out</a>
                     </li>
                 </ul>
             </div>

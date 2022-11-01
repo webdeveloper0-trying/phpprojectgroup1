@@ -1,12 +1,17 @@
 <?php
+
+session_start();
+if (!isset($_SESSION["userId"])) {
+    header("Location: ../uRegisterLogin/register.php");
+} else {
+    $userId = $_SESSION["userId"];
+}
+include "../../Controller/pharmacy/drugsListController.php";
 include "../common/uNavbar/uNavbar.php";
 include "../common/uFooter/uFooter.php";
 
 include "../../../patient/Controller/common/aChColorTxtController.php";
-include "../../Controller/pharmacy/drugsListController.php";
-
-// echo "<pre>";
-// print_r($drugs);
+include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
 
 ?>
 
@@ -82,10 +87,10 @@ include "../../Controller/pharmacy/drugsListController.php";
 
             <div id="drugResult" class="showData col col-3 shadow-5 mt-5">
 
-            <h4 class="drugSearchBox">
+                <h4 class="drugSearchBox">
                     Drugs and Disease
-            </h4>
-                
+                </h4>
+
                 <?php
                 foreach ($drugs as $drug) { ?>
                     <h6 class="bg-green fw-bold ps-2 pt-2 pb-2"><?= $drug["disease_names"] ?></h6>
@@ -96,17 +101,7 @@ include "../../Controller/pharmacy/drugsListController.php";
             </div>
         </div>
 
-
-
-
-
-
     </div>
-
-
-
-
-
 
 
 </body>

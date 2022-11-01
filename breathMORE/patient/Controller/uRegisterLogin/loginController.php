@@ -14,18 +14,11 @@ if (isset($_POST["username"]) && isset($_POST["password"])) {
     $sql->bindValue(":email", $email);
     $sql->execute();
     $result = $sql->fetchAll(PDO::FETCH_ASSOC);
-    print_r($result);
+
     if (password_verify($password, $result[0]['user_password'])) {
         $_SESSION["username"] = $username;
-
-        $sql1 = $pdo->prepare("SELECT * FROM  total_registered_accounts 
-        ORDER BY register_id DESC LIMIT 1 ");
-        $sql1->execute();
-        $resultId = $sql1->fetchAll(PDO::FETCH_ASSOC);
-        $_SESSION["userId"] = $resultId[0]['register_id'];
-
-        
-
+        $_SESSION["userId"] = $result[0]['register_id'];
+        // echo $_SESSION["userId"];
         header("location: ../../View/main/main.php");
     } else {
        
