@@ -44,52 +44,79 @@ include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
 <body>
   <!-- Daily Msg -->
   <marquee><?= $dailyMsg[0]["message"] ?></marquee>
-  
+
   <!-- herosection -->
+<<<<<<< HEAD
   <section id="herosection" class="mb-5">
     <div class="container-fluid p-5 d-flex mx-xs-0 mx-sm-0 mx-md-5 mx-lg-5">
       <div class="headerInfo col col-lg-7 text-lg-start">
         <?php
         $webName;
         $webName = explode("/", $webName);
+=======
+  <div class="container-fluid">
+>>>>>>> 76cdc72c38c8171d4336e48003434fd1b1ea4170
 
-        $fName = $webName[0];
-        $lName = $webName[1];
-        ?>
-        <h3 class="header homeHeader h3 fw-bold">
-          <?= $fName ?><span><?= $lName ?></span></h3>
 
-        <p class="text-muted my-5">
-          Our top health tips to help you live well in every way. <br />
-          Discover, small, simple changes which can make a big difference.
-        </p>
+    <section id="herosection" class="mb-5">
 
-        <div class="d-flex pb-4 mb-5" aria-label="Basic example">
-          <a href="../appointment/uMakeAppointment.php">
-            <button type="button" class="btn btn-green rounded-0">
-              <img src="../storage/home/doct1.png" alt="" width="30" />
-              Find Doctors
-            </button>
-          </a>
-          <a href="../pharmacy/pharmacy.php">
-            <button type="button" class="btn btn-purple rounded-0">
-              <img src="../storage/home/capsule.png" alt="" width="30">
-              Pharmacies
-            </button>
-          </a>
-        </div>
 
-        <div class="services row col-12 justify-content-center align-items-center flex-row  mt-lg-5 mt-md-5 mt-5 py-5 px-3">
-          <div class="serviceCard col card text-center me-4">
-            <div class="card-body">
-              <h5 class="card-title">
-                <i class='bx bxs-user-account bx-lg' style='color:#4B694D'></i>
-              </h5>
-              <p class="card-text"></p>
-              <a href="#" class="serviceLink">User Guide</a>
+      <div class="row flex-wrap ">
+        <div class="col-lg-8 mybg">
+          <div class="row flex-wrap ">
+
+            <div class="col-lg-8 col-md-8 col-sm-8">
+              <div class="headerInfo">
+                <?php
+                // echo $webName;
+                $webName = explode("/", $webName);
+
+                $fName = $webName[0];
+                $lName = $webName[1];
+                ?>
+                <h3 class="header homeHeader h3 fw-bold">
+                  <?= $fName ?><span><?= $lName ?></span></h3>
+
+                <p class="text-muted my-5">
+                  Our top health tips to help you live well in every way. <br />
+                  Discover, small, simple changes which can make a big difference.
+                </p>
+
+                <div class="d-flex pb-4 m-4" aria-label="Basic example">
+                  <a href="../appointment/uMakeAppointment.php">
+                    <button type="button" class="btn  btn-green rounded-0">
+                      <img src="../storage/home/doct1.png" alt="" width="30" />
+                      Find Doctors
+                    </button>
+                  </a>
+                  <a href="../pharmacy/pharmacy.php">
+                    <button type="button" class="btn  btn-purple rounded-0 ms-1">
+                      <img src="../storage/home/capsule.png" alt="" width="30">
+                      Pharmacies
+                    </button>
+                  </a>
+                </div>
+              </div>
+
+              <div class="d-flex pb-4 mb-5" aria-label="Basic example">
+                <a href="../appointment/uMakeAppointment.php">
+                  <button type="button" class="btn btn-green rounded-0">
+                    <img src="../storage/home/doct1.png" alt="" width="30" />
+                    Find Doctors
+                  </button>
+                </a>
+                <a href="../pharmacy/pharmacy.php">
+                  <button type="button" class="btn btn-purple rounded-0">
+                    <img src="../storage/home/capsule.png" alt="" width="30">
+                    Pharmacies
+                  </button>
+                </a>
+              </div>
+
+
             </div>
-          </div>
 
+<<<<<<< HEAD
           <div class="serviceCard col card text-center me-4">
             <div class="card-body">
               <h5 class="card-title">
@@ -117,25 +144,64 @@ include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
               </h5>
               <p class="card-text"></p>
               <a href="../bloodDonation/bloodDonationForm.php" class="serviceLink">Blood Donation</a>
+=======
+
+            <div class="col-lg-5 col-md-6 col-sm-5">
+
+              <div class="my-card-bg text-center p-2">
+                <div>
+                  <i class='bx bxs-user-account bx-lg' style='color:#f2f4f1'></i>
+                </div>
+                <a href="../userGuide/userguide.php" class="serviceLink myhover">User Guide</a>
+              </div>
+
+            </div>
+            <div class=" col-lg-5 col-md-6 col-sm-5">
+              <div class="my-card-bg text-center btn-background-slide p-2">
+                <div>
+                  <i class='bx bx-plus-medical bx-lg' style='color:#f2f4f1'></i>
+                </div>
+                <a href="../emergency/uEmergency.php" class="serviceLink myhover">Emergency</a>
+              </div>
+            </div>
+            <div class="col-lg-5 col-md-6 col-sm-5">
+              <div class="my-card-bg text-center p-2">
+                <div>
+                  <i class='bx bxs-bookmarks bx-lg' style='color:#f2f4f1'></i>
+                </div>
+                <a href="../appointment/uMakeAppointment.php" class="serviceLink myhover">Appointment</a>
+              </div>
+            </div>
+            <div class="col-lg-5 col-md-6 col-sm-5">
+              <div class="my-card-bg text-center p-2">
+                <div>
+                  <i class='bx bxs-donate-blood bx-lg' style='color:#f2f4f1'></i>
+                </div>
+                <a href="../bloodDonation/bloodDonationForm.php" class="serviceLink myhover">Blood Donation</a>
+              </div>
+>>>>>>> 76cdc72c38c8171d4336e48003434fd1b1ea4170
             </div>
           </div>
         </div>
+        <div class="headerImg col col-lg-4 col-md-4">
+          <div class="headerBox1"></div>
+          <div class="headerBox2">Medical Service</div>
+          <div class="headerBox3">that you can <span>TRUST</span></div>
+          <img src="../storage/home/doctor1.jfif" alt="Doctor">
+        </div>
+
       </div>
 
-      <div class="headerImg col col-lg-4">
-        <div class="headerBox1"></div>
-        <div class="headerBox2">Medical Service</div>
-        <div class="headerBox3">that you can <span>TRUST</span></div>
-        <img src="../storage/home/doctor1.jfif" alt="Doctor">
-      </div>
-    </div>
 
-  </section>
 
+
+
+    </section>
+  </div>
   <hr />
 
   <section id="myblogs" class="myBlogs">
-   
+
     <div class="container-fluid p-5">
       <div class="m-5">
         <h3 class="h3 title fw-bold mb-5">Health Tips
