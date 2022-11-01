@@ -58,7 +58,7 @@ include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
                     <option value="Dagon">Dagon</option>
                     <option value="Ahlon">Ahlon</option>
                     <option value="Kyeemyintdaing">Kyeemyintdaing</option>
-                    <option value="SanChaung">SanChaun</option>
+                    <option value="SanChaung">SanChaung</option>
                     <option value="South Okkalapa">South Okkalapa</option>
                 </select>
 

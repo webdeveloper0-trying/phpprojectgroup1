@@ -86,10 +86,27 @@
                 <label class="form-label" for="phNum">Phone No.</label>
             </div>
 
-            <div class="form-outline mb-4">
+            <div class="col mb-4">
 
-                <input type="text" class="form-control" name="township" id="township" />
-                <label class="form-label" for="township">Township</label>
+                <!-- <input type="text" class="form-control" name="township" id="township" />
+                <label class="form-label" for="township">Township</label> -->
+
+
+                <select class="form-control" id="township" name="township" aria-label="Default select example">
+                    <option>Township</option>
+                    <option value="Mingaladon">Mingaladon</option>
+                    <option value="Insein">Insein</option>
+                    <option value="Hlaingthayar">Hlaingthayar</option>
+                    <option value="Thanlyin">Thanlyin</option>
+                    <option value="Latha">Latha</option>
+                    <option value="Lanmadaw">Lanmadaw</option>
+                    <option value="Pabedan">Pabedan</option>
+                    <option value="Dagon">Dagon</option>
+                    <option value="Ahlon">Ahlon</option>
+                    <option value="Kyeemyintdaing">Kyeemyintdaing</option>
+                    <option value="SanChaung">SanChaung</option>
+                    <option value="South Okkalapa">South Okkalapa</option>
+                </select>
             </div>
 
 

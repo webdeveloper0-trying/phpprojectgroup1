@@ -115,10 +115,55 @@ $shop = $_SESSION["shopInfos"];
                 <label class="form-label" for="phNum">Phone No.</label>
             </div>
 
-            <div class="form-outline mb-4">
+            <div class="col  mb-4">
 
                 <input type="text" class="form-control" value="<?php echo $shop[0]["township"] ?>" name="utownship" id="township" />
                 <label class="form-label" for="township">Township</label>
+
+                <select class="form-control" id="township" name="utownship" aria-label="Default select example">
+
+                    <option value="Mingaladon" <?php if ($shop[0]["township"] == 'Mingaladon') {
+                                                    echo "selected";
+                                                } ?>>Mingaladon</option>
+                    <option value="Insein" <?php if ($shop[0]["township"] == 'Insein') {
+                                                echo "selected";
+                                            } ?>>Insein</option>
+                    <option value="Hlaingthayar" <?php if ($shop[0]["township"] == 'Hlaingthayar') {
+                                                        echo "selected";
+                                                    } ?>>Hlaingthayar</option>
+                    <option value="Thanlyin" <?php if ($shop[0]["township"] == 'Thanlyin') {
+                                                    echo "selected";
+                                                } ?>>Thanlyin</option>
+                    <option value="Latha" <?php if ($shop[0]["township"] == 'Latha') {
+                                                echo "selected";
+                                            } ?>>Latha</option>
+                    <option value="Lanmadaw" <?php if ($shop[0]["township"] == 'Lanmadaw') {
+                                                    echo "selected";
+                                                } ?>>Lanmadaw</option>
+                    <option value="Pabedan" <?php if ($shop[0]["township"] == 'Pabedan') {
+                                                echo "selected";
+                                            } ?>>Pabedan</option>
+                    <option value="Dagon" <?php if ($shop[0]["township"] == 'Dagon') {
+                                                echo "selected";
+                                            } ?>>Dagon</option>
+                    <option value="Ahlon" <?php if ($shop[0]["township"] == 'Ahlon') {
+                                                echo "selected";
+                                            } ?>>Ahlon</option>
+                    <option value="Kyeemyintdaing" <?php if ($shop[0]["township"] == 'Kyeemyintdaing') {
+                                                        echo "selected";
+                                                    } ?>>Kyeemyintdaing</option>
+                    <option value="SanChaung" <?php if ($shop[0]["township"] == 'SanChaung') {
+                                                    echo "selected";
+                                                } ?>>SanChaung</option>
+                    <option value="South Okkalapa" <?php if ($shop[0]["township"] == 'South Okkalapa') {
+                                                        echo "selected";
+                                                    } ?>>South Okkalapa</option>
+                </select>
+
+
+
+
+
             </div>
             <div class="form-outline mb-4">
 
