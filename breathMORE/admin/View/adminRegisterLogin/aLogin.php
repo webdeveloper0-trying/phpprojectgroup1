@@ -1,6 +1,7 @@
 <?php
 session_start();
 unset($_SESSION["adminname"]);
+unset($_SESSION["mainadmin"]);
 ?>
 
 <!DOCTYPE html>
@@ -30,37 +31,7 @@ unset($_SESSION["adminname"]);
 <body class="d-flex justify-content-center align-items-center">
   <div class="row">
   <div class="logo">Breath<span>More</span></div>
-  <!-- <section class="vh-100">
-    <form action="../../Controller/adminLogin/aLoginController.php" method="post" class="container py-5 h-100 ">
-      <div class="row  d-flex justify-content-center align-items-center h-100  ">
-        <div class="col-12 col-md-8 col-lg-6 col-xl-5 ">
-          <div class="card shadow-2-strong " style="border-radius: 1rem;">
-            <div class="card-body p-5 text-center mycard_body">
-              <form action="../Controller/loginController.php" method="post">
-                <h3 class="mb-5">Log in</h3>
-
-                <div class="form-outline mb-4">
-
-
-                  <input type="text" id="typeEmailX-2" name="adminname" class="form-control form-control-lg" placeholder="AdminName " required />
-
-                </div>
-
-                <div class="form-outline mb-4">
-                  <input type="password" id="typePasswordX-2" name="password" class="form-control form-control-lg" placeholder="Password " required />
-
-                </div>
-                <button class="btn btn-lg btn-block submit-button" type="submit">Login</button>
-                <hr class=" myhr">
-              </form>
-
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </form>
-  </section> -->
+ 
 
   <div class="col-12 col-sm-12 d-flex justify-content-center align-items-center">
 
@@ -68,14 +39,14 @@ unset($_SESSION["adminname"]);
       <!-- Name input -->
       <div class="form-outline mb-4">
       <label class="form-label" for="adminName">Admin Name</label>
-        <input type="name" name="adminname" id="adminName" class="form-control" />
+        <input type="name" name="adminname" id="adminName" class="form-control text-light" required />
         
       </div>
 
       <!-- Password input -->
       <div class="form-outline mb-4">
       <label class="form-label" for="adminPassword">Password</label>
-        <input type="password" name="password" id="adminPassword" class="form-control" />
+        <input type="password" name="password" id="adminPassword" class="form-control text-light" required />
         
       </div>
 

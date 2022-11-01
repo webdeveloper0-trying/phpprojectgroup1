@@ -45,9 +45,9 @@ include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
         include("../common/uNavbar/uSecNavbar.php") ?>
   <div class="d-flex justify-content-center align-items-center flex-column">
  
- <h3 class="header mt-5 mb-3">Registration Form For Blood Donation</h3>
+ <h3 class="header my-3">Registration Form For Blood Donation</h3>
 
- <form action="../../Controller/bloodDonation/uAddBloodDonationController.php" method="post" class="form d-flex justify-content-center align-items-center flex-column pt-5">
+ <form action="../../Controller/bloodDonation/uAddBloodDonationController.php" method="post" class="form d-flex justify-content-center align-items-center flex-column pt-3">
    <!-- 2 column grid layout with text inputs for the first and last names -->
    <div class="row col-12 mb-4">
      <!-- <input type="text" value="2" /> -->

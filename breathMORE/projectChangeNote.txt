@@ -2,7 +2,8 @@
 pharmacy_lists
 2. pharmacy_lists table 
 3. blogs table
+4. oxygen del_flg
 
-name YoonNadi
-pwd 535564
+
+
 

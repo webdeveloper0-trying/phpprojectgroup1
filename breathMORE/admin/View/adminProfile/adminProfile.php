@@ -54,17 +54,15 @@ include "../../Controller/adminProfile/aProfileSelectPropsController.php";
             </div>
 
             <div class="adminPath my-3">
-                <a href="!#">Emergency</a>
+                <a href="#">Emergency</a>
             </div>
             <div class="adminPath my-3">
                 <a href="#">Contact Us</a>
             </div>
             <div class="adminPath my-3">
-                <a>FAQ</a>
+                <a href="#">FAQ</a>
             </div>
-            <div class="adminPath my-3">
-                <a>Privacy Policy</a>
-            </div>
+           
         </div>
 
         <div class="col-2 me-5">
@@ -76,8 +74,8 @@ include "../../Controller/adminProfile/aProfileSelectPropsController.php";
                 <div class="container-fluid">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="../adminManagement/aManagement.php">Admin Management</a></li>
-                            <li class="breadcrumb-item"><a href="../">Total Registered List</a></li>
+                            <li class="breadcrumb-item"><a href="../adminDashboard/aDashboard.php">Admin Management</a></li>
+                            <li class="breadcrumb-item"><a href="../adminAppointment/aAppontmentList.php">Total Registered List</a></li>
                             <li class="breadcrumb-item active" aria-current="page"><a href=".">Total Appointment</a></li>
                             <li class="breadcrumb-item active" aria-current="page">
                                 <a href="#">Doctors List</a>
@@ -216,9 +214,9 @@ include "../../Controller/adminProfile/aProfileSelectPropsController.php";
                     <h4 class="h4 header">Today's Alert</h4>
 
                     <!-- Message input -->
-                    <div class="form-outline mb-4">
-                        <textarea class="form-control bg-light" name="dailyMsg" id="dailyMsg" rows="4"></textarea>
-                        <label class="form-label" for="dailyMsg">Daily Message</label>
+                    <div class="container form-outline d-flex justify-content-center mb-4">
+                        <textarea class="form-control bg-light mx-2" name="dailyMsg" id="dailyMsg" rows="4"></textarea>
+                        <label class="form-label mx-2" for="dailyMsg">Daily Message</label>
                     </div>
 
                     <button type="submit" class="btn btn-purple mt-3">Submit</button>

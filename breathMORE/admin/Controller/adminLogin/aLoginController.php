@@ -32,14 +32,16 @@ if (isset($_POST['adminname']) && isset($_POST['password'])) {
             $GLOBALS['mainadmin'] = 1;
             $_SESSION["ismainadmin"] = $GLOBALS['mainadmin'];
             echo "Main Admin" . $_SESSION["ismainadmin"];
+            header("Location: ../../View/adminDashboard/aDashboard.php");
 
             $GLOBALS['mainadmin'] = 0;
         } else {
             $GLOBALS['mainadmin'] = 0;
             $_SESSION["ismainadmin"] = $GLOBALS['mainadmin'];
             echo "Main Admin" . $_SESSION["ismainadmin"];
+            header("Location: ../../View/adminDashboard/aSubAdminDashboard.php");
         }
         $_SESSION["adminname"] = $adminname;
-        header("Location: ../../View/adminDashboard/aDashboard.php");
+        
     }
 }

@@ -2,9 +2,6 @@
 
 include "../../Model/dbConnection.php";
 
-session_start();
-
-
 $userId = $_SESSION["userId"];
 
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

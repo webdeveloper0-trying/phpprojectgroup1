@@ -1,17 +1,25 @@
 <?php
 session_start();
-include "../common/adminNavbar.php";
+
 include "../../Controller/adminBlogs/aBlogListController.php";
+include "../../../patient/Controller/common/aChColorTxtController.php";
 
-// if (isset($_POST['adminname']) && isset($_POST['password'])) {
-//     $adminname = $_POST['adminname'];
-//     $password = $_POST['password'];
-//     $_SESSION["adminname"] = $adminname;
-// }
 
-// if ($_SESSION["ismainadmin"] == 0) {
-//     header("Location: ../adminRegisterLogin/aLogin.php");
-// }
+if (isset($_POST['adminname']) && isset($_POST['password'])) {
+    $adminname = $_POST['adminname'];
+    $password = $_POST['password'];
+    $_SESSION["adminname"] = $adminname;
+}
+
+if($_SESSION["mainadmin"] = "0"){
+    include "../common/adminNavbar.php";
+}else{
+    include "../common/adminNavbar.php";
+}
+
+if (!isset($_SESSION["adminname"])) {
+    header("Location: ../adminRegisterLogin/aLogin.php");
+}
 
 
 ?>

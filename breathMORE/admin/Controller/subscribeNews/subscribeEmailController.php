@@ -5,10 +5,10 @@ include "../../Controller/subscribeNews/aSubscribeNewListController.php";
 
 
 if (isset($_POST["sendmail"])) {
-
+    $info = $_POST["info"];
     $subject = $_POST["subject"];
-    echo $subject;
-    print_r($subscriberInfos[0]["user_email"]);
+    
+   
     foreach ($subscriberInfos as $patient) {
         $userEmail = $patient["user_email"];
         // echo "ANS",$userEmail;
@@ -16,8 +16,8 @@ if (isset($_POST["sendmail"])) {
         $mail->sendMail(
             $userEmail,
             "About Our Event And Promotion",
-            "<h1>Our Event !!</h1>
-                <p>$subject</p>"
+            "<h1>$subject !!</h1>
+                <p>$info</p>"
         );
     }
 
