@@ -1,6 +1,9 @@
 <?php
-include '../../Controller/aDashboard/aDashboardCountController.php';
 session_start();
+include "../../../patient/Controller/common/aChColorTxtController.php";
+include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
+include '../../Controller/aDashboard/aDashboardCountController.php';
+
 
 if (isset($_POST['adminname']) && isset($_POST['password'])) {
     $adminname = $_POST['adminname'];
@@ -10,18 +13,39 @@ if (isset($_POST['adminname']) && isset($_POST['password'])) {
 
 if (!isset($_SESSION["adminname"])) {
     header("Location: ../adminRegisterLogin/aLogin.php");
-} else {
-    if ($_SESSION["ismainadmin"] == 0) {
-        header("Location: ./aSubAdminDashboard.php");
-    }
+} 
     $adminname = $_SESSION["adminname"];
-}
 
-print_r($regCount[0]['COUNT(register_id)']);
+
+
 
 $register = $regCount[0]['COUNT(register_id)'];
 
 $appointement = $appCount[0]['COUNT(id)'];
+
+$doctors = $docCount[0]['COUNT(doctor_id)'];
+
+$donations = $donCount[0]['COUNT(id)'];
+
+
+$medicines = $medCount[0]['COUNT(id)'];
+
+
+$reports = $labCount[0]['COUNT(id)'];
+
+$pharmacies = $pharmacyCount[0]['COUNT(id)'];
+
+$patients = $patientCount[0]['COUNT(id)'];
+
+$oxygens = $oxygenCount[0]['COUNT(id)'];
+
+$subscriptions = $subCount[0]['COUNT(id)'];
+
+$blogs = $blogCount[0]['COUNT(id)'];
+
+$faqs = $faqCount[0]['COUNT(id)'];
+
+$bloodstocks = $bloodStockCount[0]['COUNT(id)'];
 
 
 ?>
@@ -33,7 +57,7 @@ $appointement = $appCount[0]['COUNT(id)'];
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard</title>
+    <title>Admin Sub Dashboard</title>
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css?=time()" rel="stylesheet" />
@@ -44,6 +68,9 @@ $appointement = $appCount[0]['COUNT(id)'];
     <!-- MDB -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css?=time()" rel="stylesheet" />
 
+    <!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
     <!-- custom css -->
     <link rel="stylesheet" href="../common/css/style.css">
     <link rel="stylesheet" href="./css/adashboard.css" <?php time(); ?>>
@@ -51,7 +78,27 @@ $appointement = $appCount[0]['COUNT(id)'];
 </head>
 
 <body>
+
+    <div class="d-flex justify-content-center align-items-center flex-row position-absolute top-0 end-0 mx-5 mt-5 position-relative">
+        <a href="../adminProfile/adminProfile.php">
+            <i class='bx bx-lg bxs-user-circle' style='color:#4b694d'></i>
+
+        </a>
+        <i id="adminLogout" class='bx bxs-down-arrow me-5' style='color:#4b694d'></i>
+
+        <ul id="dropBox" class="bg-light p-3 rounded position-absolute text-center end-0 top-100">
+            <a href="../adminProfile/adminProfile.php">
+                <li>Profile</li>
+            </a>
+            <a href="../adminRegisterLogin/aLogin.php">
+                <li>LogOut</li>
+            </a>
+        </ul>
+    </div>
+
     <div class="d-flex justify-content-center align-items-center flex-column">
+
+
         <h3 class="h3 header my-5">Admin Dashboard</h3>
         <div class="adminDashboard col col-10 row justify-content-center align-items-center flex-wrap py-5">
             <div class="col col-4 text-center">
@@ -63,38 +110,31 @@ $appointement = $appCount[0]['COUNT(id)'];
                 </a>
             </div>
             <div class="col col-4 text-center">
-
-                <a href="../adminURegsiter/aURegisterListController.php">
-                   
-
-                        <a href="../aTotalRegisterList/aTotalRegister.php">
-                            <button type="button" class="my-3 btn btn-xl py-3 btn-green btn-rounded d-flex align-items-center">
-                                Total Registered List
-                                <span class="badge badge-primary rounded-pill fs-6"><?= $register; ?></span>
-                            </button>
-                        </a>
+                <a href="../aTotalRegisterList/aTotalRegister.php">
+                    <button type="button" class="my-3 btn btn-xl py-3 btn-green btn-rounded d-flex align-items-center">
+                        Total Registered List
+                        <span class="badge badge-primary rounded-pill fs-6"><?= $register; ?></span>
+                    </button>
+                </a>
             </div>
             <div class="col col-4 text-center">
                 <a href="../adminAppointment/aAppointmentList.php">
+                    <button type="button" class="my-3 btn btn-xl py-3 btn-green btn-rounded d-flex align-items-center">
+                        Total Appointments
+                        <span class="badge badge-primary rounded-pill fs-6"><?= $appointement; ?></span>
 
-                        <button type="button" class="my-3 btn btn-xl py-3 btn-green btn-rounded d-flex align-items-center">
-                            Total Appointments
-                            <span class="badge badge-primary rounded-pill fs-6">14</span>
-
-                        </button>
+                    </button>
                 </a>
             </div>
             <div class="col col-4 text-center">
                 <a href="../doctor/list.php">
+                    <button type="button" class="my-3 btn btn-xl py-3 btn-green btn-rounded d-flex align-items-center">
+                        Doctors List
+                        <span class="badge badge-primary rounded-pill fs-6">
+                            <?= $doctors; ?>
+                        </span>
 
-                    <button type="button" class="my-3 btn btn-lg btn-green btn-rounded">
-                        Doctor Lists
-
-                        <button type="button" class="my-3 btn btn-xl py-3 btn-green btn-rounded d-flex align-items-center">
-                            Doctors List
-                            <span class="badge badge-primary rounded-pill fs-6">14</span>
-
-                        </button>
+                    </button>
                 </a>
             </div>
 
@@ -102,85 +142,136 @@ $appointement = $appCount[0]['COUNT(id)'];
                 <a href="../adminBloodDonation/abloodDonationList.php">
                     <button type="button" class="my-3 btn btn-xl py-3 btn-green btn-rounded d-flex align-items-center">
                         Blood Donations
-                        <span class="badge badge-primary rounded-pill fs-6">14</span>
+                        <span class="badge badge-primary rounded-pill fs-6">
+                            <?= $donations; ?>
+                        </span>
                     </button>
                 </a>
             </div>
+
+            <div class="col col-4 text-center">
+                <a href="../adminBloodDonation/abloodDonationList.php">
+                    <button type="button" class="my-3 btn btn-xl py-3 btn-green btn-rounded d-flex align-items-center">
+                        Blood Stocks
+                        <span class="badge badge-primary rounded-pill fs-6">
+                            <?= $bloodstocks; ?>
+                        </span>
+                    </button>
+                </a>
+            </div>
+
             <div class="col col-4 text-center">
                 <a href="../diseAndmedi/addmedi.php">
 
-                    <button type="button" class="my-3 btn btn-lg btn-green btn-rounded">
-                        Diseases and Medicine
+                    <button type="button" class="my-3 btn btn-xl py-3 btn-green btn-rounded d-flex align-items-center">
+                        Medicine list
+                        <span class="badge badge-primary rounded-pill fs-6">
+                            <?= $medicines; ?>
+                        </span>
 
-                        <button type="button" class="my-3 btn btn-xl py-3 btn-green btn-rounded d-flex align-items-center">
-                            Medicine list
-                            <span class="badge badge-primary rounded-pill fs-6">14</span>
-
-                        </button>
+                    </button>
                 </a>
             </div>
             <div class="col col-4 text-center">
                 <a href="../labreport/labList.php">
-
-                    <button type="button" class="my-3 btn btn-lg btn-green btn-rounded">
-
-                        <button type="button" class="my-3 btn btn-xl py-3 btn-green btn-rounded d-flex align-items-center">
-
-                            Lab Reports
-                            <span class="badge badge-primary rounded-pill fs-6">14</span>
-                        </button>
+                    <button type="button" class="my-3 btn btn-xl py-3 btn-green btn-rounded d-flex align-items-center">
+                        Lab Reports
+                        <span class="badge badge-primary rounded-pill fs-6">
+                            <?= $reports; ?>
+                        </span>
+                    </button>
                 </a>
             </div>
+
+            <div class="col col-4 text-center">
+                <a href="../pharmacy/listPharmacy.php">
+                    <button type="button" class="my-3 btn btn-xl py-3 btn-green btn-rounded d-flex align-items-center">
+                        Pharmacies
+                        <span class="badge badge-primary rounded-pill fs-6">
+                            <?= $pharmacies; ?>
+                        </span>
+                    </button>
+                </a>
+            </div>
+
+
+            <div class="col col-4 text-center">
+                <a href="../phistory/phlist.php">
+                    <button type="button" class="my-3 btn btn-xl py-3 btn-green btn-rounded d-flex align-items-center">
+                        Patients' History
+                        <span class="badge badge-primary rounded-pill fs-6">
+                            <?= $patients; ?>
+                        </span>
+                    </button>
+                </a>
+            </div>
+
+
+            <div class="col col-4 text-center">
+                <a href="../oxygen/o2list.php">
+                    <button type="button" class="my-3 btn btn-xl py-3 btn-green btn-rounded d-flex align-items-center">
+                        Oxygen
+                        <span class="badge badge-primary rounded-pill fs-6">
+                            <?= $oxygens; ?>
+                        </span>
+                    </button>
+                </a>
+            </div>
+
+            <div class="col col-4 text-center">
+                <a href="../adminBloodDonation/abloodDonationList.php">
+                    <button type="button" class="my-3 btn btn-xl py-3 btn-green btn-rounded d-flex align-items-center">
+                        FAQs
+                        <span class="badge badge-primary rounded-pill fs-6">
+                            <?= $faqs; ?>
+                        </span>
+                    </button>
+                </a>
+            </div>
+
+            <div class="col col-4 text-center">
+
+                <a href="../adminBlog/aBlogList.php">
+                    <button type="button" class="my-3 btn btn-xl py-3 btn-green btn-rounded d-flex align-items-center">
+                        FeedBacks
+                        <span class="badge badge-primary rounded-pill fs-6"><?= $blogs; ?></span>
+
+                    </button>
+                </a>
+            </div>
+
             <div class="col col-4 text-center">
                 <a href="../subscribeNews/aSubscribeNewList.php">
                     <button type="button" class="my-3 btn btn-xl py-3 btn-green btn-rounded d-flex align-items-center">
-
                         Subscribtion List
-                        <span class="badge badge-primary rounded-pill fs-6">14</span>
+                        <span class="badge badge-primary rounded-pill fs-6"><?= $subscriptions; ?></span>
                     </button>
                 </a>
             </div>
+
+
             <div class="col col-4 text-center">
+
                 <a href="../adminBlog/aBlogList.php">
                     <button type="button" class="my-3 btn btn-xl py-3 btn-green btn-rounded d-flex align-items-center">
-                        Blogs list
-                        <span class="badge badge-primary rounded-pill fs-6">14</span>
+                        Blogs
+                        <span class="badge badge-primary rounded-pill fs-6"><?= $blogs; ?></span>
+
                     </button>
                 </a>
-            </div>
-            <div class="col col-4 text-center">
-                <a href="../oxygen/o2list.php">
-                    <button type="button" class="my-3 btn btn-lg btn-green btn-rounded">
-                        Oxygen
-                    </button>
-                </a>
-            </div>
-            <div class="col col-4 text-center">
-                <a href="../pharmacy/addPharmacy.php">
-                    <button type="button" class="my-3 btn btn-lg btn-green btn-rounded">
-                        Pharmacies
-                    </button>
-                </a>
-            </div>
-
-            <div class="col col-4 text-center">
-
-                <a href="../phistory/phadd.php">
-                    <button type="button" class="my-3 btn btn-lg btn-green btn-rounded">
-                        Patient History
-
-                        <a href="../adminBlog/aBlogList.php">
-                            <button type="button" class="my-3 btn btn-xl py-3 btn-green btn-rounded d-flex align-items-center">
-                                Blogs
-                                <span class="badge badge-primary rounded-pill fs-6">14</span>
-
-                            </button>
-                        </a>
             </div>
 
 
         </div>
     </div>
+
+    <script>
+        document.getElementById("adminLogout").addEventListener("click", function() {
+            console.log("admin Logout");
+            document.getElementById("dropBox").classList.toggle("show");
+        })
+    </script>
+
 
 
 

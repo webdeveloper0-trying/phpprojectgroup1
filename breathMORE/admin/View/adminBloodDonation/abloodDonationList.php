@@ -1,22 +1,25 @@
 <?php
 
 session_start();
-
-
-
-// if (isset($_POST['adminname']) && isset($_POST['password'])) {
-//     $adminname = $_POST['adminname'];
-//     $password = $_POST['password'];
-//     $_SESSION["adminname"] = $adminname;
-// }
-
-// if ($_SESSION["ismainadmin"] == 0) {
-//     header("Location: ./adminLogin.php");
-// }
-
+include "../../../patient/Controller/common/aChColorTxtController.php";
 
 include "../../Controller/adminBloodDonation/aBloodDonationController.php";
-include "../common/adminNavbar.php";
+
+if (isset($_POST['adminname']) && isset($_POST['password'])) {
+    $adminname = $_POST['adminname'];
+    $password = $_POST['password'];
+    $_SESSION["adminname"] = $adminname;
+}
+
+if($_SESSION["mainadmin"] = "0"){
+    include "../common/adminNavbar.php";
+}else{
+    include "../common/adminNavbar.php";
+}
+
+if (!isset($_SESSION["adminname"])) {
+    header("Location: ../adminRegisterLogin/aLogin.php");
+}
 
 
 ?>

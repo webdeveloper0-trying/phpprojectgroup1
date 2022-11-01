@@ -1,3 +1,24 @@
+
+#adminLogout{
+    cursor:pointer !important;
+  }
+  
+  #dropBox a{
+    color:var(--textColorTwo) !important;
+  }
+  
+  .bg-light{
+    list-style:none !important;
+    display:none;
+  }
+  
+  .show{
+    display:block !important;
+  }
+  
+
+
+
 .adminDashboard{
     background:var(--textColorOne) !important;
     color:var(--textColorTwo) !important;

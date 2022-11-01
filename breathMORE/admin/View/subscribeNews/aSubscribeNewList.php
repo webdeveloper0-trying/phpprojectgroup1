@@ -1,9 +1,10 @@
 <?php
 
-include "../../Controller/subscribeNews/aSubscribeNewListController.php";
-include "../common/adminNavbar.php";
 
 session_start();
+include "../../../patient/Controller/common/aChColorTxtController.php";
+
+include "../../Controller/subscribeNews/aSubscribeNewListController.php";
 
 if (isset($_POST['adminname']) && isset($_POST['password'])) {
     $adminname = $_POST['adminname'];
@@ -11,14 +12,15 @@ if (isset($_POST['adminname']) && isset($_POST['password'])) {
     $_SESSION["adminname"] = $adminname;
 }
 
-if ($_SESSION["ismainadmin"] == 0) {
-    header("Location: ../adminRegisterLogin/aLogin.php");
+if($_SESSION["mainadmin"] = "0"){
+    include "../common/adminNavbar.php";
+}else{
+    include "../common/adminNavbar.php";
 }
 
-
-
-
-
+if (!isset($_SESSION["adminname"])) {
+    header("Location: ../adminRegisterLogin/aLogin.php");
+}
 
 ?>
 
@@ -50,6 +52,7 @@ if ($_SESSION["ismainadmin"] == 0) {
     <!-- custom css -->
     <link rel="stylesheet" href="../common/css/style.css" <?php time(); ?> />
     <link rel="stylesheet" href="../common/css/adminNavbar.css">
+    <link rel="stylesheet" href="./css/aSubscribe.css" <?php time(); ?>  />
 </head>
 
 <body>
@@ -77,9 +80,27 @@ if ($_SESSION["ismainadmin"] == 0) {
             </tbody>
         </table>
 
-        <form action="../../Controller/subscribeNews/subscribeEmailController.php" method="post">
-            <input class="form-control" name="subject"></input>
-            <button type="submit" name="sendmail">sendmail<button>
+
+        <form class="emailBg col col-7 p-4 mt-5 shadow-5" action="../../Controller/subscribeNews/subscribeEmailController.php" method="post">
+            <h5 class="text-center mb-4">Send Email</h5>
+            <!-- Name input -->
+            <div class="form-outline mb-4">
+                <input type="text" name="subject" id="form4Example1" class="form-control" />
+                <label class="form-label fs-6" for="form4Example1">Subject</label>
+            </div>
+
+            <!-- Message input -->
+            <div class="form-outline mb-4">
+                <textarea class="form-control" name="info" id="form4Example3" rows="4"></textarea>
+                <label class="form-label fs-6" for="form4Example3">Info</label>
+            </div>
+
+            
+
+          <div class="d-flex justify-content-end">
+              
+                <button class="btn btn-purple" type="submit" name="sendmail">SEND</button>
+          </div>
         </form>
 
     </div>

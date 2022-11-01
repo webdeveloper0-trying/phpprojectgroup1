@@ -1,8 +1,32 @@
+#adminLogout{
+  cursor:pointer !important;
+}
+
+#dropBox a{
+  color:var(--textColorTwo) !important;
+}
+
+.bg-light{
+  list-style:none !important;
+  display:none;
+}
+
+.show{
+  display:block !important;
+}
+
+.homeHeader{
+  color:var(--textColorOne) !important;
+  font-size:1.5em !important;
+}
+
 .btnMenu{
   position:absolute !important;
   bottom:90% !important;
   left:2rem !important;
 }
+
+
 
 #offcanvasMenu {
   width:20vw !important;
@@ -35,6 +59,29 @@
   text-decoration: none !important;
   color:var(--textColorOne) !important;
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+  
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius:5px !important;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 
 
 

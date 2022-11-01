@@ -1,9 +1,26 @@
 <?php
-// echo "OK";
-include "../common/adminNavbar.php";
+
+
+session_start();
+include "../../../patient/Controller/common/aChColorTxtController.php";
 include "../../Controller/labreport/list_labController.php";
-// echo "<pre>";
-// print_r($labList);
+
+
+if (isset($_POST['adminname']) && isset($_POST['password'])) {
+    $adminname = $_POST['adminname'];
+    $password = $_POST['password'];
+    $_SESSION["adminname"] = $adminname;
+}
+
+if($_SESSION["mainadmin"] = "0"){
+    include "../common/adminNavbar.php";
+}else{
+    include "../common/adminNavbar.php";
+}
+
+if (!isset($_SESSION["adminname"])) {
+    header("Location: ../adminRegisterLogin/aLogin.php");
+}
 
 
 ?>

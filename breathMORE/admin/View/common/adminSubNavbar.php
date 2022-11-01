@@ -1,8 +1,3 @@
-<?php
-include "../../../patient/Controller/common/aChColorTxtController.php";
-include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,13 +31,17 @@ include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
     <div class="d-flex justify-content-center align-items-center flex-row position-absolute top-0 end-0 mx-5 mt-5 position-relative">
         <a href="../adminProfile/adminProfile.php">
             <i class='bx bx-lg bxs-user-circle' style='color:#4b694d'></i>
-           
+
         </a>
         <i id="adminLogout" class='bx bxs-down-arrow me-5' style='color:#4b694d'></i>
 
         <ul id="dropBox" class="bg-light p-3 rounded position-absolute text-center end-0 top-100">
-            <a href="../adminProfile/adminProfile.php"><li>Profile</li></a>
-            <a href="../adminRegisterLogin/aLogin.php"><li>LogOut</li></a>
+            <a href="../adminProfile/adminProfile.php">
+                <li>Profile</li>
+            </a>
+            <a href="../adminRegisterLogin/aLogin.php">
+                <li>LogOut</li>
+            </a>
         </ul>
     </div>
 
@@ -52,29 +51,16 @@ include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
 
     <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasWithBothOptionsLabel">
         <div class="offcanvas-header">
-
-            <?php
-
-            $webName = explode("/", $webName);
-
-            $fName = $webName[0];
-            $lName = $webName[1];
-            ?>
-            <h5 class="offcanvas-title mt-3 header homeHeader fw-bold ps-3" id="offcanvasWithBothOptionsLabel">
-                <?= $fName ?><span><?= $lName ?></span></h5>
-
+            <h5 class="offcanvas-title mt-3" id="offcanvasWithBothOptionsLabel">BreathMORE</h5>
             <button type="button" class="btn-close btn-light" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
-            <ul class="list-group text-center mt-2">
+            <ul class="list-group text-center mt-5">
                 <li class="p-3">
                     <a href="../adminProfile/adminProfile.php">Admin Profile</a>
                 </li>
                 <li class="p-3">
-                    <a href="../adminManagement/aManagement.php">Admin Management</a>
-                </li>
-                <li class="p-3">
-                    <a href="../adminDashboard/aDashboard.php">Admin DashBoard</a>
+                    <a href="../adminDashboard/aSubAdminDashboard.php">Admin DashBoard</a>
                 </li>
                 <li class="p-3">
                     <a href="../aTotalRegisterList/aTotalRegister.php">Total Registered List</a>
@@ -132,13 +118,6 @@ include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
             </ul>
         </div>
     </div>
-
-    <script>
-        document.getElementById("adminLogout").addEventListener("click",function(){
-            console.log("admin Logout");
-            document.getElementById("dropBox").classList.toggle("show");
-        })
-    </script>
 
 
 </body>

@@ -27,8 +27,7 @@ $sql->execute();
 // Receive Data From MySQL
 $changedProps = $sql->fetchAll(PDO::FETCH_ASSOC);
 
-// echo "<pre>";
-// print_r($changedProps);
+
 
 $bgColorOne = $changedProps[0]["backgroundColorOne"];
 $bgColorTwo = $changedProps[0]["backgroundColorTwo"];

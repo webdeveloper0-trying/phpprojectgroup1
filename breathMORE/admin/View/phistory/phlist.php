@@ -1,11 +1,27 @@
 <?php
 
 
+session_start();
+include "../../../patient/Controller/common/aChColorTxtController.php";
+include "../../Controller/phistory/phlistController.php";
 
-include "../common/adminNavbar.php";
-// include "../../Controller/phistory/phaddController.php";
 
-include "../../Controller/phistory/phlistController.php"
+if (isset($_POST['adminname']) && isset($_POST['password'])) {
+    $adminname = $_POST['adminname'];
+    $password = $_POST['password'];
+    $_SESSION["adminname"] = $adminname;
+}
+
+if($_SESSION["mainadmin"] = "0"){
+    include "../common/adminNavbar.php";
+}else{
+    include "../common/adminNavbar.php";
+}
+
+if (!isset($_SESSION["adminname"])) {
+    header("Location: ../adminRegisterLogin/aLogin.php");
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

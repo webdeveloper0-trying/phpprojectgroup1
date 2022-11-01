@@ -70,6 +70,11 @@ marquee {
   transform: scaleX(0) !important;
   transition: transform 10ms ease-in-out !important;
 }
+
+.serviceLink:hover{
+  color:var(--thirdColor) !important;
+}
+
 .myhover:hover {
   cursor: pointer;
   transform: scaleX(2) !important;
