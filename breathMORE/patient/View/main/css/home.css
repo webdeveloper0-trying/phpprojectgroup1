@@ -10,23 +10,70 @@ marquee {
   margin-top: 10vh !important;
 }
 
-.services {
+/* .services {
   background: var(--secondaryColor) !important;
   margin-top: 7em !important;
   border-radius: 20px;
-}
+} */
 
-.serviceCard {
+/* .serviceCard {
   padding: 0 !important;
   width: 12vw !important;
+} */
+/* .mybg {
+  background-color: var(--secondaryColor);
+} */
+
+.my-card-bg {
+  margin-top: 30px;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  background-color: var(--secondaryColor);
+  padding: 15px;
+  border-radius: 20px;
+  color: var(--textColorTwo) !important;
 }
 
-.serviceCard:hover {
-  border-radius: 10px 100px / 120px;
+.btn.btn-background-slide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  background-color: var(--secondaryColor);
+
+  transition: transform 300ms ease-in-out !important;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.btn.btn-background-slide:hover::before,
+.btn.btn-background-slide:focus::before {
+  transform: scaleX(1) !important;
+}
+
+.btn.btn-background-slide {
+  transition: color 600ms ease-in-out !important;
+  z-index: 1;
+}
+
+.btn.btn-background-slide:hover,
+.btn.btn-background-slide:focus {
+  color: var(--textColorOne) !important;
 }
 
 .serviceLink {
-  color: var(--thirdColor) !important;
+  color: var(--textColorOne) !important;
+  transform: scaleX(0) !important;
+  transition: transform 10ms ease-in-out !important;
+}
+.myhover:hover {
+  cursor: pointer;
+  transform: scaleX(2) !important;
+  color: var(--textColorOne) !important;
 }
 
 .headerImg {
