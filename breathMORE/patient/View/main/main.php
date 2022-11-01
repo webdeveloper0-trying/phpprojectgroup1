@@ -24,16 +24,9 @@ include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home</title>
 
-   <!-- Shepherd -->
-   <link
-      rel="stylesheet"
-      href="./node_modules/shepherd.js/dist/css/shepherd.css"
-    />
-
   <!-- Splide JS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css">
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js" defer></script>
-  <script></script>
 
   <!-- custom css3 -->
   <link rel="stylesheet" href="../common/css/style.css" />
@@ -55,7 +48,7 @@ include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
   <!-- herosection -->
   <div class="container-fluid">
 
-    <section id="herosection" class="mb-5">
+    <section id="herosection" class="mb-4 p-5">
 
 
       <div class="row flex-wrap ">
@@ -65,7 +58,7 @@ include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
             <div class="col-lg-8 col-md-8 col-sm-8">
               <div class="headerInfo">
                 <?php
-                
+
                 $webName = explode("/", $webName);
 
                 $fName = $webName[0];
@@ -74,7 +67,7 @@ include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
                 <h3 class="header homeHeader h3 fw-bold">
                   <?= $fName ?><span><?= $lName ?></span></h3>
 
-                <p class="text-muted my-5">
+                <p class="text-muted">
                   Our top health tips to help you live well in every way. <br />
                   Discover, small, simple changes which can make a big difference.
                 </p>

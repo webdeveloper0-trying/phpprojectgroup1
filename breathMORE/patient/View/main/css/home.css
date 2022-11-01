@@ -10,20 +10,6 @@ marquee {
   margin-top: 10vh !important;
 }
 
-/* .services {
-  background: var(--secondaryColor) !important;
-  margin-top: 7em !important;
-  border-radius: 20px;
-} */
-
-/* .serviceCard {
-  padding: 0 !important;
-  width: 12vw !important;
-} */
-/* .mybg {
-  background-color: var(--secondaryColor);
-} */
-
 .my-card-bg {
   margin-top: 30px;
   /* display: flex;
@@ -35,46 +21,11 @@ marquee {
   color: var(--textColorTwo) !important;
 }
 
-.btn.btn-background-slide::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  z-index: -1;
-  background-color: var(--secondaryColor);
-
-  transition: transform 300ms ease-in-out !important;
-  transform: scaleX(0);
-  transform-origin: left;
-}
-
-.btn.btn-background-slide:hover::before,
-.btn.btn-background-slide:focus::before {
-  transform: scaleX(1) !important;
-}
-
-.btn.btn-background-slide {
-  transition: color 600ms ease-in-out !important;
-  z-index: 1;
-}
-
-.btn.btn-background-slide:hover,
-.btn.btn-background-slide:focus {
-  color: var(--textColorOne) !important;
-}
-
 .serviceLink {
   color: var(--textColorOne) !important;
   transform: scaleX(0) !important;
   transition: transform 10ms ease-in-out !important;
 }
-
-.serviceLink:hover{
-  color:var(--thirdColor) !important;
-}
-
 .myhover:hover {
   cursor: pointer;
   transform: scaleX(2) !important;
@@ -162,6 +113,12 @@ marquee {
   position: relative !important;
 }
 
+.bmi {
+  font-size: 28px;
+  font-weight: 200;
+  color: var(--secondaryColor);
+}
+
 /* Subscription */
 .subscribeLet {
   color: var(--textColorOne) !important;
@@ -211,11 +168,20 @@ marquee {
   display: block !important;
 }
 
-
-
 @media (max-width: 1000px) {
   .headerImg {
     display: none !important;
+  }
+  #herosection {
+    text-align: center;
+  }
+
+  .bmi {
+    font-size: 20px;
+    text-align: center;
+    margin: 3px;
+    font-weight: 200;
+    color: var(--secondaryColor);
   }
 }
 
