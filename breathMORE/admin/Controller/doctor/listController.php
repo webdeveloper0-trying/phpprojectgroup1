@@ -3,11 +3,7 @@ include "../../Model/dbConnection.php";
 
 $rowLimit = 4; //Set Row range which you want to place in a page
 
-// if (isset($_GET["page"])) {
-//     $page = $_GET["page"];
-// } else {
-//     $page = 1; //inital page 
-// }
+
 $page = (isset($_GET["page"])) ? $_GET["page"] : 1;
 $startPage = ($page - 1) * $rowLimit; //0 ,if clicked 2,(2-1)*5=5
 

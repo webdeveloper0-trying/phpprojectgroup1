@@ -34,10 +34,9 @@ include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
   <link rel="stylesheet" href="../common/uFooter/css/uFooter.css" <?php time(); ?>>
   <link rel="stylesheet" href="./css/home.css" />
 
-
+  <!-- jq and js -->
   <script src="../common/jq/jquery-3.6.0.min.js" defer></script>
   <script src="../common/uNavbar/js/uNavbar.js" defer></script>
-
   <script src="./js/home.js" defer></script>
   <script src="./js/bmiBmr.js" defer></script>
 </head>
@@ -47,7 +46,16 @@ include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
   <marquee><?= $dailyMsg[0]["message"] ?></marquee>
 
   <!-- herosection -->
+<<<<<<< HEAD
+  <section id="herosection" class="mb-5">
+    <div class="container-fluid p-5 d-flex mx-xs-0 mx-sm-0 mx-md-5 mx-lg-5">
+      <div class="headerInfo col col-lg-7 text-lg-start">
+        <?php
+        $webName;
+        $webName = explode("/", $webName);
+=======
   <div class="container-fluid">
+>>>>>>> 76cdc72c38c8171d4336e48003434fd1b1ea4170
 
 
     <section id="herosection" class="mb-5">
@@ -108,6 +116,35 @@ include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
 
             </div>
 
+<<<<<<< HEAD
+          <div class="serviceCard col card text-center me-4">
+            <div class="card-body">
+              <h5 class="card-title">
+                <i class='bx bx-plus-medical bx-lg' style='color:#4B694D'></i>
+              </h5>
+              <p class="card-text"></p>
+              <a href="../emergency/uEmergency.php" class="serviceLink">Emergency</a>
+            </div>
+          </div>
+
+          <div class="serviceCard col card text-center me-4">
+            <div class="card-body">
+              <h5 class="card-title">
+                <i class='bx bxs-bookmarks bx-lg' style='color:#4B694D'></i>
+              </h5>
+              <p class="card-text"></p>
+              <a href="../appointment/uMakeAppointment.php" class="serviceLink">Appointment</a>
+            </div>
+          </div>
+
+          <div class="serviceCard col card text-center">
+            <div class="card-body">
+              <h5 class="card-title">
+                <i class='bx bxs-donate-blood bx-lg' style='color:#4b694d'></i>
+              </h5>
+              <p class="card-text"></p>
+              <a href="../bloodDonation/bloodDonationForm.php" class="serviceLink">Blood Donation</a>
+=======
 
             <div class="col-lg-5 col-md-6 col-sm-5">
 
@@ -142,6 +179,7 @@ include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
                 </div>
                 <a href="../bloodDonation/bloodDonationForm.php" class="serviceLink myhover">Blood Donation</a>
               </div>
+>>>>>>> 76cdc72c38c8171d4336e48003434fd1b1ea4170
             </div>
           </div>
         </div>

@@ -10,7 +10,7 @@ if (isset($_POST["searchText"])) {
 
     $sql = $pdo->prepare(" SELECT doctor_id,doctor_name
     FROM doctor_lists
-    WHERE center= :center ");
+    WHERE center= :center AND del_flg = 0");
 
     $sql->bindValue(":center", $center);
     $sql->execute();

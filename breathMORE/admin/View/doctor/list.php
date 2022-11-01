@@ -1,5 +1,11 @@
 <?php
+session_start();
 include "../common/adminNavbar.php";
+
+include "../../../patient/Controller/common/aChColorTxtController.php";
+include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
+
+include "../../Controller/doctor/aDocCountListController.php";
 include "../../Controller/doctor/listController.php";
 
 ?>
@@ -18,6 +24,7 @@ include "../../Controller/doctor/listController.php";
 
 
     <script src="../common/jq/jquery-3.6.0.min.js"></script>
+    <script src="./js/appointmentCount.js" <?= time() ?> defer></script>
     <script src="./js/doctorsearch.js" <?= time() ?> defer></script>
 
 </head>
@@ -26,6 +33,81 @@ include "../../Controller/doctor/listController.php";
 
     <div class="mx-5 d-flex justify-content-center align-items-center flex-column">
         <h3 class="header my-5"> Doctor Lists</h3>
+
+        <table class="table mb-3">
+            <thead class="thead">
+                <tr>
+                    <th>No</th>
+                    <th scope="col">Doctor Name</th>
+                    <th scope="col">Center</th>
+                    <th scope="col">Total Appointment</th>
+                    <th scope="col">Update Appointment</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                $noCount = 0;
+                //    print_r($docCountLists);
+                foreach ($docCountLists as $docCountList) { ?>
+                    <tr>
+                        <td><?= ++$noCount; ?></td>
+                        <td>
+                            <input type="hidden" name="docId" id="doctorId" value="<?= $docCountList['doc_id']?>" />
+                            <?= $docCountList["doctor_name"] ?></td>
+                        <td><?= $docCountList["center"] ?></td>
+                        <td>
+                            <span class="badge badge-danger text-primary rounded-pill fs-6">
+                                <?= $docCountList["appointment_count"] ?>
+                            </span>
+                        </td>
+                        <td>
+                            <div class="form-outline">
+                                <input type="number" id="typeCount" class="form-control" value="<?= $docCountList["appointment_count"] ?>" />
+                            </div>
+                        </td>
+                        <td>
+                            <a id="submitCount" class="btn bnt-purple" href="../../Controller/doctor/deleteController.php?cId=<?= $doctor["doctor_id"] ?>">
+                                Update
+                            </a>
+                        </td>
+                    </tr><?php } ?>
+
+            </tbody>
+        </table>
+
+
+        <nav aria-label="Page navigation example" class="mb-5">
+            <ul class="pagination justify-content-center">
+                <li class="page-item <?php if ($dpage <= 1) {
+                                            echo "disabled";
+                                        } ?>">
+                    <a class="page-link" href="?dpage=<?= $dpage - 1 ?>" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+
+
+                <?php for ($i = 1; $i <= $dtotalPages; $i++) { ?>
+                    <li class="page-item 
+                            <?php
+                            if ($dpage == $i) {
+                                echo "active";
+                            }
+                            ?>
+                            "><a class="page-link" href="?dpage=<?= $i ?>"><?= $i ?></a></li><?php } ?>
+
+                <li class="page-item 
+                        <?php if ($dpage >= $dtotalPages) {
+                            echo "disabled";
+                        } ?>">
+                    <a class="page-link" href="?dpage=<?= $dpage + 1 ?>" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
 
         <table class="table">
             <thead class="thead">
@@ -85,16 +167,9 @@ include "../../Controller/doctor/listController.php";
                         <td><?= $doctor["ph_num"] ?></td>
                         <td class="db"><?= $doctor["day"] ?></td>
                         <td class="db"><?= $doctor["start_time"] ?>-<?= $doctor["end_time"] ?></td>
-
-
                         <td><a href="../../Controller/doctor/editController.php?id=<?= $doctor["doctor_id"] ?>">
                                 <i class="fa-solid fa-pen-to-square"></i></a></td>
                         <td><a href="../../Controller/doctor/deleteController.php?id=<?= $doctor["doctor_id"] ?>"><i class="fa-solid fa-trash-can"></i></a></td>
-
-
-
-
-
 
                     </tr>
                 <?php } ?>

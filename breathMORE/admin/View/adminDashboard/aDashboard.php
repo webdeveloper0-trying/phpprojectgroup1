@@ -65,7 +65,7 @@ $appointement = $appCount[0]['COUNT(id)'];
             <div class="col col-4 text-center">
 
                 <a href="../adminURegsiter/aURegisterListController.php">
-                    <button type="button" class="my-3 btn btn-lg btn-green btn-rounded">
+                   
 
                         <a href="../aTotalRegisterList/aTotalRegister.php">
                             <button type="button" class="my-3 btn btn-xl py-3 btn-green btn-rounded d-flex align-items-center">
@@ -76,9 +76,6 @@ $appointement = $appCount[0]['COUNT(id)'];
             </div>
             <div class="col col-4 text-center">
                 <a href="../adminAppointment/aAppointmentList.php">
-
-                    <button type="button" class="my-3 btn btn-lg btn-green btn-rounded">
-                        Total Appointment Lists
 
                         <button type="button" class="my-3 btn btn-xl py-3 btn-green btn-rounded d-flex align-items-center">
                             Total Appointments

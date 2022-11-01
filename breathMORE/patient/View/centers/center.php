@@ -1,6 +1,17 @@
 <?php
+
+session_start();
+if (!isset($_SESSION["userId"])) {
+    header("Location: ../uRegisterLogin/register.php");
+} else {
+    $userId = $_SESSION["userId"];
+}
+
 include "../common/uNavbar/uNavbar.php";
 include "../common/uFooter/uFooter.php";
+
+include "../../../patient/Controller/common/aChColorTxtController.php";
+include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
 ?>
 
 

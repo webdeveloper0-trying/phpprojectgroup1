@@ -32,7 +32,8 @@ include "../common/adminNavbar.php";
 
 <body>
     <div class="col col-10 col-md-auto d-flex justify-content-center align-items-center flex-column">
-        <h3 class="h3 header my-5">Total Appointment List</h3>
+    <h3 class="h3 header my-5">Total Appointment List</h3>
+     
         <table class="table">
             <thead class="thead">
                 <tr>
@@ -50,8 +51,8 @@ include "../common/adminNavbar.php";
             </thead>
             <tbody>
                 <?php
-                 $count = ($page * $rowLimit) - ($rowLimit - 1);
-                 $id = 0;
+                $count = ($page * $rowLimit) - ($rowLimit - 1);
+                $id = 0;
                 foreach ($appointments1 as $appointment) { ?>
                     <tr>
                         <th scope="row"><?= $count++ ?></th>
@@ -72,37 +73,37 @@ include "../common/adminNavbar.php";
         </table>
 
         <div class="container d-flex  justify-content-end">
-        <ul class="pagination pagination-circle">
-            <li class="page-item 
+            <ul class="pagination pagination-circle">
+                <li class="page-item 
                     <?php if ($page <= 1) {
                         echo "disabled";
                     }  ?>
                     ">
-                <a class="page-link" href="?page=<?= $page - 1 ?>" aria-label="Previous">
-                    <span aria-hidden="true">Previous</span>
-                </a>
-            </li>
+                    <a class="page-link" href="?page=<?= $page - 1 ?>" aria-label="Previous">
+                        <span aria-hidden="true">Previous</span>
+                    </a>
+                </li>
 
-            <?php for ($i = 1; $i <= $totalPages; $i++) { ?>
-                <li class="page-item 
+                <?php for ($i = 1; $i <= $totalPages; $i++) { ?>
+                    <li class="page-item 
                         <?php
                         if ($page == $i) {
                             echo "active";
                         }
                         ?>
                         "><a class="page-link" href="?page=<?= $i ?>"><?= $i ?></a></li>
-            <?php } ?>
+                <?php } ?>
 
 
-            <li class="page-item 
+                <li class="page-item 
                      <?php if ($page >= $totalPages) {
                             echo "disabled";
                         }  ?>">
-                <a class="page-link" href="?page=<?= $page + 1 ?>" aria-label="Next">
-                    <span aria-hidden="true">Next</span>
-                </a>
-            </li>
-        </ul>
+                    <a class="page-link" href="?page=<?= $page + 1 ?>" aria-label="Next">
+                        <span aria-hidden="true">Next</span>
+                    </a>
+                </li>
+            </ul>
         </div>
     </div>
 </body>

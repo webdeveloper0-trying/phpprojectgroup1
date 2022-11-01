@@ -1,6 +1,9 @@
 <?php
 session_start();
 unset($_SESSION["userId"]);
+
+include "../../../patient/Controller/common/aChColorTxtController.php";
+include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,8 +35,8 @@ unset($_SESSION["userId"]);
     <div class="d-flex justify-content-center align-items-center mt-5">
 
         <!--body -->
-        <div class="row col-7">
-            <div class="loginInfo col col-8 pb-5">
+        <div class="row">
+            <div class="loginInfo col col-7 pb-5">
                 <form action="../../Controller/uRegisterLogin/loginController.php" method="post">
                     <h3 class="h3 header text-center my-5">LOG IN</h3>
 
@@ -70,14 +73,20 @@ unset($_SESSION["userId"]);
 
                 </form>
             </div>
-            <div class="loginBg col col-4 pb-5">
-                <div class="d-flex justify-content-center flex-row mt-5">
+            <div class="loginBg col col-5 pb-5 px-5">
+                <div class="d-flex justify-content-center align-items-center flex-column mt-5">
 
                     <img src="../storage/home/logo.png" class="logo" />
 
-                    <h3 class="homeHeader text-center mt-5">Breath
-                        <span>MORE</span>
-                    </h3>
+                    <?php
+                    $webName;
+                    $webName = explode("/", $webName);
+
+                    $fName = $webName[0];
+                    $lName = $webName[1];
+                    ?>
+                    <h3 class="header homeHeader h3 fw-bold">
+                        <?= $fName ?><span><?= $lName ?></span></h3>
 
                 </div>
 

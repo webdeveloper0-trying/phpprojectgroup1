@@ -1,3 +1,17 @@
+<?php
+
+session_start();
+if (!isset($_SESSION["userId"])) {
+    header("Location: ../uRegisterLogin/register.php");
+} else {
+    $userId = $_SESSION["userId"];
+}
+
+include "../../../patient/Controller/common/aChColorTxtController.php";
+include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,16 +37,23 @@
 </head>
 
 <body>
-<div  tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="false">
+    <div tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="false">
         <div class="modal-dialog">
-            <div class="bg-danger modal-content">
+            <div class="bg-warning modal-content">
                 <div class="modal-body text-center text-light">
                     Sorry... your Appointment is Failed..
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-green">
-                        <a href="../aboutUs/uAboutUs.php">Go to HomePage</a>
-                    </button>
+                    <a href="./uMakeAppointment.php">
+                        <button type="button" class="btn btn-purple">
+                            Return to take your Appointment
+                        </button>
+                    </a>
+                    <a href="../main/main.php">
+                        <button type="button" class="btn btn-green">
+                            Go to HomePage
+                        </button>
+                    </a>
                 </div>
             </div>
         </div>
