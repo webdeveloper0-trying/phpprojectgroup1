@@ -10,9 +10,9 @@ if (isset($_POST['adminname']) && isset($_POST['password'])) {
     $_SESSION["adminname"] = $adminname;
 }
 
-if($_SESSION["mainadmin"] = "0"){
+if ($_SESSION["mainadmin"] = "0") {
     include "../common/adminNavbar.php";
-}else{
+} else {
     include "../common/adminNavbar.php";
 }
 
@@ -50,8 +50,8 @@ if (!isset($_SESSION["adminname"])) {
 
 <body>
     <div class="col col-10 col-md-auto d-flex justify-content-center align-items-center flex-column">
-    <h3 class="h3 header my-5">Total Appointment List</h3>
-     
+        <h3 class="h3 header my-5">Total Appointment List</h3>
+
         <table class="table">
             <thead class="thead">
                 <tr>
@@ -90,8 +90,8 @@ if (!isset($_SESSION["adminname"])) {
             </tbody>
         </table>
 
-        <div class="container d-flex  justify-content-end">
-            <ul class="pagination pagination-circle">
+        <nav aria-label="Page navigation example" class="mb-5">
+            <ul class="pagination">
                 <li class="page-item 
                     <?php if ($page <= 1) {
                         echo "disabled";
@@ -122,7 +122,7 @@ if (!isset($_SESSION["adminname"])) {
                     </a>
                 </li>
             </ul>
-        </div>
+        </nav>
     </div>
 </body>
 

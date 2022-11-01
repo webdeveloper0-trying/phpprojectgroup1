@@ -13,8 +13,8 @@ if (isset($_POST['adminname']) && isset($_POST['password'])) {
 
 if (!isset($_SESSION["adminname"])) {
     header("Location: ../adminRegisterLogin/aLogin.php");
-} 
-    $adminname = $_SESSION["adminname"];
+}
+$adminname = $_SESSION["adminname"];
 
 
 
@@ -101,7 +101,7 @@ $bloodstocks = $bloodStockCount[0]['COUNT(id)'];
 
         <h3 class="h3 header my-5">Admin Dashboard</h3>
         <div class="adminDashboard col col-10 row justify-content-center align-items-center flex-wrap py-5">
-          
+
             <div class="col col-4 text-center">
                 <a href="../aTotalRegisterList/aTotalRegister.php">
                     <button type="button" class="my-3 btn btn-xl py-3 btn-green btn-rounded d-flex align-items-center">
@@ -254,7 +254,19 @@ $bloodstocks = $bloodStockCount[0]['COUNT(id)'];
                 </a>
             </div>
 
-            <div class="col col-4"></div>
+            <div class="col col-4 text-center">
+
+                <a href="../contactUs/addContact.php">
+                    <button type="button" class="my-3 btn btn-xl py-3 btn-green btn-rounded d-flex align-items-center">
+                        Contact
+
+
+                    </button>
+                </a>
+            </div>
+
+          
+
 
 
         </div>

@@ -81,7 +81,7 @@ if (!isset($_SESSION["adminname"])) {
                             </div>
                         </td>
                         <td>
-                            <a id="submitCount" class="btn bnt-purple" href="../../Controller/doctor/deleteController.php?cId=<?= $doctor["doctor_id"] ?>">
+                            <a id="submitCount" class="btn btn-purple" href="../../Controller/doctor/deleteController.php?cId=<?= $doctor["doctor_id"] ?>">
                                 Update
                             </a>
                         </td>

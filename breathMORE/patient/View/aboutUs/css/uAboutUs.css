@@ -98,6 +98,7 @@
 
 .bg-purple {
   background: var(--textColorOne) !important;
+  border:0.2em solid var(--secondaryColor) !important;
   color: #000 !important;
 }
 

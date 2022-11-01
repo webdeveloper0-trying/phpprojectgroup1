@@ -13,6 +13,10 @@
     height:10vh !important;
 }
 
+.homeHeader{
+    font-size:1.4em !important;
+}
+
 .profileCard{
     background:var(--textColorOne) !important;
 }
@@ -24,19 +28,6 @@
     align-self:center !important;
 }
 
-.adminPath{
-    width:100% !important;
-    text-align:center !important;
-    line-height:10vh !important;
-   
-
-}
-
-.adminPath a{
-    color:var(--textColorOne) !important;
-    text-decoration:none !important;
-    text-shadow:3px 5px 3px rgba(0,0,0,0.2) !important;
-}
 
 .adminSetting{
     height:100vh !important;

@@ -1,9 +1,10 @@
 <?php
-
 session_start();
-include "../../../patient/Controller/common/aChColorTxtController.php";
 
-include "../../Controller/aUserTotalRegister/aURegisterListController.php";
+include "../../Controller/adminBlogs/aBlogListController.php";
+include "../../../patient/Controller/common/aChColorTxtController.php";
+include "../../Controller/feedback/aFeedbackListController.php";
+
 
 if (isset($_POST['adminname']) && isset($_POST['password'])) {
     $adminname = $_POST['adminname'];
@@ -20,6 +21,8 @@ if ($_SESSION["mainadmin"] = "0") {
 if (!isset($_SESSION["adminname"])) {
     header("Location: ../adminRegisterLogin/aLogin.php");
 }
+
+
 ?>
 
 <!DOCTYPE html>
@@ -29,59 +32,67 @@ if (!isset($_SESSION["adminname"])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Total Register List</title>
+    <title>Feedback</title>
 
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css?=time()" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css?=time()" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Bootstrap css1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- Bootstrap js1 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous" defer></script>
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap?=time()" rel="stylesheet" />
+
     <!-- MDB -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css?=time()" rel="stylesheet" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js" defer></script>
 
-    <!-- custom css files 2 -->
-    <link rel="stylesheet" href="../common/css/style.css" <?php time(); ?>>
-    <link rel="stylesheet" href="../common/css/adminNavbar.css" <?php time(); ?>>
+    <!-- custom css -->
+    <link rel="stylesheet" href="../common/css/style.css">
+    <link rel="stylesheet" href="./css/adminBlogList.css" <?php time() ?>>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+    <!-- Navbar custom css -->
+    <link rel="stylesheet" href="../common/css/adminNavbar.css" <?php time() ?>>
+
+    <!-- jquery 1 -->
+    <script src="../common/jq/jquery-3.6.0.min.js" defer></script>
+    <script src="./js/adminBlogList.js" defer></script>
+
 </head>
 
 <body>
-    <div class="col col-10 col-md-auto d-flex justify-content-center align-items-center flex-column">
-        <h3 class="h3 header my-5">Total Registration List</h3>
-        <table class="table">
-            <thead class="thead">
+    <div class="d-flex justify-content-center align-items-center flex-column">
+        <h3 class="h3 header my-5">Feedback</h3>
+        <table class="table align-middle bg-white">
+            <thead class="thead text-center">
                 <tr>
-                    <th scope="col">No</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Gender</th>
-                    <th scope="col">Age</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Ph.NO</th>
+                    <th>No</th>
+                    <th>User Id</th>
+                    <th>Feedback</th>
+                    <th>Rating</th>
                 </tr>
             </thead>
             <tbody>
+
                 <?php
                 $count = ($page * $rowLimit) - ($rowLimit - 1);
-                $id = 0;
-                foreach ($regLists as $regList) { ?>
+                foreach ($feedbacks as $feedback) { ?>
                     <tr>
-                        <th scope="row"><?= $count++ ?></th>
-                        <td><?= $regList["user_name"] ?></td>
-                        <td><?= $regList["gender"] ?></td>
-                        <td><?= $regList["age"] ?></td>
-                        <td><?= $regList["user_email"] ?></td>
-                        <td><?= $regList["ph_num"] ?></td>
-                    </tr><?php } ?>
+                        <td class="text-center"><?= $count++; ?></td>
 
+                        <td class="text-center">
+                            <?= $feedback["user_id"] ?>
+                        </td>
+                        <td class="text-center">
+                            <?= $feedback["feedback"] ?>
+                        </td>
+                        <td class="text-center"><?= $feedback["rating"] ?>
+                        </td>
+
+
+                    </tr><?php } ?>
 
             </tbody>
         </table>
-
         <nav aria-label="Page navigation example" class="mb-5">
-            <ul class="pagination">
+            <ul class="pagination justify-content-end">
                 <li class="page-item 
                     <?php if ($page <= 1) {
                         echo "disabled";
@@ -113,6 +124,9 @@ if (!isset($_SESSION["adminname"])) {
                 </li>
             </ul>
         </nav>
+
+
+
     </div>
 </body>
 

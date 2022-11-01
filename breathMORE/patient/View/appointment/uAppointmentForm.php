@@ -135,10 +135,10 @@ if (isset($_GET["id"])) {
 
                     <div class="col col-5 ms-5">
                         <div class="form-outline my-4">
-                            <input type="hidden" name="docId" id="" value="<?= $docName[0]["doctor_id"] ?>" />
-                            <input type="hidden" name="docCenter" id="" value="<?= $docName[0]["center"] ?>">
-                            <label class="form-label" for="docName">Chose Doctor Name</label>
-                            <input type="text" name="docName" id="docName" class="form-control" value="<?= $docName[0]["doctor_name"] ?>" readonly />
+                            <input type="hidden" name="docId" id="" value=`<?= $docName[0]["doctor_id"] ?>` />
+                            <input type="hidden" name="docCenter" id="" value="<?=$docName[0]["center"] ?>">
+                            <label class="form-label" for="docName">Doctor Name</label>
+                            <input type="text" name="docName" id="docName" class="form-control" value="Dr.<?= $docName[0]["doctor_name"] ?>" readonly />
                         </div>
 
                         <div class="appointmentDay mb-4 mt-4">

@@ -55,7 +55,7 @@ $("#choseSpeciality").change(function () {
 
                     $("#docNames").append(`
                     <button class="doctor-btn m-3">
-                    <a href="../../View/appointment/uAppointmentForm.php?id=${doc.doctor_id}">${doc.doctor_name}</a>
+                    <a href="../../View/appointment/uAppointmentForm.php?id=${doc.doctor_id}">Dr.${doc.doctor_name}</a>
                 </button>
                
                 `)

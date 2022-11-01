@@ -1,6 +1,20 @@
 <?php
+session_start();
+if (isset($_POST['adminname']) && isset($_POST['password'])) {
+    $adminname = $_POST['adminname'];
+    $password = $_POST['password'];
+    $_SESSION["adminname"] = $adminname;
+}
+
+
+if ($_SESSION["ismainadmin"] == 0) {
+    $adminTxt = "Sub Admin";
+} else {
+    $adminTxt = "Main Admin";
+}
 include "../../Controller/common/aChColorTxtController.php";
 include "../../Controller/adminProfile/aProfileSelectPropsController.php";
+
 
 
 ?>
@@ -24,6 +38,8 @@ include "../../Controller/adminProfile/aProfileSelectPropsController.php";
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css?=time()" rel="stylesheet" />
     <!-- MDB JS1-->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js"></script>
+    <!-- boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <link rel="stylesheet" href="../common/css/style.css" <?php time() ?>>
     <link rel="stylesheet" href="./css/adminProfile.css" <?php time() ?>>
@@ -43,26 +59,20 @@ include "../../Controller/adminProfile/aProfileSelectPropsController.php";
                 $fName = $webName[0];
                 $lName = $webName[1];
                 ?>
-                <h3 class="homeHeader h3 fw-bold mt-3 ms-1">
-                    <?= $fName ?><span><?= $lName ?></span></h3>
+                <a href="../adminDashboard/aDashboard.php">
+                    <h3 class="homeHeader fw-bold text-center mt-5 ms-1">
+                        <?= $fName ?><span><?= $lName ?></span></h3>
+                </a>
             </div>
             <div class="profileCard card rounded-0 py-3">
-                <img src="../storage/blogsImg/benefitsOfCoffee.jpg" class="card-img-top" alt="Sunset Over the Sea" />
+                <i class='bx bx-lg bxs-user-circle text-center' style='color:#4b694d'></i>
                 <p class="card-text text-center mt-2">
-                    Main Admin
+                    <?= $adminTxt; ?>
                 </p>
             </div>
 
-            <div class="adminPath my-3">
-                <a href="#">Emergency</a>
-            </div>
-            <div class="adminPath my-3">
-                <a href="#">Contact Us</a>
-            </div>
-            <div class="adminPath my-3">
-                <a href="#">FAQ</a>
-            </div>
-           
+          
+
         </div>
 
         <div class="col-2 me-5">
@@ -72,34 +82,109 @@ include "../../Controller/adminProfile/aProfileSelectPropsController.php";
             <div class="profileHeader"></div>
             <nav class="bg-green adminMenuLinks navbar navbar-expand-lg rounded">
                 <div class="container-fluid">
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="../adminDashboard/aDashboard.php">Admin Management</a></li>
-                            <li class="breadcrumb-item"><a href="../adminAppointment/aAppontmentList.php">Total Registered List</a></li>
-                            <li class="breadcrumb-item active" aria-current="page"><a href=".">Total Appointment</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">
-                                <a href="#">Doctors List</a>
-                            </li>
-                            <li class="breadcrumb-item active" aria-current="page">
-                                <a href="#">Blood Donation</a>
-                            </li>
-                            <li class="breadcrumb-item active" aria-current="page">
-                                <a href="#">Blood Stocks</a>
-                            </li>
-                            <li class="breadcrumb-item active" aria-current="page">
-                                <a href="#">Medicine</a>
-                            </li>
-                            <li class="breadcrumb-item active" aria-current="page">
-                                <a href="#">Lab Reports</a>
-                            </li>
-                            <li class="breadcrumb-item active" aria-current="page">
-                                <a href="#">Subscribe Letters</a>
-                            </li>
-                            <li class="breadcrumb-item active" aria-current="page">
-                                <a href="#">Blogs</a>
-                            </li>
-                        </ol>
-                    </nav>
+                    <?php if ($_SESSION["ismainadmin"] == 0) { ?>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+
+                                <li class="breadcrumb-item">
+                                    <a href="../aTotalRegisterList/aTotalRegister.php">Total Registered List</a>
+                                </li>
+                                <li class="breadcrumb-item active" aria-current="page">
+                                    <a href="../adminAppointment/aAppointmentList.php">Total Appointment</a>
+                                </li>
+                                <li class="breadcrumb-item active" aria-current="page">
+                                    <a href="../doctor/list.php">Doctors List</a>
+                                </li>
+                                <li class="breadcrumb-item active" aria-current="page">
+                                    <a href="../adminBloodDonation/abloodDonationList.php">Blood Donation</a>
+                                </li>
+                                <li class="breadcrumb-item active" aria-current="page">
+                                    <a href="../bloodStock/listBs.php">Blood Stocks</a>
+                                </li>
+                                <li class="breadcrumb-item active" aria-current="page">
+                                    <a href="../diseAndmedi/addmedi.php">Medicine</a>
+                                </li>
+                                <li class="breadcrumb-item active" aria-current="page">
+                                    <a href="../labreport/labList.php">Lab Reports</a>
+                                </li>
+                                <li class="breadcrumb-item active" aria-current="page">
+                                    <a href="../pharmacy/listPharmacy.php">Pharmacies</a>
+                                </li>
+                                <li class="breadcrumb-item active" aria-current="page">
+                                    <a href="../phistory/phlist.php">Pharmacies</a>
+                                </li>
+                                <li class="breadcrumb-item active" aria-current="page">
+                                    <a href="../oxygen/o2list.php">Oxygen</a>
+                                </li>
+                                <li class="breadcrumb-item active" aria-current="page">
+                                    <a href="../faq/faqAdd.php">FAQS</a>
+                                </li>
+                                <li class="breadcrumb-item active" aria-current="page">
+                                    <a href="../feedback/aFeedbackList.php">Feedbacks</a>
+                                </li>
+                                <li class="breadcrumb-item active" aria-current="page">
+                                    <a href="../subscribeNews/aSubscribeNewList.php">Subscription Lists</a>
+                                </li>
+                                <li class="breadcrumb-item active" aria-current="page">
+                                    <a href="../adminBlog/aBlogList.php">Blogs</a>
+                                </li>
+                            </ol>
+                        </nav>
+                    <?php } else { ?>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item">
+                                    <a href="../adminManagement/aManagement.php">
+                                        Admin Management
+                                    </a>
+                                </li>
+
+                                <li class="breadcrumb-item">
+                                    <a href="../aTotalRegisterList/aTotalRegister.php">Total Registered List</a>
+                                </li>
+                                <li class="breadcrumb-item active" aria-current="page">
+                                    <a href="../adminAppointment/aAppointmentList.php">Total Appointment</a>
+                                </li>
+                                <li class="breadcrumb-item active" aria-current="page">
+                                    <a href="../doctor/list.php">Doctors List</a>
+                                </li>
+                                <li class="breadcrumb-item active" aria-current="page">
+                                    <a href="../adminBloodDonation/abloodDonationList.php">Blood Donation</a>
+                                </li>
+                                <li class="breadcrumb-item active" aria-current="page">
+                                    <a href="../bloodStock/listBs.php">Blood Stocks</a>
+                                </li>
+                                <li class="breadcrumb-item active" aria-current="page">
+                                    <a href="../diseAndmedi/addmedi.php">Medicine</a>
+                                </li>
+                                <li class="breadcrumb-item active" aria-current="page">
+                                    <a href="../labreport/labList.php">Lab Reports</a>
+                                </li>
+                                <li class="breadcrumb-item active" aria-current="page">
+                                    <a href="../pharmacy/listPharmacy.php">Pharmacies</a>
+                                </li>
+                                <li class="breadcrumb-item active" aria-current="page">
+                                    <a href="../phistory/phlist.php">Pharmacies</a>
+                                </li>
+                                <li class="breadcrumb-item active" aria-current="page">
+                                    <a href="../oxygen/o2list.php">Oxygen</a>
+                                </li>
+                                <li class="breadcrumb-item active" aria-current="page">
+                                    <a href="../faq/faqAdd.php">FAQS</a>
+                                </li>
+                                <li class="breadcrumb-item active" aria-current="page">
+                                    <a href="../feedback/aFeedbackList.php">Feedbacks</a>
+                                </li>
+                                <li class="breadcrumb-item active" aria-current="page">
+                                    <a href="../subscribeNews/aSubscribeNewList.php">Subscription Lists</a>
+                                </li>
+                                <li class="breadcrumb-item active" aria-current="page">
+                                    <a href="../adminBlog/aBlogList.php">Blogs</a>
+                                </li>
+                            </ol>
+                        </nav>
+                    <?php } ?>
+
                 </div>
             </nav>
 

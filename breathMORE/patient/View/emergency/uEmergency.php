@@ -1,9 +1,9 @@
 <?php
 session_start();
 if (!isset($_SESSION["userId"])) {
-  header("Location: ../uRegisterLogin/register.php");
+    header("Location: ../uRegisterLogin/register.php");
 } else {
-  $userId = $_SESSION["userId"];
+    $userId = $_SESSION["userId"];
 }
 include "../../Controller/blogs/mainBlogController.php";
 include "../common/uNavbar/uNavbar.php";
@@ -199,6 +199,37 @@ include "../../Controller/emergency/oxygenListController.php";
 
             </div>
         </div>
+
+        <hr />
+
+        <form class="mt-5" action="../../Controller/uFeedBack/uAddFeedbackController.php" method="POST">
+            <h4 class="header mb-3">Your FeedBack</h4>
+
+            <!-- Message input -->
+            <div class="form-outline mb-4">
+                <textarea name="fbMsg" class="form-control" id="form4Example3" rows="4"></textarea>
+                <label class="form-label" for="form4Example3">Review</label>
+            </div>
+
+
+
+            <div class="row">
+
+                <div class="col">
+                    <label for="customRange3" class="form-label">Rating for our services</label>
+                    <div class="range">
+                        <input type="range" name="fbRating" class="form-range" min="0" max="5" step="0.5" id="customRange3" />
+                    </div>
+                </div>
+
+                <div class="col">
+                    <!-- Submit button -->
+                    <button type="submit" name="fbSubmit" class="btn btn-purple btn-lg mb-4">Send</button>
+                </div>
+            </div>
+
+
+        </form>
 
 
 

@@ -30,8 +30,10 @@
 
 #offcanvasMenu {
   width:20vw !important;
+  height:100vh !important;
   background: var(--secondaryColor) !important;
   color:var(--textColorOne) !important;
+  overflow-y:auto !important;
 }
 
 .list-group {

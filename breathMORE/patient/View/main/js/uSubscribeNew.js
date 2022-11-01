@@ -8,10 +8,7 @@ $(".newsLetterBox").click(function(){
             type: "POST",
             data: sendData,
             success: function (res) {
-                console.log("OKAY");
-
-
-               
+                console.log("OKAY")            
 
             },
             error: function (err) {

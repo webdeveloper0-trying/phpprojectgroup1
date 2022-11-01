@@ -126,7 +126,7 @@ include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
                     <a href="../subscribeNews/aSubscribeNewList.php">Subscribe News</a>
                 </li>
                 <li class="p-3">
-                    <a href="#">FeedBack</a>
+                    <a href="../feedback/aFeedbackList.php">FeedBack</a>
                 </li>
 
             </ul>
