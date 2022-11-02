@@ -59,27 +59,27 @@ include "../../Controller/userProfile/profileController.php";
 
 
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                    <li class="nav-link-active nav-item m-3">
-                        <a class="nav-link" href="../main/main.php">Home</a>
+                    <li id="uHome" class="nav-link-active nav-item m-3">
+                        <a class="uHome nav-link" href="../main/main.php">Home</a>
                     </li>
-                    <li class="nav-link-active nav-item m-3">
-                        <a class="nav-link" href="../aboutUs/uAboutUs.php">About Us</a>
+                    <li id="uAbout" class="nav-link-active nav-item m-3">
+                        <a class="uAbout nav-link" href="../aboutUs/uAboutUs.php">About Us</a>
                     </li>
-                    <li class="nav-link-active nav-item m-3">
-                        <a class="nav-link" href="../centers/center.php">Center</a>
+                    <li class="uCenter nav-link-active nav-item m-3">
+                        <a class="uCenter nav-link" href="../centers/center.php">Center</a>
                     </li>
-                    <li class="nav-link-active nav-item m-3">
-                        <a class="nav-link" href="../blogs/mainBlog.php">Blogs</a>
+                    <li class="uBlogs nav-link-active nav-item m-3">
+                        <a class="uBlogs nav-link" href="../blogs/mainBlog.php">Blogs</a>
                     </li>
-                    <li class="nav-link-active nav-item m-3">
-                        <a class="nav-link" href="../emergency/uEmergency.php">Contact Us</a>
+                    <li class="uContact nav-link-active nav-item m-3">
+                        <a class="uContact nav-link" href="../emergency/uEmergency.php">Contact Us</a>
                     </li>
                 </ul>
 
             </div>
 
-            <div class="userProfile nav-item me-5 me-lg-0 dropdown">
-                <a class="nav-link dropdown-toggle" href="../userProfile/uprofile.php" id="navbarDropdown" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+            <div id="uProfile" class="userProfile nav-item me-5 me-lg-0 dropdown">
+                <a class="uProfile nav-link dropdown-toggle" href="../userProfile/uprofile.php" id="navbarDropdown" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
                     <img src="../storage/home/<?= $userInfo[0]["patient_profile"] ?>" width="30em" height="30em" alt="a" class="PicImg my-4 rounded-circle" />
                 </a>
                 <ul class="dropdown-menu me-5" aria-labelledby="navbarDropdown">

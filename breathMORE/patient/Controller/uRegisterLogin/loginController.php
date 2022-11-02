@@ -18,6 +18,7 @@ if (isset($_POST["username"]) && isset($_POST["password"])) {
     if (password_verify($password, $result[0]['user_password'])) {
         $_SESSION["username"] = $username;
         $_SESSION["userId"] = $result[0]['register_id'];
+        $_SESSION["isRegister"] = false;
         // echo $_SESSION["userId"];
         header("location: ../../View/main/main.php");
     } else {

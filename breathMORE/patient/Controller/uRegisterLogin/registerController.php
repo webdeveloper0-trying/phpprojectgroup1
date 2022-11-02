@@ -54,6 +54,7 @@ if (isset($_POST["username"]) && isset($_POST["password"])) {
         $sql1->execute();
         $resultId = $sql1->fetchAll(PDO::FETCH_ASSOC);
         $_SESSION["userId"] = $resultId[0]['register_id'];
+        $_SESSION["isRegister"] = true;
 
         // echo "Id".$_SESSION["userId"];
       

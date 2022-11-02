@@ -12,6 +12,7 @@ include "../common/uFooter/uFooter.php";
 
 include "../../../patient/Controller/common/aChColorTxtController.php";
 include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
+include "../../Controller/uFeedBack/uSelectFeedbackController.php";
 
 
 ?>
@@ -23,6 +24,15 @@ include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home</title>
+
+  <?php if($_SESSION["isRegister"]){?> 
+     <!-- Shepherd -->
+  <link rel="stylesheet" href="../libs/node_modules/shepherd.js/dist/css/shepherd.css" />
+  <script src="../libs/node_modules/@popperjs/core/dist/umd/popper.min.js" defer></script>
+    <script src="../libs/node_modules/shepherd.js/dist/js/shepherd.min.js" defer></script>
+    <script src="./js/userguide.js" defer></script>
+    <?php } ?>
+ 
 
   <!-- Splide JS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css">
@@ -36,6 +46,7 @@ include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
 
   <!-- jq and js -->
   <script src="../common/jq/jquery-3.6.0.min.js" defer></script>
+  
   <script src="../common/uNavbar/js/uNavbar.js" defer></script>
   <script src="./js/home.js" defer></script>
   <script src="./js/bmiBmr.js" defer></script>
@@ -73,14 +84,14 @@ include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
                 </p>
 
                 <div class="d-flex pb-4 m-4" aria-label="Basic example">
-                  <a href="../appointment/uMakeAppointment.php">
-                    <button type="button" class="btn  btn-green rounded-0">
+                  <a id="ufindDoctor" href="../appointment/uMakeAppointment.php">
+                    <button type="button" class="ufindDoctor btn  btn-green rounded-0">
                       <img src="../storage/home/doct1.png" alt="" width="30" />
                       Find Doctors
                     </button>
                   </a>
-                  <a href="../pharmacy/pharmacy.php">
-                    <button type="button" class="btn  btn-purple rounded-0 ms-1">
+                  <a id="upharmacy" href="../pharmacy/pharmacy.php">
+                    <button type="button" class="upharmacy btn  btn-purple rounded-0 ms-1">
                       <img src="../storage/home/capsule.png" alt="" width="30">
                       Pharmacies
                     </button>
@@ -91,32 +102,32 @@ include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
 
             <div class="col-lg-5 col-md-6 col-sm-5">
 
-              <div class="my-card-bg text-center p-2">
-                <div>
+              <div id="uUserGuide" class="my-card-bg text-center p-2">
+                <div class="uUserGuide">
                   <i class='bx bxs-user-account bx-lg' style='color:#f2f4f1'></i>
                 </div>
                 <a href="../userGuide/userguide.php" class="serviceLink myhover">User Guide</a>
               </div>
 
             </div>
-            <div class=" col-lg-5 col-md-6 col-sm-5">
-              <div class="my-card-bg text-center btn-background-slide p-2">
-                <div>
+            <div class="col-lg-5 col-md-6 col-sm-5">
+              <div id="uEmergency" class="my-card-bg text-center btn-background-slide p-2">
+                <div class="uEmergency">
                   <i class='bx bx-plus-medical bx-lg' style='color:#f2f4f1'></i>
                 </div>
                 <a href="../emergency/uEmergency.php" class="serviceLink myhover">Emergency</a>
               </div>
             </div>
             <div class="col-lg-5 col-md-6 col-sm-5">
-              <div class="my-card-bg text-center p-2">
-                <div>
+              <div id="uAppointment" class="my-card-bg text-center p-2">
+                <div class="uAppointment">
                   <i class='bx bxs-bookmarks bx-lg' style='color:#f2f4f1'></i>
                 </div>
                 <a href="../appointment/uMakeAppointment.php" class="serviceLink myhover">Appointment</a>
               </div>
             </div>
-            <div class="col-lg-5 col-md-6 col-sm-5">
-              <div class="my-card-bg text-center p-2">
+            <div id="uBloodDonation" class="col-lg-5 col-md-6 col-sm-5">
+              <div class="uBloodDonation my-card-bg text-center p-2">
                 <div>
                   <i class='bx bxs-donate-blood bx-lg' style='color:#f2f4f1'></i>
                 </div>
@@ -134,11 +145,6 @@ include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
         </div>
 
       </div>
-
-
-
-
-
     </section>
   </div>
   <hr />
@@ -156,7 +162,7 @@ include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
 
             <div class="col mb-4">
               <div class="card">
-                <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                <div class="blogimage bg-image hover-overlay ripple" data-mdb-ripple-color="light">
                   <img src="../storage/home/<?= $blogInMain["blog_img"] ?>" class="card-img-top" alt="..." />
                   <a href="#!">
                     <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
@@ -182,46 +188,19 @@ include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
     <div class="splideCarousel splide pt-2 ">
       <div class="splide__track">
         <ul class="splide__list">
+          
+        <?php foreach($feedbacks as $feedback){?> 
           <li class="splide__slide d-flex justify-content-center align-items-center flex-column">
-            <img class="sCarouselImg rounded-circle" src="../storage/home/lady-img.jpg" alt="lady-profile">
+            <img class="sCarouselImg rounded-circle" src="../storage/home/profile.png" alt="lady-profile">
+            
             <p class="sCarouselTxt rounded p-3 pt-5">
-              I have had prolonged treatment here for a serious situation. the hospital, the consultants, staff, everyone
-              has been highly professional and expertly trained. Staff are helpful, caring, professional and friendly.
-              Thank you for everything. I highly recommend this global standard hospital in the heart of Yangon.
+            <b>Rating: <?= $feedback["rating"] ?></b> <br />
+             <?= $feedback["feedback"] ?>
             </p>
           </li>
-          <li class="splide__slide d-flex justify-content-center align-items-center flex-column">
-            <img class="sCarouselImg rounded-circle" src="../storage/home/lady-img.jpg" alt="lady-profile">
-            <p class="sCarouselTxt rounded p-3 pt-5">
-              I have had prolonged treatment here for a serious situation. the hospital, the consultants, staff, everyone
-              has been highly professional and expertly trained. Staff are helpful, caring, professional and friendly.
-              Thank you for everything. I highly recommend this global standard hospital in the heart of Yangon.
-            </p>
-          </li>
-          <li class="splide__slide d-flex justify-content-center align-items-center flex-column">
-            <img class="sCarouselImg rounded-circle" src="../storage/home/lady-img.jpg" alt="lady-profile">
-            <p class="sCarouselTxt rounded p-3 pt-5">
-              I have had prolonged treatment here for a serious situation. the hospital, the consultants, staff, everyone
-              has been highly professional and expertly trained. Staff are helpful, caring, professional and friendly.
-              Thank you for everything. I highly recommend this global standard hospital in the heart of Yangon.
-            </p>
-          </li>
-          <li class="splide__slide d-flex justify-content-center align-items-center flex-column">
-            <img class="sCarouselImg rounded-circle" src="../storage/home/lady-img.jpg" alt="lady-profile">
-            <p class="sCarouselTxt rounded p-3 pt-5">
-              I have had prolonged treatment here for a serious situation. the hospital, the consultants, staff, everyone
-              has been highly professional and expertly trained. Staff are helpful, caring, professional and friendly.
-              Thank you for everything. I highly recommend this global standard hospital in the heart of Yangon.
-            </p>
-          </li>
-          <li class="splide__slide d-flex justify-content-center align-items-center flex-column">
-            <img class="sCarouselImg rounded-circle" src="../storage/home/lady-img.jpg" alt="lady-profile">
-            <p class="sCarouselTxt rounded p-3 pt-5">
-              I have had prolonged treatment here for a serious situation. the hospital, the consultants, staff, everyone
-              has been highly professional and expertly trained. Staff are helpful, caring, professional and friendly.
-              Thank you for everything. I highly recommend this global standard hospital in the heart of Yangon.
-            </p>
-          </li>
+          <?php } ?>
+         
+         
         </ul>
       </div>
     </div>
@@ -323,8 +302,8 @@ include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
 
     </div>
   </section>
-  <button type="button" class="newsLetterBox hover btn btn-secondary" data-mdb-container="body" data-mdb-toggle="popover" data-mdb-placement="left" data-mdb-content="Well Received!">
-    <i class='bx bx-news newsLetter bx-lg'></i>
+  <button type="button" id="uSubscribe" class="newsLetterBox hover btn btn-secondary" data-mdb-container="body" data-mdb-toggle="popover" data-mdb-placement="left" data-mdb-content="Well Received!">
+    <i class='uSubscribe bx bx-news newsLetter bx-lg'></i>
     <p class="newsAlert rounded p-3">If you click this button, We will send to your Email our latest blogs and event.</p>
   </button>
 

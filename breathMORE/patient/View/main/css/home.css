@@ -83,6 +83,14 @@ marquee {
   object-fit: cover !important;
 }
 
+.blogimage{
+  transition:all 0.5s !important;
+}
+.blogimage:hover{
+  transform:scale(1.1) !important;
+
+}
+
 .myBlogs .card-body {
   height: 25vh !important;
 
