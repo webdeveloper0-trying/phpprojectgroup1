@@ -11,10 +11,11 @@ if (isset($_POST['adminname']) && isset($_POST['password'])) {
     $_SESSION["adminname"] = $adminname;
 }
 
-if($_SESSION["mainadmin"] = "0"){
+
+if ($_SESSION["ismainadmin"]) {
     include "../common/adminNavbar.php";
-}else{
-    include "../common/adminNavbar.php";
+} else {
+    include "../common/adminSubNavbar.php";
 }
 
 if (!isset($_SESSION["adminname"])) {
@@ -52,7 +53,7 @@ if (!isset($_SESSION["adminname"])) {
 
     <div class="row d-flex justify-content-center align-items-center m-5">
 
-        <div class="col-lg-1 col-sm-1 m-3 ">
+        <div class="col-lg-1 col-sm-1 m-3 mt-5 pt-5">
 
             <button type="button" class="btn  mybtn-pill position-relative">
                 Total
@@ -67,7 +68,7 @@ if (!isset($_SESSION["adminname"])) {
 
 
         <?php foreach ($instockLists as $key => $instock) { ?>
-            <div class="col-lg-1 col-sm-1 m-3 flex-wrap ">
+            <div class="col-lg-1 col-sm-1 m-3 flex-wrap mt-5 pt-5">
 
                 <button type="button" class="btn mybtn-pill position-relative">
                     <?= $instock["blood_type"] ?>

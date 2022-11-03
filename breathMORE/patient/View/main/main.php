@@ -24,16 +24,16 @@ include "../../Controller/uFeedBack/uSelectFeedbackController.php";
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home</title>
-  
 
-  <?php if($_SESSION["isRegister"]){?> 
-     <!-- Shepherd -->
-  <link rel="stylesheet" href="../libs/node_modules/shepherd.js/dist/css/shepherd.css" />
-  <script src="../libs/node_modules/@popperjs/core/dist/umd/popper.min.js" defer></script>
+
+  <?php if ($_SESSION["isRegister"]) { ?>
+    <!-- Shepherd -->
+    <link rel="stylesheet" href="../libs/node_modules/shepherd.js/dist/css/shepherd.css" />
+    <script src="../libs/node_modules/@popperjs/core/dist/umd/popper.min.js" defer></script>
     <script src="../libs/node_modules/shepherd.js/dist/js/shepherd.min.js" defer></script>
     <script src="./js/userguide.js" defer></script>
-    <?php } ?>
- 
+  <?php } ?>
+
 
   <!-- Splide JS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css">
@@ -48,7 +48,7 @@ include "../../Controller/uFeedBack/uSelectFeedbackController.php";
 
   <!-- jq and js -->
   <script src="../common/jq/jquery-3.6.0.min.js" defer></script>
-  
+
   <script src="../common/uNavbar/js/uNavbar.js" defer></script>
   <script src="./js/home.js" defer></script>
   <script src="./js/bmiBmr.js" defer></script>
@@ -190,19 +190,19 @@ include "../../Controller/uFeedBack/uSelectFeedbackController.php";
     <div class="splideCarousel splide pt-2 ">
       <div class="splide__track">
         <ul class="splide__list">
-          
-        <?php foreach($feedbacks as $feedback){?> 
-          <li class="splide__slide d-flex justify-content-center align-items-center flex-column">
-            <img class="sCarouselImg rounded-circle" src="../storage/home/profile.png" alt="lady-profile">
-            
-            <p class="sCarouselTxt rounded p-3 pt-5">
-            <b>Rating: <?= $feedback["rating"] ?></b> <br />
-             <?= $feedback["feedback"] ?>
-            </p>
-          </li>
+
+          <?php foreach ($feedbacks as $feedback) { ?>
+            <li class="splide__slide d-flex justify-content-center align-items-center flex-column">
+              <img class="sCarouselImg rounded-circle" src="../storage/home/profile.png" alt="lady-profile">
+
+              <p class="sCarouselTxt rounded p-3 pt-5">
+                <b>Rating: <?= $feedback["rating"] ?></b> <br />
+                <?= $feedback["feedback"] ?>
+              </p>
+            </li>
           <?php } ?>
-         
-         
+
+
         </ul>
       </div>
     </div>

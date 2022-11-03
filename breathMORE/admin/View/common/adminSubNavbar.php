@@ -51,7 +51,16 @@
 
     <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasWithBothOptionsLabel">
         <div class="offcanvas-header">
-            <h5 class="offcanvas-title mt-3" id="offcanvasWithBothOptionsLabel">BreathMORE</h5>
+            <?php
+
+            $webName = explode("/", $webName);
+
+            $fName = $webName[0];
+            $lName = $webName[1];
+            ?>
+            <h5 class="offcanvas-title mt-3 header homeHeader fw-bold ps-3" id="offcanvasWithBothOptionsLabel">
+                <?= $fName ?><span><?= $lName ?></span></h5>
+
             <button type="button" class="btn-close btn-light" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">

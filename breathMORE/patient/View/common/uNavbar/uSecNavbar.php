@@ -11,7 +11,7 @@ include "../../../patient/Controller/common/aChColorTxtController.php";
         $fName = $webName[0];
         $lName = $webName[1];
         ?>
-        <img src="../storage/home/logo.png" alt="Logo" class="logoImg">
+        <img src="../storage/home/<?=$logoPic ?>" alt="Logo" class="logoImg">
         <h3 class="header h3 fw-bold">
           <?= $fName ?><br /><span><?= $lName ?></span></h3>
     </a>

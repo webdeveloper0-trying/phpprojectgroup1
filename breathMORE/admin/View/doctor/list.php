@@ -12,12 +12,11 @@ if (isset($_POST['adminname']) && isset($_POST['password'])) {
     $_SESSION["adminname"] = $adminname;
 }
 
-if ($_SESSION["mainadmin"] = "0") {
+if ($_SESSION["ismainadmin"]) {
     include "../common/adminNavbar.php";
 } else {
-    include "../common/adminNavbar.php";
+    include "../common/adminSubNavbar.php";
 }
-
 // if (!isset($_SESSION["adminname"])) {
 //     header("Location: ../adminRegisterLogin/aLogin.php");
 // }
@@ -48,67 +47,67 @@ if ($_SESSION["mainadmin"] = "0") {
     <div class="mx-5 d-flex justify-content-center align-items-center flex-column">
         <h3 class="header my-5"> Doctor Lists</h3>
 
-        <table class="table mb-3">
-            <thead class="thead">
-                <tr>
-                    <th>No</th>
-                    <th scope="col" colspan="2">Doctor Name</th>
-                    <th scope="col" colspan="2">Center</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
-                $noCount = 0;
-                //    print_r($docCountLists);
-                foreach ($docCountLists as $docCountList) { ?>
+        <?php if (count($docCountLists) != 0) { ?> <table class="table mb-3">
+                <thead class="thead">
                     <tr>
-                        <td><?= ++$noCount; ?></td>
-                        <td colspan="2">
-                            <input type="hidden" name="docId" class="doctorId" value="<?= $docCountList['doc_id'] ?>" />
-                            <?= $docCountList["doctor_name"] ?>
+                        <th>No</th>
+                        <th scope="col" colspan="2">Doctor Name</th>
+                        <th scope="col" colspan="2">Center</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    $noCount = 0;
+                    //    print_r($docCountLists);
+                    foreach ($docCountLists as $docCountList) { ?>
+                        <tr>
+                            <td><?= ++$noCount; ?></td>
+                            <td colspan="2">
+                                <input type="hidden" name="docId" class="doctorId" value="<?= $docCountList['doc_id'] ?>" />
+                                <?= $docCountList["doctor_name"] ?>
+                            </td>
+                            <td colspan="2"><?= $docCountList["center"] ?></td>
+                        </tr><?php } ?>
+                    <tr>
+
+                        <th scope="col">Total Appointment</th>
+                        <td>
+                            <span class="badge badge-danger text-primary rounded-pill fs-6">
+                                5
+                            </span>
                         </td>
-                        <td colspan="2"><?= $docCountList["center"] ?></td>
-                    </tr><?php } ?>
-                <tr>
 
-                    <th scope="col">Total Appointment</th>
-                    <td>
-                        <span class="badge badge-danger text-primary rounded-pill fs-6">
-                            5
-                        </span>
-                    </td>
+                        <th scope="col">Update Appointment</th>
+                        <td>
+                            <div class="form-outline">
+                                <input type="number" id="typeCount" class="form-control" value="" />
+                            </div>
+                        </td>
+                        <td>
+                            <a href="#" id="docSubmitCount" class="btn btn-purple">
+                                Update
+                            </a>
+                        </td>
+                    </tr>
 
-                    <th scope="col">Update Appointment</th>
-                    <td>
-                        <div class="form-outline">
-                            <input type="number" id="typeCount" class="form-control" value="" />
-                        </div>
-                    </td>
-                    <td>
-                        <a href="" id="docSubmitCount" class="btn btn-purple">
-                            Update
+                </tbody>
+            </table>
+
+
+
+            <nav aria-label="Page navigation example" class="mb-5">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item <?php if ($dpage <= 1) {
+                                                echo "disabled";
+                                            } ?>">
+                        <a class="page-link" href="?dpage=<?= $dpage - 1 ?>" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
                         </a>
-                    </td>
-                </tr>
-
-            </tbody>
-        </table>
+                    </li>
 
 
-
-        <nav aria-label="Page navigation example" class="mb-5">
-            <ul class="pagination justify-content-center">
-                <li class="page-item <?php if ($dpage <= 1) {
-                                            echo "disabled";
-                                        } ?>">
-                    <a class="page-link" href="?dpage=<?= $dpage - 1 ?>" aria-label="Previous">
-                        <span aria-hidden="true">&laquo;</span>
-                    </a>
-                </li>
-
-
-                <?php for ($i = 1; $i <= $dtotalPages; $i++) { ?>
-                    <li class="page-item 
+                    <?php for ($i = 1; $i <= $dtotalPages; $i++) { ?>
+                        <li class="page-item 
                             <?php
                             if ($dpage == $i) {
                                 echo "active";
@@ -116,16 +115,17 @@ if ($_SESSION["mainadmin"] = "0") {
                             ?>
                             "><a class="page-link" href="?dpage=<?= $i ?>"><?= $i ?></a></li><?php } ?>
 
-                <li class="page-item 
+                    <li class="page-item 
                         <?php if ($dpage >= $dtotalPages) {
                             echo "disabled";
                         } ?>">
-                    <a class="page-link" href="?dpage=<?= $dpage + 1 ?>" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
+                        <a class="page-link" href="?dpage=<?= $dpage + 1 ?>" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav> <?php } ?>
+
 
 
         <table class="table">

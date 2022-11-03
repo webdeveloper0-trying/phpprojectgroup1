@@ -12,10 +12,11 @@ if (isset($_POST['adminname']) && isset($_POST['password'])) {
     $_SESSION["adminname"] = $adminname;
 }
 
-if($_SESSION["mainadmin"] = "0"){
+
+if ($_SESSION["ismainadmin"]) {
     include "../common/adminNavbar.php";
-}else{
-    include "../common/adminNavbar.php";
+} else {
+    include "../common/adminSubNavbar.php";
 }
 
 if (!isset($_SESSION["adminname"])) {

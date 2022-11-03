@@ -37,13 +37,13 @@
             <div class="row mb-4">
                 <div class="col">
                     <div class="form-outline">
-                        <input type="text" name="blogTitle" id="blogTitle" class="form-control" />
+                        <input type="text" name="blogTitle" id="blogTitle" class="form-control" required />
                         <label class="form-label" for="blogTitle">Blog Title</label>
                     </div>
                 </div>
                 <div class="col">
                     <div class="form-outline">
-                        <input type="text" name="blogWriter" id="blogWriter" class="form-control" />
+                        <input type="text" name="blogWriter" id="blogWriter" class="form-control" required />
                         <label class="form-label" for="blogWriter">Blog Writer</label>
                     </div>
                 </div>
@@ -51,12 +51,12 @@
 
             <!-- Text input -->
             <div class="form-outline mb-4">
-                <input type="datetime-local" name="blogDate" id="blogDate" class="form-control" />
+                <input type="datetime-local" name="blogDate" id="blogDate" class="form-control"required />
             </div>
 
             <!-- Text input -->
             <div class="form-outline mb-4">
-                <input type="text" name="blogImage" id="BlogImage" class="form-control" />
+                <input type="text" name="blogImage" id="BlogImage" class="form-control" placeholder="imagename.extension" required />
                 <label class="form-label" for="BlogImage">Blog Image</label>
             </div>
 

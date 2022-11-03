@@ -12,7 +12,7 @@ include "../../Controller/userProfile/profileController.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
 
-    <link href="../storage/home/logo.png" rel="icon" type="image/png" />
+    <link href="../storage/home/<?=$logoPic ?>" rel="icon" type="image/png" />
 
 
     <!-- Font Awesome -->
@@ -44,7 +44,7 @@ include "../../Controller/userProfile/profileController.php";
                 <div class="navbar-brand mt-2 mt-lg-0">
 
                     <a href="../main/main.php">
-                        <img src="../storage/home/logo.png" height="35" alt="MDB Logo" loading="lazy" />
+                        <img src="../storage/home/<?=$logoPic ?>" height="35" alt="MDB Logo" loading="lazy" />
 
                         <?php
                         $webName = explode("/", $webName);

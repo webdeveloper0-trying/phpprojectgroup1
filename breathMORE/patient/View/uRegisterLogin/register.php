@@ -43,7 +43,7 @@ include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
             <div class="regBg col col-4 mx-auto pb-5">
                 <div class="d-flex justify-content-center align-items-center flex-column mt-5">
 
-                    <img src="../storage/home/logo.png" class="logo" />
+                <img src="../storage/home/<?=$logoPic ?>" alt="Logo" class="logoImg" width="85">
 
                     <?php
                     $webName;

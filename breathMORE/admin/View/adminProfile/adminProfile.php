@@ -7,10 +7,10 @@ if (isset($_POST['adminname']) && isset($_POST['password'])) {
 }
 
 
-if ($_SESSION["ismainadmin"] == 0) {
-    $adminTxt = "Sub Admin";
-} else {
+if ($_SESSION["ismainadmin"]) {
     $adminTxt = "Main Admin";
+} else {
+    $adminTxt = "Sub Admin";
 }
 include "../../Controller/common/aChColorTxtController.php";
 include "../../Controller/adminProfile/aProfileSelectPropsController.php";
@@ -82,7 +82,7 @@ include "../../Controller/adminProfile/aProfileSelectPropsController.php";
             <div class="profileHeader"></div>
             <nav class="bg-green adminMenuLinks navbar navbar-expand-lg rounded">
                 <div class="container-fluid">
-                    <?php if ($_SESSION["ismainadmin"] == 0) { ?>
+                    <?php if (!$_SESSION["ismainadmin"]) { ?>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
 
@@ -200,7 +200,7 @@ include "../../Controller/adminProfile/aProfileSelectPropsController.php";
                         <th>Logo Profile: </th>
                         <td>
                             <div class="form-outline">
-                                <input type="text" name="logoImg" id="logoImg" class="form-control" />
+                                <input type="text" name="logoImg" id="logoImg" class="form-control" placeholder="imgname.extension"  />
                                 <input type="hidden" name="logoImg1" id="logoImg1" value="<?= $defaultProps[0]["logoPic"] ?>" />
                             </div>
                         </td>
@@ -219,7 +219,7 @@ include "../../Controller/adminProfile/aProfileSelectPropsController.php";
                         <th>Website Name: </th>
                         <td>
                             <div class="form-outline">
-                                <input type="text" name="webName" id="webName" class="form-control" />
+                                <input type="text" name="webName" id="webName" class="form-control" placeholder="firstName/secondName"  />
                                 <input type="hidden" name="webName1" id="webName1" value="<?= $defaultProps[0]["websiteName"] ?>" />
                             </div>
                         </td>

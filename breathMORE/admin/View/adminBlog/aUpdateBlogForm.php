@@ -66,7 +66,7 @@ $blogInfos = $_SESSION["blogInfo"];
 
             <!-- Text input -->
             <div class="form-outline mb-4">
-                <input type="text" name="blogImage" id="BlogImage" class="form-control" value="<?=$blogInfos[0]["blog_img"] ?>" required />
+                <input type="text" name="blogImage" id="BlogImage" class="form-control" value="<?=$blogInfos[0]["blog_img"] ?>" placeholder="imagename.extension" required />
                 <label class="form-label" for="BlogImage">Blog Image</label>
             </div>
 

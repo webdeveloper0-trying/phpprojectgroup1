@@ -11,10 +11,11 @@ if (isset($_POST['adminname']) && isset($_POST['password'])) {
     $_SESSION["adminname"] = $adminname;
 }
 
-if($_SESSION["mainadmin"] = "0"){
+
+if ($_SESSION["ismainadmin"]) {
     include "../common/adminNavbar.php";
-}else{
-    include "../common/adminNavbar.php";
+} else {
+    include "../common/adminSubNavbar.php";
 }
 
 if (!isset($_SESSION["adminname"])) {
@@ -63,10 +64,10 @@ if (!isset($_SESSION["adminname"])) {
 
 </head>
 
-<body class="d-flex justify-content-center align-items-center flex-column">
+<body>
 
 
-    <div class="d-flex justify-content-center align-items-center flex-column">
+    <div class="d-flex align-items-center flex-column">
         <h3 class="header h3 my-5">Blood Donation List</h3>
 
         <table class="table">
