@@ -118,4 +118,26 @@
   transition: all 0.5s !important;
 }
 
+@media(max-width: 1266px){
+  .profileCon{
+    display:flex !important;
+    flex-direction:column !important;
+
+  }
+}
+
+@media(max-width: 540px){
+  .body{
+    margin:0 !important;
+  }
+  .profileCon{
+    margin:0 !important;
+    width:90vw !important;
+  }
+  /* .uProfileInfo{
+    width:90vw !important;
+
+  } */
+}
+
 

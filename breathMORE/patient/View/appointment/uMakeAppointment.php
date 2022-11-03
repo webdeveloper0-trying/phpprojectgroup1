@@ -57,7 +57,7 @@ include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
         <h5 class="h5 mt-3">Make an appointment with the doctor right now and choose your preferred date and time!!!</h5>
 
 
-        <div class="d-flex justify-content-center flex-row mt-5">
+        <div class="appintmentBox d-flex justify-content-center flex-row mt-5">
             <div class="col-5 appointmentGuideline d-flex justify-content-center align-items-center flex-column pt-5 pb-3">
 
                 <h5 class="text-green text-center mb-3">Need a appointment??</h5>
@@ -75,7 +75,7 @@ include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
 
             </div>
 
-            <div class="col-5 ms-5">
+            <div class="appointmentChose col-5 ms-5">
 
                 <div class="input-group mb-3">
                     <label class="input-group-text" for="choseSpeciality">Choose Speciality</label>

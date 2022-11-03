@@ -1,20 +1,22 @@
 
-console.log("hi");
-$("#submitCount").click(function () {
+console.log("hi2");
+$("#docSubmitCount").click(function () {
     console.log("click");
     if ($("#typeCount").val() == "") {
       alert("Type Appointment Count");
     } else {
-        let docId = $("#doctorId").val();
+        
         let appointmentCount = $("#typeCount").val();
+
+        // console.log("DOCID",docId,"Count",appointmentCount);
 
         if(appointmentCount < 0 || appointmentCount > 5){
             alert("Appointment Count cannot be greater than 5 or minus value");
         }else{
-            //for send data to server with object
+            // for send data to server with object
       let aData = {
-        aCount: appointmentCount,
-        docId: docId
+        aCount: appointmentCount
+      
       };
   
       $.ajax({
@@ -24,7 +26,7 @@ $("#submitCount").click(function () {
         data: aData,
   
         success: function (response) {
-        //   console.log("OK",response);
+          console.log("OK",response);
         },
         error: function (err) {
           console.log(err);

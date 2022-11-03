@@ -16,7 +16,7 @@ $sql = $pdo->prepare("
 
 // echo "count".$_SESSION["countAppointment"];
 
-$sql->bindValue(':countAppointment',$_SESSION["countAppointment"]);
+$sql->bindValue(':countAppointment',5);
 $sql->execute();
 $docCountLists = $sql->fetchAll(PDO::FETCH_ASSOC);
 

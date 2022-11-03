@@ -77,3 +77,25 @@
   color:var(--textColorOne) !important;
 }
 
+@media(max-width:500px){
+  .appintmentBox{
+    flex-direction: column !important;
+  }
+  .appointmentGuideline,.appointmentChose{
+    width:90vw !important;
+    margin:auto !important;
+  }
+
+  .form-outline{
+    width:80vw  !important;
+  }
+
+  .appointmentFormCon{
+    flex-direction:column !important;
+  }
+
+  .con1,.con2{
+    margin:0 !important;
+  }
+}
+

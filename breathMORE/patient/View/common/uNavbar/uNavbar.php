@@ -12,6 +12,8 @@ include "../../Controller/userProfile/profileController.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
 
+    <link href="../storage/home/logo.png" rel="icon" type="image/png" />
+
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />

@@ -50,9 +50,9 @@ include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
 <body>
 
 
-    <div class="mx-5">
+    <div class="body mx-5">
 
-        <div class="uProfileTitle d-flex justify-content-center flex-row my-5">
+        <div class="uProfileTitle col d-flex justify-content-center flex-row my-5">
             <h4 class="h3 me-4">Your Profile</h4>
             <div class="titleLine"></div>
         </div>
@@ -68,21 +68,21 @@ include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
                     <span class="uPline"></span>
                 </div>
             </div>
-            <div class="uProfileInfo ms-5">
-                <table class="table text-start">
+            <div class="uProfileInfo d-flex justify-content-center align-items-center flex-column ms-5">
+                <table class="col table text-start">
                     <thead>
                         <tr>
-                            <th colspan="4" class="text-muted text-capitalize">Your Id is <span><?= $userInfo[0]["register_id"] ?></span></th>
+                            <th scope="col"  colspan="4" class="text-muted text-capitalize">Your Id is <span><?= $userInfo[0]["register_id"] ?></span></th>
                         </tr>
                         <tr>
-                            <th><span class="text-muted">Gender:</span>
+                            <th scope="col"><span class="text-muted">Gender:</span>
                                 <?= $userInfo[0]["gender"] ?>
                             </th>
                             <th scope="col">
                                 <span class="text-muted">Date of Birth:</span>
                                 <?= $userInfo[0]["date_of_birth"] ?>
                             </th>
-                            <th>
+                            <th scope="col">
                                 <span class="text-muted">Age:</span>
                                 <?= $userInfo[0]["age"] ?>
                             </th>
@@ -92,11 +92,11 @@ include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
                     <tbody>
                         <tr>
 
-                            <td><span class="text-muted">Email</span>
+                            <td scope="col"><span class="text-muted">Email</span>
                                 <?= $userInfo[0]["user_email"] ?>
                             </td>
 
-                            <td colspan="2"><span class="text-muted">Ph.No:</span>
+                            <td scope="col" colspan="2"><span class="text-muted">Ph.No:</span>
                                 <?= $userInfo[0]["ph_num"] ?>
                             </td>
 

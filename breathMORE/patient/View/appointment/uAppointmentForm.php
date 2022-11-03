@@ -84,9 +84,9 @@ if (isset($_GET["id"])) {
             </h3>
             <form action="../../Controller/appointment/uAcceptUserAppointmentController.php" method="post" class="form d-flex justify-content-center align-items-center flex-column p-5">
 
-                <div class="row">
+                <div class="appointmentFormCon row">
 
-                    <div class="col col-5 me-5">
+                    <div class="con1 col col-5 me-5">
                         <div class="form-outline my-4">
                             <label class="form-label" for="patientId">Patient Id</label>
                             <input type="text" name="patientId" id="patientId" class="form-control text-center" value="<?= $userInfos[0]["register_id"] ?>" readonly />
@@ -133,15 +133,15 @@ if (isset($_GET["id"])) {
                         </div>
                     </div>
 
-                    <div class="col col-5 ms-5">
+                    <div class="con2 col col-5 ms-5">
                         <div class="form-outline my-4">
-                            <input type="hidden" name="docId" id="" value=`<?= $docName[0]["doctor_id"] ?>` />
+                            <input type="hidden" name="doctorID" id="" value="<?= $docName[0]["doctor_id"] ?>" />
                             <input type="hidden" name="docCenter" id="" value="<?=$docName[0]["center"] ?>">
                             <label class="form-label" for="docName">Doctor Name</label>
                             <input type="text" name="docName" id="docName" class="form-control" value="Dr.<?= $docName[0]["doctor_name"] ?>" readonly />
                         </div>
 
-                        <div class="appointmentDay mb-4 mt-4">
+                        <div class="form-outline appointmentDay mb-4 mt-4">
 
                             <label for="" class="mb-3">ChooseYour Preferred Day</label>
 
@@ -156,7 +156,7 @@ if (isset($_GET["id"])) {
 
                         </div>
 
-                        <div class="appointmentTime mb-4">
+                        <div class="form-outline appointmentTime mb-4">
 
                             <label for="" class="mb-3">Time is</label>
 

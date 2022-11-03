@@ -24,6 +24,7 @@ include "../../Controller/uFeedBack/uSelectFeedbackController.php";
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home</title>
+  
 
   <?php if($_SESSION["isRegister"]){?> 
      <!-- Shepherd -->
@@ -39,6 +40,7 @@ include "../../Controller/uFeedBack/uSelectFeedbackController.php";
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js" defer></script>
 
   <!-- custom css3 -->
+
   <link rel="stylesheet" href="../common/css/style.css" />
   <link rel="stylesheet" href="../common/uNavbar/css/uNavbar.css" <?php time(); ?> />
   <link rel="stylesheet" href="../common/uFooter/css/uFooter.css" <?php time(); ?>>

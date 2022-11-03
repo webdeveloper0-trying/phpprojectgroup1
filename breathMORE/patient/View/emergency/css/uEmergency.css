@@ -89,6 +89,10 @@
     .oxygenTable{
         width:auto !important;
     }
+
+    .callCenters .list-group-item{
+      background:none !important;
+    }
   }
 
 

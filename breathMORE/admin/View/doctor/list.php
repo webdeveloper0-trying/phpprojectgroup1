@@ -12,15 +12,15 @@ if (isset($_POST['adminname']) && isset($_POST['password'])) {
     $_SESSION["adminname"] = $adminname;
 }
 
-if($_SESSION["mainadmin"] = "0"){
+if ($_SESSION["mainadmin"] = "0") {
     include "../common/adminNavbar.php";
-}else{
+} else {
     include "../common/adminNavbar.php";
 }
 
-if (!isset($_SESSION["adminname"])) {
-    header("Location: ../adminRegisterLogin/aLogin.php");
-}
+// if (!isset($_SESSION["adminname"])) {
+//     header("Location: ../adminRegisterLogin/aLogin.php");
+// }
 
 ?>
 
@@ -37,8 +37,8 @@ if (!isset($_SESSION["adminname"])) {
     <link rel="stylesheet" href="../common/css/adminNavbar.css" />
 
 
-    <script src="../common/jq/jquery-3.6.0.min.js"></script>
-    <script src="./js/appointmentCount.js" <?= time() ?> defer></script>
+    <script src="./js/jquery3.6.0.js" defer></script>
+    <script src="./js/appointmentCount.js" defer></script>
     <script src="./js/doctorsearch.js" <?= time() ?> defer></script>
 
 </head>
@@ -52,11 +52,8 @@ if (!isset($_SESSION["adminname"])) {
             <thead class="thead">
                 <tr>
                     <th>No</th>
-                    <th scope="col">Doctor Name</th>
-                    <th scope="col">Center</th>
-                    <th scope="col">Total Appointment</th>
-                    <th scope="col">Update Appointment</th>
-                    <th scope="col">Action</th>
+                    <th scope="col" colspan="2">Doctor Name</th>
+                    <th scope="col" colspan="2">Center</th>
                 </tr>
             </thead>
             <tbody>
@@ -66,29 +63,37 @@ if (!isset($_SESSION["adminname"])) {
                 foreach ($docCountLists as $docCountList) { ?>
                     <tr>
                         <td><?= ++$noCount; ?></td>
-                        <td>
-                            <input type="hidden" name="docId" id="doctorId" value="<?= $docCountList['doc_id']?>" />
-                            <?= $docCountList["doctor_name"] ?></td>
-                        <td><?= $docCountList["center"] ?></td>
-                        <td>
-                            <span class="badge badge-danger text-primary rounded-pill fs-6">
-                                <?= $docCountList["appointment_count"] ?>
-                            </span>
+                        <td colspan="2">
+                            <input type="hidden" name="docId" class="doctorId" value="<?= $docCountList['doc_id'] ?>" />
+                            <?= $docCountList["doctor_name"] ?>
                         </td>
-                        <td>
-                            <div class="form-outline">
-                                <input type="number" id="typeCount" class="form-control" value="<?= $docCountList["appointment_count"] ?>" />
-                            </div>
-                        </td>
-                        <td>
-                            <a id="submitCount" class="btn btn-purple" href="../../Controller/doctor/deleteController.php?cId=<?= $doctor["doctor_id"] ?>">
-                                Update
-                            </a>
-                        </td>
+                        <td colspan="2"><?= $docCountList["center"] ?></td>
                     </tr><?php } ?>
+                <tr>
+
+                    <th scope="col">Total Appointment</th>
+                    <td>
+                        <span class="badge badge-danger text-primary rounded-pill fs-6">
+                            5
+                        </span>
+                    </td>
+
+                    <th scope="col">Update Appointment</th>
+                    <td>
+                        <div class="form-outline">
+                            <input type="number" id="typeCount" class="form-control" value="" />
+                        </div>
+                    </td>
+                    <td>
+                        <a href="" id="docSubmitCount" class="btn btn-purple">
+                            Update
+                        </a>
+                    </td>
+                </tr>
 
             </tbody>
         </table>
+
 
 
         <nav aria-label="Page navigation example" class="mb-5">

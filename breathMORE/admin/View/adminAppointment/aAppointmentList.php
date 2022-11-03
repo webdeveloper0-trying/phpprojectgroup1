@@ -1,8 +1,6 @@
 <?php
 session_start();
 
-include "../../../patient/Controller/common/aChColorTxtController.php";
-include "../../Controller/adminAppointment/aAppointmentListController.php";
 
 if (isset($_POST['adminname']) && isset($_POST['password'])) {
     $adminname = $_POST['adminname'];
@@ -16,9 +14,13 @@ if ($_SESSION["mainadmin"] = "0") {
     include "../common/adminNavbar.php";
 }
 
-if (!isset($_SESSION["adminname"])) {
-    header("Location: ../adminRegisterLogin/aLogin.php");
-}
+// if (!isset($_SESSION["adminname"])) {
+//     header("Location: ../adminRegisterLogin/aLogin.php");
+// }
+
+
+include "../../../patient/Controller/common/aChColorTxtController.php";
+include "../../Controller/adminAppointment/aAppointmentListController.php";
 
 ?>
 
