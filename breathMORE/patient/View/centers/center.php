@@ -1,20 +1,3 @@
-<?php
-
-session_start();
-if (!isset($_SESSION["userId"])) {
-    header("Location: ../uRegisterLogin/register.php");
-} else {
-    $userId = $_SESSION["userId"];
-}
-
-include "../common/uNavbar/uNavbar.php";
-include "../common/uFooter/uFooter.php";
-
-include "../../../patient/Controller/common/aChColorTxtController.php";
-include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,6 +6,24 @@ include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Centers</title>
+
+
+    <?php
+
+    session_start();
+    if (!isset($_SESSION["userId"])) {
+        header("Location: ../uRegisterLogin/register.php");
+    } else {
+        $userId = $_SESSION["userId"];
+    }
+
+    include "../common/uNavbar/uNavbar.php";
+    include "../common/uFooter/uFooter.php";
+
+    include "../../../patient/Controller/common/aChColorTxtController.php";
+    include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
+    ?>
+    
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <!-- Google Fonts -->
@@ -50,9 +51,9 @@ include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
         </h3>
 
         <div class="accordion accordion-flush" id="accordionFlushExample">
-            <div class="accordion-item">
+            <div class="accordion-item btn-background-slide">
                 <h2 class="accordion-header  " id="flush-headingOne">
-                    <button class="accordion-button collapsed btn-background-slide" type="button" data-mdb-toggle="collapse" data-mdb-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    <button class="accordion-button collapsed" type="button" data-mdb-toggle="collapse" data-mdb-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
                         Eye
                     </button>
                 </h2>

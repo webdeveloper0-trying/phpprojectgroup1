@@ -12,7 +12,7 @@ include "../../Controller/userProfile/profileController.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
 
-    <link href="../storage/home/<?=$logoPic ?>" rel="icon" type="image/png" />
+    <link href="../storage/home/<?=$logoPic?>" rel="icon" type="image/png" />
 
 
     <!-- Font Awesome -->
@@ -72,9 +72,6 @@ include "../../Controller/userProfile/profileController.php";
                     </li>
                     <li class="uBlogs nav-link-active nav-item m-3">
                         <a class="uBlogs nav-link" href="../blogs/mainBlog.php">Blogs</a>
-                    </li>
-                    <li class="uContact nav-link-active nav-item m-3">
-                        <a class="uContact nav-link" href="../emergency/uEmergency.php">Contact Us</a>
                     </li>
                 </ul>
 

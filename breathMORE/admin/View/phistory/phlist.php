@@ -1,28 +1,3 @@
-<?php
-
-
-session_start();
-include "../../../patient/Controller/common/aChColorTxtController.php";
-include "../../Controller/phistory/phlistController.php";
-
-
-if (isset($_POST['adminname']) && isset($_POST['password'])) {
-    $adminname = $_POST['adminname'];
-    $password = $_POST['password'];
-    $_SESSION["adminname"] = $adminname;
-}
-
-
-if ($_SESSION["ismainadmin"]) {
-    include "../common/adminNavbar.php";
-} else {
-    include "../common/adminSubNavbar.php";
-}
-if (!isset($_SESSION["adminname"])) {
-    header("Location: ../adminRegisterLogin/aLogin.php");
-}
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,6 +6,32 @@ if (!isset($_SESSION["adminname"])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Patient History Lists</title>
+
+    <?php
+
+
+    session_start();
+    include "../../../patient/Controller/common/aChColorTxtController.php";
+    include "../../Controller/phistory/phlistController.php";
+
+
+    if (isset($_POST['adminname']) && isset($_POST['password'])) {
+        $adminname = $_POST['adminname'];
+        $password = $_POST['password'];
+        $_SESSION["adminname"] = $adminname;
+    }
+
+
+    if ($_SESSION["ismainadmin"]) {
+        include "../common/adminNavbar.php";
+    } else {
+        include "../common/adminSubNavbar.php";
+    }
+    if (!isset($_SESSION["adminname"])) {
+        header("Location: ../adminRegisterLogin/aLogin.php");
+    }
+
+    ?>
 
 
 

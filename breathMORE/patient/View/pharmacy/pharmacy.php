@@ -47,17 +47,16 @@ include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
         <div class="row">
             <div class="townshipSelect col col-6">
                 <select class="form-select state" id="state" aria-label="townshiptSelect">
-                    <option>Township</option>
                     <option value="Mingaladon">Mingaladon</option>
                     <option value="Insein">Insein</option>
-                    <option value="Hlaingthayar">Hlaingthayar</option>
+                    <option value="Hlaingtharyar">Hlaingtharyar</option>
                     <option value="Thanlyin">Thanlyin</option>
                     <option value="Latha">Latha</option>
                     <option value="Lanmadaw">Lanmadaw</option>
                     <option value="Pabedan">Pabedan</option>
                     <option value="Dagon">Dagon</option>
-                    <option value="Ahlon">Ahlon</option>
-                    <option value="Kyeemyintdaing">Kyeemyintdaing</option>
+                    <option value="Ahlone">Ahlone</option>
+                    <option value="Kyeemyindaing">Kyeemyindaing</option>
                     <option value="SanChaung">SanChaung</option>
                     <option value="South Okkalapa">South Okkalapa</option>
                 </select>

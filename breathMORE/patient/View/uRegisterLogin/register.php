@@ -1,10 +1,3 @@
-<?php
-session_start();
-unset($_SESSION["userId"]);
-
-include "../../../patient/Controller/common/aChColorTxtController.php";
-include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +5,17 @@ include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Register</title>
+
+    <?php
+    session_start();
+    unset($_SESSION["userId"]);
+
+    include "../../../patient/Controller/common/aChColorTxtController.php";
+    include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
+    ?>
+
+    <link href="../storage/home/<?= $logoPic ?>" rel="icon" type="image/png" />
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -27,6 +30,9 @@ include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
     <!-- custom css -->
     <link rel="stylesheet" href="../common/css/style.css" <?php time(); ?> />
     <link rel="stylesheet" href="./css/uRegister.css" />
+
+    <script src="../common/jq/jquery-3.6.0.min.js" defer></script>
+    <script src="../common/js/script.js" defer></script>
 </head>
 
 
@@ -43,7 +49,7 @@ include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
             <div class="regBg col col-4 mx-auto pb-5">
                 <div class="d-flex justify-content-center align-items-center flex-column mt-5">
 
-                <img src="../storage/home/<?=$logoPic ?>" alt="Logo" class="logoImg" width="85">
+                    <img src="../storage/home/<?= $logoPic ?>" alt="Logo" class="logoImg" width="85">
 
                     <?php
                     $webName;
@@ -121,8 +127,9 @@ include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
 
 
                     <div class="form-outline mb-4">
-                        <input type="date" name="date_of_birth" class="form-control" required>
                         <label class="form-label" for="dob">Date Of Birth</label>
+                        <input type="date" name="date_of_birth" class="form-control" required>
+
                     </div>
 
                     <div class="d-flex justify-content-center mb-4">

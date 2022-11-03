@@ -61,7 +61,7 @@ include "../../../admin/Controller/contact/conListController.php";
           </div>
           <div><a href="../centers/center.php" class="footerLink">Centers</a></div>
           <div><a href="../blogs/mainBlog.php" class="footerLink">Blogs</a></div>
-          <div><a href="../emergency/uEmergency.php" class="footerLink">Contact</a></div>
+          <div><a href="../emergency/uEmergency.php" class="footerLink">Emergency</a></div>
         </div>
         <div class="col">
           <div class="ms-2 mb-3">

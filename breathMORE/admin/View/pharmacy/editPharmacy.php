@@ -1,11 +1,3 @@
-<?php
-session_start();
-$shop = $_SESSION["shopInfos"];
-// echo "<pre>";
-// print_r($shop);
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,6 +6,15 @@ $shop = $_SESSION["shopInfos"];
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Pharmacy Edit</title>
+
+    <?php
+    session_start();
+    include "../../../patient/Controller/common/aChColorTxtController.php";
+    $shop = $_SESSION["shopInfos"];
+    ?>
+    <link href="../storage/home/<?= $logoPic ?>" rel="icon" type="image/png" />
+
+
 
     <!-- Bootstrap css1 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
@@ -33,6 +34,7 @@ $shop = $_SESSION["shopInfos"];
     <!-- custom css -->
     <link rel="stylesheet" href="../doctor/docAdd.css">
     <link rel="stylesheet" href="../common/css/style.css">
+
 </head>
 
 <body>
@@ -42,8 +44,9 @@ $shop = $_SESSION["shopInfos"];
             <div class="row mb-4">
                 <div class="col">
                     <div class="form-outline">
-                        <input type="text" name="upharmacyName" value="<?php echo $shop[0]["pharmacy_name"] ?>" id="Pharmacy Name" class="form-control" />
                         <label class="form-label" for="Pharmacy Name">Pharmacy Name</label>
+                        <input type="text" name="upharmacyName" value="<?php echo $shop[0]["pharmacy_name"] ?>" id="Pharmacy Name" class="form-control" />
+
                     </div>
                 </div>
                 <div class="col">
@@ -99,8 +102,9 @@ $shop = $_SESSION["shopInfos"];
 
             <!-- Text input -->
             <div class="form-outline mb-4">
-                <input type="text" name="upharmacyAdd" value="<?php echo $shop[0]["pharmacy_address"] ?>" id="pharmacyAdd" class="form-control" />
                 <label class="form-label" for="pharmacyAdd">Address</label>
+                <input type="text" name="upharmacyAdd" value="<?php echo $shop[0]["pharmacy_address"] ?>" id="pharmacyAdd" class="form-control" />
+
             </div>
 
 
@@ -108,15 +112,15 @@ $shop = $_SESSION["shopInfos"];
 
             <!-- Message input -->
             <div class="form-outline mb-4">
-
-                <input type="text" name="uphNum" id="phNum" value="<?php echo $shop[0]["ph_num"] ?>" class="form-control" />
                 <label class="form-label" for="phNum">Phone No.</label>
+                <input type="text" name="uphNum" id="phNum" value="<?php echo $shop[0]["ph_num"] ?>" class="form-control" />
+
             </div>
 
             <div class="col  mb-4">
-
-                <input type="text" class="form-control" value="<?php echo $shop[0]["township"] ?>" name="utownship" id="township" />
                 <label class="form-label" for="township">Township</label>
+              
+
 
                 <select class="form-control" id="township" name="utownship" aria-label="Default select example">
 
@@ -126,9 +130,9 @@ $shop = $_SESSION["shopInfos"];
                     <option value="Insein" <?php if ($shop[0]["township"] == 'Insein') {
                                                 echo "selected";
                                             } ?>>Insein</option>
-                    <option value="Hlaingthayar" <?php if ($shop[0]["township"] == 'Hlaingthayar') {
+                    <option value="Hlaingthayar" <?php if ($shop[0]["township"] == 'Hlaingtharyar') {
                                                         echo "selected";
-                                                    } ?>>Hlaingthayar</option>
+                                                    } ?>>Hlaingtharyar</option>
                     <option value="Thanlyin" <?php if ($shop[0]["township"] == 'Thanlyin') {
                                                     echo "selected";
                                                 } ?>>Thanlyin</option>
@@ -144,12 +148,12 @@ $shop = $_SESSION["shopInfos"];
                     <option value="Dagon" <?php if ($shop[0]["township"] == 'Dagon') {
                                                 echo "selected";
                                             } ?>>Dagon</option>
-                    <option value="Ahlon" <?php if ($shop[0]["township"] == 'Ahlon') {
+                    <option value="Ahlon" <?php if ($shop[0]["township"] == 'Ahlone') {
                                                 echo "selected";
-                                            } ?>>Ahlon</option>
-                    <option value="Kyeemyintdaing" <?php if ($shop[0]["township"] == 'Kyeemyintdaing') {
+                                            } ?>>Ahlone</option>
+                    <option value="Kyeemyindaing" <?php if ($shop[0]["township"] == 'Kyeemyindaing') {
                                                         echo "selected";
-                                                    } ?>>Kyeemyintdaing</option>
+                                                    } ?>>Kyeemyindaing</option>
                     <option value="SanChaung" <?php if ($shop[0]["township"] == 'SanChaung') {
                                                     echo "selected";
                                                 } ?>>SanChaung</option>
@@ -177,7 +181,7 @@ $shop = $_SESSION["shopInfos"];
 
         </form>
 
-       
+
     </div>
 </body>
 

@@ -272,10 +272,7 @@ pickr1.on('change', (color, source, instance) => {
     color = color.toRGBA();
     console.log("Color", color);
 
-    this.chBgColor1.style.backgroundColor = `rgba(${color[0]},
-                                                        ${color[1]},
-                                                        ${color[2]},
-                                                        ${color[3]})`;
+    this.chBgColor1.style.backgroundColor = `red`;
     applyBgColor1 = `rgba(${color[0]},
                 ${color[1]},
                 ${color[2]},

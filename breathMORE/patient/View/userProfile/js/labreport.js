@@ -1,4 +1,5 @@
 $("#downloadLabReport").click(function () {
+  console.log("click report");
   html2canvas($("#labReport"), {
     onrendered: function (canvas) {
       var data = canvas.toDataURL();

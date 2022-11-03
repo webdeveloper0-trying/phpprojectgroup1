@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,7 +5,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Update Form</title>
+    <title>Blog Add Form</title>
+
+    <?php
+    session_start();
+
+
+    include "../../../patient/Controller/common/aChColorTxtController.php";
+
+
+    if (isset($_POST['adminname']) && isset($_POST['password'])) {
+        $adminname = $_POST['adminname'];
+        $password = $_POST['password'];
+        $_SESSION["adminname"] = $adminname;
+    }
+
+
+
+    ?>
+    <link href="../storage/home/<?= $logoPic ?>" rel="icon" type="image/png" />
 
     <!-- Bootstrap css1 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
@@ -32,7 +48,7 @@
 
 <body>
     <div class="d-flex justify-content-center align-items-center flex-column">
-        <h3 class="h3 header my-5">Blog Update Form</h3>
+        <h3 class="h3 header my-5">Blog Add Form</h3>
         <form class="form p-5" action="../../Controller/adminBlogs/aAddBlogController.php" method="POST">
             <div class="row mb-4">
                 <div class="col">
@@ -51,12 +67,12 @@
 
             <!-- Text input -->
             <div class="form-outline mb-4">
-                <input type="datetime-local" name="blogDate" id="blogDate" class="form-control"required />
+                <input type="datetime-local" name="blogDate" id="blogDate" class="form-control" required />
             </div>
 
             <!-- Text input -->
             <div class="form-outline mb-4">
-                <input type="text" name="blogImage" id="BlogImage" class="form-control" placeholder="imagename.extension" required />
+                <input type="text" name="blogImage" id="BlogImage" class="form-control" placeholder="imagename.extension" />
                 <label class="form-label" for="BlogImage">Blog Image</label>
             </div>
 

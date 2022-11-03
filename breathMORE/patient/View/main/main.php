@@ -1,6 +1,34 @@
-<?php
 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+
+
+  <?php
 session_start();
+if ($_SESSION["isRegister"]) { ?>
+    <!-- Shepherd -->
+    <link rel="stylesheet" href="../libs/node_modules/shepherd.js/dist/css/shepherd.css" />
+    <script src="../libs/node_modules/@popperjs/core/dist/umd/popper.min.js" defer></script>
+    <script src="../libs/node_modules/shepherd.js/dist/js/shepherd.min.js" defer></script>
+    <script src="./js/userguide.js" defer></script>
+  <?php 
+  $_SESSION["isRegister"] = false;}
+   ?>
+
+
+  <!-- Splide JS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js" defer></script>
+
+  <!-- custom css3 -->
+  <?php
+
 if (!isset($_SESSION["userId"])) {
   header("Location: ../uRegisterLogin/register.php");
 } else {
@@ -16,30 +44,6 @@ include "../../Controller/uFeedBack/uSelectFeedbackController.php";
 
 
 ?>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home</title>
-
-
-  <?php if ($_SESSION["isRegister"]) { ?>
-    <!-- Shepherd -->
-    <link rel="stylesheet" href="../libs/node_modules/shepherd.js/dist/css/shepherd.css" />
-    <script src="../libs/node_modules/@popperjs/core/dist/umd/popper.min.js" defer></script>
-    <script src="../libs/node_modules/shepherd.js/dist/js/shepherd.min.js" defer></script>
-    <script src="./js/userguide.js" defer></script>
-  <?php } ?>
-
-
-  <!-- Splide JS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css">
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js" defer></script>
-
-  <!-- custom css3 -->
 
   <link rel="stylesheet" href="../common/css/style.css" />
   <link rel="stylesheet" href="../common/uNavbar/css/uNavbar.css" <?php time(); ?> />
@@ -71,9 +75,7 @@ include "../../Controller/uFeedBack/uSelectFeedbackController.php";
             <div class="col-lg-8 col-md-8 col-sm-8">
               <div class="headerInfo">
                 <?php
-
                 $webName = explode("/", $webName);
-
                 $fName = $webName[0];
                 $lName = $webName[1];
                 ?>

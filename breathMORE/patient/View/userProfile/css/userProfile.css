@@ -75,6 +75,8 @@
   font-size: 1.5em !important;
 }
 
+
+
 .pHistory {
   min-height: 60vh !important;
 }
@@ -108,6 +110,9 @@
   left: 0% !important;
 }
 
+.table{
+  width:auto !important;
+}
 .uHistory {
   display: block;
   transition: all 0.5s !important;
@@ -127,17 +132,26 @@
 }
 
 @media(max-width: 540px){
-  .body{
+  .body,.profileCon,.uProfileInfo,.uProfileImgBox{
+    width:100vw !important;
     margin:0 !important;
+    overflow:hidden !important;
   }
+
   .profileCon{
     margin:0 !important;
-    width:90vw !important;
+    width:100vw !important;
   }
   /* .uProfileInfo{
     width:90vw !important;
 
   } */
+}
+
+@media(max-width: 450px){
+  .pHistory{
+    display:none !important;
+  }
 }
 
 

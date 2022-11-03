@@ -1,9 +1,3 @@
-<?php
-include "../common/uFooter/uFooter.php";
-session_start();
-$subBlogInfo = $_SESSION["subBlogInfo"];
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,6 +6,22 @@ $subBlogInfo = $_SESSION["subBlogInfo"];
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SubBlog</title>
+
+    <?php
+    session_start();
+    
+    include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
+    include "../../../patient/Controller/common/aChColorTxtController.php";
+   
+    
+    $subBlogInfo = $_SESSION["subBlogInfo"];
+    ?>
+
+    <link href="../storage/home/<?= $logoPic ?>" rel="icon" type="image/png" />
+
+    <?php
+     include "../common/uFooter/uFooter.php"; ?>
+
     <!--  Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />

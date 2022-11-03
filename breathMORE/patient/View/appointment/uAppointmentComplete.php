@@ -1,20 +1,3 @@
-<?php
-
-session_start();
-if (!isset($_SESSION["userId"])) {
-  header("Location: ../uRegisterLogin/register.php");
-} else {
-  $userId = $_SESSION["userId"];
-}
-
-
-include "../../../patient/Controller/common/aChColorTxtController.php";
-include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
-
-
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,6 +6,23 @@ include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Appointment Complete</title>
+
+    <?php
+
+    session_start();
+    if (!isset($_SESSION["userId"])) {
+        header("Location: ../uRegisterLogin/register.php");
+    } else {
+        $userId = $_SESSION["userId"];
+    }
+
+
+    include "../../../patient/Controller/common/aChColorTxtController.php";
+    include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
+
+
+    ?>
+    <link href="../storage/home/<?= $logoPic ?>" rel="icon" type="image/png" />
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css?=time()" rel="stylesheet" />
@@ -37,11 +37,13 @@ include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
     <!-- custom css files 2 -->
     <link rel="stylesheet" href="../common/css/style.css">
     <link rel="stylesheet" href="./css/uAppointmentComplete.css">
+
+
 </head>
 
 <body>
 
-    <div  tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="false">
+    <div tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="false">
         <div class="modal-dialog">
             <div class="btn-green modal-content">
                 <div class="modal-body text-center">

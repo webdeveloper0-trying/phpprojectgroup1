@@ -1,24 +1,3 @@
-<?php
-session_start();
-if (isset($_POST['adminname']) && isset($_POST['password'])) {
-    $adminname = $_POST['adminname'];
-    $password = $_POST['password'];
-    $_SESSION["adminname"] = $adminname;
-}
-
-
-if ($_SESSION["ismainadmin"]) {
-    $adminTxt = "Main Admin";
-} else {
-    $adminTxt = "Sub Admin";
-}
-include "../../Controller/common/aChColorTxtController.php";
-include "../../Controller/adminProfile/aProfileSelectPropsController.php";
-
-
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,6 +6,29 @@ include "../../Controller/adminProfile/aProfileSelectPropsController.php";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Profile</title>
+
+    <?php
+    session_start();
+    if (isset($_POST['adminname']) && isset($_POST['password'])) {
+        $adminname = $_POST['adminname'];
+        $password = $_POST['password'];
+        $_SESSION["adminname"] = $adminname;
+    }
+
+
+    if ($_SESSION["ismainadmin"]) {
+        $adminTxt = "Main Admin";
+    } else {
+        $adminTxt = "Sub Admin";
+    }
+    include "../../Controller/common/aChColorTxtController.php";
+    include "../../Controller/adminProfile/aProfileSelectPropsController.php";
+
+
+
+    ?>
+    <link href="../storage/home/<?= $logoPic ?>" rel="icon" type="image/png" />
+
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css?=time()" rel="stylesheet" />
@@ -71,7 +73,7 @@ include "../../Controller/adminProfile/aProfileSelectPropsController.php";
                 </p>
             </div>
 
-          
+
 
         </div>
 
@@ -200,7 +202,7 @@ include "../../Controller/adminProfile/aProfileSelectPropsController.php";
                         <th>Logo Profile: </th>
                         <td>
                             <div class="form-outline">
-                                <input type="text" name="logoImg" id="logoImg" class="form-control" placeholder="imgname.extension"  />
+                                <input type="text" name="logoImg" id="logoImg" class="form-control" placeholder="imgname.extension" />
                                 <input type="hidden" name="logoImg1" id="logoImg1" value="<?= $defaultProps[0]["logoPic"] ?>" />
                             </div>
                         </td>
@@ -219,7 +221,7 @@ include "../../Controller/adminProfile/aProfileSelectPropsController.php";
                         <th>Website Name: </th>
                         <td>
                             <div class="form-outline">
-                                <input type="text" name="webName" id="webName" class="form-control" placeholder="firstName/secondName"  />
+                                <input type="text" name="webName" id="webName" class="form-control" placeholder="firstName/secondName" />
                                 <input type="hidden" name="webName1" id="webName1" value="<?= $defaultProps[0]["websiteName"] ?>" />
                             </div>
                         </td>

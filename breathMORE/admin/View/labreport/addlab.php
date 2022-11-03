@@ -7,6 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Lab Report</title>
 
+    <?php
+    include "../../../patient/Controller/common/aChColorTxtController.php";
+     ?>
+
+    <link href="../storage/home/<?= $logoPic ?>" rel="icon" type="image/png" />
+
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
 
     <!-- Google Fonts -->
@@ -17,10 +23,6 @@
     <!-- MDB -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js"></script>
 
-
-    <!-- <script src="../common/jq/jquery-3.6.0.min.js" defer></script> -->
-
-    <!-- <script src="./js/labsearch.js" <?= time() ?> defer></script> -->
 
     <link rel="stylesheet" href="../doctor/docAdd.css">
 
@@ -84,7 +86,7 @@
 
                 <div class="mb-2 col col col-lg-3 ">
                     <label for="exampleFormControlInput1" class="form-label">Ref Doctor</label>
-                    <input type="text" name="refDoc" class="form-control" id="exampleFormControlInput1" placeholder="">
+                    <input type="text" name="refDoc" class="form-control" id="exampleFormControlInput1" placeholder="" required>
 
                 </div>
 
@@ -108,7 +110,7 @@
 
                 <div class="mb-3 col col-lg-2">
                     <label for="exampleFormControlInput1" class="form-label">Test</label>
-                    <input type="text" name="test" id="form8Example2" class="form-control" />
+                    <input type="text" name="test" id="form8Example2" class="form-control" required />
                 </div>
 
                 <!-- </div> -->
@@ -118,28 +120,28 @@
                 <div class="mb-2 col col-lg-2">
                     <!-- <div class="form-outline"> -->
                     <label class="form-label" for="form8Example2">result</label>
-                    <input type="text" name="result" id="form8Example2" class="form-control" />
+                    <input type="text" name="result" id="form8Example2" class="form-control" required />
 
                     <!-- </div> -->
                 </div>
                 <div class="mb-2 col col-lg-2">
                     <!-- <div class="form-outline"> -->
                     <label class="form-label" for="form8Example2">Range</label>
-                    <input type="text" name="range" id="form8Example2" class="form-control" />
+                    <input type="text" name="range" id="form8Example2" class="form-control" required />
 
 
                 </div>
                 <div class="mb-2 col col-lg-2">
 
                     <label class="form-label" for="form8Example2">Unit</label>
-                    <input type="text" name="unit" id="form8Example2" class="form-control" />
+                    <input type="text" name="unit" id="form8Example2" class="form-control" required />
 
 
                 </div>
                 <div class="mb-2 col col-lg-2">
 
                     <label class="form-label" for="form8Example2">Remark</label>
-                    <input type="text" name="remark" id="form8Example2" class="form-control" />
+                    <input type="text" name="remark" id="form8Example2" class="form-control" required />
 
 
                 </div>
@@ -151,7 +153,7 @@
 
                 <div class="mb-2 col col-lg-3">
                     <label for="exampleFormControlInput1" class="form-label">Reported By</label>
-                    <input type="text" name="repBy" class="form-control" id="exampleFormControlInput1" placeholder="Name">
+                    <input type="text" name="repBy" class="form-control" id="exampleFormControlInput1" placeholder="Name" required>
                 </div>
 
                 <div class="mb-2 col col-lg-3">
@@ -165,7 +167,7 @@
             <div class="row  justify-content-center">
                 <div class="mb-4 col col col-lg-3">
                     <label for="exampleFormControlInput1" class="form-label">Result Date</label>
-                    <input type="date" name="resdate" class="form-control" id="exampleFormControlInput1" placeholder="">
+                    <input type="date" name="resdate" class="form-control" id="exampleFormControlInput1" placeholder="" required>
                 </div>
 
 

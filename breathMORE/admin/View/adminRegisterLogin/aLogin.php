@@ -1,9 +1,3 @@
-<?php
-session_start();
-unset($_SESSION["adminname"]);
-unset($_SESSION["mainadmin"]);
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,8 +7,17 @@ unset($_SESSION["mainadmin"]);
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admin Log In</title>
 
-   <!-- Font Awesome -->
-   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css?=time()" rel="stylesheet" />
+  <?php
+  session_start();
+  include "../../Controller/common/aChColorTxtController.php";
+  unset($_SESSION["adminname"]);
+  unset($_SESSION["mainadmin"]);
+  ?>
+
+  <link href="../storage/home/<?= $logoPic ?>" rel="icon" type="image/png" />
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css?=time()" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css?=time()" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- Google Fonts -->
@@ -24,37 +27,43 @@ unset($_SESSION["mainadmin"]);
 
   <!-- custom css1 -->
   <link rel="stylesheet" href="../common/css/style.css">
-  <link rel="stylesheet" href="./css/aLogin.css" <?php time();?> />
+  <link rel="stylesheet" href="./css/aLogin.css" <?php time(); ?> />
 
 </head>
 
 <body class="d-flex justify-content-center align-items-center">
   <div class="row">
-  <div class="logo">Breath<span>More</span></div>
- 
 
-  <div class="col-12 col-sm-12 d-flex justify-content-center align-items-center">
+    <?php
+    $webName = explode("/", $webName);
+    $fName = $webName[0];
+    $lName = $webName[1];
+    ?>
+    <div class="logo"> <?= $fName ?><span><?= $lName ?></span></div>
 
-    <form class="loginForm my-5 p-5 rounded-5" action="../../Controller/adminLogin/aLoginController.php" method="post">
-      <!-- Name input -->
-      <div class="form-outline mb-4">
-      <label class="form-label" for="adminName">Admin Name</label>
-        <input type="name" name="adminname" id="adminName" class="form-control text-light" required />
-        
-      </div>
 
-      <!-- Password input -->
-      <div class="form-outline mb-4">
-      <label class="form-label" for="adminPassword">Password</label>
-        <input type="password" name="password" id="adminPassword" class="form-control text-light" required />
-        
-      </div>
+    <div class="col-12 col-sm-12 d-flex justify-content-center align-items-center">
 
-      <!-- Submit button -->
-      <button type="submit" class="btn btn-purple btn-block mb-4">Sign in</button>
-    
-    </form>
-  </div>
+      <form class="loginForm my-5 p-5 rounded-5" action="../../Controller/adminLogin/aLoginController.php" method="post">
+        <!-- Name input -->
+        <div class="form-outline mb-4">
+          <label class="form-label" for="adminName">Admin Name</label>
+          <input type="name" name="adminname" id="adminName" class="form-control text-light" required />
+
+        </div>
+
+        <!-- Password input -->
+        <div class="form-outline mb-4">
+          <label class="form-label" for="adminPassword">Password</label>
+          <input type="password" name="password" id="adminPassword" class="form-control text-light" required />
+
+        </div>
+
+        <!-- Submit button -->
+        <button type="submit" class="btn btn-purple btn-block mb-4">Sign in</button>
+
+      </form>
+    </div>
   </div>
 </body>
 

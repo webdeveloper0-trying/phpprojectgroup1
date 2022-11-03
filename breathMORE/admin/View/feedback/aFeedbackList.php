@@ -1,30 +1,3 @@
-<?php
-session_start();
-
-include "../../Controller/adminBlogs/aBlogListController.php";
-include "../../../patient/Controller/common/aChColorTxtController.php";
-include "../../Controller/feedback/aFeedbackListController.php";
-
-
-if (isset($_POST['adminname']) && isset($_POST['password'])) {
-    $adminname = $_POST['adminname'];
-    $password = $_POST['password'];
-    $_SESSION["adminname"] = $adminname;
-}
-
-
-if ($_SESSION["ismainadmin"]) {
-    include "../common/adminNavbar.php";
-} else {
-    include "../common/adminSubNavbar.php";
-}
-if (!isset($_SESSION["adminname"])) {
-    header("Location: ../adminRegisterLogin/aLogin.php");
-}
-
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,6 +6,33 @@ if (!isset($_SESSION["adminname"])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feedback</title>
+
+    <?php
+    session_start();
+
+    include "../../Controller/adminBlogs/aBlogListController.php";
+    include "../../../patient/Controller/common/aChColorTxtController.php";
+    include "../../Controller/feedback/aFeedbackListController.php";
+
+
+    if (isset($_POST['adminname']) && isset($_POST['password'])) {
+        $adminname = $_POST['adminname'];
+        $password = $_POST['password'];
+        $_SESSION["adminname"] = $adminname;
+    }
+
+
+    if ($_SESSION["ismainadmin"]) {
+        include "../common/adminNavbar.php";
+    } else {
+        include "../common/adminSubNavbar.php";
+    }
+    if (!isset($_SESSION["adminname"])) {
+        header("Location: ../adminRegisterLogin/aLogin.php");
+    }
+
+
+    ?>
 
     <!-- Bootstrap css1 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">

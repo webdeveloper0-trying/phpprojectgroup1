@@ -20,7 +20,7 @@
 }
 
 #logoEtitle {
-  color: red !important;
+  color:var(--logoColor) !important;
   text-transform: uppercase !important;
 }
 

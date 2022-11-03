@@ -7,7 +7,10 @@ include "../../Model/dbConnection.php";
 
 if (isset($_POST["updateBstock"])) {
     $upbdate = $_POST["upbdate"];
-    $upBinstock =  $_POST["upPre"] - $_POST["upUsed"];
+    $preUsed = $_POST["preUsed"];
+
+    $upUsed = $_POST["upUsed"] + $preUsed; //2
+    $upBinstock =  $_POST["upPre"] - $upUsed;
     // echo $upBinstock;
     if ($upBinstock < 0) {
         header("Location: ../../View/bloodStock/listBs.php");
@@ -16,8 +19,8 @@ if (isset($_POST["updateBstock"])) {
 
         $upbloodtypes = $_POST["upbloodtypes"];
 
-        $upPre = $_POST["upPre"];
-        $upUsed = $_POST["upUsed"]; //2
+        $upPre = $_POST["upPre"];//10
+        
         $upAvg = $_POST["upAvg"];
 
         $upId = $_POST["upId"];

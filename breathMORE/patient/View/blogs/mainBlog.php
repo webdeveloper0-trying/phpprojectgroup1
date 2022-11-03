@@ -1,22 +1,3 @@
-<?php
-
-session_start();
-if (!isset($_SESSION["userId"])) {
-  header("Location: ../uRegisterLogin/register.php");
-} else {
-  $userId = $_SESSION["userId"];
-}
-include "../../Controller/blogs/mainBlogController.php";
-include "../common/uNavbar/uNavbar.php";
-include "../common/uFooter/uFooter.php";
-
-include "../../../patient/Controller/common/aChColorTxtController.php";
-include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
-
-
-// $resultBlogs = $_SESSION["subBlogInfo"];
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,6 +6,27 @@ include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Blogs</title>
+
+  <link href="../storage/home/<?= $logoPic ?>" rel="icon" type="image/png" />
+
+  <?php
+
+  session_start();
+  if (!isset($_SESSION["userId"])) {
+    header("Location: ../uRegisterLogin/register.php");
+  } else {
+    $userId = $_SESSION["userId"];
+  }
+  include "../../Controller/blogs/mainBlogController.php";
+  include "../common/uNavbar/uNavbar.php";
+  include "../common/uFooter/uFooter.php";
+
+  include "../../../patient/Controller/common/aChColorTxtController.php";
+  include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
+
+
+  // $resultBlogs = $_SESSION["subBlogInfo"];
+  ?>
   <!-- Font Awesome -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />

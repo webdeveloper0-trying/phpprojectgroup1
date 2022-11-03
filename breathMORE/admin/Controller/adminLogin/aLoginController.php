@@ -36,7 +36,7 @@ if (isset($_POST['adminname']) && isset($_POST['password'])) {
 
             $GLOBALS['mainadmin'] = true;
         } else {
-            $GLOBALS['mainadmin'] = true;
+            $GLOBALS['mainadmin'] = false;
             $_SESSION["ismainadmin"] = $GLOBALS['mainadmin'];
             echo "Main Admin" . $_SESSION["ismainadmin"];
             header("Location: ../../View/adminDashboard/aSubAdminDashboard.php");

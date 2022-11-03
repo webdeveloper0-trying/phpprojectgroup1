@@ -1,24 +1,3 @@
-<?php
-session_start();
-if (!isset($_SESSION["userId"])) {
-    header("Location: ../uRegisterLogin/register.php");
-} else {
-    $userId = $_SESSION["userId"];
-}
-include "../../Controller/blogs/mainBlogController.php";
-include "../common/uNavbar/uNavbar.php";
-include "../common/uFooter/uFooter.php";
-
-include "../../../patient/Controller/common/aChColorTxtController.php";
-include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
-include "../../Controller/emergency/oxygenListController.php";
-
-
-// echo "<pre>";
-// print_r($oxygenLists);
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,6 +6,25 @@ include "../../Controller/emergency/oxygenListController.php";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emergency</title>
+
+    <?php
+    session_start();
+    if (!isset($_SESSION["userId"])) {
+        header("Location: ../uRegisterLogin/register.php");
+    } else {
+        $userId = $_SESSION["userId"];
+    }
+    include "../../Controller/blogs/mainBlogController.php";
+    include "../common/uNavbar/uNavbar.php";
+    include "../common/uFooter/uFooter.php";
+
+    include "../../../patient/Controller/common/aChColorTxtController.php";
+    include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
+    include "../../Controller/emergency/oxygenListController.php";
+
+
+    ?>
+
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
@@ -117,25 +115,25 @@ include "../../Controller/emergency/oxygenListController.php";
 
                 <div class="oxygenTable">
                     <table class="table table-borderless">
-                        <thead class="thead1 p-0">
+                        <thead class="thead1">
                             <tr>
                                 <th scope="col">#</th>
                                 <th scope="col">Name</th>
                                 <th scope="col">Ph.NO</th>
                                 <th scope="col">Address</th>
-                                <th scope="col">Type of Service</th>
+                                <th scope="col">Service</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody class="my-word-break">
                             <?php
                             $count = 0;
                             foreach ($oxygenLists as $oxygenList) { ?>
                                 <tr>
-                                    <th scope="row"><?= ++$count; ?></th>
-                                    <td><?= $oxygenList["name"] ?></td>
-                                    <td><?= $oxygenList["ph_num"] ?></td>
-                                    <td><?= $oxygenList["address"] ?></td>
-                                    <td><?= $oxygenList["type_of_service"] ?></td>
+                                    <th scope="row" class="text-wrap"><?= ++$count; ?></th>
+                                    <td class="text-wrap"><?= $oxygenList["name"] ?></td>
+                                    <td class="text-wrap"><?= $oxygenList["ph_num"] ?></td>
+                                    <td class="text-wrap"><?= $oxygenList["address"] ?></td>
+                                    <td class="text-wrap"><?= $oxygenList["type_of_service"] ?></td>
                                 </tr>
                             <?php } ?>
                         </tbody>

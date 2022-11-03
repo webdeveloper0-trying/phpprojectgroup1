@@ -1,9 +1,4 @@
-<?php
-session_start();
-$o2infos = $_SESSION["oxygenInfo"];
-// echo "<pre>";
-// print_r($o2infos);
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,6 +7,15 @@ $o2infos = $_SESSION["oxygenInfo"];
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AddOxygen</title>
+
+    <?php
+    include "../../../patient/Controller/common/aChColorTxtController.php";
+    session_start();
+    $o2infos = $_SESSION["oxygenInfo"];
+   
+   
+    ?>
+    <link href="../storage/home/<?= $logoPic ?>" rel="icon" type="image/png" />
 
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">

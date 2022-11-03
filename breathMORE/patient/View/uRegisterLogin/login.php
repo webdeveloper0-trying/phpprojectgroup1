@@ -1,10 +1,3 @@
-<?php
-session_start();
-unset($_SESSION["userId"]);
-
-include "../../../patient/Controller/common/aChColorTxtController.php";
-include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +5,17 @@ include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Login</title>
+
+    <?php
+    session_start();
+    unset($_SESSION["userId"]);
+
+    include "../../../patient/Controller/common/aChColorTxtController.php";
+    include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
+    ?>
+
+    <link href="../storage/home/<?= $logoPic ?>" rel="icon" type="image/png" />
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -24,10 +27,13 @@ include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
     <!-- MDB -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet" />
-   
+
     <!-- custom css -->
     <link rel="stylesheet" href="../common/css/style.css" <?php time(); ?> />
     <link rel="stylesheet" href="./css/uLogin.css" <?php time(); ?> />
+
+    <script src="../common/jq/jquery-3.6.0.min.js" defer></script>
+    <script src="../common/js/script.js" defer></script>
 </head>
 
 
@@ -67,7 +73,7 @@ include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
                         <br />
 
                         <a href="./forgetpassword.php" class="ms-6">Forgot Password?
-                           
+
                         </a>
                     </div>
 
@@ -76,7 +82,7 @@ include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
             <div class="loginBg col col-5 pb-5 px-5">
                 <div class="d-flex justify-content-center align-items-center flex-column mt-5">
 
-                <img src="../storage/home/<?=$logoPic ?>" alt="Logo" class="logoImg" width="85">
+                    <img src="../storage/home/<?= $logoPic ?>" alt="Logo" class="logoImg" width="85">
 
                     <?php
                     $webName;

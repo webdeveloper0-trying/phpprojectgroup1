@@ -1,27 +1,4 @@
-<?php
 
-session_start();
-include "../../../patient/Controller/common/aChColorTxtController.php";
-include "../../Controller/adminManagement/aAdminListController.php";
-
-if (isset($_POST['adminname']) && isset($_POST['password'])) {
-    $adminname = $_POST['adminname'];
-    $password = $_POST['password'];
-    $_SESSION["adminname"] = $adminname;
-}
-
-if($_SESSION["mainadmin"] = "0"){
-    include "../common/adminNavbar.php";
-}else{
-    include "../common/adminNavbar.php";
-}
-
-if (!isset($_SESSION["adminname"])) {
-    header("Location: ../adminRegisterLogin/aLogin.php");
-}
-
-
-?>
 
 
 
@@ -33,6 +10,31 @@ if (!isset($_SESSION["adminname"])) {
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admin Management</title>
+
+  <?php
+
+session_start();
+include "../../../patient/Controller/common/aChColorTxtController.php";
+include "../../Controller/adminManagement/aAdminListController.php";
+
+if (isset($_POST['adminname']) && isset($_POST['password'])) {
+    $adminname = $_POST['adminname'];
+    $password = $_POST['password'];
+    $_SESSION["adminname"] = $adminname;
+}
+
+if($_SESSION["ismainadmin"]){
+    include "../common/adminNavbar.php";
+}else{
+    include "../common/adminSubNavbar.php";
+}
+
+if (!isset($_SESSION["adminname"])) {
+    header("Location: ../adminRegisterLogin/aLogin.php");
+}
+
+
+?>
 
   <!-- custom css -->
   <link rel="stylesheet" href="../common/css/style.css">

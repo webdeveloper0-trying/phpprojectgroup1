@@ -1,22 +1,3 @@
-<?php
-
-session_start();
-if (!isset($_SESSION["userId"])) {
-    header("Location: ../uRegisterLogin/register.php");
-} else {
-    $userId = $_SESSION["userId"];
-}
-include "../common/uNavbar/uNavbar.php";
-include "../common/uFooter/uFooter.php";
-
-include "../../../patient/Controller/common/aChColorTxtController.php";
-include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
-
-
-?>
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,6 +6,23 @@ include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Guide</title>
+
+    <?php
+
+    session_start();
+    if (!isset($_SESSION["userId"])) {
+        header("Location: ../uRegisterLogin/register.php");
+    } else {
+        $userId = $_SESSION["userId"];
+    }
+    include "../common/uNavbar/uNavbar.php";
+    include "../common/uFooter/uFooter.php";
+
+    include "../../../patient/Controller/common/aChColorTxtController.php";
+    include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
+
+
+    ?>
 
     <!-- custom css3 -->
     <link rel="stylesheet" href="../common/css/style.css" />
@@ -54,9 +52,9 @@ include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
 
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         <div class="d-flex align-items-center">
-                        <i class='bx bxs-user-pin bx-lg' style='color:#4B694D'></i>
+                            <i class='bx bxs-user-pin bx-lg' style='color:#4B694D'></i>
                             <div class="ms-3">
-                            <h6>Doctors</h6>
+                                <h6>Doctors</h6>
                                 <p class="fw-bold mb-1">Here is the page you can see the doctors in our hospital.</p>
                             </div>
                         </div>
@@ -65,9 +63,9 @@ include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
 
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         <div class="d-flex align-items-center">
-                        <i class='bx bxs-donate-blood bx-lg' style='color:#4b694d'></i>
+                            <i class='bx bxs-donate-blood bx-lg' style='color:#4b694d'></i>
                             <div class="ms-3">
-                            <h6>Blood Donation</h6>
+                                <h6>Blood Donation</h6>
                                 <p class="fw-bold mb-1">Here is the page you can fill information required for blood donation in a quick time.</p>
                             </div>
                         </div>
@@ -76,9 +74,9 @@ include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
 
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         <div class="d-flex align-items-center">
-                        <i class='bx bx-plus-medical bx-lg' style='color:#4B694D'></i>
+                            <i class='bx bx-plus-medical bx-lg' style='color:#4B694D'></i>
                             <div class="ms-3">
-                            <h6>Emergency</h6>
+                                <h6>Emergency</h6>
                                 <p class="fw-bold mb-1">Here is the page you can easily find emergency contacts.</p>
                             </div>
                         </div>
@@ -87,9 +85,9 @@ include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
 
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         <div class="d-flex align-items-center">
-                        <i class='bx bxs-capsule bx-lg' style='color:#4b694d' ></i>
+                            <i class='bx bxs-capsule bx-lg' style='color:#4b694d'></i>
                             <div class="ms-3">
-                            <h6>Pharmacies</h6>
+                                <h6>Pharmacies</h6>
                                 <p class="fw-bold mb-1">Here is the page you can easily find Pharmacies contacts and about Medicines.</p>
                             </div>
                         </div>
@@ -98,9 +96,9 @@ include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
 
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         <div class="d-flex align-items-center">
-                        <i class='bx bx-lg bxs-info-circle' style='color:#4b694d'  ></i>
+                            <i class='bx bx-lg bxs-info-circle' style='color:#4b694d'></i>
                             <div class="ms-3">
-                            <h6>Abouts Us</h6>
+                                <h6>Abouts Us</h6>
                                 <p class="fw-bold mb-1">Here is the page you can read about our hospital system.</p>
                             </div>
                         </div>
@@ -109,9 +107,9 @@ include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
 
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         <div class="d-flex align-items-center">
-                        <i class='bx bx-lg bxs-info-circle' style='color:#4b694d'  ></i>
+                            <i class='bx bx-lg bxs-info-circle' style='color:#4b694d'></i>
                             <div class="ms-3">
-                            <h6>Centers</h6>
+                                <h6>Centers</h6>
                                 <p class="fw-bold mb-1">Here is the page you can read about the centers of our hospital.</p>
                             </div>
                         </div>
@@ -120,26 +118,16 @@ include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
 
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         <div class="d-flex align-items-center">
-                        <i class='bx bx-lg bxs-info-circle' style='color:#4b694d'  ></i>
+                            <i class='bx bx-lg bxs-info-circle' style='color:#4b694d'></i>
                             <div class="ms-3">
-                            <h6>Blogs</h6>
+                                <h6>Blogs</h6>
                                 <p class="fw-bold mb-1">Here is the page you can read blogs of us.</p>
                             </div>
                         </div>
                         <a class="btn btn-link btn-rounded btn-sm" href="../blogs/mainBlog.php" role="button">View</a>
                     </li>
 
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                        <div class="d-flex align-items-center">
-                        <i class='bx bx-lg bxs-info-circle' style='color:#4b694d'  ></i>
-                            <div class="ms-3">
-                            <h6>Contact Us</h6>
-                                <p class="fw-bold mb-1">Here is the page you can see the contacts of our hospital.</p>
-                            </div>
-                        </div>
-                        <a class="btn btn-link btn-rounded btn-sm" href="../main/main.php#footer" role="button">View</a>
-                    </li>
-
+                    
                 </ul>
             </div>
 

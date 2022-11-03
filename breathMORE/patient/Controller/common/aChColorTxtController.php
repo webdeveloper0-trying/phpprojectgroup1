@@ -51,6 +51,4 @@ document.documentElement.style.setProperty('--logoColor', `<?= $logoColor ?>`);
 document.documentElement.style.setProperty('--fontOne', `<?= $fontOne ?>`);
 document.documentElement.style.setProperty('--fontTwo', `<?= $fontTwo ?>`);
 
-
-
 </script>

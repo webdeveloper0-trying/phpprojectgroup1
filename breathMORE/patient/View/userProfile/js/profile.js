@@ -13,20 +13,35 @@ function setimg() {
 }
 
 
+$(".uReport").css("display","none");
+$(".uAHistory").css("display","none");
+$(".DocNote").css("display","none");
 
 $("#uAHistory").click(function(){
-  console.log("click history");
-  
+ 
   $(".uAHistory").css("display","block");
   $(".uReport").css("display","none");
+  $(".uDocNote").css("display","none");
+  
   
 });
 
 $("#uReport").click(function(){
-  console.log("click report");
  
-  $(".uAHistory").css("display","none");
   $(".uReport").css("display","block");
+  $(".uAHistory").css("display","none");
+  $(".uDocNote").css("display","none");
+  
+  
+});
+
+
+$("#uDocNote").click(function(){
+  
+  $(".uDocNote").css("display","block");
+  $(".uAHistory").css("display","none");
+  $(".uReport").css("display","none");
+  
   
   
 });

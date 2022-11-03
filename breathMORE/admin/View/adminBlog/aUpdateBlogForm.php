@@ -1,11 +1,3 @@
-<?php
-session_start();
-$blogInfos = $_SESSION["blogInfo"];
-
-// print_r ($blogInfos);
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,6 +6,24 @@ $blogInfos = $_SESSION["blogInfo"];
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog Update Form</title>
+
+    <?php
+    session_start();
+    include "../../../patient/Controller/common/aChColorTxtController.php";
+
+
+    if (isset($_POST['adminname']) && isset($_POST['password'])) {
+        $adminname = $_POST['adminname'];
+        $password = $_POST['password'];
+        $_SESSION["adminname"] = $adminname;
+    }
+    $blogInfos = $_SESSION["blogInfo"];
+
+    // print_r ($blogInfos);
+
+    ?>
+
+    <link href="../storage/home/<?= $logoPic ?>" rel="icon" type="image/png" />
 
     <!-- Bootstrap css1 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
@@ -35,7 +45,7 @@ $blogInfos = $_SESSION["blogInfo"];
     <!-- custom css -->
     <link rel="stylesheet" href="../common/css/style.css">
 
-  
+
 </head>
 
 <body>
@@ -44,16 +54,16 @@ $blogInfos = $_SESSION["blogInfo"];
         <form class="form p-5" action="../../Controller/adminBlogs/aUpdateBlogController.php" method="POST">
             <div class="row mb-4">
                 <div class="col">
-                <input type="hidden" name="blogId" value="<?=$blogInfos[0]["id"] ?>">
+                    <input type="hidden" name="blogId" value="<?= $blogInfos[0]["id"] ?>">
                     <div class="form-outline">
-                        
-                        <input type="text" name="blogTitle" id="blogTitle" class="form-control" value="<?=$blogInfos[0]["title"] ?>" required />
+
+                        <input type="text" name="blogTitle" id="blogTitle" class="form-control" value="<?= $blogInfos[0]["title"] ?>" required />
                         <label class="form-label" for="blogTitle">Blog Title</label>
                     </div>
                 </div>
                 <div class="col">
                     <div class="form-outline">
-                        <input type="text" name="blogWriter" id="blogWriter" class="form-control" value="<?=$blogInfos[0]["writer"] ?>" required />
+                        <input type="text" name="blogWriter" id="blogWriter" class="form-control" value="<?= $blogInfos[0]["writer"] ?>" required />
                         <label class="form-label" for="blogWriter">Blog Writer</label>
                     </div>
                 </div>
@@ -61,12 +71,12 @@ $blogInfos = $_SESSION["blogInfo"];
 
             <!-- Text input -->
             <div class="form-outline mb-4">
-                <input type="date" name="blogDate" id="blogDate" class="form-control"  value="<?=$blogInfos[0]["date"] ?>" required />
+                <input type="date" name="blogDate" id="blogDate" class="form-control" value="<?= $blogInfos[0]["date"] ?>" required />
             </div>
 
             <!-- Text input -->
             <div class="form-outline mb-4">
-                <input type="text" name="blogImage" id="BlogImage" class="form-control" value="<?=$blogInfos[0]["blog_img"] ?>" placeholder="imagename.extension" required />
+                <input type="text" name="blogImage" id="BlogImage" class="form-control" value="<?= $blogInfos[0]["blog_img"] ?>" placeholder="imagename.extension" required />
                 <label class="form-label" for="BlogImage">Blog Image</label>
             </div>
 

@@ -1,10 +1,3 @@
-<?php
-session_start();
-$typeStock = $_SESSION["bloodInfos"];
-// echo "<pre>";
-// print_r($typeStock);
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,6 +6,14 @@ $typeStock = $_SESSION["bloodInfos"];
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EditBLood Stock</title>
+
+    <?php
+    session_start();
+    include "../../../patient/Controller/common/aChColorTxtController.php";
+    $typeStock = $_SESSION["bloodInfos"];
+    // echo "<pre>";
+    // print_r($typeStock);
+    ?>
 
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -86,7 +87,8 @@ $typeStock = $_SESSION["bloodInfos"];
 
                 <div class="col-lg-5 col-sm-3 mb-3 ">
                     <label for="exampleFormControlInput1" class="form-label">Used </label>
-                    <input id="" type="text" name="upUsed" value="<?php echo $typeStock[0]["used_quantity"] ?>" class="form-control" id="exampleFormControlInput1" placeholder="">
+                    <input type="hidden" name="preUsed" value="<?php echo $typeStock[0]["used_quantity"] ?>" />
+                    <input id="" type="text" name="upUsed" value="<?php echo $typeStock[0]["used_quantity"] ?>" class="form-control" id="exampleFormControlInput1" placeholder="Previous Used + Current Used">
                 </div>
 
 

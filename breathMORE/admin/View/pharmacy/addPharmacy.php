@@ -7,6 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pharmacy ADD</title>
 
+    <?php
+    session_start();
+    include "../../../patient/Controller/common/aChColorTxtController.php";
+
+    ?>
+    <link href="../storage/home/<?= $logoPic ?>" rel="icon" type="image/png" />
+
     <!-- Bootstrap css1 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <!-- Bootstrap js1 -->
@@ -96,14 +103,14 @@
                     <option>Township</option>
                     <option value="Mingaladon">Mingaladon</option>
                     <option value="Insein">Insein</option>
-                    <option value="Hlaingthayar">Hlaingthayar</option>
+                    <option value="Hlaingtharyar">Hlaingtharyar</option>
                     <option value="Thanlyin">Thanlyin</option>
                     <option value="Latha">Latha</option>
                     <option value="Lanmadaw">Lanmadaw</option>
                     <option value="Pabedan">Pabedan</option>
                     <option value="Dagon">Dagon</option>
-                    <option value="Ahlon">Ahlon</option>
-                    <option value="Kyeemyintdaing">Kyeemyintdaing</option>
+                    <option value="Ahlone">Ahlone</option>
+                    <option value="Kyeemyindaing">Kyeemyindaing</option>
                     <option value="SanChaung">SanChaung</option>
                     <option value="South Okkalapa">South Okkalapa</option>
                 </select>

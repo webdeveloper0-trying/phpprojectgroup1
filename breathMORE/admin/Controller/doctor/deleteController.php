@@ -1,8 +1,8 @@
 <?php
 
 include "../../Model/dbConnection.php";
-if (isset($_GET["cId"])) {
-    $docId = $_GET["cId"];
+if (isset($_GET["id"])) {
+    $docId = $_GET["id"];
 
     echo $docId;
 
@@ -21,5 +21,5 @@ if (isset($_GET["cId"])) {
     $sql->execute();
 
 
-    // header("Location: ../../View/doctor/list.php");
+    header("Location: ../../View/doctor/list.php");
 }

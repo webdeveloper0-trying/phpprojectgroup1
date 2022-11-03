@@ -1,28 +1,3 @@
-<?php
-
-session_start();
-include "../../../patient/Controller/common/aChColorTxtController.php";
-include "../../Controller/doctor/listController.php";
-
-include "../../Controller/doctor/aDocCountListController.php";
-
-if (isset($_POST['adminname']) && isset($_POST['password'])) {
-    $adminname = $_POST['adminname'];
-    $password = $_POST['password'];
-    $_SESSION["adminname"] = $adminname;
-}
-
-if ($_SESSION["ismainadmin"]) {
-    include "../common/adminNavbar.php";
-} else {
-    include "../common/adminSubNavbar.php";
-}
-// if (!isset($_SESSION["adminname"])) {
-//     header("Location: ../adminRegisterLogin/aLogin.php");
-// }
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,6 +6,28 @@ if ($_SESSION["ismainadmin"]) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doctor List</title>
+
+    <?php
+
+    session_start();
+    include "../../../patient/Controller/common/aChColorTxtController.php";
+    include "../../Controller/doctor/listController.php";
+
+    include "../../Controller/doctor/aDocCountListController.php";
+
+    if (isset($_POST['adminname']) && isset($_POST['password'])) {
+        $adminname = $_POST['adminname'];
+        $password = $_POST['password'];
+        $_SESSION["adminname"] = $adminname;
+    }
+
+    if ($_SESSION["ismainadmin"]) {
+        include "../common/adminNavbar.php";
+    } else {
+        include "../common/adminSubNavbar.php";
+    }
+
+    ?>
 
     <link rel="stylesheet" href="../common/css/style.css">
     <link rel="stylesheet" href="../common/css/adminNavbar.css" />
@@ -67,15 +64,16 @@ if ($_SESSION["ismainadmin"]) {
                                 <?= $docCountList["doctor_name"] ?>
                             </td>
                             <td colspan="2"><?= $docCountList["center"] ?></td>
-                        </tr><?php } ?>
-                    <tr>
+                        </tr>
+                        <tr>
 
-                        <th scope="col">Total Appointment</th>
+                        <th scope="col">Alert:</th>
                         <td>
-                            <span class="badge badge-danger text-primary rounded-pill fs-6">
-                                5
+                            <span id="totalACount" class="text-danger">       
+                            You can only change between 1 and 5 to update Appointments for each Doctor.
                             </span>
-                        </td>
+                        </td><?php } ?>
+                    
 
                         <th scope="col">Update Appointment</th>
                         <td>

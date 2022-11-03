@@ -7,11 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ADD Doctors</title>
 
+    <?php
+    include "../../../patient/Controller/common/aChColorTxtController.php"; ?>
+    <link href="../storage/home/<?= $logoPic ?>" rel="icon" type="image/png" />
+
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="./docAdd.css">
-    <!-- <link rel="stylesheet" href="../common/css/style.css"> -->
+   
 </head>
 
 <body>
@@ -50,12 +55,12 @@
 
                 <div class="mb-2 col col col-lg-3">
                     <label for="exampleFormControlInput1" class="form-label">SAMA</label>
-                    <input type="text" name="sama" class="form-control" id="exampleFormControlInput1" placeholder="SAMA">
+                    <input type="text" name="sama" class="form-control" id="exampleFormControlInput1" placeholder="SAMA" required>
                 </div>
 
                 <div class="mb-2 col col-lg-3">
                     <label for="exampleFormControlInput1" class="form-label">Bachelar</label>
-                    <input type="text" name="bachelar" class="form-control" id="exampleFormControlInput1" placeholder="Bachelar">
+                    <input type="text" name="bachelar" class="form-control" id="exampleFormControlInput1" placeholder="Bachelar" required>
                 </div>
 
             </div>
@@ -64,11 +69,11 @@
 
                 <div class="mb-2 col col-lg-3">
                     <label for="exampleFormControlInput1" class="form-label">Center</label>
-                    <input type="text" name="center" class="form-control" id="exampleFormControlInput1" placeholder="Center">
+                    <input type="text" name="center" class="form-control" id="exampleFormControlInput1" placeholder="Center" required>
                 </div>
                 <div class="mb-2 col col-lg-3">
                     <label for="exampleFormControlInput1" class="form-label">Phone No.</label>
-                    <input type="text" name="phNum" class="form-control" id="exampleFormControlInput1" placeholder="Phone number">
+                    <input type="text" name="phNum" class="form-control" id="exampleFormControlInput1" placeholder="Phone number" required>
                 </div>
 
             </div>
@@ -76,7 +81,7 @@
             <div class="row justify-content-center">
                 <div class="mb-2 col col-lg-6">
                     <label for="exampleFormControlInput1" class="form-label">Duty Date</label>
-                    <input type="text" name="dutyDate" class="form-control" id="exampleFormControlInput1" placeholder="Duty Date">
+                    <input type="text" name="dutyDate" class="form-control" id="exampleFormControlInput1" placeholder="Duty Date" required>
                 </div>
             </div>
 
@@ -85,11 +90,11 @@
             <div class="row  justify-content-center">
                 <div class="mb-2 col col-lg-3">
                     <label for="exampleFormControlInput1" class="form-label">Start Time</label>
-                    <input type="text" name="stime" class="form-control" id="exampleFormControlInput1" placeholder="Start time">
+                    <input type="text" name="stime" class="form-control" id="exampleFormControlInput1" placeholder="Start time" required>
                 </div>
                 <div class="mb-2 col col-lg-3">
                     <label for="exampleFormControlInput1" class="form-label">End Time</label>
-                    <input type="text" name="etime" class="form-control" id="exampleFormControlInput1" placeholder="End time">
+                    <input type="text" name="etime" class="form-control" id="exampleFormControlInput1" placeholder="End time" required>
                 </div>
             </div>
 

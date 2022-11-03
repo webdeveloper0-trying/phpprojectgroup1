@@ -6,9 +6,7 @@ $("#docSubmitCount").click(function () {
       alert("Type Appointment Count");
     } else {
         
-        let appointmentCount = $("#typeCount").val();
-
-        // console.log("DOCID",docId,"Count",appointmentCount);
+        
 
         if(appointmentCount < 0 || appointmentCount > 5){
             alert("Appointment Count cannot be greater than 5 or minus value");

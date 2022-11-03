@@ -13,7 +13,7 @@
 }
 
 .header > span{
-    color:red !important;
+    color:var(--logoColor) !important;
 }
 
 @media (max-width: 900px) {

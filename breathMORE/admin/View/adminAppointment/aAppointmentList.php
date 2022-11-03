@@ -1,29 +1,3 @@
-<?php
-session_start();
-
-
-if (isset($_POST['adminname']) && isset($_POST['password'])) {
-    $adminname = $_POST['adminname'];
-    $password = $_POST['password'];
-    $_SESSION["adminname"] = $adminname;
-}
-
-
-if ($_SESSION["ismainadmin"]) {
-    include "../common/adminNavbar.php";
-} else {
-    include "../common/adminSubNavbar.php";
-}
-// if (!isset($_SESSION["adminname"])) {
-//     header("Location: ../adminRegisterLogin/aLogin.php");
-// }
-
-
-include "../../../patient/Controller/common/aChColorTxtController.php";
-include "../../Controller/adminAppointment/aAppointmentListController.php";
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,6 +6,30 @@ include "../../Controller/adminAppointment/aAppointmentListController.php";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AppointmentList</title>
+
+    <?php
+    session_start();
+
+
+    if (isset($_POST['adminname']) && isset($_POST['password'])) {
+        $adminname = $_POST['adminname'];
+        $password = $_POST['password'];
+        $_SESSION["adminname"] = $adminname;
+    }
+
+
+    include "../../../patient/Controller/common/aChColorTxtController.php";
+    include "../../Controller/adminAppointment/aAppointmentListController.php";
+    if ($_SESSION["ismainadmin"]) {
+        include "../common/adminNavbar.php";
+    } else {
+        include "../common/adminSubNavbar.php";
+    }
+
+
+
+
+    ?>
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css?=time()" rel="stylesheet" />

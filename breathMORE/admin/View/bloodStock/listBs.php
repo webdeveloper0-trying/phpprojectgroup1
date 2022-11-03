@@ -1,28 +1,3 @@
-<?php
-
-session_start();
-include "../../../patient/Controller/common/aChColorTxtController.php";
-
-include "../../Controller/bloodStock/listBsController.php";
-
-if (isset($_POST['adminname']) && isset($_POST['password'])) {
-    $adminname = $_POST['adminname'];
-    $password = $_POST['password'];
-    $_SESSION["adminname"] = $adminname;
-}
-
-
-if ($_SESSION["ismainadmin"]) {
-    include "../common/adminNavbar.php";
-} else {
-    include "../common/adminSubNavbar.php";
-}
-
-if (!isset($_SESSION["adminname"])) {
-    header("Location: ../adminRegisterLogin/aLogin.php");
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,6 +6,30 @@ if (!isset($_SESSION["adminname"])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blood stock lists</title>
+    <?php
+
+    session_start();
+    include "../../../patient/Controller/common/aChColorTxtController.php";
+
+    include "../../Controller/bloodStock/listBsController.php";
+
+    if (isset($_POST['adminname']) && isset($_POST['password'])) {
+        $adminname = $_POST['adminname'];
+        $password = $_POST['password'];
+        $_SESSION["adminname"] = $adminname;
+    }
+
+
+    if ($_SESSION["ismainadmin"]) {
+        include "../common/adminNavbar.php";
+    } else {
+        include "../common/adminSubNavbar.php";
+    }
+
+    if (!isset($_SESSION["adminname"])) {
+        header("Location: ../adminRegisterLogin/aLogin.php");
+    }
+    ?>
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
@@ -99,9 +98,12 @@ if (!isset($_SESSION["adminname"])) {
                 </tr>
             </thead>
             <tbody>
-                <?php foreach ($bloodLists as $key => $blood) { ?>
+            <?php $count = ($page * $rowLimit) - ($rowLimit - 1); ?>
+
+                <?php
+                 foreach ($bloodLists as $key => $blood) { ?>
                     <tr>
-                        <th scope="row">1</th>
+                    <td><?= $count++; ?></td>
                         <td><?= $blood["blood_date"] ?></td>
                         <td><?= $blood["instock_now"] ?></td>
                         <td><?= $blood["blood_type"] ?></td>

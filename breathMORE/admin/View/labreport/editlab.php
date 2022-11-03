@@ -1,12 +1,3 @@
-<?php
-// echo "ok";
-session_start();
-$labinfo =  $_SESSION["pLabInfo"];
-// echo "<pre>";
-// print_r($labinfo);
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,6 +6,14 @@ $labinfo =  $_SESSION["pLabInfo"];
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Lab </title>
+
+    <?php
+    include "../../../patient/Controller/common/aChColorTxtController.php";
+    session_start();
+    $labinfo =  $_SESSION["pLabInfo"];
+   
+    ?>
+    <link href="../storage/home/<?= $logoPic ?>" rel="icon" type="image/png" />
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
     <!-- Google Fonts -->

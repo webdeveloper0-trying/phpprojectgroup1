@@ -1,10 +1,3 @@
-<?php
-session_start();
-$mediList =  $_SESSION["dAndmeInfos"];
-// echo "<pre>";
-// print_r($mediList);
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,6 +6,17 @@ $mediList =  $_SESSION["dAndmeInfos"];
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit MEDI </title>
+
+    <?php
+
+    session_start();
+    include "../../../patient/Controller/common/aChColorTxtController.php";
+    $mediList =  $_SESSION["dAndmeInfos"];
+    // echo "<pre>";
+    // print_r($mediList);
+    ?>
+
+    <link href="../storage/home/<?= $logoPic ?>" rel="icon" type="image/png" />
 
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">

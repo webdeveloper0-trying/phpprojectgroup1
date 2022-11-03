@@ -38,6 +38,7 @@
 }
 
 .table{
+    width:inherit !important;
     position:relative !important;
 }
 
@@ -45,6 +46,8 @@
     position:sticky !important;
     top:0 !important;
 }
+
+
 
 
 /* width */

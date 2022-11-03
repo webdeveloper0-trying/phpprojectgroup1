@@ -1,20 +1,3 @@
-<?php
-session_start();
-if (!isset($_SESSION["userId"])) {
-  header("Location: ../uRegisterLogin/register.php");
-} else {
-  $userId = $_SESSION["userId"];
-}
-include "../../Controller/blogs/mainBlogController.php";
-include "../common/uNavbar/uNavbar.php";
-include "../common/uFooter/uFooter.php";
-
-include "../../../patient/Controller/common/aChColorTxtController.php";
-include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
-include "../../Controller/appointment/uCountAppointmentController.php";
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,6 +7,7 @@ include "../../Controller/appointment/uCountAppointmentController.php";
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Us</title>
 
+
   <!-- custom css -->
   <link rel="stylesheet" href="../common/css/style.css" <?php time(); ?> />
   <link rel="stylesheet" href="../common/uNavbar/css/uNavbar.css" />
@@ -32,6 +16,25 @@ include "../../Controller/appointment/uCountAppointmentController.php";
 
   <script src="../common/jq/jquery-3.6.0.min.js" defer></script>
   <script src="../common/uNavbar/js/uNavbar.js" <?php time(); ?> defer></script>
+
+
+  <?php
+  session_start();
+  if (!isset($_SESSION["userId"])) {
+    header("Location: ../uRegisterLogin/register.php");
+  } else {
+    $userId = $_SESSION["userId"];
+  }
+  include "../../Controller/blogs/mainBlogController.php";
+  include "../common/uNavbar/uNavbar.php";
+  include "../common/uFooter/uFooter.php";
+
+  include "../../../patient/Controller/common/aChColorTxtController.php";
+  include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
+  include "../../Controller/appointment/uCountAppointmentController.php";
+
+  ?>
+
 </head>
 
 <body>
@@ -113,27 +116,46 @@ include "../../Controller/appointment/uCountAppointmentController.php";
 
     <div class="row featureCards">
       <div class="col card text-center m-5 p-0">
-        <div class="bg-green card-header">Featured</div>
+        <div class="bg-green card-header">Online Appointment</div>
         <div class="card-body">
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <p class="card-text">
+            Find a Doctor who is your favorite and make an appointment comfortably using our Website.
+            You can save time using our appointment service, without calling any call centers and get the specific time that you want to meet your doctor.
+
+          </p>
 
         </div>
 
       </div>
 
       <div class="col card text-center m-5 p-0">
-        <div class="bg-green card-header">Featured</div>
+        <div class="bg-green card-header">Blood Donation</div>
         <div class="card-body">
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <p class="card-text">
+            Every donation is critical. You can make a lifesaving difference.
+            Patients with trauma, undergoing surgery, or with conditions that require
+            blood transfusions, such as sickle cell disease, need blood and blood products. You can help.
+            Donate Blood. Save a life.
+
+
+          </p>
 
         </div>
 
       </div>
 
       <div class="col card text-center m-5 p-0">
-        <div class="bg-green card-header">Featured</div>
+        <div class="bg-green card-header">Emergency</div>
         <div class="card-body">
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <p class="card-text">
+            The emergency Department at Breath More Hospital is
+            staffed 24 hours a day by Board Certified Emergency
+            Medicine Physicians and registered nurses who are
+            certified in advanced cardiac life support (ACLS)
+            and in Trauma Care. Moreover, We provide Oxygen
+            available places on our website.
+
+          </p>
 
         </div>
       </div>
