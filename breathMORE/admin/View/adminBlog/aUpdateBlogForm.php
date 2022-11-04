@@ -92,14 +92,11 @@
             </div>
 
 
-            <div class="d-flex justify-content-between">
+            <div class="d-flex justify-content-end">
                 <!-- Submit button -->
                 <button type="submit" class="btn btn-purple btn-blog mb-4" name="updateBlog">Update</button>
 
-                <!-- Blog button -->
-                <a href="">
-                    <button type="submit" class="btn btn-green btn-blog mb-4">Go Back to Blog Page</button>
-                </a>
+                
             </div>
         </form>
     </div>
