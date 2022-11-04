@@ -16,11 +16,7 @@
     }
 
 
-    if ($_SESSION["ismainadmin"]) {
-        $adminTxt = "Main Admin";
-    } else {
-        $adminTxt = "Sub Admin";
-    }
+
     include "../../Controller/common/aChColorTxtController.php";
     include "../../Controller/adminProfile/aProfileSelectPropsController.php";
 
@@ -60,11 +56,24 @@
                 $webName = explode("/", $webName);
                 $fName = $webName[0];
                 $lName = $webName[1];
-                ?>
+                
+                if ($_SESSION["ismainadmin"]) {
+                $adminTxt = "Main Admin"; ?>
+
                 <a href="../adminDashboard/aDashboard.php">
                     <h3 class="homeHeader fw-bold text-center mt-5 ms-1">
                         <?= $fName ?><span><?= $lName ?></span></h3>
                 </a>
+                <?php } else {
+                $adminTxt = "Sub Admin"; ?>
+
+                <a href="../adminDashboard/aSubAdminDashboard.php">
+                    <h3 class="homeHeader fw-bold text-center mt-5 ms-1">
+                        <?= $fName ?><span><?= $lName ?></span></h3>
+                </a>
+                <?php }
+                ?>
+                
             </div>
             <div class="profileCard card rounded-0 py-3">
                 <i class='bx bx-lg bxs-user-circle text-center' style='color:#4b694d'></i>
@@ -166,7 +175,7 @@
                                     <a href="../pharmacy/listPharmacy.php">Pharmacies</a>
                                 </li>
                                 <li class="breadcrumb-item active" aria-current="page">
-                                    <a href="../phistory/phlist.php">Pharmacies</a>
+                                    <a href="../phistory/phlist.php">Patient History</a>
                                 </li>
                                 <li class="breadcrumb-item active" aria-current="page">
                                     <a href="../oxygen/o2list.php">Oxygen</a>

@@ -17,3 +17,9 @@
   overflow: hidden !important;
   text-overflow: ellipsis !important;
 }
+
+@media (max-width:500px){
+  .con{
+    margin:0 !important;
+  }
+}

@@ -105,13 +105,13 @@ marquee {
 
 .splideCarousel {
   width: 100vw !important;
-  height: 40vh !important;
+  height: auto !important;
   background: var(--secondaryColor) !important;
   color: var(--textColorTwo) !important;
 }
 
 .sCarouselTxt {
-  width: 50vw !important;
+  width: 80vw !important;
   background: var(--textColorOne) !important;
 }
 

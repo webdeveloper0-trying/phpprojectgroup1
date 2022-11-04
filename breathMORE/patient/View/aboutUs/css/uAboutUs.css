@@ -153,3 +153,9 @@
     margin-top: 3em !important;
   }
 }
+
+@media(max-width: 400px){
+  .features{
+    padding-top:10em !important;
+  }
+}

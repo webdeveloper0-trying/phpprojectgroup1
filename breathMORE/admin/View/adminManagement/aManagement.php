@@ -115,7 +115,7 @@ if (!isset($_SESSION["adminname"])) {
 
                     <!-- Password input -->
                     <div class="form-outline mb-4">
-                      <input type="password" name="password" id="editAdminPwd<?= $countId ?>" value="<?= $adminInfo[0]['password'] ?>" class="form-control" />
+                      <input type="password" name="password" id="editAdminPwd<?= $countId ?>" class="form-control" required />
                       <label class="form-label" for="editAdminPwd<?= $countId ?>">Password</label>
                     </div>
 

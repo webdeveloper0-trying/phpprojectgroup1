@@ -46,7 +46,7 @@
 </head>
 
 <body>
-  <div class="mx-5">
+  <div class="con mx-5">
     <h4 class="header text-center my-5">Strong And Well</h4>
 
     <div class="blogList p-5">

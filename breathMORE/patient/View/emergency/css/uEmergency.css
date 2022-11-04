@@ -89,7 +89,11 @@
 
   @media (max-width: 690px){
 
-    .oxygenTable{
+    .con{
+      margin:0 !important;
+    }
+
+    .oxygenList{
         width:auto !important;
     }
 

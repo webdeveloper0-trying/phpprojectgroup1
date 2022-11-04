@@ -41,7 +41,7 @@
 </head>
 
 <body>
-    <div class="mx-5">
+    <div class="con mx-5">
 
         <?php
         include("../common/uNavbar/uSecNavbar.php") ?>

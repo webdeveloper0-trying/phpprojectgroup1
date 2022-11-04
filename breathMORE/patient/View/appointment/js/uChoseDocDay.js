@@ -5,6 +5,8 @@ let selected = $(this).val();
 
 console.log("Selected",selected);
 
+$(this).css("backgroundColor",`var(--thirdColor)`);
+
 if (selected == "") {
     alert("Please input you want to search!")
 } else {
@@ -24,4 +26,8 @@ if (selected == "") {
         }
     })
 }
+});
+
+$(".docTime").click(function(){
+    $(this).css("backgroundColor",`var(--thirdColor)`);
 });

@@ -163,20 +163,6 @@ tour.addStep({
   });
 
 
-  tour.addStep({
-    id: 'uContact',
-    text: 'This is the contact page.',
-    attachTo: {
-      element: '.uContact',
-      on: 'bottom'
-    },
-    buttons: [
-      {
-        text: 'Next',
-        action: tour.next
-      }
-    ]
-  });
 
 
   tour.addStep({

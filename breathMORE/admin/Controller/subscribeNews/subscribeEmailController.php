@@ -19,7 +19,9 @@ if (isset($_POST["sendmail"])) {
             "<h1>$subject !!</h1>
                 <p>$info</p>"
         );
+
+        header("Location: ../../View/subscribeNews/aSubscribeNewList.php");
     }
 
-    header("Location: ../../View/subscribeNews/aSubscribeNewList.php");
+    
 }

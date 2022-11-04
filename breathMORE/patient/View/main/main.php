@@ -16,7 +16,7 @@ if ($_SESSION["isRegister"]) { ?>
     <link rel="stylesheet" href="../libs/node_modules/shepherd.js/dist/css/shepherd.css" />
     <script src="../libs/node_modules/@popperjs/core/dist/umd/popper.min.js" defer></script>
     <script src="../libs/node_modules/shepherd.js/dist/js/shepherd.min.js" defer></script>
-    <script src="./js/userguide.js" defer></script>
+    <script src="./js/userguide.js" <?=time()?> defer></script>
   <?php 
   $_SESSION["isRegister"] = false;}
    ?>
@@ -188,7 +188,7 @@ include "../../Controller/uFeedBack/uSelectFeedbackController.php";
 
   <!-- carousel -->
 
-  <section class="d-flex  justify-content-center align-items-center">
+  <section class="d-flex justify-content-center align-items-center">
     <div class="splideCarousel splide pt-2 ">
       <div class="splide__track">
         <ul class="splide__list">

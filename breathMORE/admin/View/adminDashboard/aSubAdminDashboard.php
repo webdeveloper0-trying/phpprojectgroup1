@@ -1,55 +1,3 @@
-<?php
-session_start();
-include "../../../patient/Controller/common/aChColorTxtController.php";
-include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
-include '../../Controller/aDashboard/aDashboardCountController.php';
-
-
-if (isset($_POST['adminname']) && isset($_POST['password'])) {
-    $adminname = $_POST['adminname'];
-    $password = $_POST['password'];
-    $_SESSION["adminname"] = $adminname;
-}
-
-if (!isset($_SESSION["adminname"])) {
-    header("Location: ../adminRegisterLogin/aLogin.php");
-}
-$adminname = $_SESSION["adminname"];
-
-
-
-
-$register = $regCount[0]['COUNT(register_id)'];
-
-$appointement = $appCount[0]['COUNT(id)'];
-
-$doctors = $docCount[0]['COUNT(doctor_id)'];
-
-$donations = $donCount[0]['COUNT(id)'];
-
-
-$medicines = $medCount[0]['COUNT(id)'];
-
-
-$reports = $labCount[0]['COUNT(id)'];
-
-$pharmacies = $pharmacyCount[0]['COUNT(id)'];
-
-$patients = $patientCount[0]['COUNT(id)'];
-
-$oxygens = $oxygenCount[0]['COUNT(id)'];
-
-$subscriptions = $subCount[0]['COUNT(id)'];
-
-$blogs = $blogCount[0]['COUNT(id)'];
-
-$faqs = $faqCount[0]['COUNT(id)'];
-
-$bloodstocks = $bloodStockCount[0]['COUNT(id)'];
-
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -57,7 +5,64 @@ $bloodstocks = $bloodStockCount[0]['COUNT(id)'];
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard</title>
+    <title>Admin Sub Dashboard</title>
+
+    <?php
+    session_start();
+    include "../../../patient/Controller/common/aChColorTxtController.php";
+    include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
+    include '../../Controller/aDashboard/aDashboardCountController.php';
+
+
+    if (isset($_POST['adminname']) && isset($_POST['password'])) {
+        $adminname = $_POST['adminname'];
+        $password = $_POST['password'];
+        $_SESSION["adminname"] = $adminname;
+    }
+
+    if (!isset($_SESSION["adminname"])) {
+        header("Location: ../adminRegisterLogin/aLogin.php");
+    }
+    $adminname = $_SESSION["adminname"];
+
+
+
+
+    $register = $regCount[0]['COUNT(register_id)'];
+
+    $appointement = $appCount[0]['COUNT(id)'];
+
+    $doctors = $docCount[0]['COUNT(doctor_id)'];
+
+    $donations = $donCount[0]['COUNT(id)'];
+
+
+    $medicines = $medCount[0]['COUNT(id)'];
+
+
+    $reports = $labCount[0]['COUNT(id)'];
+
+    $pharmacies = $pharmacyCount[0]['COUNT(id)'];
+
+    $patients = $patientCount[0]['COUNT(id)'];
+
+    $oxygens = $oxygenCount[0]['COUNT(id)'];
+
+    $subscriptions = $subCount[0]['COUNT(id)'];
+
+    $blogs = $blogCount[0]['COUNT(id)'];
+
+    $faqs = $faqCount[0]['COUNT(id)'];
+
+    $feedbacks = $feedbackCount[0]['COUNT(id)'];
+
+    $bloodstocks = $bloodStockCount[0]['COUNT(id)'];
+
+
+    ?>
+
+
+    <link href="../storage/home/<?= $logoPic ?>" rel="icon" type="image/png" />
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css?=time()" rel="stylesheet" />
@@ -101,7 +106,7 @@ $bloodstocks = $bloodStockCount[0]['COUNT(id)'];
 
         <h3 class="h3 header my-5">Admin Dashboard</h3>
         <div class="adminDashboard col col-10 row justify-content-center align-items-center flex-wrap py-5">
-
+           
             <div class="col col-4 text-center">
                 <a href="../aTotalRegisterList/aTotalRegister.php">
                     <button type="button" class="my-3 btn btn-xl py-3 btn-green btn-rounded d-flex align-items-center">
@@ -143,7 +148,7 @@ $bloodstocks = $bloodStockCount[0]['COUNT(id)'];
             </div>
 
             <div class="col col-4 text-center">
-                <a href="../adminBloodDonation/abloodDonationList.php">
+                <a href="../bloodStock/listBs.php">
                     <button type="button" class="my-3 btn btn-xl py-3 btn-green btn-rounded d-flex align-items-center">
                         Blood Stocks
                         <span class="badge badge-primary rounded-pill fs-6">
@@ -212,7 +217,7 @@ $bloodstocks = $bloodStockCount[0]['COUNT(id)'];
             </div>
 
             <div class="col col-4 text-center">
-                <a href="../adminBloodDonation/abloodDonationList.php">
+                <a href="../faq/faqAdd.php">
                     <button type="button" class="my-3 btn btn-xl py-3 btn-green btn-rounded d-flex align-items-center">
                         FAQs
                         <span class="badge badge-primary rounded-pill fs-6">
@@ -224,10 +229,10 @@ $bloodstocks = $bloodStockCount[0]['COUNT(id)'];
 
             <div class="col col-4 text-center">
 
-                <a href="../adminBlog/aBlogList.php">
+                <a href="../feedback/aFeedbackList.php">
                     <button type="button" class="my-3 btn btn-xl py-3 btn-green btn-rounded d-flex align-items-center">
                         FeedBacks
-                        <span class="badge badge-primary rounded-pill fs-6"><?= $blogs; ?></span>
+                        <span class="badge badge-primary rounded-pill fs-6"><?= $feedbacks; ?></span>
 
                     </button>
                 </a>
@@ -265,7 +270,8 @@ $bloodstocks = $bloodStockCount[0]['COUNT(id)'];
                 </a>
             </div>
 
-          
+            <div class="col col-8"></div>
+
 
 
 

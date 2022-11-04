@@ -1,3 +1,9 @@
 .blogTitle{
     color:var(--secondaryColor) !important;
 }
+
+@media (max-width:500px){
+    .con{
+      margin:0 !important;
+    }
+  }

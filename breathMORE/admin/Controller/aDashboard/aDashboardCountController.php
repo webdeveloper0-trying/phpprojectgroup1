@@ -111,6 +111,14 @@ $sql->execute();
 $bloodStockCount = $sql->fetchAll(PDO::FETCH_ASSOC);
 
 
+$sql = $pdo->prepare("
+SELECT COUNT(id) FROM feedback WHERE del_flg = 0;
+");
+$sql->execute();
+
+$feedbackCount = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+
 
 
 

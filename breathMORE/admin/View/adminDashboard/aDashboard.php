@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Sub Dashboard</title>
+    <title>Admin Dashboard</title>
 
     <?php
     session_start();
@@ -53,6 +53,8 @@
     $blogs = $blogCount[0]['COUNT(id)'];
 
     $faqs = $faqCount[0]['COUNT(id)'];
+
+    $feedbacks = $feedbackCount[0]['COUNT(id)'];
 
     $bloodstocks = $bloodStockCount[0]['COUNT(id)'];
 
@@ -153,7 +155,7 @@
             </div>
 
             <div class="col col-4 text-center">
-                <a href="../adminBloodDonation/abloodDonationList.php">
+                <a href="../bloodStock/listBs.php">
                     <button type="button" class="my-3 btn btn-xl py-3 btn-green btn-rounded d-flex align-items-center">
                         Blood Stocks
                         <span class="badge badge-primary rounded-pill fs-6">
@@ -222,7 +224,7 @@
             </div>
 
             <div class="col col-4 text-center">
-                <a href="../adminBloodDonation/abloodDonationList.php">
+                <a href="../faq/faqAdd.php">
                     <button type="button" class="my-3 btn btn-xl py-3 btn-green btn-rounded d-flex align-items-center">
                         FAQs
                         <span class="badge badge-primary rounded-pill fs-6">
@@ -234,10 +236,10 @@
 
             <div class="col col-4 text-center">
 
-                <a href="../adminBlog/aBlogList.php">
+                <a href="../feedback/aFeedbackList.php">
                     <button type="button" class="my-3 btn btn-xl py-3 btn-green btn-rounded d-flex align-items-center">
                         FeedBacks
-                        <span class="badge badge-primary rounded-pill fs-6"><?= $blogs; ?></span>
+                        <span class="badge badge-primary rounded-pill fs-6"><?= $feedbacks; ?></span>
 
                     </button>
                 </a>

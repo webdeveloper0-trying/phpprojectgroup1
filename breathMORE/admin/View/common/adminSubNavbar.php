@@ -130,4 +130,11 @@
 
 </body>
 
+<script>
+        document.getElementById("adminLogout").addEventListener("click",function(){
+            console.log("admin Logout");
+            document.getElementById("dropBox").classList.toggle("show");
+        })
+    </script>
+
 </html>

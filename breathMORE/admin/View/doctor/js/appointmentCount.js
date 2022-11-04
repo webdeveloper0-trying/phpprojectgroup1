@@ -2,11 +2,15 @@
 console.log("hi2");
 $("#docSubmitCount").click(function () {
     console.log("click");
+
+    
+
+
     if ($("#typeCount").val() == "") {
       alert("Type Appointment Count");
     } else {
         
-        
+        let appointmentCount = $("#typeCount").val();
 
         if(appointmentCount < 0 || appointmentCount > 5){
             alert("Appointment Count cannot be greater than 5 or minus value");
