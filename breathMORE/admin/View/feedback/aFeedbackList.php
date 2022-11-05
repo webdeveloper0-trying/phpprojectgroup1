@@ -67,6 +67,7 @@
                     <th>User Id</th>
                     <th>Feedback</th>
                     <th>Rating</th>
+                    <th>Control</th>
                 </tr>
             </thead>
             <tbody>
@@ -84,6 +85,11 @@
                             <?= $feedback["feedback"] ?>
                         </td>
                         <td class="text-center"><?= $feedback["rating"] ?>
+                        </td>
+                        <td>
+                            <a href="../../Controller/feedback/aDelFeedbackController.php?id=<?= $feedback["id"] ?>">
+                                <i class="fa-solid fa-trash-can"></i>
+                            </a>
                         </td>
 
 
