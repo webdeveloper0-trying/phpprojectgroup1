@@ -68,11 +68,12 @@
 
                     <div class="regLink text-center">
                         <a href="./register.php" class="ms-6">Don't Have Account?
-                            <span>Register</span>
+                            <span><u>Register</u></span>
                         </a>
                         <br />
 
-                        <a href="./forgetpassword.php" class="ms-6">Forgot Password?
+                        <a href="./forgetpassword.php" class="ms-6">
+                            <u>Forgot Password?</u>
 
                         </a>
                     </div>

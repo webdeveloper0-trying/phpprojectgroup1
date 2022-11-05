@@ -31,7 +31,7 @@
 
 
 .accordion-button:hover::before{
-  transform:translateX(10%) !important;
+  transform:translateX(50%) !important;
 }
 
 

@@ -20,7 +20,7 @@ body{
 }
 
 .regLink span{
-    color:var(--thirdColor) !important;
+    color:var(--textColorOne) !important;
 }
 
 .header{

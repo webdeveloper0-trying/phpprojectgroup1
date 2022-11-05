@@ -26,13 +26,13 @@
 </head>
 
 <body class="d-flex justify-content-center">
-    <div class="mx-5 mt-5 col col-xl-5 col-lg-5 col-md-5 col-sm-10">
+    <div class="mx-5 mt-5 col col-xl-5 col-lg-5 col-md-5 col-sm-10 pt-5">
 
         <form class="bg-green p-3 rounded" action="../../Controller/uRegisterLogin/forgetpasswordController.php" method="POST">
             <!-- Email input -->
             <div class="form-outline mb-4">
                 <input type="mail" class="form-control" name="email" id="forgotPwdEmail" aria-describedby="emailHelp" required>
-                <label class="form-label" for="form1Example1">Email address</label>
+                <label class="form-label text-light" for="form1Example1">Email address</label>
             </div>
 
 
@@ -42,7 +42,7 @@
 
                 <div class="col">
                     <button type="submit" class="btn btn-purple" name="forgetpassword">Reset password</button>
-                    <a href="./login.php">Login?</a>
+                    <a href="./login.php" class="text-light"><u>Login?</u></a>
                 </div>
             </div>
 
