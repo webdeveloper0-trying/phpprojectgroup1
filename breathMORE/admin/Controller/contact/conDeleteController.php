@@ -14,5 +14,5 @@ if (isset($_GET["id"])) {
     $sql->bindValue(":id", $conId);
     $sql->execute();
 
-    header("Location: ../../View/contactUs/editContact.php");
+    header("Location: ../../View/contactUs/addContact.php");
 }

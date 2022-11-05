@@ -90,10 +90,7 @@
                 <!-- Submit button -->
                 <button type="submit" class="btn btn-purple btn-blog mb-4" name="addBlog">Add</button>
 
-                <!-- Blog button -->
-                <a href="">
-                    <button type="submit" class="btn btn-green btn-blog mb-4">Go Back to Blog Page</button>
-                </a>
+              
             </div>
         </form>
     </div>

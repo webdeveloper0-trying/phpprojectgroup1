@@ -50,8 +50,8 @@ if (count($patientinfo) !== 0) {
 
         $sql = $pdo->prepare("SELECT * FROM
                patient_history LEFT JOIN  doctor_lists ON doctor_lists.doctor_id = patient_history.doctor_id
-                 WHERE patient_history.del_flg=0 AND doctor_lists.del_flg=0 LIMIT $startPage1, $rowLimit1");
-        // $sql->bindValue(":id", $patientid);
+                 WHERE patient_history.del_flg=0 AND doctor_lists.del_flg=0 AND patient_history.patient_id = :id LIMIT $startPage1, $rowLimit1");
+        $sql->bindValue(":id", $patientid);
         $sql->execute();
         $docNote = $sql->fetchAll(PDO::FETCH_ASSOC);
 

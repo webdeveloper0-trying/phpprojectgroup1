@@ -125,18 +125,20 @@
                         </tr>
                     </thead>
                     <tbody class="my-word-break">
-                        <?php foreach ($conList as $key => $contact) { ?>
+                        <?php 
+                        $count = 0;
+                        foreach ($conList as $key => $contact) { ?>
                             <tr>
-                                <th scope="row">1</th>
+                                <th scope="row"><?= ++$count; ?></th>
                                 <td class="text-wrap"><?= $contact["website_phno"] ?></td>
                                 <td class="text-wrap"><?= $contact["facebook"] ?></td>
                                 <td class="text-wrap"><?= $contact["youtube"] ?></td>
                                 <td class="text-wrap"><?= $contact["telegram"] ?></td>
 
                                 <td>
-                                    <a href=" ../../Controller/contact/conEditController.php?id=<?= $contact["id"] ?>"><i class="fa-solid fa-pen-to-square"></i></a>
+                                    <!-- <a href=" ../../Controller/contact/conEditController.php?id=<?= $contact["id"] ?>"><i class="fa-solid fa-pen-to-square"></i></a> -->
 
-                                    &nbsp;&nbsp;
+                                    <!-- &nbsp;&nbsp; -->
 
                                     <a href=" ../../Controller/contact/conDeleteController.php?id=<?= $contact["id"] ?>"><i class="fa-solid fa-trash-can"></i></a>
                                 </td>

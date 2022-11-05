@@ -30,7 +30,7 @@
                 </div>
                 <div class="modal-footer d-flex justify-content-center">
                     <button type="button" class="btn btn-purple">
-                        <a href="../aboutUs/uAboutUs.php" class="text-light">Go to HomePage</a>
+                        <a href="../main/main.php" class="text-light">Go to HomePage</a>
                     </button>
                 </div>
             </div>

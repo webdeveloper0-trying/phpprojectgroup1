@@ -31,7 +31,7 @@
         <form class="bg-green p-3 rounded" action="../../Controller/uRegisterLogin/forgetpasswordController.php" method="POST">
             <!-- Email input -->
             <div class="form-outline mb-4">
-                <input type="mail" class="form-control" name="email" id="forgotPwdEmail" aria-describedby="emailHelp" required>
+                <input type="mail" class="form-control text-light" name="email" id="forgotPwdEmail" aria-describedby="emailHelp" required>
                 <label class="form-label text-light" for="form1Example1">Email address</label>
             </div>
 

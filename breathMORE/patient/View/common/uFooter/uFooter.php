@@ -44,7 +44,7 @@ include "../../../admin/Controller/contact/conListController.php";
           <div class="footerAddress">01-567 344</div>
           <br />
 
-          <div class="footerAddress"><?= $conList[0]['website_phno'] ?></div>
+          <div class="footerAddress"><?= $uConList[0]['website_phno'] ?></div>
         </div>
         <div class="col">
           <div class="mb-3">
@@ -68,9 +68,9 @@ include "../../../admin/Controller/contact/conListController.php";
             <a href="#" class="fw-bold">Follow Us</a>
           </div>
           <div class="socialLinks">
-            <a href="<?= $conList[0]['facebook'] ?>" class="m-2"><i class='bx bx-sm bxl-facebook footerLink' style='color:#eaeaea'></i></a>
-            <a href="<?= $conList[0]['telegram'] ?>" class="m-2"><i class='bx bx-sm bxl-telegram footerLink' style='color:#eaeaea'></i></a>
-            <a href="<?= $conList[0]['youtube'] ?>" class="m-2"><i class='bx bx-sm bxl-youtube footerLink' style='color:#eaeaea'></i></a>
+            <a href="<?= $uConList[0]['facebook'] ?>" class="m-2"><i class='bx bx-sm bxl-facebook footerLink' style='color:#eaeaea'></i></a>
+            <a href="<?= $uConList[0]['telegram'] ?>" class="m-2"><i class='bx bx-sm bxl-telegram footerLink' style='color:#eaeaea'></i></a>
+            <a href="<?= $uConList[0]['youtube'] ?>" class="m-2"><i class='bx bx-sm bxl-youtube footerLink' style='color:#eaeaea'></i></a>
           </div>
         </div>
 

@@ -122,7 +122,7 @@
                                     <a href="../pharmacy/listPharmacy.php">Pharmacies</a>
                                 </li>
                                 <li class="breadcrumb-item active" aria-current="page">
-                                    <a href="../phistory/phlist.php">Pharmacies</a>
+                                    <a href="../phistory/phlist.php">Patient History</a>
                                 </li>
                                 <li class="breadcrumb-item active" aria-current="page">
                                     <a href="../oxygen/o2list.php">Oxygen</a>

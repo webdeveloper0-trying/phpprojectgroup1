@@ -52,6 +52,8 @@
 
     <div class="row d-flex justify-content-center align-items-center m-5">
 
+        <h3 class="header text-center">Blood Stock List</h3>
+
         <div class="col-lg-1 col-sm-1 m-3 mt-5 pt-5">
 
             <button type="button" class="btn  mybtn-pill position-relative">

@@ -46,17 +46,21 @@ include "../../../admin/Controller/adminProfile/aSelectMsgController.php";
                     $fName = $webName[0];
                     $lName = $webName[1];
                     ?>
-                    <span>
-                        <?= $fName ?><span><?= $lName ?></span></span>. We at
+                    <b>
+                        <?= $fName ?><b><?= $lName ?></b></b>. We at
 
-                    <span>
-                        <?= $fName ?><span><?= $lName ?></span></span>
+                    <b>
+                        <?= $fName ?><b><?= $lName ?></b></b>
                     (“
-                    <span>
-                        <?= $fName ?><span><?= $lName ?></span></span>”, “we”, “us”) respect your privacy and want you to understand how we collect, use, and share data about you. This Privacy Policy covers our data collection practices and describes your rights regarding your personal data.
+                    <b>
+                        <?= $fName ?><b><?= $lName ?></b></b>”, “we”, “us”) respect your privacy and want you to understand how we collect, use, and share data about you. This Privacy Policy covers our data collection practices and describes your rights regarding your personal data.
                 </P>
                 <br>
-                <p>Unless we link to a different policy or state otherwise, this Privacy Policy applies when you visit or use the Udemy and CorpU websites, mobile applications, APIs, or related services (the “Services”). It also applies to prospective customers of our business and enterprise products.</p>
+                <p>Unless we link to a different policy or state otherwise, this Privacy Policy 
+                    applies when you visit or use the <b>
+                        <?= $fName ?><b><?= $lName ?></b></b> websites, mobile applications,
+                     APIs, or related services (the “Services”). It also applies to prospective customers 
+                     of our business and enterprise products.</p>
                 <br>
                 <p>By using the Services, you agree to the terms of this Privacy Policy. You shouldn’t use the Services if you don’t agree with this Privacy Policy or any other agreement that governs your use of the Services.</p>
                 <br>

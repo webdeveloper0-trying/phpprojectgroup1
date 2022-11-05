@@ -67,7 +67,7 @@
                     <label for="exampleFormControlInput1" class="form-label">Question</label>
                     <!-- <input type="text" name="que" class="form-control" id="exampleFormControlInput1" placeholder="Name"> -->
 
-                    <textarea name="que" class="form-control" id="exampleFormControlInput1" cols="30" rows="5"></textarea>
+                    <textarea name="que" class="form-control" id="exampleFormControlInput1" cols="30" rows="5" required></textarea>
 
                 </div>
 
@@ -79,7 +79,7 @@
 
                 <div class="col-4 mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Answer</label>
-                    <textarea name="ans" id="exampleFormControlInput1" class="form-control" cols="30" rows="5"></textarea>
+                    <textarea name="ans" id="exampleFormControlInput1" class="form-control" cols="30" rows="5" required></textarea>
 
                     <!-- <input type="text" name="ans" class="form-control" id="exampleFormControlInput1" placeholder="Name"> -->
 

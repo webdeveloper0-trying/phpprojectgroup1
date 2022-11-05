@@ -88,7 +88,7 @@
                 <div class="col-lg-5 col-sm-3 mb-3 ">
                     <label for="exampleFormControlInput1" class="form-label">Used </label>
                     <input type="hidden" name="preUsed" value="<?php echo $typeStock[0]["used_quantity"] ?>" />
-                    <input id="" type="text" name="upUsed" value="<?php echo $typeStock[0]["used_quantity"] ?>" class="form-control" id="exampleFormControlInput1" placeholder="Previous Used + Current Used">
+                    <input id="" type="text" name="upUsed" value="<?php echo $typeStock[0]["used_quantity"] ?>" class="form-control" id="exampleFormControlInput1" placeholder="Current Used">
                 </div>
 
 
